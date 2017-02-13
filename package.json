@@ -1,6 +1,6 @@
 {
   "name": "elektron",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Bootstrap 4 Based Admin Toolkit",
   "main": "index.js",
   "scripts": {
