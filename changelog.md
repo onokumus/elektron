@@ -13,6 +13,12 @@ Custom labels used in this changelog:
 * `dependencies`: bumps dependencies
 * `housekeeping`: code re-organization, minor edits, or other changes that don't fit in one of the other categories.
 
+### [0.0.2] - 2017-02-13
+
+**fixed**
+
+- .verb.md
+
 ### [0.0.1] - 2017-02-13
 
 **added**

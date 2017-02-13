@@ -12,7 +12,7 @@ Creating an issue is the simplest form of contributing to a project. But there a
 
 If you'd like to learn more about contributing in general, the [Guide to Idiomatic Contributing](https://github.com/jonschlinkert/idiomatic-contributing) has a lot of useful information.
 
-**Showing support for elk**
+**Showing support for elektron**
 
 Please keep in mind that open source software is built by people like you, who spend their free time creating things the rest the community can use.
 

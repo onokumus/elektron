@@ -1,0 +1,25 @@
+{
+  "name": "elektron",
+  "description": "Bootstrap 4 Based Admin Toolkit",
+  "main": "index.js",
+  "authors": [
+    "Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "admin",
+    "bootstrap",
+    "elektron",
+    "jquery"
+  ],
+  "homepage": "https://github.com/onokumus/elektron",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "public",
+    "templates"
+  ]
+}
