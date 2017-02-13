@@ -1,0 +1,73 @@
+{
+  "name": "elektron",
+  "version": "0.0.1",
+  "description": "Bootstrap 4 Based Admin Toolkit",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf public",
+    "content": "assemble",
+    "assets": "assemble --file assets.js",
+    "build": "npm run assets & npm run content"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onokumus/elektron.git"
+  },
+  "keywords": [
+    "elektron",
+    "admin",
+    "bootstrap",
+    "jquery"
+  ],
+  "author": "Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onokumus/elektron/issues"
+  },
+  "homepage": "https://github.com/onokumus/elektron#readme",
+  "files": [
+    "index.js",
+    "assets.js",
+    "assemblefile.js",
+    "templates",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=4"
+  },
+  "devDependencies": {
+    "assemble": "^0.23.0",
+    "gulp-extname": "^0.2.2",
+    "gulp-prettify": "^0.5.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "font-awesome": "^4.7.0",
+    "metismenu": "^2.6.2"
+  },
+  "verb": {
+    "layout": "default",
+    "toc": {
+      "collapsible": true,
+      "method": "preWrite"
+    },
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": [
+        "twbuttons",
+        "label2srt",
+        "metismenu"
+      ]
+    },
+    "reflinks": [
+      "twbuttons",
+      "label2srt",
+      "metismenu"
+    ]
+  }
+}
