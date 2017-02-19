@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>Elektron - {{title}}</title>
 
@@ -12,14 +14,104 @@
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/vendor/metismenu/metisMenu.min.css">
+  <link rel="stylesheet" href="assets/vendor/metis-canvas/metis-canvas.min.css">
+  <link rel="stylesheet" href="assets/vendor/animate/animate.min.css">
+  <link rel="stylesheet" href="assets/css/elektron.css">
 </head>
-<body>
-  {% body %}
+
+<body class="">
+  <!-- BEGIN .app -->
+  <div class="app">
+    <!-- BEGIN .app-wrap -->
+    <div class="app-wrap">
+      <!-- BEGIN .app-heading -->
+      <header class="app-heading">
+        {{> navbar }}
+      </header>
+      <!-- END:  .app-heading -->
+      <!-- BEGIN .app-container -->
+      <div class="app-container">
+        <!-- BEGIN .app-side -->
+        <aside class="app-side canvas is-left bg-inverse text-white" id="app-side">
+          <!-- BEGIN .side-content -->
+          <div class="side-content">
+            {{> side-nav }}
+          </div>
+          <!-- END: .side-content -->
+          <footer class="p-3">
+            <div class="progress">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress mt-3">
+              <div class="progress-bar bg-info" role="progressbar" style="width: 50%; height: 4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress mt-3">
+              <div class="progress-bar bg-warning" role="progressbar" style="width: 75%; height: 4px;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </footer>
+        </aside>
+        <!-- END: .app-side -->
+        <!-- BEGIN .app-main -->
+        <div class="app-main">
+
+          <!-- BEGIN .main-heading -->
+          <header class="main-heading">
+            <div class="card rounded-0 border-right-0 border-left-0 flex-row">
+              <div class="card-block p-2 d-flex flex-column text-muted">
+                <h6 class="text-uppercase">Elektron</h6>
+                <h5>Dashboard</h5>
+              </div>
+              <div class="card-block p-2 d-flex justify-content-end">
+                <ol class="breadcrumb mb-0 bg-white">
+                  <li class="breadcrumb-item"><a href="#">Elektron</a></li>
+                  <li class="breadcrumb-item active">Dashboard</li>
+                </ol>
+              </div>
+            </div>
+          </header>
+          <!-- END: .main-heading -->
+
+          <!-- BEGIN .main-content -->
+          <div class="main-content bg-faded">
+
+            <!-- BEGIN .container-fluid -->
+            <div class="container-fluid">
+              {% body %}
+            </div>
+            <!-- END: .container-fluid -->
+
+          </div>
+          <!-- END: .main-content -->
+          <!-- BEGIN .main-footer -->
+          <footer class="main-footer bg-info">
+            main footer
+          </footer>
+          <!-- END: .main-footer -->
+        </div>
+        <!-- END: .app-main -->
+      </div>
+      <!-- END: .app-container -->
+      <!-- begin .app-footer -->
+      <footer class="app-footer bg-inverse text-white">
+        <div class="container-fluid">
+          <p class="text-center small pt-3">
+            Copyright {{pkg.name}} v{{pkg.version}} &copy; 2017
+          </p>
+        </div>
+      </footer>
+      <!-- END: .app-footer -->
+    </div>
+    <!-- END: .app-wrap -->
+  </div>
+  <!-- END: .app -->
 
   <!-- jQuery first, then Tether, then other JS. -->
   <script src="assets/vendor/jquery/jquery.slim.min.js" charset="utf-8"></script>
   <script src="assets/vendor/tether/js/tether.min.js" charset="utf-8"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
   <script src="assets/vendor/metismenu/metisMenu.min.js" charset="utf-8"></script>
+  <script src="assets/vendor/metis-canvas/metis-canvas.min.js" charset="utf-8"></script>
+  <script src="assets/js/elektron.js" charset="utf-8"></script>
 </body>
+
 </html>

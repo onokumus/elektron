@@ -25,12 +25,20 @@ app.task('copy-tether', function() {
   return app.copy(`${nmd}/tether/dist/**/*.*`, `${vnd}/tether`);
 });
 
+app.task('copy-font-awesome', function() {
+  return app.copy(`${nmd}/font-awesome/{css,fonts}/**/*.*`, `${vnd}/font-awesome`);
+});
+
 app.task('copy-metismenu', function() {
   return app.copy(`${nmd}/metismenu/dist/**/*.*`, `${vnd}/metismenu`);
 });
 
-app.task('copy-font-awesome', function() {
-  return app.copy(`${nmd}/font-awesome/{css,fonts}/**/*.*`, `${vnd}/font-awesome`);
+app.task('copy-metiscanvas', function() {
+  return app.copy(`${nmd}/metis-canvas/dist/**/*.*`, `${vnd}/metis-canvas`);
+});
+
+app.task('copy-animate', function() {
+  return app.copy(`${nmd}/animate.css/*.css`, `${vnd}/animate`);
 });
 
 module.exports = app;
