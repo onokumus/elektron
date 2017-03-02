@@ -7,6 +7,7 @@ _(Click the following sections to expand them)_
 <details>
 <summary><strong>Table of Contents</strong></summary>
 - [Install](#install)
+- [Download](#download)
 - [About](#about)
   * [Related projects](#related-projects)
   * [Community](#community)
@@ -36,6 +37,9 @@ Install with [bower](https://bower.io/)
 ```sh
 $ bower install elektron --save
 ```
+
+## Download
+[Download Link](https://github.com/onokumus/elektron/archive/master.zip)
 
 ## About
 ### Related projects
