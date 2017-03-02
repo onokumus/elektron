@@ -2,9 +2,9 @@
 
 $(function () {
   if ($(window).width() < 768) {
-    $('.app-side').canvas('hide');
+    $('#app-side').canvas('hide');
   } else {
-    $('.app-side').canvas('show');
+    $('#app-side').canvas('show');
   }
 
   $('.side-nav .metismenu').metisMenu();

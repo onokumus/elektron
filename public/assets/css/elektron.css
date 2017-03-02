@@ -1,8 +1,5 @@
-html {
-  font-size: 14px;
-}
-
-.app {
+.app,
+body > .ember-view {
   position: absolute;
   width: 100%;
   display: flex;
@@ -34,41 +31,58 @@ html {
   position: relative;
   display: flex;
   flex-direction: column;
-  flex: 1 1 0;
+  flex: 1 1 0%;
+  flex-basis: 0%;
+  transition: all 0.3s ease-out;
 }
 
 .main-content {
   position: relative;
   margin-bottom: auto;
   flex: 1 1 auto;
-  padding-top: 1rem;
+  flex-basis: auto;
+  padding: 1rem;
 }
 
 .app-side {
-  width: 240px;
+  width: 15rem;
   display: flex;
   flex-flow: column nowrap;
   margin: 0;
+  transition: all 0.3s ease-out;
 }
 
 .app-side.is-open {
   z-index: 1000;
 }
 
-@media (min-width: 768px) {
-  .app-side.is-open {
-    position: relative;
+@media (min-width: 992px) {
+  .app-side.is-open ~ .app-main {
+    margin-left: 15rem;
   }
 }
 
 .side-content {
   margin-bottom: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.bg-white {
-  background: #fff;
+.app-is-fixed .app {
+  height: 100%;
 }
 
-.metismenu .active > .nav-link .fa.arrow:before {
-  content: "\f107";
+.app-is-fixed .app-container,
+.app-is-fixed .app-main {
+  overflow-y: auto;
+}
+
+.main-is-fixed .app {
+  height: 100%;
+}
+
+.main-is-fixed .app-container,
+.main-is-fixed .app-main,
+.main-is-fixed .main-content {
+  overflow-y: auto;
 }

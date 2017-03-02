@@ -1,19 +1,37 @@
 ---
 title: Dashboard
 ---
-<div class="alert alert-info alert-dismissible fade show" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-  <h4>Welcome to Elektron Bootstrap 4 Based Admin Toolkit</h4>
-  <p>I hope you like it.</p>
+<h1>Elektron: <small>{{pkg.description}}</small></h1>
+
+<h2>HTML Structure</h2>
+<p>
+  <code>.app</code> class should be added to div element inside the body tag. If you will
+   use the Elektron with <a href="http://emberjs.com/" target="_blank">ember.js</a>, you don't need this element.
+ </p>
+
+<h3>Basic Template</h3>
+<span>Start with this basic HTML template.</span>
+
+<div class="language-markup">
+
+  {{#markdown}}
+    {{> basic-html }}
+  {{/markdown}}
+
 </div>
 
+{{md "document.md"}}
 
-<div class="row">
-  <div class="col-md-3">
-    <div class="card bg-primary text-white">
-      CARD
-    </div>
-  </div>
-</div>
+<h4>top bar fixed</h4>
+<pre><code class="language-markup">&lt;header class="app-heading" style="min-height: 50px;"&gt;
+  &lt;nav class="canvas is-fixed is-top is-open" style="z-index: 1001;"&gt;
+  ...
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+
+<h4>bottom bar fixed</h4>
+<pre><code class="language-markup">&lt;footer class="app-footer" style="min-height: 50px;"&gt;
+  &lt;nav class="canvas is-fixed is-bottom is-open" style="z-index: 1001;"&gt;
+  ...
+  &lt;/nav&gt;
+&lt;/footer&gt;</code></pre>

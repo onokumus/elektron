@@ -13,6 +13,13 @@ Custom labels used in this changelog:
 * `dependencies`: bumps dependencies
 * `housekeeping`: code re-organization, minor edits, or other changes that don't fit in one of the other categories.
 
+### [0.1.0] - 2017-03-03
+**removed**
+- bootstrap
+- tether
+- animate.css
+- font-awesome
+
 ### [0.0.4] - 2017-02-19
 
 **added**

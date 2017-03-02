@@ -1,6 +1,6 @@
 {
   "name": "elektron",
-  "description": "Bootstrap 4 Based Admin Toolkit",
+  "description": "An Admin Toolkit",
   "main": "index.js",
   "authors": [
     "Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)"

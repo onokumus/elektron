@@ -1,0 +1,26 @@
+// Variables
+//
+// Copy settings from this file into the provided `_custom.scss` to override
+// the Elektron defaults without modifying key, versioned files.
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-transitions: true !default;
+
+// app-side width
+$app-side-width: 15rem !default;
+
+// breakpoint
+$app-side-breakpoint: 992px !default;
+
+// app-side visibility z-index
+$app-side-z-index: 1000 !default;
+
+// main-content padding
+$main-content-padding: 1rem !default;
+
+// app-side and app-main transition
+$transition-duration: 0.3s !default;
+$transition-timing-function: ease-out !default;

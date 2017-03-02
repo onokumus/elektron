@@ -1,3 +1,5 @@
+// layout
+
 .app,
 body > .ember-view {
   position: absolute;
@@ -33,7 +35,9 @@ body > .ember-view {
   flex-direction: column;
   flex: 1 1 0%;
   flex-basis: 0%;
-  transition: all 0.3s ease-out;
+  @if $enable-transitions {
+    transition: all $transition-duration $transition-timing-function;
+  }
 }
 
 .main-content {
@@ -41,24 +45,25 @@ body > .ember-view {
   margin-bottom: auto;
   flex: 1 1 auto;
   flex-basis: auto;
-  padding: 1rem;
+  padding: $main-content-padding;
 }
 
 .app-side {
-  width: 15rem;
+  width: $app-side-width;
   display: flex;
   flex-flow: column nowrap;
   margin: 0;
-  transition: all 0.3s ease-out;
+  @if $enable-transitions {
+    transition: all $transition-duration $transition-timing-function;
+  }
 }
 
 .app-side.is-open {
-  z-index: 1000;
+  z-index: $app-side-z-index;
 }
-
-@media (min-width: 992px) {
+@media (min-width: $app-side-breakpoint) {
   .app-side.is-open ~ .app-main {
-    margin-left: 15rem;
+    margin-left: $app-side-width;
   }
 }
 
@@ -68,21 +73,25 @@ body > .ember-view {
   overflow-x: hidden;
 }
 
-.app-is-fixed .app {
-  height: 100%;
+.app-is-fixed {
+  .app {
+    height: 100%;
+  }
+
+  .app-container,
+  .app-main {
+    overflow-y: auto;
+  }
 }
 
-.app-is-fixed .app-container,
-.app-is-fixed .app-main {
-  overflow-y: auto;
-}
+.main-is-fixed {
+  .app {
+    height: 100%;
+  }
 
-.main-is-fixed .app {
-  height: 100%;
-}
-
-.main-is-fixed .app-container,
-.main-is-fixed .app-main,
-.main-is-fixed .main-content {
-  overflow-y: auto;
+  .app-container,
+  .app-main,
+  .main-content {
+    overflow-y: auto;
+  }
 }

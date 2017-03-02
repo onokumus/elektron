@@ -1,3 +1,6 @@
+---
+layout: false
+---
 <!doctype html>
 <html lang="en">
 
@@ -8,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Elektron - {{title}}</title>
+  <title>Elektron -fixed topbar</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="assets/vendor/metismenu/metisMenu.min.css">
@@ -16,7 +19,16 @@
   <link rel="stylesheet" href="assets/css/elektron.css">
   <link rel="stylesheet" href="assets/css/elektron-demo.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css" />
+  <style media="screen">
+    .app-heading {
+      min-height: 3.5rem;
+    }
+    .fixed-topbar {
+      background: #777;
+      height: 3.5rem;
+      z-index: 1001;
+    }
+  </style>
 </head>
 
 <body>
@@ -29,9 +41,11 @@
 
       <!-- BEGIN .app-heading -->
       <header class="app-heading">
-        <a href="#app-side" data-toggle="canvas">
-          MENU
-        </a>
+        <nav class="fixed-topbar canvas is-top is-fixed is-open">
+          <a href="#app-side" data-toggle="canvas">
+            MENU
+          </a>
+        </nav>
       </header>
       <!-- END:  .app-heading -->
 
@@ -68,8 +82,70 @@
           <!-- BEGIN .main-content -->
           <div class="main-content">
 
-              {% body %}
-
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
           </div>
           <!-- END: .main-content -->
 
@@ -104,15 +180,6 @@
   <script src="assets/vendor/metismenu/metisMenu.min.js" charset="utf-8"></script>
   <script src="assets/vendor/metis-canvas/metis-canvas.min.js" charset="utf-8"></script>
   <script src="assets/js/elektron.js" charset="utf-8"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js" data-manual></script>
-
-  <script>
-    $(function(){
-      $('.language-markup > pre > code').addClass('language-markup');
-      Prism.highlightAll();
-    });
-  </script>
 
 </body>
 

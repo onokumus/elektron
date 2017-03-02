@@ -18,6 +18,8 @@ app.task('init', function(cb) {
   app.option('layout', 'default');
   app.data('pkg', pkg);
   app.helper('compare', helpers.comparison());
+  app.helper('markdown', require('helper-markdown'));
+  app.helper('md', require('helper-md').sync);
   app.layouts(path.join(__dirname, './templates/layouts/**/*.hbs'));
   app.partials(path.join(__dirname, './templates/includes/**/*.hbs'));
   app.pages(path.join(__dirname, './content/**/*.hbs'));
@@ -26,19 +28,11 @@ app.task('init', function(cb) {
 });
 
 app.task('scss', function() {
-  return app.src(path.join(__dirname, 'scss/**/*.scss'))
-    .pipe(sass({
-      outputStyle: 'expanded'
-    }).on('error', sass.logError))
-    .pipe(app.dest('./public/assets/css'))
-    .pipe(app.dest('./dist'));
+  return app.src(path.join(__dirname, 'scss/**/*.scss')).pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)).pipe(app.dest('./public/assets/css')).pipe(app.dest('./dist'));
 });
 
 app.task('js', function() {
-  return app.src(path.join(__dirname, 'js/**/*.js'))
-    .pipe(babel())
-    .pipe(app.dest('./public/assets/js'))
-    .pipe(app.dest('./dist'));
+  return app.src(path.join(__dirname, 'js/**/*.js')).pipe(babel()).pipe(app.dest('./public/assets/js')).pipe(app.dest('./dist'));
 });
 
 app.task('serve', ['init'], function() {
@@ -68,16 +62,12 @@ app.task('watch', ['init'], function() {
 
 app.task('default', ['init'], function() {
   app.pages('templates/content/**/*.hbs');
-  return app.toStream('pages')
-    .pipe(app.renderFile())
-    .pipe(prettify({
-      indent_inner_html: false,
-      preserve_newlines: true,
-      end_with_newline: true,
-      extra_liners: ['head', 'body']
-    }))
-    .pipe(extname())
-    .pipe(app.dest('public'));
+  return app.toStream('pages').pipe(app.renderFile()).pipe(prettify({
+    indent_inner_html: false,
+    preserve_newlines: true,
+    end_with_newline: true,
+    extra_liners: ['head', 'body']
+  })).pipe(extname()).pipe(app.dest('public'));
 });
 
 function watch() {
