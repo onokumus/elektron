@@ -17,9 +17,10 @@
 }
 
 .main-heading {
-  background: #f5f5f5;
+  background: #eceeef;
 }
 
+.app-heading,
 .main-heading {
   border-bottom: 1px solid #e7e7e7;
 }

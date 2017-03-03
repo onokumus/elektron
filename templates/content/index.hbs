@@ -3,6 +3,7 @@ title: Dashboard
 ---
 <h1>Elektron: <small>{{pkg.description}}</small></h1>
 
+
 {{#markdown}}
 ## Install
 Install with [npm](https://www.npmjs.com/):
@@ -31,13 +32,12 @@ $ bower install elektron --save
 <h3>Basic Template</h3>
 <span>Start with this basic HTML template.</span>
 
-<div class="language-markup">
 
-  {{#markdown}}
-    {{> basic-html }}
-  {{/markdown}}
-
-</div>
+{{#markdown}}
+```html
+{{> basic-html }}
+```
+{{/markdown}}
 
 {{md "document.md"}}
 
