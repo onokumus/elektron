@@ -17,7 +17,7 @@
 ### Fixed Page Options
 
 #### app fixed
-Elektron is fluid by default. Can be used as fixed on will. All that's needed to be done is to add .app-is-fixed class to body element.
+Elektron is fluid by default. Can be used as fixed on will. All that's needed to be done is to add `.app-is-fixed` class to `body` element.
 
 #### main fixed
-All that's needed to be done is to add .main-is-fixed class to body element.
+All that's needed to be done is to add `.main-is-fixed` class to `body` element.

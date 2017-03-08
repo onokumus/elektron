@@ -1,8 +1,8 @@
 $(function() {
   if ($(window).width() < 768) {
-    $('#app-side').canvas('hide')
+    $('#app-side').onoffcanvas('hide')
   } else {
-    $('#app-side').canvas('show')
+    $('#app-side').onoffcanvas('show')
   }
 
   $('.side-nav .metismenu').metisMenu();

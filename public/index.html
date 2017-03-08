@@ -12,11 +12,11 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="assets/vendor/metismenu/metisMenu.min.css">
-  <link rel="stylesheet" href="assets/vendor/metis-canvas/metis-canvas.min.css">
+  <link rel="stylesheet" href="assets/vendor/onoffcanvas/onoffcanvas.min.css">
   <link rel="stylesheet" href="assets/css/elektron.css">
   <link rel="stylesheet" href="assets/css/elektron-demo.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" />
 </head>
 
 <body>
@@ -29,7 +29,7 @@
 
       <!-- BEGIN .app-heading -->
       <header class="app-heading">
-        <a href="#app-side" data-toggle="canvas">
+        <a href="#app-side" data-toggle="onoffcanvas">
           MENU
         </a>
       </header>
@@ -39,7 +39,13 @@
       <div class="app-container">
 
         <!-- BEGIN .app-side -->
-        <aside class="app-side canvas is-left" id="app-side">
+        <aside class="app-side onoffcanvas is-left is-sticky" id="app-side">
+
+          <!-- BEGIN .side-heading -->
+          <div class="side-heading">
+            <a class="app-side-toggler" href="#app-side" data-toggle="onoffcanvas">MENU</a>
+          </div>
+          <!-- END: .side-heading -->
 
           <!-- BEGIN .side-content -->
           <div class="side-content">
@@ -190,7 +196,7 @@
 
         &lt;!-- BEGIN .app-heading --&gt;
         &lt;header class=&quot;app-heading&quot;&gt;
-          &lt;a href=&quot;#app-side&quot; data-toggle=&quot;canvas&quot;&gt;
+          &lt;a href=&quot;#app-side&quot; data-toggle=&quot;onoffcanvas&quot;&gt;
             MENU
           &lt;/a&gt;
         &lt;/header&gt;
@@ -200,7 +206,7 @@
         &lt;div class=&quot;app-container&quot;&gt;
 
           &lt;!-- BEGIN .app-side --&gt;
-          &lt;aside class=&quot;app-side canvas is-left&quot; id=&quot;app-side&quot;&gt;
+          &lt;aside class=&quot;app-side onoffcanvas is-left&quot; id=&quot;app-side&quot;&gt;
 
             &lt;!-- BEGIN .side-content --&gt;
             &lt;div class=&quot;side-content&quot;&gt;
@@ -261,7 +267,7 @@
     &lt;!-- jQuery first, then other JS. --&gt;
     &lt;script src=&quot;assets/vendor/jquery/jquery.min.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;assets/vendor/metismenu/metisMenu.min.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;assets/vendor/metis-canvas/metis-canvas.min.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;assets/vendor/onoffcanvas/onoffcanvas.min.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;assets/js/elektron.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;
@@ -341,23 +347,25 @@
             </table>
             <h3>Fixed Page Options</h3>
             <h4>app fixed</h4>
-            <p>Elektron is fluid by default. Can be used as fixed on will. All that's needed to be done is to add .app-is-fixed class to body element.</p>
+            <p>Elektron is fluid by default. Can be used as fixed on will. All that's needed to be done is to add <code>.app-is-fixed</code> class to <code>body</code> element.</p>
             <h4>main fixed</h4>
-            <p>All that's needed to be done is to add .main-is-fixed class to body element.</p>
+            <p>All that's needed to be done is to add <code>.main-is-fixed</code> class to <code>body</code> element.</p>
 
             <h4>top bar fixed</h4>
-            <pre><code class="language-markup">&lt;header class="app-heading" style="min-height: 50px;"&gt;
-  &lt;nav class="canvas is-fixed is-top is-open" style="z-index: 1001;"&gt;
+            <pre><code class="language-html">&lt;header class=&quot;app-heading&quot; style=&quot;min-height: 50px;&quot;&gt;
+  &lt;nav class=&quot;canvas is-fixed is-top is-open&quot; style=&quot;z-index: 1001;&quot;&gt;
   ...
   &lt;/nav&gt;
-&lt;/header&gt;</code></pre>
+&lt;/header&gt;
+</code></pre>
 
             <h4>bottom bar fixed</h4>
-            <pre><code class="language-markup">&lt;footer class="app-footer" style="min-height: 50px;"&gt;
-  &lt;nav class="canvas is-fixed is-bottom is-open" style="z-index: 1001;"&gt;
+            <pre><code class="language-html">&lt;footer class=&quot;app-footer&quot; style=&quot;min-height: 50px;&quot;&gt;
+  &lt;nav class=&quot;canvas is-fixed is-bottom is-open&quot; style=&quot;z-index: 1001;&quot;&gt;
   ...
   &lt;/nav&gt;
-&lt;/footer&gt;</code></pre>
+&lt;/footer&gt;
+</code></pre>
 
           </div>
           <!-- END: .main-content -->
@@ -391,7 +399,7 @@
   <!-- jQuery first, then Tether, then other JS. -->
   <script src="assets/vendor/jquery/jquery.min.js" charset="utf-8"></script>
   <script src="assets/vendor/metismenu/metisMenu.min.js" charset="utf-8"></script>
-  <script src="assets/vendor/metis-canvas/metis-canvas.min.js" charset="utf-8"></script>
+  <script src="assets/vendor/onoffcanvas/onoffcanvas.min.js" charset="utf-8"></script>
   <script src="assets/js/elektron.js" charset="utf-8"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>

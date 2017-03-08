@@ -61,9 +61,13 @@ body > .ember-view {
 .app-side.is-open {
   z-index: $app-side-z-index;
 }
+
 @media (min-width: $app-side-breakpoint) {
   .app-side.is-open ~ .app-main {
     margin-left: $app-side-width;
+  }
+  .side-heading {
+    display: none;
   }
 }
 

@@ -1,0 +1,7 @@
+/**
+ * Elektron - An Admin Toolkit
+ * @version 0.1.0
+ * @license MIT
+ * @link https://github.com/onokumus/elektron#readme
+ */
+.app-side{width:250px}@media (min-width:992px){.app-side.is-open~.app-main{margin-left:250px}}.app-side{background:#fff}.side-footer{padding:1rem 1rem 0}.main-heading{background:#eceeef}.app-heading,.main-heading{border-bottom:1px solid #e7e7e7}.navbar-static-top{margin-bottom:0}.app-footer,.main-footer{border-top:1px solid #e7e7e7}.app-side{border-right:1px solid #e7e7e7}.side-nav ul{padding:0;margin:0;list-style:none}.side-nav ul ul{padding-left:1.5rem}.side-nav a{display:-webkit-box!important;display:-ms-flexbox!important;display:flex!important;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.side-nav .nav-icon{-webkit-box-flex:0;-ms-flex:0 0 1.5rem;flex:0 0 1.5rem;font-size:1.25rem;color:#868e96}.side-nav .nav-title{-webkit-box-flex:1;-ms-flex:1;flex:1 1 0%}.side-nav .has-arrow:after{border-color:#868e96}.side-nav span.has-arrow:after{right:0}.side-nav li.active span.has-arrow:after{-webkit-transform:rotate(-135deg) translateY(-50%);transform:rotate(-135deg) translateY(-50%)}
