@@ -53,13 +53,12 @@ body > .ember-view {
   display: flex;
   flex-flow: column nowrap;
   margin: 0;
-  @if $enable-transitions {
-    transition: all $transition-duration $transition-timing-function;
-  }
-}
-
-.app-side.is-open {
   z-index: $app-side-z-index;
+  background: $app-side-bg-color;
+
+  &.side-inverse {
+    background: $app-side-inverse-bg-color;
+  }
 }
 
 @media (min-width: $app-side-breakpoint) {
@@ -67,7 +66,7 @@ body > .ember-view {
     margin-left: $app-side-width;
   }
   .side-heading {
-    display: none;
+    // display: none;
   }
 }
 

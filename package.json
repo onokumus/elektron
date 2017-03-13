@@ -1,6 +1,6 @@
 {
   "name": "elektron",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An Admin Toolkit",
   "main": "index.js",
   "scripts": {
@@ -46,8 +46,8 @@
   "devDependencies": {
     "assemble": "^0.23.0",
     "auto": "^0.1.2",
-    "autoprefixer": "^6.7.6",
-    "babel-preset-env": "^1.1.8",
+    "autoprefixer": "^6.7.7",
+    "babel-preset-env": "^1.2.1",
     "browser-sync": "^2.18.8",
     "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
@@ -58,7 +58,7 @@
     "gulp-prettify": "^0.5.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^2.0.1",
+    "gulp-uglify": "^2.1.0",
     "handlebars-helpers": "^0.8.0",
     "helper-markdown": "^0.2.1",
     "helper-md": "^0.2.1",
@@ -66,8 +66,8 @@
     "rtlcss": "^2.1.2"
   },
   "dependencies": {
-    "onoffcanvas": "^1.0.0",
-    "metismenu": "^2.7.0"
+    "metismenu": "^2.7.0",
+    "onoffcanvas": "^1.1.1"
   },
   "verb": {
     "toc": {

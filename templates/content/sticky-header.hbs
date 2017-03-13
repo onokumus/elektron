@@ -1,20 +1,37 @@
 ---
-title: app-is-fixed
-bodyClass: app-is-fixed
+title: sticky header
+headerClass: is-sticky
 ---
-<h4>Code</h4>
+<style media="screen">
+  .app-heading {
+    background: #212529;
+  }
+</style>
 
+<h4>Code</h4>
+<p>Supported browser : <a href="http://caniuse.com/#feat=css-sticky">http://caniuse.com/#feat=css-sticky</a></p>
+<h5>HTML</h5>
 <p>
 {{#markdown}}
   ```html
-
-  <body class="app-is-fixed">
-    ...
-  </body>
+  <!-- BEGIN .app-heading -->
+  <header class="app-heading is-sticky is-open">
+    <a href="#app-side" data-toggle="onoffcanvas" class="onoffcanvas-toggler" aria-expanded=false></a>
+    <span>APP HEADING</span>
+  </header>
+  <!-- END:  .app-heading -->
   ```
 {{/markdown}}
 </p>
-
+<p>lorem</p>
+<p>lorem</p>
+<p>lorem</p>
+<p>lorem</p>
+<p>lorem</p>
+<p>lorem</p>
+<p>lorem</p>
+<p>lorem</p>
+<p>lorem</p>
 <p>lorem</p>
 <p>lorem</p>
 <p>lorem</p>

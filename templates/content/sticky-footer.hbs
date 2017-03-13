@@ -1,20 +1,31 @@
 ---
-title: app-is-fixed
-bodyClass: app-is-fixed
+title: sticky footer
+footerClass: is-sticky is-bottom
 ---
-<h4>Code</h4>
+<style media="screen">
 
+  .app-footer {
+    background: #212529;
+  }
+</style>
+<h4>Code</h4>
+<p>Supported browser : <a href="http://caniuse.com/#feat=css-sticky">http://caniuse.com/#feat=css-sticky</a></p>
+<h5>HTML</h5>
 <p>
 {{#markdown}}
   ```html
-
-  <body class="app-is-fixed">
-    ...
-  </body>
+  <!-- begin .app-footer -->
+  <footer class="app-footer is-sticky is-bottom">
+    <p>
+      {{pkg.name}} v{{pkg.version}} 2017
+    </p>
+  </footer>
+  <!-- END: .app-footer -->
   ```
 {{/markdown}}
 </p>
 
+<p>lorem</p>
 <p>lorem</p>
 <p>lorem</p>
 <p>lorem</p>

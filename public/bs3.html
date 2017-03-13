@@ -39,12 +39,16 @@
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="#">Elektron</a>
-              <button type="button" class="btn btn-primary navbar-btn" data-target="#app-side" data-toggle="onoffcanvas">MENU</button>
-
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+              <ul class="nav navbar-nav">
+                <li>
+                  <a href="#app-side" data-toggle="onoffcanvas" class="onoffcanvas-toggler is-animated" aria-expanded=false style="margin: 10px;"></a>
+                </li>
+              </ul>
 
               <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -91,7 +95,7 @@
             <nav class="side-nav">
 
               <!-- BEGIN: side-nav-content -->
-              <ul class="metismenu nav" id="metismenu">
+              <ul class="metismenu" id="metismenu">
 
                 <li>
                   <a class="" href="index.html">
@@ -100,14 +104,13 @@
                   </a>
                 </li>
 
-                <li class="active">
-                  <a href="#">
+                <li>
+                  <a href="#" class="has-arrow" aria-expanded=false>
                     <span class="nav-icon">&lt;&#47;&gt;</span>
                     <span class="nav-title">Examples</span>
-                    <span class="nav-tools has-arrow"></span>
                   </a>
-                  <ul class="nav">
-                    <li class="active">
+                  <ul aria-expanded=false>
+                    <li>
                       <a href="bs3.html">Bootstrap 3</a>
                     </li>
                     <li>
@@ -117,12 +120,11 @@
                 </li>
 
                 <li>
-                  <a href="#">
+                  <a href="#" class="has-arrow" aria-expanded=false>
                     <span class="nav-icon">&lt;&#47;&gt;</span>
                     <span class="nav-title">Blank Pages</span>
-                    <span class="nav-tools has-arrow"></span>
                   </a>
-                  <ul class="nav">
+                  <ul aria-expanded=false>
                     <li>
                       <a href="2-col.html">Fixed Sidebar</a>
                     </li>
@@ -142,17 +144,22 @@
                       <a href="main-is-fixed.html">Main Fixed</a>
                     </li>
                     <li>
-                      <a href="fixed-topbar.html">Fixed TopBar</a>
+                      <a href="sticky-header.html">Sticky Header</a>
                     </li>
                     <li>
-                      <a href="fixed-bottombar.html">Fixed BottomBar</a>
+                      <a href="sticky-header-2.html">Sticky Header 2</a>
+                    </li>
+                    <li>
+                      <a href="sticky-footer.html">Sticky Footer</a>
+                    </li>
+                    <li>
+                      <a href="sticky-sidebar.html">Sticky SideBar</a>
                     </li>
                   </ul>
                 </li>
 
               </ul>
               <!-- END: side-nav-content -->
-
             </nav>
             <!-- END: .side-nav -->
           </div>
@@ -303,7 +310,7 @@
       <footer class="app-footer">
         <div class="container-fluid">
           <p class="text-center">
-            elektron v0.1.0 2017
+            elektron v0.2.0 2017
           </p>
         </div>
       </footer>

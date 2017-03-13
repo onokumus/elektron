@@ -10,16 +10,11 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>Elektron - {{title}}</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="assets/vendor/metismenu/metisMenu.min.css">
-  <link rel="stylesheet" href="assets/vendor/onoffcanvas/onoffcanvas.min.css">
-  <link rel="stylesheet" href="assets/css/elektron.css">
-  <link rel="stylesheet" href="assets/css/elektron-demo.css">
+  {{> head}}
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" />
 </head>
 
-<body>
+<body {{#if bodyClass}}class="{{bodyClass}}"{{/if}}>
 
   <!-- BEGIN .app -->
   <div class="app">
@@ -28,10 +23,8 @@
     <div class="app-wrap">
 
       <!-- BEGIN .app-heading -->
-      <header class="app-heading">
-        <a href="#app-side" data-toggle="onoffcanvas">
-          MENU
-        </a>
+      <header class="app-heading is-open {{#if headerClass}}{{headerClass}}{{/if}}">
+        <a class="onoffcanvas-toggler" href="#app-side" data-toggle="onoffcanvas"></a>
       </header>
       <!-- END:  .app-heading -->
 
@@ -39,12 +32,12 @@
       <div class="app-container">
 
         <!-- BEGIN .app-side -->
-        <aside class="app-side onoffcanvas is-left is-sticky" id="app-side">
+        <aside class="app-side side-inverse onoffcanvas is-left" id="app-side">
 
           {{> side-heading}}
 
           <!-- BEGIN .side-content -->
-          <div class="side-content">
+          <div class="side-content {{#if sideCntSticky}}is-sticky{{/if}}">
             {{> side-nav }}
           </div>
           <!-- END: .side-content -->
@@ -88,7 +81,7 @@
       <!-- END: .app-container -->
 
       <!-- begin .app-footer -->
-      <footer class="app-footer">
+      <footer class="app-footer {{#if footerClass}}{{footerClass}}{{/if}}">
         <p>
           {{pkg.name}} v{{pkg.version}} 2017
         </p>
@@ -101,13 +94,7 @@
   </div>
   <!-- END: .app -->
 
-  <!-- jQuery first, then Tether, then other JS. -->
-  <script src="assets/vendor/jquery/jquery.min.js" charset="utf-8"></script>
-  <script src="assets/vendor/metismenu/metisMenu.min.js" charset="utf-8"></script>
-  <script src="assets/vendor/onoffcanvas/onoffcanvas.min.js" charset="utf-8"></script>
-  <script src="assets/js/elektron.js" charset="utf-8"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+  {{> scripts}}
 
 </body>
 

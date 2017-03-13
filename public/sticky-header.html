@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Elektron - main is fixed</title>
+  <title>Elektron - sticky header</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="assets/vendor/metismenu/metisMenu.min.css">
@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="main-is-fixed">
+<body>
 
   <!-- BEGIN .app -->
   <div class="app">
@@ -29,7 +29,7 @@
     <div class="app-wrap">
 
       <!-- BEGIN .app-heading -->
-      <header class="app-heading is-open ">
+      <header class="app-heading is-open is-sticky">
         <a class="onoffcanvas-toggler" href="#app-side" data-toggle="onoffcanvas"></a>
       </header>
       <!-- END:  .app-heading -->
@@ -143,16 +143,35 @@
           <!-- BEGIN .main-content -->
           <div class="main-content">
 
-            <h4>Code</h4>
+            <style media="screen">
+              .app-heading {
+                background: #212529;
+              }
 
+            </style>
+
+            <h4>Code</h4>
+            <p>Supported browser :
+              <a href="http://caniuse.com/#feat=css-sticky">http://caniuse.com/#feat=css-sticky</a>
+            </p>
+            <h5>HTML</h5>
             <p>
-              <pre><code class="language-html">
-&lt;body class=&quot;main-is-fixed&quot;&gt;
-  ...
-&lt;/body&gt;
+              <pre><code class="language-html">&lt;!-- BEGIN .app-heading --&gt;
+&lt;header class=&quot;app-heading is-sticky is-open&quot;&gt;
+  &lt;a href=&quot;#app-side&quot; data-toggle=&quot;onoffcanvas&quot; class=&quot;onoffcanvas-toggler&quot; aria-expanded=false&gt;&lt;/a&gt;
+  &lt;span&gt;APP HEADING&lt;/span&gt;
+&lt;/header&gt;
+&lt;!-- END:  .app-heading --&gt;
 </code></pre>
             </p>
-
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
             <p>lorem</p>
             <p>lorem</p>
             <p>lorem</p>

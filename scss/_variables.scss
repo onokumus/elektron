@@ -18,6 +18,20 @@ $app-side-breakpoint: 992px !default;
 // app-side visibility z-index
 $app-side-z-index: 1000 !default;
 
+$app-side-bg-color: $oc-white;
+
+$side-nav-a-color: $oc-gray-7;
+$side-nav-a-hover-color: $oc-cyan-9;
+$side-nav-a-hover-bg-color: $oc-gray-0;
+
+
+$app-side-inverse-bg-color: $oc-gray-9;
+$app-side-inverse-ul-bg-color: $oc-gray-8;
+$app-side-inverse-a-color: $oc-gray-5;
+$app-side-inverse-a-hover-color: $oc-cyan-9;
+$app-side-inverse-a-hover-bg-color: $oc-gray-9;
+
+
 // main-content padding
 $main-content-padding: 1rem !default;
 

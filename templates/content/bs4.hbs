@@ -30,7 +30,7 @@ layout: false
     <div class="app-wrap">
 
       <!-- BEGIN .app-heading -->
-      <header class="app-heading">
+      <header class="app-heading is-sticky is-open" style="background: #fff;">
 
 
         <nav class="navbar sticky-top navbar-toggleable-md navbar-light">
@@ -38,10 +38,11 @@ layout: false
             <span class="navbar-toggler-icon"></span>
           </button>
           <a class="navbar-brand" href="index.html">Elektron</a>
+          <span>
 
-          <button type="button" class="btn btn-primary" data-toggle="onoffcanvas" data-target="#app-side">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <a href="#app-side" data-toggle="onoffcanvas" class="onoffcanvas-toggler" aria-expanded=false></a>
+        </span>
+
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -70,11 +71,11 @@ layout: false
       <div class="app-container">
 
         <!-- BEGIN .app-side -->
-        <aside class="app-side onoffcanvas is-left" id="app-side">
+        <aside class="app-side side-inverse onoffcanvas is-left" id="app-side">
 
           <!-- BEGIN .side-content -->
-          <div class="side-content">
-            {{> bs4-side-nav }}
+          <div class="side-content is-sticky">
+            {{> side-nav }}
           </div>
           <!-- END: .side-content -->
 
@@ -105,6 +106,66 @@ layout: false
               <a href="https://v4-alpha.getbootstrap.com/" target="_blank" class="alert-link">Download Bootstrap 4</a>
             </div>
               MAIN CONTENT
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
 
           </div>
           <!-- END: .main-content -->
@@ -142,6 +203,12 @@ layout: false
   <script src="assets/vendor/metismenu/metisMenu.min.js" charset="utf-8"></script>
   <script src="assets/vendor/onoffcanvas/onoffcanvas.min.js" charset="utf-8"></script>
   <script src="assets/js/elektron.js" charset="utf-8"></script>
+
+  <script>
+    $(function(){
+      $('.side-content').css('top', $('.app-heading').outerHeight());
+    });
+  </script>
 
 </body>
 

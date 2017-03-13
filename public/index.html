@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="assets/css/elektron-demo.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" />
+
 </head>
 
 <body>
@@ -28,10 +29,8 @@
     <div class="app-wrap">
 
       <!-- BEGIN .app-heading -->
-      <header class="app-heading">
-        <a href="#app-side" data-toggle="onoffcanvas">
-          MENU
-        </a>
+      <header class="app-heading is-open ">
+        <a class="onoffcanvas-toggler" href="#app-side" data-toggle="onoffcanvas"></a>
       </header>
       <!-- END:  .app-heading -->
 
@@ -39,16 +38,16 @@
       <div class="app-container">
 
         <!-- BEGIN .app-side -->
-        <aside class="app-side onoffcanvas is-left is-sticky" id="app-side">
+        <aside class="app-side side-inverse onoffcanvas is-left" id="app-side">
 
           <!-- BEGIN .side-heading -->
           <div class="side-heading">
-            <a class="app-side-toggler" href="#app-side" data-toggle="onoffcanvas">MENU</a>
+            <a class="onoffcanvas-toggler" href="#app-side" data-toggle="onoffcanvas"></a>
           </div>
           <!-- END: .side-heading -->
 
           <!-- BEGIN .side-content -->
-          <div class="side-content">
+          <div class="side-content ">
             <!-- BEGIN .side-nav -->
             <nav class="side-nav">
 
@@ -63,12 +62,11 @@
                 </li>
 
                 <li>
-                  <a href="#">
+                  <a href="#" class="has-arrow" aria-expanded=false>
                     <span class="nav-icon">&lt;&#47;&gt;</span>
                     <span class="nav-title">Examples</span>
-                    <span class="nav-tools has-arrow"></span>
                   </a>
-                  <ul>
+                  <ul aria-expanded=false>
                     <li>
                       <a href="bs3.html">Bootstrap 3</a>
                     </li>
@@ -78,13 +76,12 @@
                   </ul>
                 </li>
 
-                <li class="">
-                  <a href="#">
+                <li>
+                  <a href="#" class="has-arrow" aria-expanded=false>
                     <span class="nav-icon">&lt;&#47;&gt;</span>
                     <span class="nav-title">Blank Pages</span>
-                    <span class="nav-tools has-arrow"></span>
                   </a>
-                  <ul>
+                  <ul aria-expanded=false>
                     <li>
                       <a href="2-col.html">Fixed Sidebar</a>
                     </li>
@@ -104,17 +101,22 @@
                       <a href="main-is-fixed.html">Main Fixed</a>
                     </li>
                     <li>
-                      <a href="fixed-topbar.html">Fixed TopBar</a>
+                      <a href="sticky-header.html">Sticky Header</a>
                     </li>
                     <li>
-                      <a href="fixed-bottombar.html">Fixed BottomBar</a>
+                      <a href="sticky-header-2.html">Sticky Header 2</a>
+                    </li>
+                    <li>
+                      <a href="sticky-footer.html">Sticky Footer</a>
+                    </li>
+                    <li>
+                      <a href="sticky-sidebar.html">Sticky SideBar</a>
                     </li>
                   </ul>
                 </li>
 
               </ul>
               <!-- END: side-nav-content -->
-
             </nav>
             <!-- END: .side-nav -->
           </div>
@@ -181,7 +183,10 @@
 
   &lt;title&gt;Title&lt;/title&gt;
 
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/vendor/metismenu/metisMenu.min.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/vendor/onoffcanvas/onoffcanvas.min.css&quot;&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/elektron.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/elektron-demo.css&quot;&gt;
 
 &lt;/head&gt;
 
@@ -209,7 +214,7 @@
           &lt;aside class=&quot;app-side onoffcanvas is-left&quot; id=&quot;app-side&quot;&gt;
 
             &lt;!-- BEGIN .side-content --&gt;
-            &lt;div class=&quot;side-content&quot;&gt;
+            &lt;div class=&quot;side-content is-sticky&quot;&gt;
               ...
             &lt;/div&gt;
             &lt;!-- END: .side-content --&gt;
@@ -351,20 +356,23 @@
             <h4>main fixed</h4>
             <p>All that's needed to be done is to add <code>.main-is-fixed</code> class to <code>body</code> element.</p>
 
-            <h4>top bar fixed</h4>
-            <pre><code class="language-html">&lt;header class=&quot;app-heading&quot; style=&quot;min-height: 50px;&quot;&gt;
-  &lt;nav class=&quot;canvas is-fixed is-top is-open&quot; style=&quot;z-index: 1001;&quot;&gt;
-  ...
-  &lt;/nav&gt;
+            <h4>sticky top bar</h4>
+            <pre><code class="language-html">&lt;!-- BEGIN .app-heading --&gt;
+&lt;header class=&quot;app-heading is-sticky&quot;&gt;
+    &lt;a href=&quot;#app-side&quot; data-toggle=&quot;onoffcanvas&quot; class=&quot;onoffcanvas-toggler&quot; aria-expanded=false&gt;&lt;/a&gt;
+    &lt;span&gt;APP HEADING&lt;/span&gt;
 &lt;/header&gt;
+&lt;!-- END:  .app-heading --&gt;
 </code></pre>
 
-            <h4>bottom bar fixed</h4>
-            <pre><code class="language-html">&lt;footer class=&quot;app-footer&quot; style=&quot;min-height: 50px;&quot;&gt;
-  &lt;nav class=&quot;canvas is-fixed is-bottom is-open&quot; style=&quot;z-index: 1001;&quot;&gt;
-  ...
-  &lt;/nav&gt;
+            <h4>sticky bottom bar</h4>
+            <pre><code class="language-html">&lt;!-- begin .app-footer --&gt;
+&lt;footer class=&quot;app-footer is-sticky is-bottom&quot;&gt;
+    &lt;p&gt;
+      elektron v0.2.0 2017
+    &lt;/p&gt;
 &lt;/footer&gt;
+&lt;!-- END: .app-footer --&gt;
 </code></pre>
 
           </div>
@@ -383,9 +391,9 @@
       <!-- END: .app-container -->
 
       <!-- begin .app-footer -->
-      <footer class="app-footer">
+      <footer class="app-footer ">
         <p>
-          elektron v0.1.0 2017
+          elektron v0.2.0 2017
         </p>
       </footer>
       <!-- END: .app-footer -->

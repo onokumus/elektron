@@ -8,27 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Elektron -fixed topbar</title>
+  <title>Elektron - sticky footer</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="assets/vendor/metismenu/metisMenu.min.css">
   <link rel="stylesheet" href="assets/vendor/onoffcanvas/onoffcanvas.min.css">
   <link rel="stylesheet" href="assets/css/elektron.css">
   <link rel="stylesheet" href="assets/css/elektron-demo.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css" />
 
-  <style media="screen">
-    .app-heading {
-      min-height: 3.5rem;
-    }
-    
-    .fixed-topbar {
-      background: #777;
-      height: 3.5rem;
-      z-index: 1001;
-    }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" />
 
-  </style>
 </head>
 
 <body>
@@ -40,12 +29,8 @@
     <div class="app-wrap">
 
       <!-- BEGIN .app-heading -->
-      <header class="app-heading">
-        <nav class="fixed-topbar onoffcanvas is-top is-fixed is-open">
-          <a href="#app-side" data-toggle="onoffcanvas">
-            MENU
-          </a>
-        </nav>
+      <header class="app-heading is-open ">
+        <a class="onoffcanvas-toggler" href="#app-side" data-toggle="onoffcanvas"></a>
       </header>
       <!-- END:  .app-heading -->
 
@@ -53,10 +38,16 @@
       <div class="app-container">
 
         <!-- BEGIN .app-side -->
-        <aside class="app-side onoffcanvas is-left" id="app-side">
+        <aside class="app-side side-inverse onoffcanvas is-left" id="app-side">
+
+          <!-- BEGIN .side-heading -->
+          <div class="side-heading">
+            <a class="onoffcanvas-toggler" href="#app-side" data-toggle="onoffcanvas"></a>
+          </div>
+          <!-- END: .side-heading -->
 
           <!-- BEGIN .side-content -->
-          <div class="side-content">
+          <div class="side-content ">
             <!-- BEGIN .side-nav -->
             <nav class="side-nav">
 
@@ -71,12 +62,11 @@
                 </li>
 
                 <li>
-                  <a href="#">
+                  <a href="#" class="has-arrow" aria-expanded=false>
                     <span class="nav-icon">&lt;&#47;&gt;</span>
                     <span class="nav-title">Examples</span>
-                    <span class="nav-tools has-arrow"></span>
                   </a>
-                  <ul>
+                  <ul aria-expanded=false>
                     <li>
                       <a href="bs3.html">Bootstrap 3</a>
                     </li>
@@ -86,13 +76,12 @@
                   </ul>
                 </li>
 
-                <li class=" active">
-                  <a href="#">
+                <li>
+                  <a href="#" class="has-arrow" aria-expanded=false>
                     <span class="nav-icon">&lt;&#47;&gt;</span>
                     <span class="nav-title">Blank Pages</span>
-                    <span class="nav-tools has-arrow"></span>
                   </a>
-                  <ul>
+                  <ul aria-expanded=false>
                     <li>
                       <a href="2-col.html">Fixed Sidebar</a>
                     </li>
@@ -112,17 +101,22 @@
                       <a href="main-is-fixed.html">Main Fixed</a>
                     </li>
                     <li>
-                      <a href="fixed-topbar.html">Fixed TopBar</a>
+                      <a href="sticky-header.html">Sticky Header</a>
                     </li>
                     <li>
-                      <a href="fixed-bottombar.html">Fixed BottomBar</a>
+                      <a href="sticky-header-2.html">Sticky Header 2</a>
+                    </li>
+                    <li>
+                      <a href="sticky-footer.html">Sticky Footer</a>
+                    </li>
+                    <li>
+                      <a href="sticky-sidebar.html">Sticky SideBar</a>
                     </li>
                   </ul>
                 </li>
 
               </ul>
               <!-- END: side-nav-content -->
-
             </nav>
             <!-- END: .side-nav -->
           </div>
@@ -149,33 +143,28 @@
           <!-- BEGIN .main-content -->
           <div class="main-content">
 
-            <h4>Code</h4>
+            <style media="screen">
+              .app-footer {
+                background: #212529;
+              }
 
-            <h5>CSS</h5>
-            <p>
-              <pre><code class="language-css">.app-heading {
-  min-height: 3.5rem;
-}
-.fixed-topbar {
-  background: #777;
-  height: 3.5rem;
-  z-index: 1001;
-}
-</code></pre>
+            </style>
+            <h4>Code</h4>
+            <p>Supported browser :
+              <a href="http://caniuse.com/#feat=css-sticky">http://caniuse.com/#feat=css-sticky</a>
             </p>
             <h5>HTML</h5>
             <p>
-              <pre><code class="language-html">&lt;!-- BEGIN .app-heading --&gt;
-&lt;header class=&quot;app-heading&quot;&gt;
-  &lt;nav class=&quot;fixed-topbar onoffcanvas is-top is-fixed is-open&quot;&gt;
-    &lt;a href=&quot;#app-side&quot; data-toggle=&quot;onoffcanvas&quot;&gt;
-      MENU
-    &lt;/a&gt;
-  &lt;/nav&gt;
-&lt;/header&gt;
-&lt;!-- END:  .app-heading --&gt;
+              <pre><code class="language-html">&lt;!-- begin .app-footer --&gt;
+&lt;footer class=&quot;app-footer is-sticky is-bottom&quot;&gt;
+  &lt;p&gt;
+    elektron v0.2.0 2017
+  &lt;/p&gt;
+&lt;/footer&gt;
+&lt;!-- END: .app-footer --&gt;
 </code></pre>
             </p>
+
             <p>lorem</p>
             <p>lorem</p>
             <p>lorem</p>
@@ -232,14 +221,7 @@
             <p>lorem</p>
             <p>lorem</p>
             <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
+
           </div>
           <!-- END: .main-content -->
 
@@ -256,9 +238,9 @@
       <!-- END: .app-container -->
 
       <!-- begin .app-footer -->
-      <footer class="app-footer">
+      <footer class="app-footer is-sticky is-bottom">
         <p>
-          elektron v0.1.0 2017
+          elektron v0.2.0 2017
         </p>
       </footer>
       <!-- END: .app-footer -->
@@ -274,6 +256,7 @@
   <script src="assets/vendor/metismenu/metisMenu.min.js" charset="utf-8"></script>
   <script src="assets/vendor/onoffcanvas/onoffcanvas.min.js" charset="utf-8"></script>
   <script src="assets/js/elektron.js" charset="utf-8"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
 
 </body>

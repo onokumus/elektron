@@ -1,0 +1,267 @@
+---
+layout: false
+---
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Elektron - sticky header 2</title>
+
+{{> head}}
+
+<link rel="stylesheet" href="assets/css/mm-horizontal.css">
+
+</head>
+
+<body>
+
+  <!-- BEGIN .app -->
+  <div class="app">
+
+    <!-- BEGIN .app-wrap -->
+    <div class="app-wrap">
+
+      <!-- BEGIN .app-heading -->
+      <header class="app-heading is-open">
+        <a class="onoffcanvas-toggler" href="#app-side" data-toggle="onoffcanvas"></a>
+      </header>
+      <!-- END:  .app-heading -->
+
+      <!-- BEGIN .app-heading -->
+      <header class="app-heading is-open is-sticky">
+        <nav class="topbar-nav">
+      <ul class="metismenu" id="menu1">
+        <li>
+          <a class="has-arrow" href="#">
+            <span class="fa fa-fw fa-github fa-lg"></span>
+            metisMenu
+          </a>
+          <ul aria-expanded="true">
+            <li>
+              <a href="https://github.com/onokumus/metisMenu">
+                <span class="fa fa-fw fa-code-fork"></span> Fork
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/onokumus/metisMenu">
+                <span class="fa fa-fw fa-star"></span> Star
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/onokumus/metisMenu/issues">
+                <span class="fa fa-fw fa-exclamation-triangle"></span> Issues
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="has-arrow" href="#" aria-expanded="false">Menu 0</a>
+          <ul aria-expanded="false">
+            <li><a href="#">item 0.1</a></li>
+            <li><a href="#">item 0.2</a></li>
+            <li><a href="http://onokumus.com">onokumus</a></li>
+            <li><a href="#">item 0.4</a></li>
+          </ul>
+        </li>
+        <li id="removable">
+          <a class="has-arrow" href="#" aria-expanded="false">Menu 1</a>
+          <ul aria-expanded="false">
+            <li><a href="#">item 1.1</a></li>
+            <li><a href="#">item 1.2</a></li>
+            <li>
+              <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
+              <ul aria-expanded="false">
+                <li><a href="#">item 1.3.1</a></li>
+                <li><a href="#">item 1.3.2</a></li>
+                <li><a href="#">item 1.3.3</a></li>
+                <li><a href="#">item 1.3.4</a></li>
+              </ul>
+            </li>
+            <li><a href="#">item 1.4</a></li>
+            <li>
+              <a class="has-arrow" href="#" aria-expanded="false">Menu 1.5</a>
+              <ul aria-expanded="false">
+                <li><a href="#">item 1.5.1</a></li>
+                <li><a href="#">item 1.5.2</a></li>
+                <li><a href="#">item 1.5.3</a></li>
+                <li><a href="#">item 1.5.4</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="has-arrow" href="#" aria-expanded="false">Menu 2</a>
+          <ul aria-expanded="false">
+            <li><a href="#">item 2.1</a></li>
+            <li><a href="#">item 2.2</a></li>
+            <li><a href="#">item 2.3</a></li>
+            <li><a href="#">item 2.4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+      </header>
+      <!-- END:  .app-heading -->
+
+      <!-- BEGIN .app-container -->
+      <div class="app-container">
+
+        <!-- BEGIN .app-side -->
+        <aside class="app-side onoffcanvas is-left" id="app-side">
+
+          <!-- BEGIN .side-content -->
+          <div class="side-content ">
+
+            {{> side-nav}}
+
+          </div>
+          <!-- END: .side-content -->
+
+          <!-- BEGIN .side-footer -->
+          <footer class="side-footer">
+            SIDE FOOTER
+          </footer>
+          <!-- END .side-footer -->
+
+        </aside>
+        <!-- END: .app-side -->
+
+        <!-- BEGIN .app-main -->
+        <div class="app-main">
+
+          <!-- BEGIN .main-heading -->
+          <header class="main-heading">
+            MAIN HEADING
+          </header>
+          <!-- END: .main-heading -->
+
+          <!-- BEGIN .main-content -->
+          <div class="main-content">
+
+            <h4>Code</h4>
+            <p>Supported browser :
+              <a href="http://caniuse.com/#feat=css-sticky">http://caniuse.com/#feat=css-sticky</a>
+            </p>
+            <h5>HTML</h5>
+            <p>
+              <pre><code class="language-html">&lt;!-- BEGIN .app-heading --&gt;
+&lt;header class=&quot;app-heading is-sticky is-open&quot;&gt;
+  &lt;a href=&quot;#app-side&quot;
+  data-toggle=&quot;onoffcanvas&quot;
+  class=&quot;onoffcanvas-toggler&quot;
+  aria-expanded=false&gt;&lt;/a&gt;
+  &lt;span&gt;APP HEADING&lt;/span&gt;
+&lt;/header&gt;
+&lt;!-- END:  .app-heading --&gt;
+</code></pre>
+            </p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+            <p>lorem</p>
+
+          </div>
+          <!-- END: .main-content -->
+
+          <!-- BEGIN .main-footer -->
+          <footer class="main-footer">
+            main footer
+          </footer>
+          <!-- END: .main-footer -->
+
+        </div>
+        <!-- END: .app-main -->
+
+      </div>
+      <!-- END: .app-container -->
+
+      <!-- begin .app-footer -->
+      <footer class="app-footer ">
+        <p>
+          elektron v0.1.0 2017
+        </p>
+      </footer>
+      <!-- END: .app-footer -->
+
+    </div>
+    <!-- END: .app-wrap -->
+
+  </div>
+  <!-- END: .app -->
+
+{{> scripts}}
+
+  <script>
+  $(function () {
+    $('#menu1').metisMenu();
+  });
+  </script>
+
+</body>
+
+</html>

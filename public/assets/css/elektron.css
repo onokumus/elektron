@@ -1,6 +1,6 @@
 /**
  * Elektron - An Admin Toolkit
- * @version 0.1.0
+ * @version 0.2.0
  * @license MIT
  * @link https://github.com/onokumus/elektron#readme
  */
@@ -110,21 +110,17 @@ body > .ember-view {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   margin: 0;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  z-index: 1000;
+  background: #ffffff;
 }
 
-.app-side.is-open {
-  z-index: 1000;
+.app-side.side-inverse {
+  background: #212529;
 }
 
 @media (min-width: 992px) {
   .app-side.is-open ~ .app-main {
     margin-left: 15rem;
-  }
-  .side-heading {
-    display: none;
   }
 }
 
@@ -153,42 +149,107 @@ body > .ember-view {
   overflow-y: auto;
 }
 
-.app-side-toggler {
+.side-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.side-nav .metismenu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.side-nav .metismenu li {
+  margin-top: 5px;
+}
+
+.side-nav .metismenu li:last-child {
+  margin-bottom: 5px;
+}
+
+.side-nav .metismenu > li {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
-  color: #adb5bd;
-  display: inline-block;
-  padding: .5rem 4rem .5rem 1rem;
-  margin: .5rem;
-  border: 1px solid #495057;
-  border-radius: 4px;
+}
+
+.side-nav .metismenu a {
+  position: relative;
+  display: block;
+  padding: 13px 15px;
+  color: #495057;
   outline-width: 0;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
 }
 
-.app-side-toggler:hover {
+.side-nav .metismenu ul a {
+  padding: 10px 15px 10px 30px;
+}
+
+.side-nav .metismenu ul ul a {
+  padding: 10px 15px 10px 45px;
+}
+
+.side-nav .metismenu a:hover,
+.side-nav .metismenu a:focus,
+.side-nav .metismenu a:active {
+  color: #0b7285;
+  text-decoration: none;
+  background: #f8f9fa;
+}
+
+.side-inverse .side-nav ul {
   background: #343a40;
-  color: #868e96;
 }
 
-.app-side-toggler:after {
-  content: '';
-  position: absolute;
-  border-top: 3px solid #adb5bd;
-  border-bottom: 3px solid #adb5bd;
-  width: 30px;
-  height: 50%;
-  top: 25%;
-  right: 10px;
+.side-inverse .side-nav .metismenu {
+  background: #212529;
 }
 
-.app-side-toggler:before {
-  content: '';
-  position: absolute;
-  background: #adb5bd;
-  height: 3px;
-  width: 30px;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-       -o-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  right: 10px;
+.side-inverse .side-nav .metismenu a {
+  color: #adb5bd;
+}
+
+.side-inverse .side-nav .metismenu a:hover,
+.side-inverse .side-nav .metismenu a:focus,
+.side-inverse .side-nav .metismenu a:active {
+  color: #0b7285;
+  background: #212529;
+}
+
+.onoffcanvas-toggler {
+  display: inline-block !important;
+}
+
+.is-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1002;
+}
+
+.is-sticky.is-bottom {
+  top: auto;
+  bottom: 0;
 }

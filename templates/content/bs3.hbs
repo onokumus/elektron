@@ -42,12 +42,21 @@ layout: false
                   <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">Elektron</a>
-                <button type="button" class="btn btn-primary navbar-btn" data-target="#app-side" data-toggle="onoffcanvas">MENU</button>
-
               </div>
+
 
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav">
+                  <li>
+                    <a href="#app-side"
+                    data-toggle="onoffcanvas"
+                    class="onoffcanvas-toggler is-animated"
+                    aria-expanded=false
+                    style="margin: 10px;"></a>
+                  </li>
+                </ul>
 
                 <ul class="nav navbar-nav navbar-right">
                   <li><a href="#">Link</a></li>
@@ -76,7 +85,7 @@ layout: false
 
           <!-- BEGIN .side-content -->
           <div class="side-content">
-            {{> bs3-side-nav }}
+            {{> side-nav }}
           </div>
           <!-- END: .side-content -->
 

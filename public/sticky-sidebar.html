@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Elektron - main is fixed</title>
+  <title>Elektron - Sticky Sidebar</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="assets/vendor/metismenu/metisMenu.min.css">
@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="main-is-fixed">
+<body>
 
   <!-- BEGIN .app -->
   <div class="app">
@@ -47,7 +47,7 @@
           <!-- END: .side-heading -->
 
           <!-- BEGIN .side-content -->
-          <div class="side-content ">
+          <div class="side-content is-sticky">
             <!-- BEGIN .side-nav -->
             <nav class="side-nav">
 
@@ -143,72 +143,62 @@
           <!-- BEGIN .main-content -->
           <div class="main-content">
 
-            <h4>Code</h4>
-
-            <p>
-              <pre><code class="language-html">
-&lt;body class=&quot;main-is-fixed&quot;&gt;
-  ...
-&lt;/body&gt;
-</code></pre>
+            <p>Supported browser :
+              <a href="http://caniuse.com/#feat=css-sticky">http://caniuse.com/#feat=css-sticky</a>
             </p>
 
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
-            <p>lorem</p>
+            <pre><code class="language-html">&lt;!-- BEGIN .side-content --&gt;
+&lt;div class=&quot;side-content is-sticky&quot;&gt;
+  &lt;!-- BEGIN .side-nav --&gt;
+  &lt;nav class=&quot;side-nav&quot;&gt;
+  
+    &lt;!-- BEGIN: side-nav-content --&gt;
+    &lt;ul class=&quot;metismenu&quot; id=&quot;metismenu&quot;&gt;
+  
+      &lt;li&gt;
+        &lt;a class=&quot;&quot; href=&quot;index.html&quot;&gt;
+          &lt;span class=&quot;nav-icon&quot;&gt;&amp;amp;&lt;/span&gt;
+          &lt;span class=&quot;nav-title&quot;&gt;Dashboard&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+  
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot; class=&quot;has-arrow&quot; aria-expanded=false&gt;
+          &lt;span class=&quot;nav-icon&quot;&gt;&amp;lt;&amp;#47;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nav-title&quot;&gt;Examples&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul aria-expanded=false&gt;
+          &lt;li&gt;&lt;a href=&quot;bs3.html&quot;&gt;Bootstrap 3&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;bs4.html&quot;&gt;Bootstrap 4&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+  
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot; class=&quot;has-arrow&quot; aria-expanded=false&gt;
+          &lt;span class=&quot;nav-icon&quot;&gt;&amp;lt;&amp;#47;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nav-title&quot;&gt;Blank Pages&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul aria-expanded=false&gt;
+          &lt;li&gt;&lt;a href=&quot;2-col.html&quot;&gt;Fixed Sidebar&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;no-footers.html&quot;&gt;No Footers&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;no-headers.html&quot;&gt;No Headers&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;no-headers-footers.html&quot;&gt;No Headers&amp;Footers&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;app-is-fixed.html&quot;&gt;App Fixed&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;main-is-fixed.html&quot;&gt;Main Fixed&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;sticky-header.html&quot;&gt;Sticky Header&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;sticky-header-2.html&quot;&gt;Sticky Header 2&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;sticky-footer.html&quot;&gt;Sticky Footer&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;sticky-sidebar.html&quot;&gt;Sticky SideBar&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+  
+    &lt;/ul&gt;
+    &lt;!-- END: side-nav-content --&gt;
+  &lt;/nav&gt;
+  &lt;!-- END: .side-nav --&gt;
+&lt;/div&gt;
+&lt;!-- END: .side-content --&gt;
+</code></pre>
 
           </div>
           <!-- END: .main-content -->

@@ -41,14 +41,11 @@ a:hover {
 }
 
 
-.app-side,
-.app-footer,
 .main-heading,
 .main-footer {
   background: $oc-white;
 }
 
-.app-heading,
 .main-heading {
   border-bottom: 1px solid $oc-gray-3;
 }
@@ -62,61 +59,7 @@ a:hover {
   border-right: 1px solid  $oc-gray-3;
 }
 
-.side-nav {
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
 
-    ul {
-      padding: .5rem 0;
-    }
-    li + li {
-      margin-top: .25rem;
-    }
-
-    ul a {
-      padding: .5rem 0 .5rem;
-      padding-left: 2rem;
-      font-size: .875rem;
-    }
-    ul ul a {
-      padding-left: 3rem;
-    }
-  }
-
-  a {
-    padding: 0.625rem 1rem;
-    display: flex;
-    flex-direction: row;
-    outline: 0;
-    align-items: center;
-    color: $oc-gray-6;
-    &:hover,
-    &:focus {
-      color: $oc-gray-7;
-      background: $oc-gray-0;
-    }
-  }
-  .nav-icon {
-    flex: 0 0 1.5rem;
-    font-size: 1.25rem;
-    color: $oc-gray-7;
-  }
-  .nav-title {
-    flex: 1;
-  }
-  .has-arrow::after {
-    border-color:$oc-gray-7;
-  }
-  span.has-arrow::after {
-    right: 0;
-  }
-  li.active span.has-arrow::after {
-    transform: rotate(-135deg) translateY(-50%);
-  }
-
-}
 table {
     width: 100%;
 }
@@ -127,48 +70,4 @@ td {
   border-collapse: collapse;
   border: 1px solid $oc-gray-2;
   padding: .25rem;
-}
-
-.app-heading {
-  background: $oc-gray-9;
-
-  a {
-    color: $oc-gray-5;
-    display: inline-block;
-    padding: .5rem 1rem;
-    margin: .5rem;
-    border: 1px solid $oc-gray-7;
-    border-radius: 4px;
-
-    &:hover {
-      background: $oc-gray-8;
-      color: $oc-gray-6;
-    }
-  }
-}
-
-.app-heading a {
-  position: relative;
-  padding-right: 60px;
-}
-.app-heading a:after {
-  content: '';
-  position: absolute;
-  border-top: 3px solid $oc-gray-5;
-  border-bottom: 3px solid $oc-gray-5;
-  width: 30px;
-  height: 50%;
-  top: 25%;
-  right: 10px;
-}
-
-.app-heading a:before {
-  content: '';
-  position: absolute;
-  background: $oc-gray-5;
-  height: 3px;
-  width: 30px;
-  top: 50%;
-  transform: translate(0, -50%);
-  right: 10px;
 }

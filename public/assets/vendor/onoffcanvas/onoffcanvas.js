@@ -1,6 +1,6 @@
 /**
  * onoffcanvas - A jQuery offcanvas plugin
- * @version v1.0.0
+ * @version v1.1.1
  * @link https://github.com/onokumus/onoffcanvas#readme
  * @license MIT
  */
@@ -46,29 +46,42 @@
       } else {
         this.addAriaCollapsedClass(this.$element, this.$trigger);
       }
+
+      if (this.options.toggle) {
+        // this.toggle();
+      }
     };
 
     OnoffCanvas.DEFAULTS = {
-      toggle: true,
-      openClass: 'is-open'
+      toggle: true
     };
 
     OnoffCanvas.prototype.show = function () {
-      var openClass = this.options.openClass;
+      var openClass = 'is-open';
+
+      if (this.$element.hasClass(openClass)) {
+        return;
+      }
+
       this.$element.addClass(openClass).attr('aria-expanded', true);
 
       this.$trigger.attr('aria-expanded', true);
     };
 
     OnoffCanvas.prototype.hide = function () {
-      var openClass = this.options.openClass;
+      var openClass = 'is-open';
+
+      if (!this.$element.hasClass(openClass)) {
+        return;
+      }
+
       this.$element.removeClass(openClass).attr('aria-expanded', false);
 
       this.$trigger.attr('aria-expanded', false);
     };
 
     OnoffCanvas.prototype.toggle = function () {
-      var openClass = this.options.openClass;
+      var openClass = 'is-open';
       this[this.$element.hasClass(openClass) ? 'hide' : 'show']();
     };
 
@@ -80,11 +93,11 @@
     };
 
     OnoffCanvas.prototype.addAriaCollapsedClass = function ($element, $trigger) {
-      var openClass = this.options.openClass;
+      var openClass = 'is-open';
       var isOpen = $element.hasClass(openClass);
 
-      $trigger.attr('aria-expanded', isOpen);
-      $element.toggleClass(openClass, !isOpen).attr('aria-expanded', isOpen);
+      $trigger.attr('aria-expanded', !isOpen);
+      $element.toggleClass(openClass, !isOpen).attr('aria-expanded', !isOpen);
     };
 
     function getTargetFromTrigger($trigger) {
@@ -134,6 +147,7 @@
 
       var $target = getTargetFromTrigger($this);
       var data = $target.data('onoffcanvas');
+      console.log(data);
       var option = data ? 'toggle' : $this.data();
 
       Plugin.call($target, option);

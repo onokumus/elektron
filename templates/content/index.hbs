@@ -1,7 +1,6 @@
 ---
 title: Dashboard
 ---
-
 <h1>Elektron: <small>{{pkg.description}}</small></h1>
 
 {{#markdown}}
@@ -39,24 +38,27 @@ $ bower install elektron --save
 
 {{md "document.md"}}
 
-<h4>top bar fixed</h4>
+<h4>sticky top bar</h4>
 {{#markdown}}
 ```html
-<header class="app-heading" style="min-height: 50px;">
-  <nav class="canvas is-fixed is-top is-open" style="z-index: 1001;">
-  ...
-  </nav>
+<!-- BEGIN .app-heading -->
+<header class="app-heading is-sticky">
+    <a href="#app-side" data-toggle="onoffcanvas" class="onoffcanvas-toggler" aria-expanded=false></a>
+    <span>APP HEADING</span>
 </header>
+<!-- END:  .app-heading -->
 ```
 {{/markdown}}
 
-<h4>bottom bar fixed</h4>
+<h4>sticky bottom bar</h4>
 {{#markdown}}
 ```html
-<footer class="app-footer" style="min-height: 50px;">
-  <nav class="canvas is-fixed is-bottom is-open" style="z-index: 1001;">
-  ...
-  </nav>
+<!-- begin .app-footer -->
+<footer class="app-footer is-sticky is-bottom">
+    <p>
+      {{pkg.name}} v{{pkg.version}} 2017
+    </p>
 </footer>
+<!-- END: .app-footer -->
 ```
 {{/markdown}}

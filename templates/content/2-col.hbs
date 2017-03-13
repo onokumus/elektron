@@ -18,7 +18,7 @@ layout: false
   <link rel="stylesheet" href="assets/vendor/onoffcanvas/onoffcanvas.min.css">
   <link rel="stylesheet" href="assets/css/elektron.css">
   <link rel="stylesheet" href="assets/css/elektron-demo.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" />
 
 </head>
 
@@ -34,12 +34,12 @@ layout: false
       <div class="app-container">
 
         <!-- BEGIN .app-side -->
-        <aside class="app-side onoffcanvas is-left" id="app-side">
+        <aside class="app-side side-inverse onoffcanvas is-left" id="app-side">
 
           {{> side-heading}}
 
           <!-- BEGIN .side-content -->
-          <div class="side-content">
+          <div class="side-content is-sticky">
             {{> side-nav }}
           </div>
           <!-- END: .side-content -->
@@ -57,10 +57,8 @@ layout: false
         <div class="app-main">
 
           <!-- BEGIN .main-heading -->
-          <header class="main-heading">
-            <a href="#app-side" data-toggle="onoffcanvas">
-              MENU
-            </a>
+          <header class="main-heading is-open">
+            <a href="#app-side" data-toggle="onoffcanvas" class="onoffcanvas-toggler" aria-expanded=false></a>
           </header>
           <!-- END: .main-heading -->
 
