@@ -1,6 +1,6 @@
 {
   "name": "elektron",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "An Admin Toolkit",
   "main": "index.js",
   "scripts": {
@@ -66,12 +66,12 @@
     "rtlcss": "^2.1.2"
   },
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "metismenu": "^2.7.0",
     "onoffcanvas": "^1.1.1"
   },
   "verb": {
     "toc": {
-      "collapsible": false,
       "method": "preWrite"
     },
     "tasks": [

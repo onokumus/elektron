@@ -91,6 +91,7 @@ gulp.task('assets', () => {
     gulp.src(`${nmd}/jquery/dist/**/*.*`).pipe(gulp.dest(`${vnd}/jquery`));
     gulp.src(`${nmd}/metismenu/dist/*.*`).pipe(gulp.dest(`${vnd}/metismenu`));
     gulp.src(`${nmd}/onoffcanvas/dist/*.*`).pipe(gulp.dest(`${vnd}/onoffcanvas`));
+    gulp.src(`${nmd}/font-awesome/{css,fonts}/*.*`).pipe(gulp.dest(`${vnd}/font-awesome`));
 });
 
 gulp.task('pages', () => {

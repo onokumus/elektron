@@ -12,58 +12,39 @@
 .side-nav .metismenu li {
   margin-top: 5px;
 }
-
+.side-nav .metismenu li:first-child {
+  padding-top: 5px;
+}
 .side-nav .metismenu li:last-child {
-  margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 
-
 .side-nav .metismenu > li {
-    flex: 1 1 0%;
-    display: flex;
-    flex-direction: column;
     position: relative;
 }
 .side-nav .metismenu a {
+    font-size: $side-nav-a-font-size;
     position: relative;
-    display: block;
-    padding: 13px 15px;
-    color: $side-nav-a-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     outline-width: 0;
-    transition: all .3s ease-out;
+    @if $enable-transitions {
+      transition: all $transition-duration $transition-timing-function;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
 }
 
 .side-nav .metismenu ul a {
-    padding: 10px 15px 10px 30px;
+    padding: .5em;
+    padding-left: 3.5rem;
 }
 
 .side-nav .metismenu ul ul a {
-    padding: 10px 15px 10px 45px;
-}
-
-.side-nav .metismenu a:hover,
-.side-nav .metismenu a:focus,
-.side-nav .metismenu a:active {
-    color: $side-nav-a-hover-color;
-    text-decoration: none;
-    background: $side-nav-a-hover-bg-color;
-}
-
-// inverse
-.side-inverse {
-  .side-nav ul {
-      background: $app-side-inverse-ul-bg-color;
-  }
-  .side-nav .metismenu {
-      background: $app-side-inverse-bg-color;
-  }
-  .side-nav .metismenu a {
-      color: $app-side-inverse-a-color;
-  }
-  .side-nav .metismenu a:hover,
-  .side-nav .metismenu a:focus,
-  .side-nav .metismenu a:active {
-      color: $app-side-inverse-a-hover-color;
-      background: $app-side-inverse-a-hover-bg-color;
-  }
+    padding-left: 4.5rem;
 }

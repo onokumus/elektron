@@ -5,5 +5,5 @@ $(function() {
     $('#app-side').onoffcanvas('show')
   }
 
-  $('.side-nav .metismenu').metisMenu();
+  $('.side-nav .metismenu').metisMenu({toggle: true});
 });

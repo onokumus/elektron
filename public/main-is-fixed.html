@@ -11,6 +11,7 @@
   <title>Elektron - main is fixed</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/vendor/metismenu/metisMenu.min.css">
   <link rel="stylesheet" href="assets/vendor/onoffcanvas/onoffcanvas.min.css">
   <link rel="stylesheet" href="assets/css/elektron.css">
@@ -38,11 +39,11 @@
       <div class="app-container">
 
         <!-- BEGIN .app-side -->
-        <aside class="app-side side-inverse onoffcanvas is-left" id="app-side">
+        <aside class="app-side " id="app-side" aria-expanded=false>
 
           <!-- BEGIN .side-heading -->
           <div class="side-heading">
-            <a class="onoffcanvas-toggler" href="#app-side" data-toggle="onoffcanvas"></a>
+            SH
           </div>
           <!-- END: .side-heading -->
 
@@ -56,14 +57,18 @@
 
                 <li>
                   <a class="" href="index.html">
-                    <span class="nav-icon">&amp;</span>
+                    <span class="has-icon">
+                      <i class="fa fa-cogs"></i>
+                    </span>
                     <span class="nav-title">Dashboard</span>
                   </a>
                 </li>
 
                 <li>
                   <a href="#" class="has-arrow" aria-expanded=false>
-                    <span class="nav-icon">&lt;&#47;&gt;</span>
+                    <span class="has-icon">
+                      <i class="fa fa-html5"></i>
+                    </span>
                     <span class="nav-title">Examples</span>
                   </a>
                   <ul aria-expanded=false>
@@ -78,13 +83,12 @@
 
                 <li>
                   <a href="#" class="has-arrow" aria-expanded=false>
-                    <span class="nav-icon">&lt;&#47;&gt;</span>
+                    <span class="has-icon">
+                      <i class="fa fa-pagelines"></i>
+                    </span>
                     <span class="nav-title">Blank Pages</span>
                   </a>
                   <ul aria-expanded=false>
-                    <li>
-                      <a href="2-col.html">Fixed Sidebar</a>
-                    </li>
                     <li>
                       <a href="no-footers.html">No Footers</a>
                     </li>
@@ -109,8 +113,78 @@
                     <li>
                       <a href="sticky-footer.html">Sticky Footer</a>
                     </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="has-arrow" aria-expanded=false>
+                    <span class="has-icon">
+                      <i class="fa fa-list"></i>
+                    </span>
+                    <span class="nav-title">app-side</span>
+                  </a>
+                  <ul aria-expanded=false>
                     <li>
-                      <a href="sticky-sidebar.html">Sticky SideBar</a>
+                      <a href="app-side-is-inverse.html">app-side-is-inverse</a>
+                    </li>
+                    <li>
+                      <a href="#" class="has-arrow" aria-expanded=false>is-fixed</a>
+                      <ul aria-expanded=false>
+                        <li>
+                          <a href="app-side-is-fixed.html">default</a>
+                        </li>
+                        <li>
+                          <a href="app-side-is-fixed-is-inverse.html">inverse</a>
+                        </li>
+                        <li>
+                          <a href="app-side-is-fixed-is-hoverable.html">hoverable default</a>
+                        </li>
+                        <li>
+                          <a href="app-side-is-fixed-is-hoverable-is-inverse.html">hoverable inverse</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" class="has-arrow" aria-expanded=false>is-sticky</a>
+                      <ul aria-expanded=false>
+                        <li>
+                          <a href="app-side-is-sticky.html">light</a>
+                        </li>
+                        <li>
+                          <a href="app-side-is-sticky-is-inverse.html">inverse</a>
+                        </li>
+                        <li>
+                          <a href="app-side-is-sticky-is-mini.html">mini</a>
+                        </li>
+                        <li>
+                          <a href="app-side-is-sticky-is-hoverable.html">hoverable</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" class="has-arrow" aria-expanded=false>is-mini</a>
+                      <ul aria-expanded=false>
+                        <li>
+                          <a href="app-side-is-mini.html">light</a>
+                        </li>
+                        <li>
+                          <a href="app-side-is-inverse-is-mini.html">inverse</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" class="has-arrow" aria-expanded=false>is-hoverable</a>
+                      <ul aria-expanded=false>
+                        <li>
+                          <a href="app-side-is-hoverable.html">light</a>
+                        </li>
+                        <li>
+                          <a href="app-side-is-inverse-is-hoverable.html">inverse</a>
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                 </li>
@@ -124,7 +198,9 @@
 
           <!-- BEGIN .side-footer -->
           <footer class="side-footer">
-            SIDE FOOTER
+            <span class="has-icon">
+              <a class="onoffcanvas-toggler" href="#app-side" data-toggle="onoffcanvas"></a>
+            </span>
           </footer>
           <!-- END .side-footer -->
 

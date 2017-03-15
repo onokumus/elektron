@@ -13,6 +13,19 @@ Custom labels used in this changelog:
 * `dependencies`: bumps dependencies
 * `housekeeping`: code re-organization, minor edits, or other changes that don't fit in one of the other categories.
 
+### [0.2.1] - 2017-03-15
+**fixed**
+- app-side
+
+### [0.2.0] - 2017-03-13
+**added**
+- font-awesome
+- is-inverse class
+**changes**
+- onoffcanvas update
+**removed**
+- side-inverse class
+
 ### [0.1.0] - 2017-03-03
 **removed**
 - bootstrap
@@ -21,30 +34,22 @@ Custom labels used in this changelog:
 - font-awesome
 
 ### [0.0.4] - 2017-02-19
-
 **added**
 - animate.css
 - multilevel menü
-
 **fixed**
 - elektron.js
 
 ### [0.0.3] - 2017-02-13
-
 **added**
-
 - bower support
 
 ### [0.0.2] - 2017-02-13
-
 **fixed**
-
 - .verb.md
 
 ### [0.0.1] - 2017-02-13
-
 **added**
-
 - initial release
 
 [keep-a-changelog]: https://github.com/olivierlacan/keep-a-changelog

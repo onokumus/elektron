@@ -1,0 +1,34 @@
+// fixed layout
+/*
+* <body class="app-is-fixed">
+*
+*/
+.app-is-fixed {
+  body > .ember-view,
+  .app {
+    height: 100%;
+  }
+
+  .app-container,
+  .app-side,
+  .app-main {
+    overflow-y: auto;
+  }
+}
+/*
+* <body class="main-is-fixed">
+*
+*/
+.main-is-fixed {
+  body > .ember-view,
+  .app {
+    height: 100%;
+  }
+
+  .app-container,
+  .app-side,
+  .app-main,
+  .main-content {
+    overflow-y: auto;
+  }
+}

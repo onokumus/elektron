@@ -1,0 +1,49 @@
+/*
+* .app-side.is-hoverable
+*/
+@media (min-width: $app-side-breakpoint) {
+  .app-side.is-hoverable {
+    transition: all 0.3s ease;
+    width: $app-side-is-mini-width;
+  }
+
+  .app-side.is-hoverable.is-open ~ .app-main {
+    margin-left: $app-side-is-mini-width;
+  }
+
+  .app-side.is-hoverable {
+
+    .metismenu > li > a {
+      &.has-arrow::after {
+        border-width: 0;
+      }
+    }
+
+    .metismenu > li > ul.collapse.in {
+      display: none;
+    }
+
+    .nav-title {
+      transition: transform 0.3s ease;
+      transform: translate3d(-10000%, 0, 0);
+    }
+  }
+
+  .app-side.is-hoverable:hover {
+    width: $app-side-width;
+
+    .nav-title {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .metismenu > li > ul.collapse.in {
+      display: block;
+    }
+
+    .metismenu > li > a {
+      &.has-arrow::after {
+        border-width: 1px 0 0 1px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+// app-side
+/*
+* app-side : inspired .onoffcanvas.is-left
+*
+* available classess: is-open
+*/
+.app-side {
+  width: $app-side-width;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: $app-side-z-index;
+  transform: translate3d(-100%, 0, 0);
+  @if $enable-transitions {
+    will-change: transform;
+    transition: transform $transition-duration $transition-timing-function;
+  }
+}
+/*
+* show app-side
+*/
+.app-side.is-open {
+  transform: translate3d(0, 0, 0);
+}
+
+@media (min-width: $app-side-breakpoint) {
+  .app-side.is-open ~ .app-main {
+    margin-left: $app-side-width;
+  }
+}
+
+/*
+* side-content
+*
+* available classess: is-sticky
+*/
+.side-content {
+  margin-bottom: auto;
+}

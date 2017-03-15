@@ -1,0 +1,69 @@
+/*
+* .app-side.is-mini
+*/
+@media (min-width: $app-side-breakpoint) {
+  .app-side.is-mini {
+    width: $app-side-is-mini-width;
+    border-width: 0 !important;
+  }
+
+  .app-side.is-mini.is-open ~ .app-main {
+    margin-left: $app-side-is-mini-width;
+  }
+
+  .app-side.is-mini {
+    .metismenu li:last-child {
+      padding-bottom: 0;
+    }
+
+    .metismenu > li > a {
+      &.has-arrow::after {
+        border-width: 0;
+      }
+    }
+
+    .nav-title {
+      display: none;
+      margin-left: 1.5rem;
+    }
+
+    .metismenu ul ul a {
+      padding-left: 2.5rem;
+    }
+
+    .metismenu > li > ul {
+      position: absolute;
+      top: 100%;
+      left: 100%;
+      display: none;
+
+      > li > a {
+        padding: 0.5em 0.5em 0.5em 1.5em;
+      }
+    }
+
+    .metismenu > li:hover > ul {
+      display: block;
+      min-width: $app-side-width - $app-side-is-mini-width + 1;
+      height: auto !important;
+    }
+
+    .metismenu > li:hover {
+      > a {
+        display: flex;
+        flex-direction: row;
+        min-width: $app-side-width + 1;
+      }
+
+      .nav-title {
+        display: inline-block;
+        align-self: center;
+      }
+
+      > .has-arrow::after {
+        border-width: 1px 0 0 1px;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+}

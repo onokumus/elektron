@@ -11,10 +11,12 @@
   <title>Elektron - fixed side</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/vendor/metismenu/metisMenu.min.css">
   <link rel="stylesheet" href="assets/vendor/onoffcanvas/onoffcanvas.min.css">
   <link rel="stylesheet" href="assets/css/elektron.css">
   <link rel="stylesheet" href="assets/css/elektron-demo.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" />
 
 </head>
@@ -35,7 +37,9 @@
 
           <!-- BEGIN .side-heading -->
           <div class="side-heading">
-            <a class="onoffcanvas-toggler" href="#app-side" data-toggle="onoffcanvas"></a>
+            <span class="has-icon">
+              <a class="onoffcanvas-toggler" href="#app-side" data-toggle="onoffcanvas"></a>
+            </span>
           </div>
           <!-- END: .side-heading -->
 
@@ -49,14 +53,18 @@
 
                 <li>
                   <a class="" href="index.html">
-                    <span class="nav-icon">&amp;</span>
+                    <span class="has-icon">
+                      <i class="fa fa-cogs"></i>
+                    </span>
                     <span class="nav-title">Dashboard</span>
                   </a>
                 </li>
 
                 <li>
                   <a href="#" class="has-arrow" aria-expanded=false>
-                    <span class="nav-icon">&lt;&#47;&gt;</span>
+                    <span class="has-icon">
+                      <i class="fa fa-html5"></i>
+                    </span>
                     <span class="nav-title">Examples</span>
                   </a>
                   <ul aria-expanded=false>
@@ -71,7 +79,9 @@
 
                 <li>
                   <a href="#" class="has-arrow" aria-expanded=false>
-                    <span class="nav-icon">&lt;&#47;&gt;</span>
+                    <span class="has-icon">
+                      <i class="fa fa-pagelines"></i>
+                    </span>
                     <span class="nav-title">Blank Pages</span>
                   </a>
                   <ul aria-expanded=false>
@@ -104,6 +114,35 @@
                     </li>
                     <li>
                       <a href="sticky-sidebar.html">Sticky SideBar</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" class="has-arrow" aria-expanded=false>
+                    <span class="has-icon">
+                      <i class="fa fa-list"></i>
+                    </span>
+                    <span class="nav-title">Sidebar Options</span>
+                  </a>
+                  <ul aria-expanden=false>
+                    <li>
+                      <a href="app-side-is-sticky.html">app-side-is-sticky</a>
+                    </li>
+                    <li>
+                      <a href="app-side-is-inverse.html">app-side-is-inverse</a>
+                    </li>
+                    <li>
+                      <a href="app-side-is-mini.html">app-side-is-mini</a>
+                    </li>
+                    <li>
+                      <a href="app-side-is-hoverable.html">app-side-is-hoverable</a>
+                    </li>
+                    <li>
+                      <a href="app-side-is-inverse-is-mini.html">app-side-is-inverse-is-mini</a>
+                    </li>
+                    <li>
+                      <a href="app-side-is-inverse-is-hoverable.html">app-side-is-inverse-is-hoverable</a>
                     </li>
                   </ul>
                 </li>

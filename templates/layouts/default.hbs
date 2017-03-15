@@ -18,7 +18,7 @@
 
   <!-- BEGIN .app -->
   <div class="app">
-
+ 
     <!-- BEGIN .app-wrap -->
     <div class="app-wrap">
 
@@ -32,19 +32,21 @@
       <div class="app-container">
 
         <!-- BEGIN .app-side -->
-        <aside class="app-side side-inverse onoffcanvas is-left" id="app-side">
+        <aside class="app-side {{#if app-side-class}}{{app-side-class}}{{/if}}" id="app-side" aria-expanded=false>
 
           {{> side-heading}}
 
           <!-- BEGIN .side-content -->
-          <div class="side-content {{#if sideCntSticky}}is-sticky{{/if}}">
+          <div class="side-content {{#if side-content-sticky}}is-sticky{{/if}}">
             {{> side-nav }}
           </div>
           <!-- END: .side-content -->
 
           <!-- BEGIN .side-footer -->
           <footer class="side-footer">
-            SIDE FOOTER
+            <span class="has-icon">
+              <a class="onoffcanvas-toggler" href="#app-side" data-toggle="onoffcanvas"></a>
+            </span>
           </footer>
           <!-- END .side-footer -->
 

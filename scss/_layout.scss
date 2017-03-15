@@ -36,7 +36,7 @@ body > .ember-view {
   flex: 1 1 0%;
   flex-basis: 0%;
   @if $enable-transitions {
-    transition: all $transition-duration $transition-timing-function;
+    transition: margin $transition-duration $transition-timing-function;
   }
 }
 
@@ -49,52 +49,7 @@ body > .ember-view {
 }
 
 .app-side {
-  width: $app-side-width;
   display: flex;
   flex-flow: column nowrap;
   margin: 0;
-  z-index: $app-side-z-index;
-  background: $app-side-bg-color;
-
-  &.side-inverse {
-    background: $app-side-inverse-bg-color;
-  }
-}
-
-@media (min-width: $app-side-breakpoint) {
-  .app-side.is-open ~ .app-main {
-    margin-left: $app-side-width;
-  }
-  .side-heading {
-    // display: none;
-  }
-}
-
-.side-content {
-  margin-bottom: auto;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.app-is-fixed {
-  .app {
-    height: 100%;
-  }
-
-  .app-container,
-  .app-main {
-    overflow-y: auto;
-  }
-}
-
-.main-is-fixed {
-  .app {
-    height: 100%;
-  }
-
-  .app-container,
-  .app-main,
-  .main-content {
-    overflow-y: auto;
-  }
 }

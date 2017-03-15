@@ -80,9 +80,9 @@ body > .ember-view {
   -webkit-flex-basis: 0%;
       -ms-flex-preferred-size: 0%;
           flex-basis: 0%;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: margin 0.3s ease-out;
+  -o-transition: margin 0.3s ease-out;
+  transition: margin 0.3s ease-out;
 }
 
 .main-content {
@@ -99,7 +99,6 @@ body > .ember-view {
 }
 
 .app-side {
-  width: 15rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -110,43 +109,83 @@ body > .ember-view {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   margin: 0;
-  z-index: 1000;
-  background: #ffffff;
 }
 
-.app-side.side-inverse {
-  background: #212529;
-}
-
-@media (min-width: 992px) {
-  .app-side.is-open ~ .app-main {
-    margin-left: 15rem;
-  }
-}
-
-.side-content {
-  margin-bottom: auto;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
+/*
+* <body class="app-is-fixed">
+*
+*/
+.app-is-fixed body > .ember-view,
 .app-is-fixed .app {
   height: 100%;
 }
 
 .app-is-fixed .app-container,
+.app-is-fixed .app-side,
 .app-is-fixed .app-main {
   overflow-y: auto;
 }
 
+/*
+* <body class="main-is-fixed">
+*
+*/
+.main-is-fixed body > .ember-view,
 .main-is-fixed .app {
   height: 100%;
 }
 
 .main-is-fixed .app-container,
+.main-is-fixed .app-side,
 .main-is-fixed .app-main,
 .main-is-fixed .main-content {
   overflow-y: auto;
+}
+
+/*
+* app-side : inspired .onoffcanvas.is-left
+*
+* available classess: is-open
+*/
+.app-side {
+  width: 256px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 1000;
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out, -o-transform 0.3s ease-out;
+}
+
+/*
+* show app-side
+*/
+.app-side.is-open {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+@media (min-width: 992px) {
+  .app-side.is-open ~ .app-main {
+    margin-left: 256px;
+  }
+}
+
+/*
+* side-content
+*
+* available classess: is-sticky
+*/
+.side-content {
+  margin-bottom: auto;
 }
 
 .side-nav ul {
@@ -171,75 +210,207 @@ body > .ember-view {
   margin-top: 5px;
 }
 
+.side-nav .metismenu li:first-child {
+  padding-top: 5px;
+}
+
 .side-nav .metismenu li:last-child {
-  margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 .side-nav .metismenu > li {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 0%;
-      -ms-flex: 1 1 0%;
-          flex: 1 1 0%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
   position: relative;
 }
 
 .side-nav .metismenu a {
+  font-size: 14px;
   position: relative;
-  display: block;
-  padding: 13px 15px;
-  color: #495057;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   outline-width: 0;
-  -webkit-transition: all .3s ease-out;
-  -o-transition: all .3s ease-out;
-  transition: all .3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.side-nav .metismenu a:active, .side-nav .metismenu a:focus, .side-nav .metismenu a:hover {
+  text-decoration: none;
 }
 
 .side-nav .metismenu ul a {
-  padding: 10px 15px 10px 30px;
+  padding: .5em;
+  padding-left: 3.5rem;
 }
 
 .side-nav .metismenu ul ul a {
-  padding: 10px 15px 10px 45px;
+  padding-left: 4.5rem;
 }
 
-.side-nav .metismenu a:hover,
-.side-nav .metismenu a:focus,
-.side-nav .metismenu a:active {
-  color: #0b7285;
-  text-decoration: none;
-  background: #f8f9fa;
+/*
+* .app-side.is-mini
+*/
+@media (min-width: 992px) {
+  .app-side.is-mini {
+    width: 56px;
+    border-width: 0 !important;
+  }
+  .app-side.is-mini.is-open ~ .app-main {
+    margin-left: 56px;
+  }
+  .app-side.is-mini .metismenu li:last-child {
+    padding-bottom: 0;
+  }
+  .app-side.is-mini .metismenu > li > a.has-arrow::after {
+    border-width: 0;
+  }
+  .app-side.is-mini .nav-title {
+    display: none;
+    margin-left: 1.5rem;
+  }
+  .app-side.is-mini .metismenu ul ul a {
+    padding-left: 2.5rem;
+  }
+  .app-side.is-mini .metismenu > li > ul {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    display: none;
+  }
+  .app-side.is-mini .metismenu > li > ul > li > a {
+    padding: 0.5em 0.5em 0.5em 1.5em;
+  }
+  .app-side.is-mini .metismenu > li:hover > ul {
+    display: block;
+    min-width: 201px;
+    height: auto !important;
+  }
+  .app-side.is-mini .metismenu > li:hover > a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    min-width: 257px;
+  }
+  .app-side.is-mini .metismenu > li:hover .nav-title {
+    display: inline-block;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
+            align-self: center;
+  }
+  .app-side.is-mini .metismenu > li:hover > .has-arrow::after {
+    border-width: 1px 0 0 1px;
+    -webkit-transform: rotate(-135deg);
+         -o-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+  }
 }
 
-.side-inverse .side-nav ul {
-  background: #343a40;
-}
-
-.side-inverse .side-nav .metismenu {
-  background: #212529;
-}
-
-.side-inverse .side-nav .metismenu a {
-  color: #adb5bd;
-}
-
-.side-inverse .side-nav .metismenu a:hover,
-.side-inverse .side-nav .metismenu a:focus,
-.side-inverse .side-nav .metismenu a:active {
-  color: #0b7285;
-  background: #212529;
+/*
+* .app-side.is-hoverable
+*/
+@media (min-width: 992px) {
+  .app-side.is-hoverable {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    width: 56px;
+  }
+  .app-side.is-hoverable.is-open ~ .app-main {
+    margin-left: 56px;
+  }
+  .app-side.is-hoverable .metismenu > li > a.has-arrow::after {
+    border-width: 0;
+  }
+  .app-side.is-hoverable .metismenu > li > ul.collapse.in {
+    display: none;
+  }
+  .app-side.is-hoverable .nav-title {
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: -o-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease, -o-transform 0.3s ease;
+    -webkit-transform: translate3d(-10000%, 0, 0);
+            transform: translate3d(-10000%, 0, 0);
+  }
+  .app-side.is-hoverable:hover {
+    width: 256px;
+  }
+  .app-side.is-hoverable:hover .nav-title {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .app-side.is-hoverable:hover .metismenu > li > ul.collapse.in {
+    display: block;
+  }
+  .app-side.is-hoverable:hover .metismenu > li > a.has-arrow::after {
+    border-width: 1px 0 0 1px;
+  }
 }
 
 .onoffcanvas-toggler {
   display: inline-block !important;
+}
+
+/*
+*
+* available classess: is-inverse
+*/
+.app-side {
+  background: #ffffff;
+}
+
+.app-side.is-inverse {
+  background: #343a40;
+}
+
+/* .side-nav colors */
+.app-side .side-nav a,
+.app-side .side-nav li,
+.app-side .side-nav ul {
+  background: #ffffff;
+}
+
+.app-side .side-nav .metismenu a {
+  color: #495057;
+}
+
+.app-side .side-nav .metismenu a:active, .app-side .side-nav .metismenu a:focus, .app-side .side-nav .metismenu a:hover {
+  color: #e8590c;
+  background: #e9ecef;
+}
+
+/* .side-nav inverse colors */
+.app-side.is-inverse .side-nav a,
+.app-side.is-inverse .side-nav li,
+.app-side.is-inverse .side-nav ul {
+  background: #343a40;
+}
+
+.app-side.is-inverse .side-nav .metismenu a {
+  color: #868e96;
+}
+
+.app-side.is-inverse .side-nav .metismenu a:active, .app-side.is-inverse .side-nav .metismenu a:focus, .app-side.is-inverse .side-nav .metismenu a:hover {
+  color: #adb5bd;
+  background: #212529;
 }
 
 .is-sticky {
@@ -252,4 +423,31 @@ body > .ember-view {
 .is-sticky.is-bottom {
   top: auto;
   bottom: 0;
+}
+
+.has-icon {
+  width: 56px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 56px;
+      -ms-flex: 0 0 56px;
+          flex: 0 0 56px;
+  height: 2.5rem;
+  font-size: 1.5em;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }

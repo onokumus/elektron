@@ -8,3 +8,14 @@
     bottom: 0;
   }
 }
+
+.has-icon {
+  width: $app-side-is-mini-width;
+  flex: 0 0 $app-side-is-mini-width;
+  height: 2.5rem;
+  font-size: 1.5em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

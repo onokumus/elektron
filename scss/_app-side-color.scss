@@ -1,0 +1,51 @@
+// app-side
+/*
+*
+* available classess: is-inverse
+*/
+.app-side {
+  background: $app-side-bg-color;
+}
+
+.app-side.is-inverse {
+  background: $app-side-inverse-bg-color;
+}
+/* .side-nav colors */
+.app-side .side-nav {
+  a,
+  li,
+  ul {
+    background: $app-side-bg-color;
+  }
+
+  .metismenu a {
+    color: $side-nav-a-color;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $side-nav-a-hover-color;
+      background: $side-nav-a-hover-bg-color;
+    }
+  }
+}
+
+/* .side-nav inverse colors */
+.app-side.is-inverse .side-nav {
+  a,
+  li,
+  ul {
+    background: $app-side-inverse-bg-color;
+  }
+
+  .metismenu a {
+    color: $app-side-inverse-a-color;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $app-side-inverse-a-hover-color;
+      background: $app-side-inverse-a-hover-bg-color;
+    }
+  }
+}
