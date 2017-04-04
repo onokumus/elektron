@@ -18,13 +18,13 @@
 
   <!-- BEGIN .app -->
   <div class="app">
- 
+
     <!-- BEGIN .app-wrap -->
     <div class="app-wrap">
 
       <!-- BEGIN .app-heading -->
-      <header class="app-heading is-open {{#if headerClass}}{{headerClass}}{{/if}}">
-        <a class="onoffcanvas-toggler" href="#app-side" data-toggle="onoffcanvas"></a>
+      <header class="app-heading {{#if headerClass}}{{headerClass}}{{/if}}">
+        <a class="onoffcanvas-toggler is-animated" href="#app-side" data-toggle="onoffcanvas"></a>
       </header>
       <!-- END:  .app-heading -->
 
@@ -44,9 +44,9 @@
 
           <!-- BEGIN .side-footer -->
           <footer class="side-footer">
-            <span class="has-icon">
-              <a class="onoffcanvas-toggler" href="#app-side" data-toggle="onoffcanvas"></a>
-            </span>
+              <a class="has-icon" href="#" id="app-side-hoverable-toggler">
+                <i class="fa fa-angle-right"></i>
+              </a>
           </footer>
           <!-- END .side-footer -->
 

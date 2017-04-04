@@ -1,0 +1,79 @@
+.top-nav {
+  padding: 0 1rem;
+  &.is-open {
+    position: relative;
+  }
+}
+
+.top-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.top-nav .metismenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-nav .metismenu .has-icon {
+  height: auto;
+}
+
+.top-nav .metismenu > li {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.top-nav .metismenu a {
+  font-size: $top-nav-a-font-size;
+  position: relative;
+  display: block;
+  padding: .75rem 1rem;
+  outline-width: 0;
+  transition: all 0.3s ease-out;
+}
+
+.top-nav .metismenu ul a {
+  padding: .5rem 5rem;
+}
+
+.top-nav .metismenu a:active,
+.top-nav .metismenu a:focus,
+.top-nav .metismenu a:hover {
+  text-decoration: none;
+}
+@media (min-width: 992px) {
+  .top-nav .metismenu {
+    flex-direction: row;
+  }
+
+  .top-nav .metismenu > li {
+    flex-direction: column;
+  }
+  .top-nav .metismenu ul a {
+    padding: .625rem 1rem;
+  }
+
+  .top-nav .metismenu > li > ul {
+    position: absolute;
+    top: 100%;
+    min-width: 100%;
+    z-index: 1001;
+  }
+
+  .top-nav.is-hoverable .metismenu > li > ul {
+    height: auto !important;
+  }
+
+  .top-nav.is-hoverable .metismenu > li:hover > ul {
+    display: block;
+  }
+
+  .top-nav.is-hoverable .metismenu > li:hover > a.has-arrow:after {
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+}

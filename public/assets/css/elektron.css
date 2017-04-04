@@ -1,6 +1,6 @@
 /**
  * Elektron - An Admin Toolkit
- * @version 0.2.1
+ * @version 0.3.0
  * @license MIT
  * @link https://github.com/onokumus/elektron#readme
  */
@@ -367,6 +367,7 @@ body > .ember-view {
 
 .onoffcanvas-toggler {
   display: inline-block !important;
+  outline-width: 0;
 }
 
 /*
@@ -413,6 +414,155 @@ body > .ember-view {
   background: #212529;
 }
 
+.top-nav {
+  padding: 0 1rem;
+}
+
+.top-nav.is-open {
+  position: relative;
+}
+
+.top-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.top-nav .metismenu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.top-nav .metismenu .has-icon {
+  height: auto;
+}
+
+.top-nav .metismenu > li {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1 1 0%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.top-nav .metismenu a {
+  font-size: 14px;
+  position: relative;
+  display: block;
+  padding: .75rem 1rem;
+  outline-width: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.top-nav .metismenu ul a {
+  padding: .5rem 5rem;
+}
+
+.top-nav .metismenu a:active,
+.top-nav .metismenu a:focus,
+.top-nav .metismenu a:hover {
+  text-decoration: none;
+}
+
+@media (min-width: 992px) {
+  .top-nav .metismenu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .top-nav .metismenu > li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .top-nav .metismenu ul a {
+    padding: .625rem 1rem;
+  }
+  .top-nav .metismenu > li > ul {
+    position: absolute;
+    top: 100%;
+    min-width: 100%;
+    z-index: 1001;
+  }
+  .top-nav.is-hoverable .metismenu > li > ul {
+    height: auto !important;
+  }
+  .top-nav.is-hoverable .metismenu > li:hover > ul {
+    display: block;
+  }
+  .top-nav.is-hoverable .metismenu > li:hover > a.has-arrow:after {
+    -webkit-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+       transform: rotate(-135deg);
+  }
+}
+
+/*
+*
+* available classess: is-inverse
+*/
+.app-heading {
+  background: #ffffff;
+}
+
+.app-heading.is-inverse {
+  background: #343a40;
+}
+
+/* .top-nav colors */
+.app-heading .top-nav a,
+.app-heading .top-nav li,
+.app-heading .top-nav ul {
+  background: #ffffff;
+}
+
+.app-heading .top-nav .metismenu a {
+  color: #495057;
+}
+
+.app-heading .top-nav .metismenu a:active, .app-heading .top-nav .metismenu a:focus, .app-heading .top-nav .metismenu a:hover {
+  color: #e8590c;
+  background: #e9ecef;
+}
+
+/* .top-nav inverse colors */
+.app-heading.is-inverse .top-nav a,
+.app-heading.is-inverse .top-nav li,
+.app-heading.is-inverse .top-nav ul {
+  background: #343a40;
+}
+
+.app-heading.is-inverse .top-nav .metismenu a {
+  color: #868e96;
+}
+
+.app-heading.is-inverse .top-nav .metismenu a:active, .app-heading.is-inverse .top-nav .metismenu a:focus, .app-heading.is-inverse .top-nav .metismenu a:hover {
+  color: #adb5bd;
+  background: #212529;
+}
+
 .is-sticky {
   position: -webkit-sticky;
   position: sticky;
@@ -450,4 +600,12 @@ body > .ember-view {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.onoffcanvas {
+  visibility: hidden;
+}
+
+.onoffcanvas.is-open {
+  visibility: visible;
 }

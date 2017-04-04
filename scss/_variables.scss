@@ -20,6 +20,7 @@ $app-side-breakpoint: 992px !default;
 $app-side-z-index: 1000 !default;
 
 $side-nav-a-font-size             : 14px;
+$top-nav-a-font-size              : 14px;
 
 $app-side-bg-color                : $oc-white;
 $side-nav-a-color                 : $oc-gray-7;
@@ -30,6 +31,16 @@ $app-side-inverse-bg-color        : $oc-gray-8;
 $app-side-inverse-a-color         : $oc-gray-6;
 $app-side-inverse-a-hover-color   : $oc-gray-5;
 $app-side-inverse-a-hover-bg-color: $oc-gray-9;
+
+$app-heading-bg-color             : $oc-white;
+$top-nav-a-color                  : $oc-gray-7;
+$top-nav-a-hover-color            : $oc-orange-8;
+$top-nav-a-hover-bg-color         : $oc-gray-2;
+
+$app-heading-inverse-bg-color        : $oc-gray-8;
+$app-heading-inverse-a-color         : $oc-gray-6;
+$app-heading-inverse-a-hover-color   : $oc-gray-5;
+$app-heading-inverse-a-hover-bg-color: $oc-gray-9;
 
 
 // main-content padding

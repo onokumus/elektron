@@ -35,6 +35,6 @@ app.task('html', ['init'], function() {
   .pipe(app.dest('public'));
 });
 
-app.task('default', ['html'], function(){});
+app.task('default', ['html'], function() {});
 
 module.exports = app;

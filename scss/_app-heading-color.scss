@@ -1,0 +1,54 @@
+// app-heading
+/*
+*
+* available classess: is-inverse
+*/
+
+.app-heading {
+  background: $app-heading-bg-color;
+
+  &.is-inverse {
+    background: $app-heading-inverse-bg-color;
+  }
+}
+
+/* .top-nav colors */
+
+.app-heading .top-nav {
+  a,
+  li,
+  ul {
+    background: $app-heading-bg-color;
+  }
+
+  .metismenu a {
+    color: $top-nav-a-color;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $top-nav-a-hover-color;
+      background: $top-nav-a-hover-bg-color;
+    }
+  }
+}
+
+/* .top-nav inverse colors */
+.app-heading.is-inverse .top-nav {
+  a,
+  li,
+  ul {
+    background: $app-heading-inverse-bg-color;
+  }
+
+  .metismenu a {
+    color: $app-heading-inverse-a-color;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $app-heading-inverse-a-hover-color;
+      background: $app-heading-inverse-a-hover-bg-color;
+    }
+  }
+}

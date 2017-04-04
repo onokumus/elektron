@@ -19,25 +19,26 @@ const reload = browserSync.reload;
 const nmd = 'node_modules';
 const vnd = 'public/assets/vendor';
 
-const banner = ['/**',
-    ' * Elektron - <%= pkg.description %>',
-    ' * @version <%= pkg.version %>',
-    ' * @license <%= pkg.license %>',
-    ' * @link <%= pkg.homepage %>',
-    ' */',
-    ''
+const banner = [
+  '/**',
+  ' * Elektron - <%= pkg.description %>',
+  ' * @version <%= pkg.version %>',
+  ' * @license <%= pkg.license %>',
+  ' * @link <%= pkg.homepage %>',
+  ' */',
+  ''
 ].join('\n');
 
 const browsers = [
-      'Chrome >= 35',
-      'Firefox >= 38',
-      'Edge >= 12',
-      'Explorer >= 10',
-      'iOS >= 8',
-      'Safari >= 8',
-      'Android 2.3',
-      'Android >= 4',
-      'Opera >= 12'
+  'Chrome >= 35',
+  'Firefox >= 38',
+  'Edge >= 12',
+  'Explorer >= 10',
+  'iOS >= 8',
+  'Safari >= 8',
+  'Android 2.3',
+  'Android >= 4',
+  'Opera >= 12'
 ];
 
 gulp.task('js', () => {
@@ -46,16 +47,14 @@ gulp.task('js', () => {
   .pipe(header(banner, {pkg}))
   .pipe(gulp.dest('public/assets/js'))
   .pipe(uglify())
-  .pipe(rename({suffix: ".min"}))
+  .pipe(rename({suffix: '.min'}))
   .pipe(header(banner, {pkg}))
   .pipe(gulp.dest('public/assets/js'));
 });
 
 gulp.task('css:ltr', () => {
   return gulp.src('scss/*.scss')
-  .pipe(sass({
-    outputStyle: 'expanded'
-  }).on('error', sass.logError))
+  .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
   .pipe(postcss([
     autoprefixer({browsers: browsers}),
     flexbugs()
@@ -88,10 +87,10 @@ gulp.task('css:rtl', () => {
 gulp.task('css', ['css:ltr']);
 
 gulp.task('assets', () => {
-    gulp.src(`${nmd}/jquery/dist/**/*.*`).pipe(gulp.dest(`${vnd}/jquery`));
-    gulp.src(`${nmd}/metismenu/dist/*.*`).pipe(gulp.dest(`${vnd}/metismenu`));
-    gulp.src(`${nmd}/onoffcanvas/dist/*.*`).pipe(gulp.dest(`${vnd}/onoffcanvas`));
-    gulp.src(`${nmd}/font-awesome/{css,fonts}/*.*`).pipe(gulp.dest(`${vnd}/font-awesome`));
+  gulp.src(`${nmd}/jquery/dist/**/*.*`).pipe(gulp.dest(`${vnd}/jquery`));
+  gulp.src(`${nmd}/metismenu/dist/*.*`).pipe(gulp.dest(`${vnd}/metismenu`));
+  gulp.src(`${nmd}/onoffcanvas/dist/*.*`).pipe(gulp.dest(`${vnd}/onoffcanvas`));
+  gulp.src(`${nmd}/font-awesome/{css,fonts}/*.*`).pipe(gulp.dest(`${vnd}/font-awesome`));
 });
 
 gulp.task('pages', () => {
@@ -106,24 +105,24 @@ gulp.task('pages', () => {
  * Serves the landing page from "public" directory.
  */
 gulp.task('serve', function() {
-    browserSync.init({
-        notify: true,
-        server: {
-            baseDir: ['public']
-        }
-    });
-    watch();
+  browserSync.init({
+    notify: true,
+    server: {
+      baseDir: ['public']
+    }
+  });
+  watch();
 });
 
 /**
  * Defines the list of resources to watch for changes.
  */
 function watch() {
-    gulp.watch(['templates/**/*.hbs'], ['pages', reload]);
-    gulp.watch(['js/**/*.js'], ['js', reload]);
-    gulp.watch(['scss/**/*.scss'], ['css', reload]);
+  gulp.watch(['templates/**/*.hbs'], ['pages', reload]);
+  gulp.watch(['js/**/*.js'], ['js', reload]);
+  gulp.watch(['scss/**/*.scss'], ['css', reload]);
 }
 
-
-
-gulp.task('default', ['pages', 'assets', 'js', 'css'], () => {});
+gulp.task('default', [
+  'pages', 'assets', 'js', 'css'
+], () => {});

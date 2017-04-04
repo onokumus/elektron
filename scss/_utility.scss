@@ -19,3 +19,11 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.onoffcanvas {
+  visibility: hidden;
+
+  &.is-open {
+    visibility: visible;
+  }
+}

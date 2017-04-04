@@ -2,3 +2,4 @@ node_modules
 coverage
 
 templates/includes/ads.hbs
+public/*.gz
