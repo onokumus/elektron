@@ -24,11 +24,3 @@ _(note the version of elektron you were using when you experienced the issue (th
 ```sh
 # please paste any error messages here
 ```
-
-## assemblefile.js
-
-```js
-// Please paste contents of assemblefile.js here, or in a gist.
-// Be sure to include any additional comments that might help
-// us resolve the issue.
-```

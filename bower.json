@@ -1,7 +1,9 @@
 {
   "name": "elektron",
   "description": "An Admin Toolkit",
-  "main": "index.js",
+  "main": [
+    "dist/elektron.css"
+  ],
   "authors": [
     "Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)"
   ],

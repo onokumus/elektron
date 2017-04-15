@@ -54,4 +54,4 @@ Here are some tips for creating idiomatic issues. Taking just a little bit extra
 
 [node-glob]: https://github.com/isaacs/node-glob
 [micromatch]: https://github.com/jonschlinkert/micromatch
-[so]: http://stackoverflow.com/questions/tagged/elektronlk
+[so]: http://stackoverflow.com/questions/tagged/elektron

@@ -26,7 +26,7 @@ const banner = [
   ' * @license <%= pkg.license %>',
   ' * @link <%= pkg.homepage %>',
   ' */',
-  ''
+  '',
 ].join('\n');
 
 const browsers = [
@@ -38,53 +38,53 @@ const browsers = [
   'Safari >= 8',
   'Android 2.3',
   'Android >= 4',
-  'Opera >= 12'
+  'Opera >= 12',
 ];
 
-gulp.task('js', () => {
-  return gulp.src('js/*.js')
+gulp.task('js', () => gulp.src('js/elektron.js')
   .pipe(babel())
-  .pipe(header(banner, {pkg}))
+  .pipe(header(banner, { pkg }))
   .pipe(gulp.dest('public/assets/js'))
+  .pipe(gulp.dest('dist'))
   .pipe(uglify())
-  .pipe(rename({suffix: '.min'}))
-  .pipe(header(banner, {pkg}))
-  .pipe(gulp.dest('public/assets/js'));
-});
+  .pipe(rename({ suffix: '.min' }))
+  .pipe(header(banner, { pkg }))
+  .pipe(gulp.dest('public/assets/js'))
+  .pipe(gulp.dest('dist')));
 
-gulp.task('css:ltr', () => {
-  return gulp.src('scss/*.scss')
-  .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+gulp.task('css:ltr', () => gulp.src('scss/elektron.scss')
+  .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
   .pipe(postcss([
-    autoprefixer({browsers: browsers}),
-    flexbugs()
+    autoprefixer({ browsers }),
+    flexbugs(),
   ]))
-  .pipe(header(banner, {pkg}))
+  .pipe(header(banner, { pkg }))
   .pipe(gulp.dest('public/assets/css'))
-  .pipe(postcss([cssnano({zindex: false})]))
-  .pipe(rename({suffix: '.min'}))
-  .pipe(header(banner, {pkg}))
-  .pipe(gulp.dest('public/assets/css'));
-});
+  .pipe(gulp.dest('dist'))
+  .pipe(postcss([cssnano({ zindex: false })]))
+  .pipe(rename({ suffix: '.min' }))
+  .pipe(header(banner, { pkg }))
+  .pipe(gulp.dest('public/assets/css'))
+  .pipe(gulp.dest('dist')));
 
-gulp.task('css:rtl', () => {
-  return gulp.src('scss/*.scss')
-  .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+gulp.task('css:rtl', () => gulp.src('scss/elektron.scss')
+  .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
   .pipe(postcss([
     flexbugs(),
-    autoprefixer({browsers: browsers}),
-    rtlcss()
+    autoprefixer({ browsers }),
+    rtlcss(),
   ]))
-  .pipe(rename({suffix: '-rtl'}))
-  .pipe(header(banner, {pkg}))
+  .pipe(rename({ suffix: '-rtl' }))
+  .pipe(header(banner, { pkg }))
   .pipe(gulp.dest('public/assets/css'))
-  .pipe(postcss([cssnano({zindex: false})]))
-  .pipe(rename({suffix: '.min'}))
-  .pipe(header(banner, {pkg}))
-  .pipe(gulp.dest('public/assets/css'));
-});
+  .pipe(gulp.dest('dist'))
+  .pipe(postcss([cssnano({ zindex: false })]))
+  .pipe(rename({ suffix: '.min' }))
+  .pipe(header(banner, { pkg }))
+  .pipe(gulp.dest('public/assets/css'))
+  .pipe(gulp.dest('dist')));
 
-gulp.task('css', ['css:ltr']);
+gulp.task('css', ['css:ltr', 'css:rtl']);
 
 gulp.task('assets', () => {
   gulp.src(`${nmd}/jquery/dist/**/*.*`).pipe(gulp.dest(`${vnd}/jquery`));
@@ -94,7 +94,7 @@ gulp.task('assets', () => {
 });
 
 gulp.task('pages', () => {
-  app.build('html', function(err) {
+  app.build('html', (err) => {
     if (err) {
       console.error('ERROR', err);
     }
@@ -104,12 +104,12 @@ gulp.task('pages', () => {
 /**
  * Serves the landing page from "public" directory.
  */
-gulp.task('serve', function() {
+gulp.task('serve', () => {
   browserSync.init({
     notify: true,
     server: {
-      baseDir: ['public']
-    }
+      baseDir: ['public'],
+    },
   });
   watch();
 });
@@ -124,5 +124,5 @@ function watch() {
 }
 
 gulp.task('default', [
-  'pages', 'assets', 'js', 'css'
+  'pages', 'assets', 'js', 'css',
 ], () => {});
