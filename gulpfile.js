@@ -17,7 +17,7 @@ const browserSync = brs.create();
 const reload = browserSync.reload;
 
 const nmd = 'node_modules';
-const vnd = 'public/assets/vendor';
+const vnd = 'docs/assets/vendor';
 
 const banner = [
   '/**',
@@ -44,12 +44,12 @@ const browsers = [
 gulp.task('js', () => gulp.src('js/elektron.js')
   .pipe(babel())
   .pipe(header(banner, { pkg }))
-  .pipe(gulp.dest('public/assets/js'))
+  .pipe(gulp.dest('docs/assets/js'))
   .pipe(gulp.dest('dist'))
   .pipe(uglify())
   .pipe(rename({ suffix: '.min' }))
   .pipe(header(banner, { pkg }))
-  .pipe(gulp.dest('public/assets/js'))
+  .pipe(gulp.dest('docs/assets/js'))
   .pipe(gulp.dest('dist')));
 
 gulp.task('css:ltr', () => gulp.src('scss/elektron.scss')
@@ -59,12 +59,12 @@ gulp.task('css:ltr', () => gulp.src('scss/elektron.scss')
     flexbugs(),
   ]))
   .pipe(header(banner, { pkg }))
-  .pipe(gulp.dest('public/assets/css'))
+  .pipe(gulp.dest('docs/assets/css'))
   .pipe(gulp.dest('dist'))
   .pipe(postcss([cssnano({ zindex: false })]))
   .pipe(rename({ suffix: '.min' }))
   .pipe(header(banner, { pkg }))
-  .pipe(gulp.dest('public/assets/css'))
+  .pipe(gulp.dest('docs/assets/css'))
   .pipe(gulp.dest('dist')));
 
 gulp.task('css:rtl', () => gulp.src('scss/elektron.scss')
@@ -76,12 +76,12 @@ gulp.task('css:rtl', () => gulp.src('scss/elektron.scss')
   ]))
   .pipe(rename({ suffix: '-rtl' }))
   .pipe(header(banner, { pkg }))
-  .pipe(gulp.dest('public/assets/css'))
+  .pipe(gulp.dest('docs/assets/css'))
   .pipe(gulp.dest('dist'))
   .pipe(postcss([cssnano({ zindex: false })]))
   .pipe(rename({ suffix: '.min' }))
   .pipe(header(banner, { pkg }))
-  .pipe(gulp.dest('public/assets/css'))
+  .pipe(gulp.dest('docs/assets/css'))
   .pipe(gulp.dest('dist')));
 
 gulp.task('css', ['css:ltr', 'css:rtl']);
@@ -102,13 +102,13 @@ gulp.task('pages', () => {
 });
 
 /**
- * Serves the landing page from "public" directory.
+ * Serves the landing page from "docs" directory.
  */
 gulp.task('serve', () => {
   browserSync.init({
     notify: true,
     server: {
-      baseDir: ['public'],
+      baseDir: ['docs'],
     },
   });
   watch();

@@ -32,7 +32,7 @@ app.task('html', ['init'], function() {
     extra_liners: ['head', 'body']
   }))
   .pipe(extname())
-  .pipe(app.dest('public'));
+  .pipe(app.dest('docs'));
 });
 
 app.task('default', ['html'], function() {});
