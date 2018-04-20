@@ -1,7 +1,7 @@
 {
   "name": "elektron",
-  "version": "0.3.1",
-  "description": "An Admin Toolkit",
+  "version": "0.3.2",
+  "description": "An Admin Layout",
   "main": "index.js",
   "style": "dist/elektron.css",
   "sass": "scss/elektron.scss",
@@ -26,7 +26,7 @@
   },
   "keywords": [
     "admin",
-    "toolkit",
+    "layout",
     "elektron",
     "jquery"
   ],
