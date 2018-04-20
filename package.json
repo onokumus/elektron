@@ -28,9 +28,7 @@
     "pages": "gulp pages",
     "assets": "gulp assets",
     "build": "npm run assets & npm run pages",
-    "test": "eslint js",
-    "precommit": "npm test",
-    "prepush": "npm test"
+    "test": "eslint js"
   },
   "repository": {
     "type": "git",
