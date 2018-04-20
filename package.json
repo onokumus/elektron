@@ -25,7 +25,7 @@
     "start": "gulp serve",
     "css": "gulp css",
     "js": "gulp js",
-    "pages": "gulp pages",
+    "pages": "assemble",
     "assets": "gulp assets",
     "build": "npm run assets & npm run pages",
     "test": "eslint js"
