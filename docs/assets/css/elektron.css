@@ -1,6 +1,6 @@
 /**
- * Elektron - An Admin Toolkit
- * @version 0.3.1
+ * Elektron - An Admin Layout
+ * @version 0.3.2
  * @license MIT
  * @link https://github.com/onokumus/elektron#readme
  */
@@ -115,7 +115,7 @@ body > .ember-view {
 * <body class="app-is-fixed">
 *
 */
-.app-is-fixed body > .ember-view,
+.app-is-fixed > .ember-view,
 .app-is-fixed .app {
   height: 100%;
 }
@@ -130,7 +130,7 @@ body > .ember-view {
 * <body class="main-is-fixed">
 *
 */
-.main-is-fixed body > .ember-view,
+.main-is-fixed > .ember-view,
 .main-is-fixed .app {
   height: 100%;
 }
