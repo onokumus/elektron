@@ -3,7 +3,7 @@
   "version": "0.3.2",
   "description": "An Admin Layout",
   "main": "index.js",
-  "browser": "dist/metisMenu.js",
+  "browser": "dist/elektron.min.js",
   "unpkg": "dist/elektron.min.js",
   "jsdelivr": "dist/elektron.min.js",
   "style": "dist/elektron.css",
