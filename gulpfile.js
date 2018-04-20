@@ -29,18 +29,6 @@ const banner = [
   '',
 ].join('\n');
 
-const browsers = [
-  'Chrome >= 35',
-  'Firefox >= 38',
-  'Edge >= 12',
-  'Explorer >= 10',
-  'iOS >= 8',
-  'Safari >= 8',
-  'Android 2.3',
-  'Android >= 4',
-  'Opera >= 12',
-];
-
 gulp.task('js', () => gulp.src('js/elektron.js')
   .pipe(babel())
   .pipe(header(banner, { pkg }))
@@ -55,7 +43,7 @@ gulp.task('js', () => gulp.src('js/elektron.js')
 gulp.task('css:ltr', () => gulp.src('scss/elektron.scss')
   .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
   .pipe(postcss([
-    autoprefixer({ browsers }),
+    autoprefixer(),
     flexbugs(),
   ]))
   .pipe(header(banner, { pkg }))
@@ -71,7 +59,7 @@ gulp.task('css:rtl', () => gulp.src('scss/elektron.scss')
   .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
   .pipe(postcss([
     flexbugs(),
-    autoprefixer({ browsers }),
+    autoprefixer(),
     rtlcss(),
   ]))
   .pipe(rename({ suffix: '-rtl' }))
