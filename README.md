@@ -12,6 +12,7 @@
   * [Contributing](#contributing)
   * [Contributors](#contributors)
   * [Release history](#release-history)
+      - [[0.4.1] - 2018-04-20](#041---2018-04-20)
       - [[0.4.0] - 2018-04-30](#040---2018-04-30)
       - [[0.3.3] - 2018-04-20](#033---2018-04-20)
       - [[0.3.2] - 2018-04-20](#032---2018-04-20)
@@ -72,6 +73,10 @@ Custom labels used in this changelog:
 
 * `dependencies`: bumps dependencies
 * `housekeeping`: code re-organization, minor edits, or other changes that don't fit in one of the other categories.
+
+##### [0.4.1] - 2018-04-20
+**fixed**
+- elk-switch selector in elektron.js
 
 ##### [0.4.0] - 2018-04-30
 
@@ -150,6 +155,7 @@ Custom labels used in this changelog:
 
 [keep-a-changelog]: https://github.com/olivierlacan/keep-a-changelog
 
+[0.4.1]: https://github.com/onokumus/elektron/compare/0.4.0...0.4.1
 [0.4.0]: https://github.com/onokumus/elektron/compare/0.3.3...0.4.0
 [0.3.3]: https://github.com/onokumus/elektron/compare/0.3.2...0.3.3
 [0.3.2]: https://github.com/onokumus/elektron/compare/0.2.1...0.3.2
