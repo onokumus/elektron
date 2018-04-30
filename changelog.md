@@ -13,6 +13,10 @@ Custom labels used in this changelog:
 * `dependencies`: bumps dependencies
 * `housekeeping`: code re-organization, minor edits, or other changes that don't fit in one of the other categories.
 
+### [0.4.1] - 2018-04-20
+**fixed**
+- elk-switch selector in elektron.js
+
 ### [0.4.0] - 2018-04-30
 
 **added**
