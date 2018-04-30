@@ -1,5 +1,5 @@
 /*!
-* elektron - v0.4.0
+* elektron - v0.4.1
 * An Admin Layout
 * https://github.com/onokumus/elektron#readme
 *
@@ -31,14 +31,14 @@
     $('.elk-side').toggleClass('is-hoverable');
     $(this).children('i.fa').toggleClass('fa-angle-right fa-angle-left');
   });
-  $('.elk-side-switch [name=mini]').change(function () {
+  $('.elk-switch [name=mini]').change(function () {
     if (this.checked) {
       elkSide.addClass('is-mini');
     } else {
       elkSide.removeClass('is-mini');
     }
   });
-  $('.elk-side-switch [name=hoverable]').change(function () {
+  $('.elk-switch [name=hoverable]').change(function () {
     if (this.checked) {
       elkSide.addClass('is-hoverable');
     } else {
