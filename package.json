@@ -1,6 +1,6 @@
 {
   "name": "elektron",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "An Admin Layout",
   "main": "dist/elektron.js",
   "browser": "dist/elektron.js",
@@ -70,10 +70,10 @@
     "node": ">=4"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.44",
-    "@babel/preset-env": "^7.0.0-beta.44",
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
     "assemble": "^0.24.3",
-    "autoprefixer": "^8.3.0",
+    "autoprefixer": "^8.4.1",
     "clean-css-cli": "^4.1.11",
     "cssnano": "^4.0.0-rc.2",
     "eslint": "^4.19.1",
@@ -82,21 +82,21 @@
     "gulp-extname": "^0.2.2",
     "gulp-prettify": "^0.5.0",
     "handlebars-helpers": "^0.10.0",
+    "helper-changelog": "^0.3.0",
     "helper-markdown": "^1.0.0",
     "helper-md": "^0.2.2",
-    "node-sass": "^4.8.3",
+    "node-sass": "^4.9.0",
     "nodemon": "^1.17.3",
     "npm-run-all": "^4.1.2",
     "postcss-cli": "^5.0.0",
     "postcss-header": "^1.0.0",
-    "rollup": "^0.58.1",
+    "rollup": "^0.58.2",
     "rollup-plugin-babel": "^4.0.0-beta.2",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rtlcss": "^2.2.1",
-    "uglify-js": "^3.3.21"
+    "uglify-js": "^3.3.23"
   },
   "peerDependencies": {
-    "jquery": "1.9.1 - 3",
     "font-awesome": "^4.7.0",
     "metismenu": "^2.7.0",
     "onoffcanvas": "^1.1.2"
@@ -128,5 +128,8 @@
       "helper-changelog",
       "keep-a-changelog"
     ]
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
   }
 }
