@@ -20,7 +20,7 @@ $('#elk-side-hoverable-toggler').on('click', function () {
   $(this).children('i.fa').toggleClass('fa-angle-right fa-angle-left');
 });
 
-$('.elk-side-switch [name=mini]').change(function () {
+$('.elk-switch [name=mini]').change(function () {
   if (this.checked) {
     elkSide.addClass('is-mini');
   } else {
@@ -28,7 +28,7 @@ $('.elk-side-switch [name=mini]').change(function () {
   }
 });
 
-$('.elk-side-switch [name=hoverable]').change(function () {
+$('.elk-switch [name=hoverable]').change(function () {
   if (this.checked) {
     elkSide.addClass('is-hoverable');
   } else {
