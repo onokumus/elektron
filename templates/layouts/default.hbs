@@ -1,103 +1,77 @@
-<!doctype html>
-<html lang="en">
+---
+layout: base
+---
+{{#if noHeader}}
+{{else}}
+<!-- BEGIN .elk-header -->
+<header class="elk-header {{#if headerClass}}{{headerClass}}{{/if}}">
+  <a class="onoffcanvas-toggler is-animated" href="#elk-side" data-toggle="onoffcanvas"></a>
+</header>
+<!-- END:  .elk-header -->
+{{/if}}
+<!-- BEGIN .elk-container -->
+<div class="elk-container">
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- BEGIN .elk-side -->
+  <aside{{#if dark}} data-theme=dark{{/if}} class="elk-side {{#if app-side-class}}{{app-side-class}}{{/if}}" id="elk-side" aria-expanded=false>
 
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Elektron - {{title}}</title>
+    {{> elk-side-header}}
 
-  {{> head}}
+    <!-- BEGIN .elk-side-content -->
+    <div class="elk-side-content {{#if side-content-sticky}}is-sticky{{/if}}">
+      {{> elk-side-nav }}
+    </div>
+    <!-- END: .elk-side-content -->
+    
+    {{#if noFooter}}
+    {{else}}
+    {{> elk-side-footer}}
+    {{/if}}    
 
-</head>
+  </aside>
+  <!-- END: .elk-side -->
 
-<body {{#if bodyClass}}class="{{bodyClass}}"{{/if}}>
+  <!-- BEGIN .elk-main -->
+  <div class="elk-main{{#if elkMainIsFixed}} is-fixed{{/if}}">
 
-  <!-- BEGIN .app -->
-  <div class="app">
+{{#if noHeader}}
+{{else}}
+    <!-- BEGIN .elk-main-heading -->
+    <header class="elk-main-header">
+      MAIN HEADER
+    </header>
+    <!-- END: .elk-main-header -->
+{{/if}}
+    <!-- BEGIN .elk-main-content -->
+    <div class="elk-main-content">
 
-    <!-- BEGIN .app-wrap -->
-    <div class="app-wrap">
-
-      <!-- BEGIN .app-heading -->
-      <header class="app-heading {{#if headerClass}}{{headerClass}}{{/if}}">
-        <a class="onoffcanvas-toggler is-animated" href="#app-side" data-toggle="onoffcanvas"></a>
-      </header>
-      <!-- END:  .app-heading -->
-
-      <!-- BEGIN .app-container -->
-      <div class="app-container">
-
-        <!-- BEGIN .app-side -->
-        <aside class="app-side {{#if app-side-class}}{{app-side-class}}{{/if}}" id="app-side" aria-expanded=false>
-
-          {{> side-heading}}
-
-          <!-- BEGIN .side-content -->
-          <div class="side-content {{#if side-content-sticky}}is-sticky{{/if}}">
-            {{> side-nav }}
-          </div>
-          <!-- END: .side-content -->
-
-          <!-- BEGIN .side-footer -->
-          <footer class="side-footer">
-              <a class="has-icon" href="#" id="app-side-hoverable-toggler">
-                <i class="fa fa-angle-right"></i>
-              </a>
-          </footer>
-          <!-- END .side-footer -->
-
-        </aside>
-        <!-- END: .app-side -->
-
-        <!-- BEGIN .app-main -->
-        <div class="app-main">
-
-          <!-- BEGIN .main-heading -->
-          <header class="main-heading">
-            MAIN HEADING
-          </header>
-          <!-- END: .main-heading -->
-
-          <!-- BEGIN .main-content -->
-          <div class="main-content">
-
-              {% body %}
-
-          </div>
-          <!-- END: .main-content -->
-
-          <!-- BEGIN .main-footer -->
-          <footer class="main-footer">
-            main footer
-          </footer>
-          <!-- END: .main-footer -->
-
-        </div>
-        <!-- END: .app-main -->
-
-      </div>
-      <!-- END: .app-container -->
-
-      <!-- begin .app-footer -->
-      <footer class="app-footer {{#if footerClass}}{{footerClass}}{{/if}}">
-        <p>
-          {{pkg.name}} v{{pkg.version}} 2017
-        </p>
-      </footer>
-      <!-- END: .app-footer -->
+        {% body %}
 
     </div>
-    <!-- END: .app-wrap -->
+    <!-- END: .elk-main-content -->
+{{#if noFooter}}
+{{else}}
+<!-- BEGIN .elk-main-footer -->
+    <footer class="elk-main-footer">
+      MAIN FOOTER
+    </footer>
+{{/if}}
+    
+    <!-- END: .elk-main-footer -->
 
   </div>
-  <!-- END: .app -->
+  <!-- END: .elk-main -->
 
-  {{> scripts}}
+</div>
+<!-- END: .elk-container -->
 
-</body>
-
-</html>
+{{#if noFooter}}
+{{else}}
+<!-- begin .elk-footer -->
+<footer class="elk-footer {{#if footerClass}}{{footerClass}}{{/if}}">
+  <p>
+    {{pkg.name}} v{{pkg.version}} 2018
+  </p>
+</footer>
+<!-- END: .elk-footer -->
+{{/if}}

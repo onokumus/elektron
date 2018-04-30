@@ -1,18 +1,18 @@
-@import "../node_modules/open-color/open-color.scss";
-@import "variables";
-@import "custom";
+@import "open-color.scss";
+@import "elk-variables";
+@import "elk-root";
+@import "elk-custom";
 
-@import "layout";
-@import "layout-fixed";
+@import "elk-layout";
+@import "elk-layout-fixed";
 
-@import "app-side";
-@import "app-side-menu";
-@import "app-side-is-mini";
-@import "app-side-is-hoverable";
-@import "app-side-toggler";
-@import "app-side-color";
+@import "elk-side";
+@import "elk-side-menu";
+@import "elk-side-is-mini";
+@import "elk-side-is-hoverable";
+@import "elk-side-toggler";
 
-@import "app-heading-menu";
-@import "app-heading-color";
+@import "elk-header-menu";
+@import "elk-theme";
 
-@import "utility";
+@import "elk-utility";

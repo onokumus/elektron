@@ -1,17 +1,37 @@
 /* eslint-disable no-undef */
-$(() => {
-  if ($(window).width() < 992) {
-    $('#app-side').onoffcanvas('hide');
-    $('#top-nav').onoffcanvas('hide');
+/* eslint-disable func-names */
+import $ from 'jquery';
+
+const elkSide = $('.elk-side');
+if ($(window).width() < 992) {
+  elkSide.onoffcanvas('hide');
+  $('.elk-top-nav').onoffcanvas('hide');
+} else {
+  elkSide.onoffcanvas('show');
+  $('.elk-top-nav').onoffcanvas('show');
+}
+
+$('.elk-side-nav .metismenu').metisMenu();
+
+$('.elk-top-nav .metismenu').metisMenu();
+
+$('#elk-side-hoverable-toggler').on('click', function () {
+  $('.elk-side').toggleClass('is-hoverable');
+  $(this).children('i.fa').toggleClass('fa-angle-right fa-angle-left');
+});
+
+$('.elk-side-switch [name=mini]').change(function () {
+  if (this.checked) {
+    elkSide.addClass('is-mini');
   } else {
-    $('#app-side').onoffcanvas('show');
-    $('#top-nav').onoffcanvas('show');
+    elkSide.removeClass('is-mini');
   }
+});
 
-  $('.side-nav .metismenu').metisMenu({ toggle: true });
-
-  $('#app-side-hoverable-toggler').on('click', () => {
-    $('.app-side').toggleClass('is-hoverable');
-    $(this).children('i.fa').toggleClass('fa-angle-right fa-angle-left');
-  });
+$('.elk-side-switch [name=hoverable]').change(function () {
+  if (this.checked) {
+    elkSide.addClass('is-hoverable');
+  } else {
+    elkSide.removeClass('is-hoverable');
+  }
 });

@@ -4,7 +4,11 @@ title: Dashboard
 
 
 <h1>Elektron: <small>{{pkg.description}}</small></h1>
-
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/onokumus" data-size="large" data-show-count="true" aria-label="Follow @onokumus on GitHub">Follow @onokumus</a><!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/onokumus/elektron" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star onokumus/elektron on GitHub">Star</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/onokumus/elektron/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download onokumus/elektron on GitHub">Download</a>
 {{#markdown}}
 ## Install
 Install with [npm](https://www.npmjs.com/):
@@ -12,10 +16,10 @@ Install with [npm](https://www.npmjs.com/):
 ```sh
 $ npm install --save elektron
 ```
-Install with [bower](https://bower.io/)
+Install with [yarn](https://yarnpkg.com/)
 
 ```sh
-$ bower install elektron --save
+$ yarn add elektron
 ```
 {{/markdown}}
 
@@ -26,8 +30,7 @@ $ bower install elektron --save
 
 <h2>HTML Structure</h2>
 <p>
-  <code>.app</code> class should be added to div element inside the body tag. If you will
-   use the Elektron with <a href="http://emberjs.com/" target="_blank">ember.js</a>, you don't need this element.
+  <code>.elk-app</code> class should be added to div element inside the body tag.
  </p>
 
 <h3>Basic Template</h3>
@@ -39,27 +42,39 @@ $ bower install elektron --save
 
 {{md "document.md"}}
 
+{{#markdown}}
+```html
+  <div class="elk-app is-fixed">
+    <div class="elk-main is-fixed">
+      ...
+    </div>
+  </div>
+```
+{{/markdown}}
+
 <h4>sticky top bar</h4>
 {{#markdown}}
 ```html
-<!-- BEGIN .app-heading -->
-<header class="app-heading is-sticky">
-    <a href="#app-side" data-toggle="onoffcanvas" class="onoffcanvas-toggler" aria-expanded=false></a>
-    <span>APP HEADING</span>
+<!-- BEGIN .elk-header -->
+<header class="elk-header is-sticky">
+    <a href="#elk-side" data-toggle="onoffcanvas" class="onoffcanvas-toggler" aria-expanded=false></a>
+    <span>APP HEADER</span>
 </header>
-<!-- END:  .app-heading -->
+<!-- END:  .elk-header -->
 ```
 {{/markdown}}
 
 <h4>sticky bottom bar</h4>
 {{#markdown}}
 ```html
-<!-- begin .app-footer -->
-<footer class="app-footer is-sticky is-bottom">
+<!-- begin .elk-footer -->
+<footer class="elk-footer is-sticky is-bottom">
     <p>
-      {{pkg.name}} v{{pkg.version}} 2017
+      elektron v1.0.0 2018
     </p>
 </footer>
-<!-- END: .app-footer -->
+<!-- END: .elk-footer -->
 ```
 {{/markdown}}
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>

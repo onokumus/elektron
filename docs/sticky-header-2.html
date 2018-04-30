@@ -10,34 +10,33 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>Elektron - sticky header 2</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/vendor/metismenu/metisMenu.min.css">
-  <link rel="stylesheet" href="assets/vendor/onoffcanvas/onoffcanvas.min.css">
-  <link rel="stylesheet" href="assets/css/elektron.css">
-  <link rel="stylesheet" href="assets/css/elektron-demo.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu/dist/metisMenu.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onoffcanvas@1.1.2/dist/onoffcanvas.min.css">
+  <link rel="stylesheet" href="../dist/elektron.min.css">
+  <link rel="stylesheet" href="assets/css/elektron-demo.min.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" />
 
 </head>
 
 <body>
 
-  <!-- BEGIN .app -->
-  <div class="app">
+  <!-- BEGIN .elk-app -->
+  <div class="elk-app">
 
-    <!-- BEGIN .app-wrap -->
-    <div class="app-wrap">
-
+    <!-- BEGIN .elk-wrap -->
+    <div class="elk-wrap">
       <!-- BEGIN .app-heading -->
-      <header class="app-heading">
-        <a class="onoffcanvas-toggler is-animated" href="#top-nav" data-toggle="onoffcanvas"></a>
+      <header class="elk-header">
+        <a class="onoffcanvas-toggler is-animated" href="#elk-top-nav" data-toggle="onoffcanvas"></a>
       </header>
       <!-- END:  .app-heading -->
 
       <!-- BEGIN .app-heading -->
-      <header class="app-heading is-sticky is-inverse">
-        <nav class="top-nav is-hoverable onoffcanvas is-top" id="top-nav">
+      <header data-theme=dark class="elk-header is-sticky">
+        <nav class="elk-top-nav is-hoverable onoffcanvas" id="elk-top-nav">
           <ul class="metismenu" id="menu1">
             <li>
               <a class="" href="index.html">
@@ -178,19 +177,19 @@
       <!-- END:  .app-heading -->
 
       <!-- BEGIN .app-container -->
-      <div class="app-container">
+      <div class="elk-container">
 
         <!-- BEGIN .app-main -->
-        <div class="app-main">
+        <div class="elk-main">
 
           <!-- BEGIN .main-heading -->
-          <header class="main-heading">
+          <header class="elk-main-header">
             MAIN HEADING
           </header>
           <!-- END: .main-heading -->
 
           <!-- BEGIN .main-content -->
-          <div class="main-content">
+          <div class="elk-main-content">
 
             <h4>Code</h4>
             <p>Supported browser :
@@ -198,15 +197,15 @@
             </p>
             <h5>HTML</h5>
             <p>
-              <pre><code class="language-html">&lt;!-- BEGIN .app-heading --&gt;
-&lt;header class=&quot;app-heading is-sticky is-inverse&quot;&gt;
+              <pre><code class="language-html">&lt;!-- BEGIN .app-header --&gt;
+&lt;header class=&quot;app-header is-sticky is-inverse&quot;&gt;
   &lt;a href=&quot;#app-side&quot;
   data-toggle=&quot;onoffcanvas&quot;
   class=&quot;onoffcanvas-toggler&quot;
   aria-expanded=false&gt;&lt;/a&gt;
-  &lt;span&gt;APP HEADING&lt;/span&gt;
+  &lt;span&gt;APP HEADER&lt;/span&gt;
 &lt;/header&gt;
-&lt;!-- END:  .app-heading --&gt;
+&lt;!-- END:  .app-header --&gt;
 </code></pre>
             </p>
             <p>lorem</p>
@@ -289,34 +288,26 @@
       <!-- END: .app-container -->
 
       <!-- begin .app-footer -->
-      <footer class="app-footer ">
+      <footer class="elk-footer ">
         <p>
-          elektron v0.1.0 2017
+          elektron v0.3.3 2018
         </p>
       </footer>
       <!-- END: .app-footer -->
 
     </div>
-    <!-- END: .app-wrap -->
+    <!-- END: .elk-wrap -->
 
   </div>
-  <!-- END: .app -->
+  <!-- END: .elk-app -->
 
-  <!-- jQuery first, then Tether, then other JS. -->
-  <script src="assets/vendor/jquery/jquery.min.js" charset="utf-8"></script>
-  <script src="assets/vendor/metismenu/metisMenu.min.js" charset="utf-8"></script>
-  <script src="assets/vendor/onoffcanvas/onoffcanvas.min.js" charset="utf-8"></script>
-  <script src="assets/js/elektron.js" charset="utf-8"></script>
+  <!-- jQuery first, then other JS. -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metismenu" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/onoffcanvas@1.1.2/dist/onoffcanvas.min.js" charset="utf-8"></script>
+  <script src="../dist/elektron.min.js" charset="utf-8"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
-
-  <script>
-    $(function()
-    {
-      $('#menu1').metisMenu();
-    });
-
-  </script>
 
 </body>
 

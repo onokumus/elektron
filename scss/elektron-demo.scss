@@ -1,6 +1,6 @@
 @import "open-color";
-@import "variables";
-@import "custom";
+@import "elk-variables";
+@import "elk-custom";
 
 html {
   box-sizing: border-box;
@@ -62,6 +62,7 @@ a:hover {
 
 table {
     width: 100%;
+    background: #fff;
 }
 table,
 th,

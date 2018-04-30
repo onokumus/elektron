@@ -10,49 +10,41 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>Elektron - app-is-fixed</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/vendor/metismenu/metisMenu.min.css">
-  <link rel="stylesheet" href="assets/vendor/onoffcanvas/onoffcanvas.min.css">
-  <link rel="stylesheet" href="assets/css/elektron.css">
-  <link rel="stylesheet" href="assets/css/elektron-demo.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu/dist/metisMenu.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onoffcanvas@1.1.2/dist/onoffcanvas.min.css">
+  <link rel="stylesheet" href="../dist/elektron.min.css">
+  <link rel="stylesheet" href="assets/css/elektron-demo.min.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" />
 
 </head>
 
-<body class="app-is-fixed">
+<body>
 
-  <!-- BEGIN .app -->
-  <div class="app">
+  <!-- BEGIN .elk-app -->
+  <div class="elk-app is-fixed">
 
-    <!-- BEGIN .app-wrap -->
-    <div class="app-wrap">
-
-      <!-- BEGIN .app-heading -->
-      <header class="app-heading ">
-        <a class="onoffcanvas-toggler is-animated" href="#app-side" data-toggle="onoffcanvas"></a>
+    <!-- BEGIN .elk-wrap -->
+    <div class="elk-wrap">
+      <!-- BEGIN .elk-header -->
+      <header class="elk-header ">
+        <a class="onoffcanvas-toggler is-animated" href="#elk-side" data-toggle="onoffcanvas"></a>
       </header>
-      <!-- END:  .app-heading -->
+      <!-- END:  .elk-header -->
+      <!-- BEGIN .elk-container -->
+      <div class="elk-container">
 
-      <!-- BEGIN .app-container -->
-      <div class="app-container">
+        <!-- BEGIN .elk-side -->
+        <aside class="elk-side " id="elk-side" aria-expanded=false>
 
-        <!-- BEGIN .app-side -->
-        <aside class="app-side " id="app-side" aria-expanded=false>
+          <!-- BEGIN .elk-side-content -->
+          <div class="elk-side-content ">
+            <!-- BEGIN .elk-side-nav -->
+            <nav class="elk-side-nav">
 
-          <!-- BEGIN .side-heading -->
-          <div class="side-heading">
-            SH
-          </div>
-          <!-- END: .side-heading -->
-
-          <!-- BEGIN .side-content -->
-          <div class="side-content ">
-            <!-- BEGIN .side-nav -->
-            <nav class="side-nav">
-
-              <!-- BEGIN: side-nav-content -->
+              <!-- BEGIN: elk-side-nav-content -->
               <ul class="metismenu" id="metismenu">
 
                 <li>
@@ -62,23 +54,6 @@
                     </span>
                     <span class="nav-title">Dashboard</span>
                   </a>
-                </li>
-
-                <li>
-                  <a href="#" class="has-arrow" aria-expanded=false>
-                    <span class="has-icon">
-                      <i class="fa fa-html5"></i>
-                    </span>
-                    <span class="nav-title">Examples</span>
-                  </a>
-                  <ul aria-expanded=false>
-                    <li>
-                      <a href="bs3.html">Bootstrap 3</a>
-                    </li>
-                    <li>
-                      <a href="bs4.html">Bootstrap 4</a>
-                    </li>
-                  </ul>
                 </li>
 
                 <li>
@@ -121,26 +96,26 @@
                     <span class="has-icon">
                       <i class="fa fa-list"></i>
                     </span>
-                    <span class="nav-title">app-side</span>
+                    <span class="nav-title">elk-side</span>
                   </a>
                   <ul aria-expanded=false>
                     <li>
-                      <a href="app-side-is-inverse.html">app-side-is-inverse</a>
+                      <a href="app-side-is-inverse.html">Dark Theme</a>
                     </li>
                     <li>
                       <a href="#" class="has-arrow" aria-expanded=false>is-fixed</a>
                       <ul aria-expanded=false>
                         <li>
-                          <a href="app-side-is-fixed.html">default</a>
+                          <a href="app-side-is-fixed.html">Light</a>
                         </li>
                         <li>
-                          <a href="app-side-is-fixed-is-inverse.html">inverse</a>
+                          <a href="app-side-is-fixed-is-inverse.html">Dark</a>
                         </li>
                         <li>
-                          <a href="app-side-is-fixed-is-hoverable.html">hoverable default</a>
+                          <a href="app-side-is-fixed-is-hoverable.html">Hoverable Light</a>
                         </li>
                         <li>
-                          <a href="app-side-is-fixed-is-hoverable-is-inverse.html">hoverable inverse</a>
+                          <a href="app-side-is-fixed-is-hoverable-is-inverse.html">Hoverable Dark</a>
                         </li>
                       </ul>
                     </li>
@@ -149,10 +124,10 @@
                       <a href="#" class="has-arrow" aria-expanded=false>is-sticky</a>
                       <ul aria-expanded=false>
                         <li>
-                          <a href="app-side-is-sticky.html">light</a>
+                          <a href="app-side-is-sticky.html">Light</a>
                         </li>
                         <li>
-                          <a href="app-side-is-sticky-is-inverse.html">inverse</a>
+                          <a href="app-side-is-sticky-is-inverse.html">Dark</a>
                         </li>
                         <li>
                           <a href="app-side-is-sticky-is-mini.html">mini</a>
@@ -167,10 +142,10 @@
                       <a href="#" class="has-arrow" aria-expanded=false>is-mini</a>
                       <ul aria-expanded=false>
                         <li>
-                          <a href="app-side-is-mini.html">light</a>
+                          <a href="app-side-is-mini.html">Light</a>
                         </li>
                         <li>
-                          <a href="app-side-is-inverse-is-mini.html">inverse</a>
+                          <a href="app-side-is-inverse-is-mini.html">Dark</a>
                         </li>
                       </ul>
                     </li>
@@ -179,10 +154,10 @@
                       <a href="#" class="has-arrow" aria-expanded=false>is-hoverable</a>
                       <ul aria-expanded=false>
                         <li>
-                          <a href="app-side-is-hoverable.html">light</a>
+                          <a href="app-side-is-hoverable.html">Light</a>
                         </li>
                         <li>
-                          <a href="app-side-is-inverse-is-hoverable.html">inverse</a>
+                          <a href="app-side-is-inverse-is-hoverable.html">Dark</a>
                         </li>
                       </ul>
                     </li>
@@ -190,42 +165,39 @@
                 </li>
 
               </ul>
-              <!-- END: side-nav-content -->
+              <!-- END: elk-side-nav-content -->
             </nav>
-            <!-- END: .side-nav -->
+            <!-- END: .elk-side-nav -->
           </div>
-          <!-- END: .side-content -->
+          <!-- END: .elk-side-content -->
 
-          <!-- BEGIN .side-footer -->
-          <footer class="side-footer">
-            <a class="has-icon" href="#" id="app-side-hoverable-toggler">
-              <i class="fa fa-angle-right"></i>
-            </a>
+          <!-- BEGIN .elk-side-footer -->
+          <footer class="elk-side-footer">
+            ESF
           </footer>
-          <!-- END .side-footer -->
+          <!-- END .elk-side-footer -->
 
         </aside>
-        <!-- END: .app-side -->
+        <!-- END: .elk-side -->
 
-        <!-- BEGIN .app-main -->
-        <div class="app-main">
+        <!-- BEGIN .elk-main -->
+        <div class="elk-main">
 
-          <!-- BEGIN .main-heading -->
-          <header class="main-heading">
-            MAIN HEADING
+          <!-- BEGIN .elk-main-heading -->
+          <header class="elk-main-header">
+            MAIN HEADER
           </header>
-          <!-- END: .main-heading -->
-
-          <!-- BEGIN .main-content -->
-          <div class="main-content">
+          <!-- END: .elk-main-header -->
+          <!-- BEGIN .elk-main-content -->
+          <div class="elk-main-content">
 
             <h4>Code</h4>
 
             <p>
               <pre><code class="language-html">
-&lt;body class=&quot;app-is-fixed&quot;&gt;
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"elk-app is-fixed"</span>&gt;</span>
   ...
-&lt;/body&gt;
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
             </p>
 
@@ -286,39 +258,38 @@
             <p>lorem</p>
 
           </div>
-          <!-- END: .main-content -->
-
-          <!-- BEGIN .main-footer -->
-          <footer class="main-footer">
-            main footer
+          <!-- END: .elk-main-content -->
+          <!-- BEGIN .elk-main-footer -->
+          <footer class="elk-main-footer">
+            MAIN FOOTER
           </footer>
-          <!-- END: .main-footer -->
+
+          <!-- END: .elk-main-footer -->
 
         </div>
-        <!-- END: .app-main -->
+        <!-- END: .elk-main -->
 
       </div>
-      <!-- END: .app-container -->
+      <!-- END: .elk-container -->
 
-      <!-- begin .app-footer -->
-      <footer class="app-footer ">
+      <!-- begin .elk-footer -->
+      <footer class="elk-footer ">
         <p>
-          elektron v0.3.1 2017
+          elektron v0.4.0 2018
         </p>
       </footer>
-      <!-- END: .app-footer -->
-
+      <!-- END: .elk-footer -->
     </div>
-    <!-- END: .app-wrap -->
+    <!-- END: .elk-wrap -->
 
   </div>
-  <!-- END: .app -->
+  <!-- END: .elk-app -->
 
-  <!-- jQuery first, then Tether, then other JS. -->
-  <script src="assets/vendor/jquery/jquery.min.js" charset="utf-8"></script>
-  <script src="assets/vendor/metismenu/metisMenu.min.js" charset="utf-8"></script>
-  <script src="assets/vendor/onoffcanvas/onoffcanvas.min.js" charset="utf-8"></script>
-  <script src="assets/js/elektron.js" charset="utf-8"></script>
+  <!-- jQuery first, then other JS. -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metismenu" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/onoffcanvas@1.1.2/dist/onoffcanvas.min.js" charset="utf-8"></script>
+  <script src="../dist/elektron.min.js" charset="utf-8"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
 

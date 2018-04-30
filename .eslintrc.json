@@ -1,9 +1,3 @@
 {
-  "extends": "airbnb",
-  "plugins": [
-    "compat"
-  ],
-  "rules": {
-    "compat/compat": 2
-  }
+  "extends": "airbnb-base"
 }

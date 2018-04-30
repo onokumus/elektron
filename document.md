@@ -1,23 +1,23 @@
 ### Class structure
 | class | required                                              | multiple |
 |-------|-------------------------------------------------------|----------|
-| .app  | not required for ember.js project, otherwise required | no       |
-| .app-wrap | required                                            | no       |
-| .app-heading | no                                    | yes      |
-| .app-container | required | no |
-| .app-footer | no | yes |
-| .app-side | no | yes|
-| .side-content | no (required, if .app-side ) | no|
-| .side-footer | no | no |
-| .app-main | required | no |
-| .main-heading | no | yes |
-| .main-content | required | no |
-| .main-footer | no | yes |
+| .elk-app  | not required for ember.js project, otherwise required | no       |
+| .elk-wrap | required                                            | no       |
+| .elk-header | no                                    | yes      |
+| .elk-container | required | no |
+| .elk-footer | no | yes |
+| .elk-side | no | yes|
+| .elk-side-content | no (required, if .app-side ) | no|
+| .elk-side-footer | no | no |
+| .elk-main | required | no |
+| .elk-main-header | no | yes |
+| .elk-main-content | required | no |
+| .elk-main-footer | no | yes |
 
 ### Fixed Page Options
 
-#### app fixed
-Elektron is fluid by default. Can be used as fixed on will. All that's needed to be done is to add `.app-is-fixed` class to `body` element.
+#### elk-app fixed
+Elektron is fluid by default. Can be used as fixed on will. All that's needed to be done is to add `.is-fixed` class to `elk-app` element.
 
-#### main fixed
-All that's needed to be done is to add `.main-is-fixed` class to `body` element.
+#### elk-main fixed
+All that's needed to be done is to add `.is-fixed` class to `elk-app` and `is-fixed` class to `elh-main` elements. For example :

@@ -1,9 +1,9 @@
 {
   "name": "elektron",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "An Admin Layout",
-  "main": "index.js",
-  "browser": "dist/elektron.min.js",
+  "main": "dist/elektron.js",
+  "browser": "dist/elektron.js",
   "unpkg": "dist/elektron.min.js",
   "jsdelivr": "dist/elektron.min.js",
   "style": "dist/elektron.css",
@@ -21,14 +21,25 @@
     "Opera >= 30"
   ],
   "scripts": {
-    "clean": "rimraf dist",
-    "start": "gulp serve",
-    "css": "gulp css",
-    "js": "gulp js",
+    "css": "npm-run-all --parallel css-compile* --sequential css-prefix* css-minify*",
+    "css-main": "npm-run-all --parallel css-compile --sequential css-prefix css-minify",
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/elektron.scss dist/elektron.css",
+    "css-compile-docs": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/elektron-demo.scss docs/assets/css/elektron-demo.css",
+    "css-prefix": "postcss --config postcss.config.js --replace \"dist/*.css\" \"!dist/*.min.css\"",
+    "css-prefix-docs": "postcss --config postcss.config.js --replace \"docs/assets/css/*.css\" \"!docs/assets/css/*.min.css\"",
+    "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output dist/elektron.min.css dist/elektron.css",
+    "css-minify-odcs": "cleancss --level 1 --source-map --source-map-inline-sources --output docs/assets/css/elektron-demo.min.css docs/assets/css/elektron-demo.css",
+    "js": "npm-run-all js-lint js-compile js-minify",
+    "js-lint": "eslint js",
+    "js-compile": "rollup --config rollup.config.js",
+    "js-minify": "uglifyjs --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/elektron.js.map,includeSources,url=elektron.min.js.map\" --output dist/elektron.min.js dist/elektron.js",
     "pages": "assemble",
-    "assets": "gulp assets",
-    "build": "npm run assets & npm run pages",
-    "test": "eslint js"
+    "build": "npm-run-all --parallel pages css js",
+    "dist": "npm-run-all --parallel css js",
+    "watch": "npm-run-all --parallel watch-css watch-js watch-pages",
+    "watch-pages": "nodemon --ignore docs/ --ignore js --ignore dist/ --ignore scss/ -e hbs -x \"npm run pages\"",
+    "watch-css": "nodemon --ignore docs/ --ignore js --ignore dist/ -e scss -x \"npm run css\"",
+    "watch-js": "nodemon --ignore scss/ --ignore scss --ignore dist/ -e js -x \"npm run js\""
   },
   "repository": {
     "type": "git",
@@ -50,10 +61,6 @@
   },
   "homepage": "https://github.com/onokumus/elektron#readme",
   "files": [
-    "index.js",
-    "assets.js",
-    "assemblefile.js",
-    "templates/",
     "dist/",
     "js/",
     "scss/",
@@ -67,9 +74,11 @@
     "@babel/preset-env": "^7.0.0-beta.44",
     "assemble": "^0.24.3",
     "autoprefixer": "^8.3.0",
+    "clean-css-cli": "^4.1.11",
     "cssnano": "^4.0.0-rc.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
     "gulp-extname": "^0.2.2",
     "gulp-prettify": "^0.5.0",
     "handlebars-helpers": "^0.10.0",
@@ -78,7 +87,6 @@
     "node-sass": "^4.8.3",
     "nodemon": "^1.17.3",
     "npm-run-all": "^4.1.2",
-    "open-color": "^1.6.3",
     "postcss-cli": "^5.0.0",
     "postcss-header": "^1.0.0",
     "rollup": "^0.58.1",
@@ -87,7 +95,8 @@
     "rtlcss": "^2.2.1",
     "uglify-js": "^3.3.21"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "jquery": "1.9.1 - 3",
     "font-awesome": "^4.7.0",
     "metismenu": "^2.7.0",
     "onoffcanvas": "^1.1.2"

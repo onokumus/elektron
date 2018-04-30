@@ -1,5 +1,5 @@
 ```html
-<!doctype html>
+ <!doctype html>
 <html lang="en">
 
 <head>
@@ -8,99 +8,126 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Title</title>
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Admin</title>
 
-  <link rel="stylesheet" href="assets/vendor/metismenu/metisMenu.min.css">
-  <link rel="stylesheet" href="assets/vendor/onoffcanvas/onoffcanvas.min.css">
-  <link rel="stylesheet" href="assets/css/elektron.css">
-  <link rel="stylesheet" href="assets/css/elektron-demo.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu/dist/metisMenu.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onoffcanvas@1.1.2/dist/onoffcanvas.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/elektron/dist/elektron.min.css">
 
 </head>
 
 <body>
 
-    <!-- not required for ember.js -->
-    <!-- BEGIN .app -->
-    <div class="app">
+  <!-- BEGIN .elk-app -->
+  <div class="elk-app">
 
-      <!-- BEGIN .app-wrap -->
-      <div class="app-wrap">
+    <!-- BEGIN .elk-wrap -->
+    <div class="elk-wrap">
+      <!-- BEGIN .elk-header -->
+      <header class="elk-header ">
+        <a class="onoffcanvas-toggler is-animated" href="#elk-side" data-toggle="onoffcanvas"></a>
+      </header>
+      <!-- END:  .elk-header -->
+      <!-- BEGIN .elk-container -->
+      <div class="elk-container">
 
-        <!-- BEGIN .app-heading -->
-        <header class="app-heading">
-          <a href="#app-side" data-toggle="onoffcanvas">
-            MENU
-          </a>
-        </header>
-        <!-- END:  .app-heading -->
+        <!-- BEGIN .elk-side -->
+        <aside class="elk-side " id="elk-side" aria-expanded=false>
 
-        <!-- BEGIN .app-container -->
-        <div class="app-container">
+          <!-- BEGIN .elk-side-content -->
+          <div class="elk-side-content ">
+            <!-- BEGIN .elk-side-nav -->
+            <nav class="elk-side-nav">
 
-          <!-- BEGIN .app-side -->
-          <aside class="app-side" id="app-side">
+              <!-- BEGIN: elk-side-nav-content -->
+              <ul class="metismenu" id="metismenu">
 
-            <!-- BEGIN .side-content -->
-            <div class="side-content">
-              ...
-            </div>
-            <!-- END: .side-content -->
+                <li>
+                  <a class="active" href="index.html">
+                    <span class="has-icon">
+                      <i class="fa fa-cogs"></i>
+                    </span>
+                    <span class="nav-title">Dashboard</span>
+                  </a>
+                </li>
 
-            <!-- BEGIN .side-footer -->
-            <footer class="side-footer">
-              ...
-            </footer>
-            <!-- END .side-footer -->
+                <li>
+                  <a href="#" class="has-arrow" aria-expanded=false>
+                    <span class="has-icon">
+                      <i class="fa fa-pagelines"></i>
+                    </span>
+                    <span class="nav-title">Menu</span>
+                  </a>
+                  <ul aria-expanded=false>
+                    <li>
+                      <a href="#">Menu Item</a>
+                    </li>
+                  </ul>
+                </li>
 
-          </aside>
-          <!-- END: .app-side -->
+              </ul>
+              <!-- END: elk-side-nav-content -->
+            </nav>
+            <!-- END: .elk-side-nav -->
+          </div>
+          <!-- END: .elk-side-content -->
+          <!-- BEGIN .elk-side-footer -->
+          <footer class="elk-side-footer">
+            ...
+          </footer>
+          <!-- END .elk-side-footer -->
 
-          <!-- BEGIN .app-main -->
-          <div class="app-main">
+        </aside>
+        <!-- END: .elk-side -->
 
-            <!-- BEGIN .main-heading -->
-            <header class="main-heading">
-              ...
-            </header>
-            <!-- END: .main-heading -->
+        <!-- BEGIN .elk-main -->
+        <div class="elk-main">
 
-            <!-- BEGIN .main-content -->
-            <div class="main-content">
+          <!-- BEGIN .elk-main-heading -->
+          <header class="elk-main-header">
+            ...
+          </header>
+          <!-- END: .elk-main-header -->
+          <!-- BEGIN .elk-main-content -->
+          <div class="elk-main-content">
 
-                <!-- Content is here -->
-
-            </div>
-            <!-- END: .main-content -->
-
-            <!-- BEGIN .main-footer -->
-            <footer class="main-footer">
-              ...
-            </footer>
-            <!-- END: .main-footer -->
+            ...
 
           </div>
-          <!-- END: .app-main -->
+          <!-- END: .elk-main-content -->
+          <!-- BEGIN .elk-main-footer -->
+          <footer class="elk-main-footer">
+            ...
+          </footer>
+
+          <!-- END: .elk-main-footer -->
 
         </div>
-        <!-- END: .app-container -->
-
-        <!-- begin .app-footer -->
-        <footer class="app-footer">
-
-        </footer>
-        <!-- END: .app-footer -->
+        <!-- END: .elk-main -->
 
       </div>
-      <!-- END: .app-wrap -->
+      <!-- END: .elk-container -->
 
+      <!-- begin .elk-footer -->
+      <footer class="elk-footer ">
+        ...
+      </footer>
+      <!-- END: .elk-footer -->
     </div>
-    <!-- END: .app -->
+    <!-- END: .elk-wrap -->
 
-    <!-- jQuery first, then other JS. -->
-    <script src="assets/vendor/jquery/jquery.min.js" charset="utf-8"></script>
-    <script src="assets/vendor/metismenu/metisMenu.min.js" charset="utf-8"></script>
-    <script src="assets/vendor/onoffcanvas/onoffcanvas.min.js" charset="utf-8"></script>
-    <script src="assets/js/elektron.js" charset="utf-8"></script>
-  </body>
+  </div>
+  <!-- END: .elk-app -->
+
+  <!-- jQuery first, then other JS. -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metismenu" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/onoffcanvas@1.1.2/dist/onoffcanvas.min.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/elektron" charset="utf-8"></script>
+</body>
+
 </html>
 ```
