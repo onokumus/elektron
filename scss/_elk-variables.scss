@@ -1,0 +1,61 @@
+// Variables
+//
+// Copy settings from this file into the provided `_custom.scss` to override
+// the Elektron defaults without modifying key, versioned files.
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-transitions: true !default;
+
+// elk-side width
+$elk-side-width: 256px !default;
+$elk-side-is-mini-width: 56px !default;
+
+// breakpoint
+$elk-side-breakpoint: 992px !default;
+
+// elk-side visibility z-index
+$elk-side-z-index: 1000 !default;
+
+$side-nav-a-font-size               : .875rem;
+$top-nav-a-font-size                : $side-nav-a-font-size;
+
+$elk-side-bg-color                  : $oc-white;
+$side-nav-a-color                   : $oc-gray-7;
+$side-nav-a-hover-color             : $oc-cyan-8;
+$side-nav-a-hover-bg-color          : $oc-gray-2;
+
+$elk-side-inverse-bg-color          : $oc-gray-8;
+$elk-side-inverse-a-color           : $oc-gray-6;
+$elk-side-inverse-a-hover-color     : $oc-gray-5;
+$elk-side-inverse-a-hover-bg-color  : $oc-gray-9;
+
+$elk-header-bg-color                : $oc-white;
+$top-nav-a-color                    : $oc-gray-7;
+$top-nav-a-hover-color              : $oc-cyan-8;
+$top-nav-a-hover-bg-color           : $oc-gray-2;
+
+$elk-header-inverse-bg-color        : $oc-gray-8;
+$elk-header-inverse-a-color         : $oc-gray-6;
+$elk-header-inverse-a-hover-color   : $oc-gray-5;
+$elk-header-inverse-a-hover-bg-color: $oc-gray-9;
+
+$elk-switch-indicator-bg               : $oc-gray-2;
+$elk-switch-indicator-border           : $oc-gray-3;
+$elk-switch-indicator-before           : $oc-white;
+$elk-switch-indicator-checked-bg       : $oc-gray-2;
+
+$elk-switch-dark-indicator-bg         : $oc-gray-5;
+$elk-switch-dark-indicator-border     : $oc-gray-8;
+$elk-switch-dark-indicator-before     : $oc-white;
+$elk-switch-dark-indicator-checked-bg : $oc-gray-5;
+
+
+// main-content padding
+$main-content-padding: 1rem !default;
+
+// elk-side and elk-main transition
+$transition-duration: 0.3s !default;
+$transition-timing-function: ease-out !default;

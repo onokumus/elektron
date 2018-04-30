@@ -1,0 +1,40 @@
+// elk-side
+/*
+* elk-side : inspired .onoffcanvas.is-left
+*
+* available classess: is-open
+*/
+.elk-side {
+  width: $elk-side-width;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  // margin: auto;
+  transform: translate3d(-100%, 0, 0);
+  @if $enable-transitions {
+    transition: transform $transition-duration $transition-timing-function;
+  }
+}
+/*
+* show elk-side
+*/
+.elk-side.is-open {
+  z-index: $elk-side-z-index;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (min-width: $elk-side-breakpoint) {
+  .elk-side.is-open ~ .elk-main {
+    margin-left: $elk-side-width;
+  }
+}
+
+/*
+* side-content
+*
+* available classess: is-sticky
+*/
+.elk-side-content {
+  margin-bottom: auto;
+}

@@ -1,0 +1,31 @@
+:root {
+  --elk-side-bg-color: #{$elk-side-bg-color};
+  --side-nav-a-color: #{$side-nav-a-color};
+  --side-nav-a-hover-color:  #{$side-nav-a-hover-color};
+  --side-nav-a-hover-bg-color: #{$side-nav-a-hover-bg-color};
+
+  --elk-header-bg-color: #{$elk-header-bg-color};
+  --top-nav-a-color: #{$top-nav-a-color};
+  --top-nav-a-hover-color : #{$top-nav-a-hover-color};
+  --top-nav-a-hover-bg-color: #{$top-nav-a-hover-bg-color};
+
+  --elk-switch-indicator-bg: #{$elk-switch-indicator-bg};
+  --elk-switch-indicator-border: #{$elk-switch-indicator-border};
+  --elk-switch-indicator-before: #{$elk-switch-indicator-before};
+  --elk-switch-indicator-checked-bg: #{$elk-switch-indicator-checked-bg};
+}
+
+[data-theme="dark"] {
+  --elk-side-bg-color: #{$elk-side-inverse-bg-color};
+  --side-nav-a-color: #{$elk-side-inverse-a-color};
+  --side-nav-a-hover-bg-color: #{$elk-side-inverse-a-hover-bg-color};
+
+  --elk-header-bg-color: #{$elk-header-inverse-bg-color};
+  --top-nav-a-color: #{$elk-header-inverse-a-color};
+  --top-nav-a-hover-bg-color: #{$elk-header-inverse-a-hover-bg-color};
+
+  --elk-switch-indicator-bg: #{$elk-switch-dark-indicator-bg};
+  --elk-switch-indicator-border: #{$elk-switch-dark-indicator-border};
+  --elk-switch-indicator-before: #{$elk-switch-dark-indicator-before};
+  --elk-switch-indicator-checked-bg: #{$elk-switch-dark-indicator-checked-bg};
+}

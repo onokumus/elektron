@@ -1,0 +1,50 @@
+/*
+* .elk-side.is-hoverable
+*/
+@media (min-width: $elk-side-breakpoint) {
+  .elk-side.is-hoverable {
+    transition: all 0.3s ease;
+    width: $elk-side-is-mini-width;
+  }
+
+  .elk-side.is-hoverable.is-open ~ .elk-main {
+    margin-left: $elk-side-is-mini-width;
+  }
+
+  .elk-side.is-hoverable {
+
+    .metismenu > li > a {
+      &.has-arrow::after {
+        transition: none;
+        border-width: 0;
+      }
+    }
+
+    .metismenu > li > ul.collapse.in {
+      display: none;
+    }
+
+    .nav-title {
+      transition: transform 0.3s ease;
+      transform: translate3d(-10000%, 0, 0);
+    }
+  }
+
+  .elk-side.is-hoverable:hover {
+    width: $elk-side-width;
+
+    .nav-title {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .metismenu > li > ul.collapse.in {
+      display: block;
+    }
+
+    .metismenu > li > a {
+      &.has-arrow::after {
+        border-width: 1px 0 0 1px;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+// fixed layout
+/*
+* <div class="elk-app is-fixed">
+*
+*/
+
+.elk-app.is-fixed {
+  height: 100%;
+  .elk-container,
+  .elk-side,
+  .elk-main {
+    overflow-y: auto;
+  }
+}
+
+/*
+* <div class="elk-app is-fixed">
+*   <div class="elk-main is-fixed">
+*     ...
+*   </div>
+* </div>
+*
+*/
+
+.elk-app.is-fixed .elk-main.is-fixed {
+  .elk-main-content {
+    overflow-y: auto;
+  }
+}
