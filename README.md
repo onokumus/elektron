@@ -74,11 +74,13 @@ Custom labels used in this changelog:
 * `housekeeping`: code re-organization, minor edits, or other changes that don't fit in one of the other categories.
 
 ##### [0.4.0] - 2018-04-30
+
 **added**
 - elk-switch component
 - data-theme=dark attribute
 - is-fixed class for elk-app component
 - is-fixed class for elk-main component
+
 **changed**
 - app class to elk-app
 - app-wrap class to elk-wrap
@@ -93,6 +95,7 @@ Custom labels used in this changelog:
 - main-heading class to elk-main-header
 - main-content class to elk-main-content
 - main-footer class to elk-main-footer
+
 **removed**
 - is-inverse class
 - app-is-fixed class
