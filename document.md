@@ -7,6 +7,7 @@
 | .elk-container | required | no |
 | .elk-footer | no | yes |
 | .elk-side | no | yes|
+| .elk-side-header | no | yes|
 | .elk-side-content | no (required, if .app-side ) | no|
 | .elk-side-footer | no | no |
 | .elk-main | required | no |
@@ -20,4 +21,4 @@
 Elektron is fluid by default. Can be used as fixed on will. All that's needed to be done is to add `.is-fixed` class to `elk-app` element.
 
 #### elk-main fixed
-All that's needed to be done is to add `.is-fixed` class to `elk-app` and `is-fixed` class to `elh-main` elements. For example :
+All that's needed to be done is to add `.is-fixed` class to `elk-app` and `is-fixed` class to `elk-main` elements. For example :
