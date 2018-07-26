@@ -11,65 +11,48 @@
       </a>
     </li>
 
-    <li>
-      <a href="#" class="has-arrow" aria-expanded=false>
+    <li{{#if ifBlank}} class="active"{{/if}}>
+      <a href="#" class="has-arrow">
         <span class="has-icon"><i class="fa fa-pagelines"></i></span>
         <span class="nav-title">Blank Pages</span>
       </a>
-      <ul aria-expanded=false>
-        <li><a href="no-footers.html">No Footers</a></li>
-        <li><a href="no-headers.html">No Headers</a></li>
-        <li><a href="no-headers-footers.html">No Headers&Footers</a></li>
-        <li><a href="app-is-fixed.html">App Fixed</a></li>
-        <li><a href="main-is-fixed.html">Main Fixed</a></li>
-        <li><a href="sticky-header.html">Sticky Header</a></li>
-        <li><a href="sticky-header-2.html">Sticky Header 2</a></li>
-        <li><a href="sticky-footer.html">Sticky Footer</a></li>
+      <ul>
+        <li><a{{#is title "no footers"}} class=active{{/is}} href="no-footers.html">No Footers</a></li>
+        <li><a{{#is title "no headers"}} class=active{{/is}} href="no-headers.html">No Headers</a></li>
+        <li><a{{#is title "no headers & footers"}} class=active{{/is}} href="no-headers-footers.html">No Headers&Footers</a></li>
+        <li><a{{#is title "app-is-fixed"}} class=active{{/is}} href="app-is-fixed.html">App Fixed</a></li>
+        <li><a{{#is title "main is fixed"}} class=active{{/is}} href="main-is-fixed.html">Main Fixed</a></li>
+        <li><a{{#is title "sticky header"}} class=active{{/is}} href="sticky-header.html">Sticky Header</a></li>
+        <li><a{{#is title "sticky header 2"}} class=active{{/is}} href="sticky-header-2.html">Sticky Header 2</a></li>
+        <li><a{{#is title "sticky footer"}} class=active{{/is}} href="sticky-footer.html">Sticky Footer</a></li>
       </ul>
     </li>
-
-    <li>
-      <a href="#" class="has-arrow" aria-expanded=false>
+    
+    <li{{#if ifSide}} class="active"{{/if}}>
+      <a href="#" class="has-arrow">
         <span class="has-icon"><i class="fa fa-list"></i></span>
         <span class="nav-title">elk-side</span>
       </a>
-      <ul aria-expanded=false>
-      <li><a href="app-side-is-inverse.html">Dark Theme</a></li>
-        <li>
-          <a href="#" class="has-arrow" aria-expanded=false>is-fixed</a>
-          <ul aria-expanded=false>
-            <li><a href="app-side-is-fixed.html">Light</a></li>
-            <li><a href="app-side-is-fixed-is-inverse.html">Dark</a></li>
-            <li><a href="app-side-is-fixed-is-hoverable.html">Hoverable Light</a></li>
-            <li><a href="app-side-is-fixed-is-hoverable-is-inverse.html">Hoverable Dark</a></li>
+      <ul>
+        <li><a{{#is title "is-mini"}} class=active{{/is}} href="app-side-is-mini.html">is-mini</a></li>
+        <li><a{{#is title "is-hoverable"}} class=active{{/is}} href="app-side-is-hoverable.html">is-hoverable</a></li>
+        <li{{#if ifFixed}} class="active"{{/if}}>
+          <a href="#" class="has-arrow">is-fixed</a>
+          <ul>
+            <li><a{{#is title "app-side fixed"}} class=active{{/is}} href="app-side-is-fixed.html">Default</a></li>
+            <li><a{{#is title "elk-side hoverable"}} class=active{{/is}} href="app-side-is-fixed-is-hoverable.html">Hoverable</a></li>
           </ul>
         </li>
 
-        <li>
-          <a href="#" class="has-arrow" aria-expanded=false>is-sticky</a>
-          <ul aria-expanded=false>
-            <li><a href="app-side-is-sticky.html">Light</a></li>
-            <li><a href="app-side-is-sticky-is-inverse.html">Dark</a></li>
-            <li><a href="app-side-is-sticky-is-mini.html">mini</a></li>
-            <li><a href="app-side-is-sticky-is-hoverable.html">hoverable</a></li>
+        <li{{#if ifSticky}} class="active"{{/if}}>
+          <a href="#" class="has-arrow">is-sticky</a>
+          <ul>
+            <li><a{{#is title "is-sticky"}} class=active{{/is}} href="app-side-is-sticky.html">Default</a></li>
+            <li><a{{#is title "is-sticky is-mini"}} class=active{{/is}} href="app-side-is-sticky-is-mini.html">mini</a></li>
+            <li><a{{#is title "is-sticky is-hoverable"}} class=active{{/is}} href="app-side-is-sticky-is-hoverable.html">hoverable</a></li>
           </ul>
         </li>
 
-        <li>
-          <a href="#" class="has-arrow" aria-expanded=false>is-mini</a>
-          <ul aria-expanded=false>
-            <li><a href="app-side-is-mini.html">Light</a></li>
-            <li><a href="app-side-is-inverse-is-mini.html">Dark</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="#" class="has-arrow" aria-expanded=false>is-hoverable</a>
-          <ul aria-expanded=false>
-            <li><a href="app-side-is-hoverable.html">Light</a></li>
-            <li><a href="app-side-is-inverse-is-hoverable.html">Dark</a></li>
-          </ul>
-        </li>
       </ul>
     </li>
 

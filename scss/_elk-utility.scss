@@ -29,7 +29,7 @@
 .elk-switch {
   user-select: none;
   cursor: default;
-  display: inline-flex;
+  display: none;
   align-items: center;
   margin: 0;
 }
@@ -64,4 +64,11 @@
 
 .elk-switch-input:checked~.elk-switch-indicator::before {
   left: calc(1rem + 1px);
+}
+
+
+@media(min-width:$elk-side-breakpoint) {
+  .elk-switch{
+    display: inline-flex;
+  }
 }

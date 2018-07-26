@@ -13,7 +13,9 @@ app.task('init', function(cb) {
   app.option('layout', 'default');
   app.data('pkg', pkg);
   app.helper('compare', helpers.comparison());
-  app.helper('markdown', require('helper-markdown'));
+  app.helper('markdown', require('helper-markdown')({
+    highlight: false
+  }));
   app.helper('md', require('helper-md').sync);
   app.layouts(path.join(__dirname, './templates/layouts/**/*.hbs'));
   app.partials(path.join(__dirname, './templates/includes/**/*.hbs'));

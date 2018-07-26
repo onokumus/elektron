@@ -2,6 +2,8 @@
 .elk-header {
   background: $elk-header-bg-color;
   background: var(--elk-header-bg-color);
+  border-bottom: 1px solid $elk-header-border-color;
+  border-bottom: 1px solid var(--elk-header-border-color);
 }
 
 /* .elk-top-nav colors */
@@ -35,6 +37,10 @@
 .elk-side {
   background: $elk-side-bg-color;
   background: var(--elk-side-bg-color);
+  &.is-open {
+    border-right: 1px solid $elk-side-border-color;
+    border-right: 1px solid var(--elk-side-border-color);
+  }
 }
 
 /* .elk-side-nav colors */

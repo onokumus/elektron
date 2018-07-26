@@ -1,15 +1,19 @@
 ---
 layout: base
 title: sticky header 2
+ifBlank: true
 ---
       <!-- BEGIN .app-heading -->
       <header class="elk-header">
         <a class="onoffcanvas-toggler is-animated" href="#elk-top-nav" data-toggle="onoffcanvas"></a>
+        <a href="index.html">
+    <img src="assets/img/logo.svg" alt="Elektron Logo">
+  </a>
       </header>
       <!-- END:  .app-heading -->
 
       <!-- BEGIN .app-heading -->
-      <header data-theme=dark class="elk-header is-sticky">
+      <header class="elk-header is-sticky">
         <nav class="elk-top-nav is-hoverable onoffcanvas" id="elk-top-nav">
           <ul class="metismenu" id="menu1">
             <li>
@@ -119,7 +123,10 @@ title: sticky header 2
 
           <!-- BEGIN .main-content -->
           <div class="elk-main-content">
-
+<label class="elk-switch">
+        <input name="dark" class="elk-switch-input" type="checkbox">
+        <span class="elk-switch-indicator"></span>
+      </label>
             <h4>Code</h4>
             <p>Supported browser :
               <a href="http://caniuse.com/#feat=css-sticky">http://caniuse.com/#feat=css-sticky</a>

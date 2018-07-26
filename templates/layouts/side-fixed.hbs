@@ -5,7 +5,7 @@ layout: base
 <div class="elk-container">
 
   <!-- BEGIN .app-side -->
-  <aside{{#if dark}} data-theme=dark{{/if}} class="elk-side {{#if app-side-class}}{{app-side-class}}{{/if}}" id="elk-side">
+  <aside class="elk-side {{#if app-side-class}}{{app-side-class}}{{/if}}" id="elk-side">
 
     {{> elk-side-header}}
 
@@ -26,12 +26,19 @@ layout: base
     <!-- BEGIN .elk-main-header -->
     <header class="elk-main-header">
       <a class="onoffcanvas-toggler is-animated" href="#elk-side" data-toggle="onoffcanvas"></a>
+      <a href="index.html">
+        <img src="assets/img/logo.svg" alt="Elektron Logo">
+      </a>
     </header>
     <!-- END: .elk-main-header -->
 
     <!-- BEGIN .elk-main-content -->
     <div class="elk-main-content">
-
+<label class="elk-switch">
+        <input name="dark" class="elk-switch-input" type="checkbox">
+        <span class="elk-switch-indicator"></span>
+      </label>
+      <hr>
         {% body %}
 
     </div>
@@ -39,7 +46,9 @@ layout: base
 
     <!-- BEGIN .elk-main-footer -->
     <footer class="elk-main-footer">
-      main footer
+       <p>
+        {{pkg.name}} v{{pkg.version}} 2018
+      </p>
     </footer>
     <!-- END: .elk-main-footer -->
 

@@ -1,5 +1,5 @@
 /*!
-* elektron - v0.4.1
+* elektron - v0.5.0
 * An Admin Layout
 * https://github.com/onokumus/elektron#readme
 *
@@ -8,10 +8,12 @@
 */
 :root {
   --elk-side-bg-color: #ffffff;
+  --elk-side-border-color: #dee2e6;
   --side-nav-a-color: #495057;
   --side-nav-a-hover-color:  #0c8599;
   --side-nav-a-hover-bg-color: #e9ecef;
   --elk-header-bg-color: #ffffff;
+  --elk-header-border-color: #dee2e6;
   --top-nav-a-color: #495057;
   --top-nav-a-hover-color: #0c8599;
   --top-nav-a-hover-bg-color: #e9ecef;
@@ -23,9 +25,11 @@
 
 [data-theme="dark"] {
   --elk-side-bg-color: #343a40;
-  --side-nav-a-color: #868e96;
+  --elk-side-border-color: #495057;
+  --side-nav-a-color: #adb5bd;
   --side-nav-a-hover-bg-color: #212529;
   --elk-header-bg-color: #343a40;
+  --elk-header-border-color: #495057;
   --top-nav-a-color: #868e96;
   --top-nav-a-hover-bg-color: #212529;
   --elk-switch-indicator-bg: #adb5bd;
@@ -419,6 +423,8 @@ body > .ember-view {
 .elk-header {
   background: #ffffff;
   background: var(--elk-header-bg-color);
+  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid var(--elk-header-border-color);
 }
 
 /* .elk-top-nav colors */
@@ -451,6 +457,11 @@ body > .ember-view {
 .elk-side {
   background: #ffffff;
   background: var(--elk-side-bg-color);
+}
+
+.elk-side.is-open {
+  border-right: 1px solid #dee2e6;
+  border-right: 1px solid var(--elk-side-border-color);
 }
 
 /* .elk-side-nav colors */
@@ -539,8 +550,7 @@ body > .ember-view {
   -ms-user-select: none;
   user-select: none;
   cursor: default;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: none;
   -ms-flex-align: center;
   align-items: center;
   margin: 0;
@@ -576,5 +586,12 @@ body > .ember-view {
 
 .elk-switch-input:checked ~ .elk-switch-indicator::before {
   left: calc(1rem + 1px);
+}
+
+@media (min-width: 992px) {
+  .elk-switch {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
 }
 /*# sourceMappingURL=elektron.css.map */

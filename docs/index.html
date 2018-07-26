@@ -12,10 +12,10 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/normalize.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu/dist/metisMenu.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onoffcanvas@1.1.2/dist/onoffcanvas.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/elektron@0.4.1/dist/elektron.min.css">
-  <link rel="stylesheet" href="assets/css/elektron-demo.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenujs/dist/metismenujs.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onoffcanvas/dist/onoffcanvas.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/elektron/dist/elektron.min.css">
+  <link rel="stylesheet" href="assets/css/elektron-demo.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" />
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -44,6 +44,9 @@
       <!-- BEGIN .elk-header -->
       <header class="elk-header ">
         <a class="onoffcanvas-toggler is-animated" href="#elk-side" data-toggle="onoffcanvas"></a>
+        <a href="index.html">
+          <img src="assets/img/logo.svg" alt="Elektron Logo">
+        </a>
       </header>
       <!-- END:  .elk-header -->
       <!-- BEGIN .elk-container -->
@@ -70,13 +73,13 @@
                 </li>
 
                 <li>
-                  <a href="#" class="has-arrow" aria-expanded=false>
+                  <a href="#" class="has-arrow">
                     <span class="has-icon">
                       <i class="fa fa-pagelines"></i>
                     </span>
                     <span class="nav-title">Blank Pages</span>
                   </a>
-                  <ul aria-expanded=false>
+                  <ul>
                     <li>
                       <a href="no-footers.html">No Footers</a>
                     </li>
@@ -105,42 +108,36 @@
                 </li>
 
                 <li>
-                  <a href="#" class="has-arrow" aria-expanded=false>
+                  <a href="#" class="has-arrow">
                     <span class="has-icon">
                       <i class="fa fa-list"></i>
                     </span>
                     <span class="nav-title">elk-side</span>
                   </a>
-                  <ul aria-expanded=false>
+                  <ul>
                     <li>
-                      <a href="app-side-is-inverse.html">Dark Theme</a>
+                      <a href="app-side-is-mini.html">is-mini</a>
                     </li>
                     <li>
-                      <a href="#" class="has-arrow" aria-expanded=false>is-fixed</a>
-                      <ul aria-expanded=false>
+                      <a href="app-side-is-hoverable.html">is-hoverable</a>
+                    </li>
+                    <li>
+                      <a href="#" class="has-arrow">is-fixed</a>
+                      <ul>
                         <li>
-                          <a href="app-side-is-fixed.html">Light</a>
+                          <a href="app-side-is-fixed.html">Default</a>
                         </li>
                         <li>
-                          <a href="app-side-is-fixed-is-inverse.html">Dark</a>
-                        </li>
-                        <li>
-                          <a href="app-side-is-fixed-is-hoverable.html">Hoverable Light</a>
-                        </li>
-                        <li>
-                          <a href="app-side-is-fixed-is-hoverable-is-inverse.html">Hoverable Dark</a>
+                          <a href="app-side-is-fixed-is-hoverable.html">Hoverable</a>
                         </li>
                       </ul>
                     </li>
 
                     <li>
-                      <a href="#" class="has-arrow" aria-expanded=false>is-sticky</a>
-                      <ul aria-expanded=false>
+                      <a href="#" class="has-arrow">is-sticky</a>
+                      <ul>
                         <li>
-                          <a href="app-side-is-sticky.html">Light</a>
-                        </li>
-                        <li>
-                          <a href="app-side-is-sticky-is-inverse.html">Dark</a>
+                          <a href="app-side-is-sticky.html">Default</a>
                         </li>
                         <li>
                           <a href="app-side-is-sticky-is-mini.html">mini</a>
@@ -151,29 +148,6 @@
                       </ul>
                     </li>
 
-                    <li>
-                      <a href="#" class="has-arrow" aria-expanded=false>is-mini</a>
-                      <ul aria-expanded=false>
-                        <li>
-                          <a href="app-side-is-mini.html">Light</a>
-                        </li>
-                        <li>
-                          <a href="app-side-is-inverse-is-mini.html">Dark</a>
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li>
-                      <a href="#" class="has-arrow" aria-expanded=false>is-hoverable</a>
-                      <ul aria-expanded=false>
-                        <li>
-                          <a href="app-side-is-hoverable.html">Light</a>
-                        </li>
-                        <li>
-                          <a href="app-side-is-inverse-is-hoverable.html">Dark</a>
-                        </li>
-                      </ul>
-                    </li>
                   </ul>
                 </li>
 
@@ -203,7 +177,11 @@
           <!-- END: .elk-main-header -->
           <!-- BEGIN .elk-main-content -->
           <div class="elk-main-content">
-
+            <label class="elk-switch">
+              <input name="dark" class="elk-switch-input" type="checkbox">
+              <span class="elk-switch-indicator"></span>
+            </label>
+            <hr>
             <h1>Elektron:
               <small>An Admin Layout</small>
             </h1>
@@ -237,137 +215,135 @@
             <h3>Basic Template</h3>
             <span>Start with this basic HTML template.</span>
 
-            <pre><code class="language-html"> <span class="hljs-meta">&lt;!doctype html&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+            <pre><code class="language-html"> &lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
 
-<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-  <span class="hljs-comment">&lt;!-- Required meta tags --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"X-UA-Compatible"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"IE=edge"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1, shrink-to-fit=no"</span>&gt;</span>
+&lt;head&gt;
+  &lt;!-- Required meta tags --&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
 
-  <span class="hljs-comment">&lt;!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Admin<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  &lt;!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --&gt;
+  &lt;title&gt;Admin&lt;/title&gt;
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/metismenu/dist/metisMenu.min.css"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/onoffcanvas@1.1.2/dist/onoffcanvas.min.css"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/elektron/dist/elektron.min.css"</span>&gt;</span>
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/normalize.css/normalize.min.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/metismenujs/dist/metismenujs.min.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/onoffcanvas/dist/onoffcanvas.min.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/elektron/dist/elektron.min.css&quot;&gt;
 
-<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+&lt;/head&gt;
 
-<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+&lt;body&gt;
 
-  <span class="hljs-comment">&lt;!-- BEGIN .elk-app --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"elk-app"</span>&gt;</span>
+  &lt;!-- BEGIN .elk-app --&gt;
+  &lt;div class=&quot;elk-app&quot;&gt;
 
-    <span class="hljs-comment">&lt;!-- BEGIN .elk-wrap --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"elk-wrap"</span>&gt;</span>
-      <span class="hljs-comment">&lt;!-- BEGIN .elk-header --&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"elk-header "</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"onoffcanvas-toggler is-animated"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#elk-side"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"onoffcanvas"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
-      <span class="hljs-comment">&lt;!-- END:  .elk-header --&gt;</span>
-      <span class="hljs-comment">&lt;!-- BEGIN .elk-container --&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"elk-container"</span>&gt;</span>
+    &lt;!-- BEGIN .elk-wrap --&gt;
+    &lt;div class=&quot;elk-wrap&quot;&gt;
+      &lt;!-- BEGIN .elk-header --&gt;
+      &lt;header class=&quot;elk-header &quot;&gt;
+        &lt;a class=&quot;onoffcanvas-toggler is-animated&quot; href=&quot;#elk-side&quot; data-toggle=&quot;onoffcanvas&quot;&gt;&lt;/a&gt;
+      &lt;/header&gt;
+      &lt;!-- END:  .elk-header --&gt;
+      &lt;!-- BEGIN .elk-container --&gt;
+      &lt;div class=&quot;elk-container&quot;&gt;
 
-        <span class="hljs-comment">&lt;!-- BEGIN .elk-side --&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"elk-side "</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"elk-side"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">false</span>&gt;</span>
+        &lt;!-- BEGIN .elk-side --&gt;
+        &lt;aside class=&quot;elk-side &quot; id=&quot;elk-side&quot; aria-expanded=false&gt;
 
-          <span class="hljs-comment">&lt;!-- BEGIN .elk-side-content --&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"elk-side-content "</span>&gt;</span>
-            <span class="hljs-comment">&lt;!-- BEGIN .elk-side-nav --&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"elk-side-nav"</span>&gt;</span>
+          &lt;!-- BEGIN .elk-side-content --&gt;
+          &lt;div class=&quot;elk-side-content &quot;&gt;
+            &lt;!-- BEGIN .elk-side-nav --&gt;
+            &lt;nav class=&quot;elk-side-nav&quot;&gt;
 
-              <span class="hljs-comment">&lt;!-- BEGIN: elk-side-nav-content --&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"metismenu"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"metismenu"</span>&gt;</span>
+              &lt;!-- BEGIN: elk-side-nav-content --&gt;
+              &lt;ul class=&quot;metismenu&quot; id=&quot;metismenu&quot;&gt;
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"active"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"index.html"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"has-icon"</span>&gt;</span>
-                      <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fa fa-cogs"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-title"</span>&gt;</span>Dashboard<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                &lt;li&gt;
+                  &lt;a class=&quot;active&quot; href=&quot;index.html&quot;&gt;
+                    &lt;span class=&quot;has-icon&quot;&gt;
+                      &lt;i class=&quot;fa fa-cogs&quot;&gt;&lt;/i&gt;
+                    &lt;/span&gt;
+                    &lt;span class=&quot;nav-title&quot;&gt;Dashboard&lt;/span&gt;
+                  &lt;/a&gt;
+                &lt;/li&gt;
 
-                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"has-arrow"</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">false</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"has-icon"</span>&gt;</span>
-                      <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fa fa-pagelines"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-title"</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">aria-expanded</span>=<span class="hljs-string">false</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-                      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Menu Item<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                &lt;li&gt;
+                  &lt;a href=&quot;#&quot; class=&quot;has-arrow&quot; aria-expanded=false&gt;
+                    &lt;span class=&quot;has-icon&quot;&gt;
+                      &lt;i class=&quot;fa fa-pagelines&quot;&gt;&lt;/i&gt;
+                    &lt;/span&gt;
+                    &lt;span class=&quot;nav-title&quot;&gt;Menu&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;ul aria-expanded=false&gt;
+                    &lt;li&gt;
+                      &lt;a href=&quot;#&quot;&gt;Menu Item&lt;/a&gt;
+                    &lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/li&gt;
 
-              <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-              <span class="hljs-comment">&lt;!-- END: elk-side-nav-content --&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
-            <span class="hljs-comment">&lt;!-- END: .elk-side-nav --&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-comment">&lt;!-- END: .elk-side-content --&gt;</span>
-          <span class="hljs-comment">&lt;!-- BEGIN .elk-side-footer --&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"elk-side-footer"</span>&gt;</span>
+              &lt;/ul&gt;
+              &lt;!-- END: elk-side-nav-content --&gt;
+            &lt;/nav&gt;
+            &lt;!-- END: .elk-side-nav --&gt;
+          &lt;/div&gt;
+          &lt;!-- END: .elk-side-content --&gt;
+          &lt;!-- BEGIN .elk-side-footer --&gt;
+          &lt;footer class=&quot;elk-side-footer&quot;&gt;
             ...
-          <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
-          <span class="hljs-comment">&lt;!-- END .elk-side-footer --&gt;</span>
+          &lt;/footer&gt;
+          &lt;!-- END .elk-side-footer --&gt;
 
-        <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span>
-        <span class="hljs-comment">&lt;!-- END: .elk-side --&gt;</span>
+        &lt;/aside&gt;
+        &lt;!-- END: .elk-side --&gt;
 
-        <span class="hljs-comment">&lt;!-- BEGIN .elk-main --&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"elk-main"</span>&gt;</span>
+        &lt;!-- BEGIN .elk-main --&gt;
+        &lt;div class=&quot;elk-main&quot;&gt;
 
-          <span class="hljs-comment">&lt;!-- BEGIN .elk-main-heading --&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"elk-main-header"</span>&gt;</span>
+          &lt;!-- BEGIN .elk-main-heading --&gt;
+          &lt;header class=&quot;elk-main-header&quot;&gt;
             ...
-          <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
-          <span class="hljs-comment">&lt;!-- END: .elk-main-header --&gt;</span>
-          <span class="hljs-comment">&lt;!-- BEGIN .elk-main-content --&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"elk-main-content"</span>&gt;</span>
+          &lt;/header&gt;
+          &lt;!-- END: .elk-main-header --&gt;
+          &lt;!-- BEGIN .elk-main-content --&gt;
+          &lt;div class=&quot;elk-main-content&quot;&gt;
 
             ...
 
-          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-comment">&lt;!-- END: .elk-main-content --&gt;</span>
-          <span class="hljs-comment">&lt;!-- BEGIN .elk-main-footer --&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"elk-main-footer"</span>&gt;</span>
+          &lt;/div&gt;
+          &lt;!-- END: .elk-main-content --&gt;
+          &lt;!-- BEGIN .elk-main-footer --&gt;
+          &lt;footer class=&quot;elk-main-footer&quot;&gt;
             ...
-          <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+          &lt;/footer&gt;
 
-          <span class="hljs-comment">&lt;!-- END: .elk-main-footer --&gt;</span>
+          &lt;!-- END: .elk-main-footer --&gt;
 
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-comment">&lt;!-- END: .elk-main --&gt;</span>
+        &lt;/div&gt;
+        &lt;!-- END: .elk-main --&gt;
 
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-comment">&lt;!-- END: .elk-container --&gt;</span>
+      &lt;/div&gt;
+      &lt;!-- END: .elk-container --&gt;
 
-      <span class="hljs-comment">&lt;!-- begin .elk-footer --&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"elk-footer "</span>&gt;</span>
+      &lt;!-- begin .elk-footer --&gt;
+      &lt;footer class=&quot;elk-footer &quot;&gt;
         ...
-      <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
-      <span class="hljs-comment">&lt;!-- END: .elk-footer --&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- END: .elk-wrap --&gt;</span>
+      &lt;/footer&gt;
+      &lt;!-- END: .elk-footer --&gt;
+    &lt;/div&gt;
+    &lt;!-- END: .elk-wrap --&gt;
 
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-comment">&lt;!-- END: .elk-app --&gt;</span>
+  &lt;/div&gt;
+  &lt;!-- END: .elk-app --&gt;
 
-  <span class="hljs-comment">&lt;!-- jQuery first, then other JS. --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/jquery"</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/metismenu"</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/onoffcanvas@1.1.2/dist/onoffcanvas.min.js"</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/elektron"</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/metismenujs&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/onoffcanvas/dist/onoffcanvas.min.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/elektron&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
 
-<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+&lt;/html&gt;
 </code></pre>
 
             <h3>Class structure</h3>
@@ -501,7 +477,7 @@
       <!-- begin .elk-footer -->
       <footer class="elk-footer ">
         <p>
-          elektron v0.4.1 2018
+          elektron v0.5.0 2018
         </p>
       </footer>
       <!-- END: .elk-footer -->
@@ -511,14 +487,12 @@
   </div>
   <!-- END: .elk-app -->
 
-  <!-- jQuery first, then other JS. -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery" charset="utf-8"></script>
-  <script src="https://cdn.jsdelivr.net/npm/metismenu" charset="utf-8"></script>
-  <script src="https://cdn.jsdelivr.net/npm/onoffcanvas@1.1.2/dist/onoffcanvas.min.js" charset="utf-8"></script>
-  <script src="https://cdn.jsdelivr.net/npm/elektron@0.4.1" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metismenujs" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/onoffcanvas" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs" charset="utf-f"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/elektron" charset="utf-8"></script>
+  <script src="assets/js/changetheme.js"></script>
 </body>
 
 </html>

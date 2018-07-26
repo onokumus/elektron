@@ -12,10 +12,10 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/normalize.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu/dist/metisMenu.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onoffcanvas@1.1.2/dist/onoffcanvas.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/elektron@0.4.1/dist/elektron.min.css">
-  <link rel="stylesheet" href="assets/css/elektron-demo.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenujs/dist/metismenujs.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onoffcanvas/dist/onoffcanvas.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/elektron/dist/elektron.min.css">
+  <link rel="stylesheet" href="assets/css/elektron-demo.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" />
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -44,11 +44,14 @@
       <!-- BEGIN .app-heading -->
       <header class="elk-header">
         <a class="onoffcanvas-toggler is-animated" href="#elk-top-nav" data-toggle="onoffcanvas"></a>
+        <a href="index.html">
+          <img src="assets/img/logo.svg" alt="Elektron Logo">
+        </a>
       </header>
       <!-- END:  .app-heading -->
 
       <!-- BEGIN .app-heading -->
-      <header data-theme=dark class="elk-header is-sticky">
+      <header class="elk-header is-sticky">
         <nav class="elk-top-nav is-hoverable onoffcanvas" id="elk-top-nav">
           <ul class="metismenu" id="menu1">
             <li>
@@ -186,7 +189,10 @@
 
           <!-- BEGIN .main-content -->
           <div class="elk-main-content">
-
+            <label class="elk-switch">
+              <input name="dark" class="elk-switch-input" type="checkbox">
+              <span class="elk-switch-indicator"></span>
+            </label>
             <h4>Code</h4>
             <p>Supported browser :
               <a href="http://caniuse.com/#feat=css-sticky">http://caniuse.com/#feat=css-sticky</a>
@@ -297,14 +303,12 @@
   </div>
   <!-- END: .elk-app -->
 
-  <!-- jQuery first, then other JS. -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery" charset="utf-8"></script>
-  <script src="https://cdn.jsdelivr.net/npm/metismenu" charset="utf-8"></script>
-  <script src="https://cdn.jsdelivr.net/npm/onoffcanvas@1.1.2/dist/onoffcanvas.min.js" charset="utf-8"></script>
-  <script src="https://cdn.jsdelivr.net/npm/elektron@0.4.1" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/metismenujs" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/onoffcanvas" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs" charset="utf-f"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/elektron" charset="utf-8"></script>
+  <script src="assets/js/changetheme.js"></script>
 </body>
 
 </html>

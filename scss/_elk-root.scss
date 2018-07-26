@@ -1,10 +1,12 @@
 :root {
   --elk-side-bg-color: #{$elk-side-bg-color};
+  --elk-side-border-color: #{$elk-side-border-color};
   --side-nav-a-color: #{$side-nav-a-color};
   --side-nav-a-hover-color:  #{$side-nav-a-hover-color};
   --side-nav-a-hover-bg-color: #{$side-nav-a-hover-bg-color};
 
   --elk-header-bg-color: #{$elk-header-bg-color};
+  --elk-header-border-color: #{$elk-header-border-color};
   --top-nav-a-color: #{$top-nav-a-color};
   --top-nav-a-hover-color : #{$top-nav-a-hover-color};
   --top-nav-a-hover-bg-color: #{$top-nav-a-hover-bg-color};
@@ -17,10 +19,12 @@
 
 [data-theme="dark"] {
   --elk-side-bg-color: #{$elk-side-inverse-bg-color};
+  --elk-side-border-color: #{$elk-side-dark-border-color};  
   --side-nav-a-color: #{$elk-side-inverse-a-color};
   --side-nav-a-hover-bg-color: #{$elk-side-inverse-a-hover-bg-color};
 
   --elk-header-bg-color: #{$elk-header-inverse-bg-color};
+  --elk-header-border-color: #{$elk-header-dark-border-color};
   --top-nav-a-color: #{$elk-header-inverse-a-color};
   --top-nav-a-hover-bg-color: #{$elk-header-inverse-a-hover-bg-color};
 

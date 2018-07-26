@@ -33,20 +33,25 @@ a {
 
 a:focus,
 a:hover {
-  color: #1c7ed6;
+  color: #862e9c;
 }
 
-.main-heading,
-.main-footer {
-  background: #ffffff;
+img {
+  vertical-align: middle;
 }
 
-.main-heading {
+.elk-footer,
+.elk-main-header,
+.elk-main-footer {
+  background: #f8f9fa;
+}
+
+.elk-main-header {
   border-bottom: 1px solid #dee2e6;
 }
 
-.app-footer,
-.main-footer {
+.elk-footer,
+.elk-main-footer {
   border-top: 1px solid #dee2e6;
 }
 
@@ -62,5 +67,14 @@ td {
   border-collapse: collapse;
   border: 1px solid #e9ecef;
   padding: .25rem;
+}
+
+.elk-main-content .elk-switch {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.onoffcanvas-drawer.is-open {
+  background: rgba(0, 0, 0, 0.5);
 }
 /*# sourceMappingURL=elektron-demo.css.map */

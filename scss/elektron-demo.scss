@@ -37,28 +37,27 @@ a {
 
 a:focus,
 a:hover {
-  color: $oc-blue-7;
+  color: $oc-grape-9;
 }
 
-
-.main-heading,
-.main-footer {
-  background: $oc-white;
+img {
+  vertical-align: middle;
 }
 
-.main-heading {
+.elk-footer,
+.elk-main-header,
+.elk-main-footer {
+  background: $oc-gray-0;
+}
+
+.elk-main-header {
   border-bottom: 1px solid $oc-gray-3;
 }
 
-.app-footer,
-.main-footer {
+.elk-footer,
+.elk-main-footer {
   border-top: 1px solid $oc-gray-3;
 }
-
-.app-side {
-  // border-right: 1px solid  $oc-gray-3;
-}
-
 
 table {
     width: 100%;
@@ -71,4 +70,11 @@ td {
   border-collapse: collapse;
   border: 1px solid $oc-gray-2;
   padding: .25rem;
+}
+.elk-main-content .elk-switch {
+  display: inline-flex;
+}
+
+.onoffcanvas-drawer.is-open {
+  background: rgba(0, 0, 0, .5);
 }
