@@ -22,39 +22,39 @@ $elk-side-z-index                       : 1000 !default;
 $side-nav-a-font-size                   : .875rem;
 $top-nav-a-font-size                    : $side-nav-a-font-size;
 
-$elk-side-bg-color                      : $oc-white;
-$elk-side-border-color                  : $oc-gray-3;
-$side-nav-a-color                       : $oc-gray-7;
-$side-nav-a-hover-color                 : $oc-cyan-8;
-$side-nav-a-hover-bg-color              : $oc-gray-2;
+$elk-side-bg-color                      : #fff;
+$elk-side-border-color                  : #dee2e6;
+$side-nav-a-color                       : #495057;
+$side-nav-a-hover-color                 : #0c8599;
+$side-nav-a-hover-bg-color              : #e9ecef;
 
-$elk-side-inverse-bg-color              : $oc-gray-8;
-$elk-side-dark-border-color             : $oc-gray-7;
-$elk-side-inverse-a-color               : $oc-gray-5;
-$elk-side-inverse-a-hover-color         : $oc-gray-4;
-$elk-side-inverse-a-hover-bg-color      : $oc-gray-9;
+$elk-side-inverse-bg-color              : #343a40;
+$elk-side-dark-border-color             : #495057;
+$elk-side-inverse-a-color               : #adb5bd;
+$elk-side-inverse-a-hover-color         : #ced4da;
+$elk-side-inverse-a-hover-bg-color      : #212529;
 
-$elk-header-bg-color                    : $oc-white;
-$elk-header-border-color                : $oc-gray-3;
-$top-nav-a-color                        : $oc-gray-7;
-$top-nav-a-hover-color                  : $oc-cyan-8;
-$top-nav-a-hover-bg-color               : $oc-gray-2;
+$elk-header-bg-color                    : #fff;
+$elk-header-border-color                : #dee2e6;
+$top-nav-a-color                        : #495057;
+$top-nav-a-hover-color                  : #0c8599;
+$top-nav-a-hover-bg-color               : #e9ecef;
 
-$elk-header-inverse-bg-color            : $oc-gray-8;
-$elk-header-dark-border-color           : $oc-gray-7;
-$elk-header-inverse-a-color             : $oc-gray-6;
-$elk-header-inverse-a-hover-color       : $oc-gray-5;
-$elk-header-inverse-a-hover-bg-color    : $oc-gray-9;
+$elk-header-inverse-bg-color            : #343a40;
+$elk-header-dark-border-color           : #495057;
+$elk-header-inverse-a-color             : #868e96;
+$elk-header-inverse-a-hover-color       : #adb5bd;
+$elk-header-inverse-a-hover-bg-color    : #212529;
 
-$elk-switch-indicator-bg                : $oc-gray-2;
-$elk-switch-indicator-border            : $oc-gray-3;
-$elk-switch-indicator-before            : $oc-white;
-$elk-switch-indicator-checked-bg        : $oc-gray-2;
+$elk-switch-indicator-bg                : #e9ecef;
+$elk-switch-indicator-border            : #dee2e6;
+$elk-switch-indicator-before            : #fff;
+$elk-switch-indicator-checked-bg        : #e9ecef;
 
-$elk-switch-dark-indicator-bg           : $oc-gray-5;
-$elk-switch-dark-indicator-border       : $oc-gray-8;
-$elk-switch-dark-indicator-before       : $oc-white;
-$elk-switch-dark-indicator-checked-bg   : $oc-gray-5;
+$elk-switch-dark-indicator-bg           : #adb5bd;
+$elk-switch-dark-indicator-border       : #343a40;
+$elk-switch-dark-indicator-before       : #fff;
+$elk-switch-dark-indicator-checked-bg   : #adb5bd;
 
 
 // main-content padding
