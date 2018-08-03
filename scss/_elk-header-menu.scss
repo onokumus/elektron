@@ -27,7 +27,6 @@
 }
 
 .elk-top-nav .metismenu a {
-  font-size: $top-nav-a-font-size;
   position: relative;
   display: block;
   padding: .75rem 1rem;
@@ -80,7 +79,16 @@
   }
 
   .elk-top-nav.is-hoverable .metismenu > li:hover > a.has-arrow:after {
-    -webkit-transform: rotate(-135deg);
     transform: rotate(-135deg);
+  }
+}
+
+.is-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1002;
+  &.is-bottom {
+    top: auto;
+    bottom: 0;
   }
 }

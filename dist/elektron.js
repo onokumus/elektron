@@ -1,5 +1,5 @@
 /*!
-* elektron - v0.5.0
+* elektron - v0.5.1
 * An Admin Layout
 * https://github.com/onokumus/elektron#readme
 *
@@ -72,7 +72,7 @@
 
   if (elkSide !== null) {
     /* eslint-disable-next-line no-inner-declarations */
-    var showHide = function showHide() {
+    var showHideElkSide = function showHideElkSide() {
       if (window.innerWidth < 993) {
         elkSideNavOnoffCanvas.hide();
       } else {
@@ -92,11 +92,11 @@
     };
 
     var elkSideNavOnoffCanvas = new OnoffCanvas(elkSide, {
-      'hideByEsc': window.innerWidth < 993 ? true : false,
-      'createDrawer': window.innerWidth < 993 ? true : false
+      'hideByEsc': window.innerWidth < 993,
+      'createDrawer': window.innerWidth < 993
     });
-    showHide();
-    window.addEventListener('resize', debounce(showHide, 250));
+    showHideElkSide();
+    window.addEventListener('resize', debounce(showHideElkSide, 250));
     var esi = document.querySelector('.elk-switch-input');
 
     if (esi !== null) {
@@ -112,16 +112,25 @@
   }
 
   var elkTopNav = document.querySelector('.elk-top-nav');
+  var elkTopNavCanvas;
 
   if (elkTopNav !== null) {
-    new OnoffCanvas('.elk-top-nav', {
+    /* eslint-disable-next-line no-inner-declarations */
+    var showHideElkTopNav = function showHideElkTopNav() {
+      if (window.innerWidth < 993) {
+        elkTopNavCanvas.hide();
+      } else {
+        elkTopNavCanvas.show();
+      }
+    };
+
+    elkTopNavCanvas = new OnoffCanvas('.elk-top-nav', {
       'hideByEsc': false,
       'createDrawer': false
-    }).show();
-
-    if (elkTopNav !== null) {
-      new MetisMenu(elkTopNav.querySelector('.metismenu'));
-    }
+    });
+    showHideElkTopNav();
+    window.addEventListener('resize', debounce(showHideElkTopNav, 250));
+    new MetisMenu(elkTopNav.querySelector('.metismenu'));
   }
 
 })));

@@ -4,17 +4,18 @@
 body > .ember-view {
   position: absolute;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
-  min-height: 100%;
 }
 
 .elk-wrap {
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   position: relative;
+  width: 100%;
 }
 
 .elk-header {
@@ -33,8 +34,8 @@ body > .ember-view {
   position: relative;
   display: flex;
   flex-direction: column;
-  flex: 1 1 0%;
-  flex-basis: 0%;
+  flex: 1 1 auto;
+  overflow-x: auto;
   @if $enable-transitions {
     transition: margin $transition-duration $transition-timing-function;
   }
@@ -44,8 +45,6 @@ body > .ember-view {
   position: relative;
   margin-bottom: auto;
   flex: 1 1 auto;
-  flex-basis: auto;
-  padding: $main-content-padding;
 }
 
 .elk-side {

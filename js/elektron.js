@@ -55,11 +55,11 @@ const elkSide = document.querySelector('.elk-side');
 
 if (elkSide !== null) {
   const elkSideNavOnoffCanvas = new OnoffCanvas(elkSide, {
-    'hideByEsc': window.innerWidth < 993 ? true : false,
-    'createDrawer': window.innerWidth < 993 ? true : false
+    'hideByEsc': window.innerWidth < 993,
+    'createDrawer': window.innerWidth < 993
   });
   /* eslint-disable-next-line no-inner-declarations */
-  function showHide() {
+  function showHideElkSide() {
     if (window.innerWidth < 993) {
       elkSideNavOnoffCanvas.hide();
     } else {
@@ -67,9 +67,9 @@ if (elkSide !== null) {
     }
   }
 
-  showHide();
+  showHideElkSide();
 
-  window.addEventListener('resize', debounce(showHide, 250));
+  window.addEventListener('resize', debounce(showHideElkSide, 250));
 
   const esi = document.querySelector('.elk-switch-input');
 
@@ -94,14 +94,24 @@ if (elkSide !== null) {
 }
 
 const elkTopNav = document.querySelector('.elk-top-nav');
+let elkTopNavCanvas;
 
 if (elkTopNav !== null) {
-  new OnoffCanvas('.elk-top-nav', {
+  elkTopNavCanvas = new OnoffCanvas('.elk-top-nav', {
     'hideByEsc': false,
     'createDrawer': false
-  }).show();
+  });
 
-  if (elkTopNav !== null) {
-    new MetisMenu(elkTopNav.querySelector('.metismenu'));
+  /* eslint-disable-next-line no-inner-declarations */
+  function showHideElkTopNav() {
+    if (window.innerWidth < 993) {
+      elkTopNavCanvas.hide();
+    } else {
+      elkTopNavCanvas.show();
+    }
   }
+  showHideElkTopNav();
+  window.addEventListener('resize', debounce(showHideElkTopNav, 250));
+
+  new MetisMenu(elkTopNav.querySelector('.metismenu'));
 }

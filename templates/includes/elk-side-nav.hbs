@@ -5,7 +5,7 @@
   <ul class="metismenu" id="metismenu">
 
     <li>
-      <a class="{{#is title "Dashboard"}} active{{/is}}" href="index.html">
+      <a{{#is title "Dashboard"}} class="active"{{/is}} href="index.html">
         <span class="has-icon"><i class="fa fa-cogs"></i></span>
         <span class="nav-title">Dashboard</span>
       </a>
@@ -33,12 +33,12 @@
         <span class="has-icon"><i class="fa fa-list"></i></span>
         <span class="nav-title">elk-side</span>
       </a>
-      <ul>
+      <ul{{#if ifSide}} class="collapse in"{{/if}}>
         <li><a{{#is title "is-mini"}} class=active{{/is}} href="app-side-is-mini.html">is-mini</a></li>
         <li><a{{#is title "is-hoverable"}} class=active{{/is}} href="app-side-is-hoverable.html">is-hoverable</a></li>
         <li{{#if ifFixed}} class="active"{{/if}}>
           <a href="#" class="has-arrow">is-fixed</a>
-          <ul>
+          <ul{{#if ifFixed}} class="collapse in"{{/if}}>
             <li><a{{#is title "app-side fixed"}} class=active{{/is}} href="app-side-is-fixed.html">Default</a></li>
             <li><a{{#is title "elk-side hoverable"}} class=active{{/is}} href="app-side-is-fixed-is-hoverable.html">Hoverable</a></li>
           </ul>
@@ -46,7 +46,7 @@
 
         <li{{#if ifSticky}} class="active"{{/if}}>
           <a href="#" class="has-arrow">is-sticky</a>
-          <ul>
+          <ul{{#if ifSticky}} class="collapse in"{{/if}}>
             <li><a{{#is title "is-sticky"}} class=active{{/is}} href="app-side-is-sticky.html">Default</a></li>
             <li><a{{#is title "is-sticky is-mini"}} class=active{{/is}} href="app-side-is-sticky-is-mini.html">mini</a></li>
             <li><a{{#is title "is-sticky is-hoverable"}} class=active{{/is}} href="app-side-is-sticky-is-hoverable.html">hoverable</a></li>

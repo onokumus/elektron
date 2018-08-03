@@ -33,7 +33,13 @@
     background: $top-nav-a-hover-bg-color;
     background: var(--top-nav-a-hover-bg-color);
   }
-} // elk-side
+}
+
+.elk-top-nav .metismenu a {
+  font-size: $top-nav-a-font-size;
+}
+
+// elk-side
 .elk-side {
   background: $elk-side-bg-color;
   background: var(--elk-side-bg-color);
@@ -71,8 +77,12 @@
     background: var(--side-nav-a-hover-bg-color);
   }
 }
-// elk-switch
 
+.elk-side-nav .metismenu a {
+  font-size: $side-nav-a-font-size;
+}
+
+// elk-switch
 .elk-switch-indicator {
   background: $elk-switch-indicator-bg;
   background: var(--elk-switch-indicator-bg);
@@ -88,4 +98,9 @@
 .elk-switch-input:checked~.elk-switch-indicator {
   background: $elk-switch-indicator-checked-bg;
   background: var(--elk-switch-indicator-checked-bg);
+}
+
+// elk-main-content
+.elk-main-content {
+  padding: $main-content-padding;
 }

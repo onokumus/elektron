@@ -1,22 +1,12 @@
-.is-sticky {
-  position: sticky;
-  top: 0;
-  z-index: 1002;
-  &.is-bottom {
-    top: auto;
-    bottom: 0;
-  }
-}
-
 .has-icon {
-  width: $elk-side-is-mini-width;
-  flex: 0 0 $elk-side-is-mini-width;
-  height: 2.5rem;
-  font-size: 1.5em;
+  width: 1.5rem;
+  flex: 0 0 1.5rem;
+  font-size: 1.5rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-right: .5rem;
 }
 
 .onoffcanvas {

@@ -1,63 +1,32 @@
 /*!
-* elektron - v0.5.0
+* elektron - v0.5.1
 * An Admin Layout
-* https://github.com/onokumus/elektron#readme
+* https://github.com/onokumus/elektron
 *
 * Made by Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)
 * Under MIT License
 */
-:root {
-  --elk-side-bg-color: #ffffff;
-  --elk-side-border-color: #dee2e6;
-  --side-nav-a-color: #495057;
-  --side-nav-a-hover-color:  #0c8599;
-  --side-nav-a-hover-bg-color: #e9ecef;
-  --elk-header-bg-color: #ffffff;
-  --elk-header-border-color: #dee2e6;
-  --top-nav-a-color: #495057;
-  --top-nav-a-hover-color: #0c8599;
-  --top-nav-a-hover-bg-color: #e9ecef;
-  --elk-switch-indicator-bg: #e9ecef;
-  --elk-switch-indicator-border: #dee2e6;
-  --elk-switch-indicator-before: #ffffff;
-  --elk-switch-indicator-checked-bg: #e9ecef;
-}
-
-[data-theme="dark"] {
-  --elk-side-bg-color: #343a40;
-  --elk-side-border-color: #495057;
-  --side-nav-a-color: #adb5bd;
-  --side-nav-a-hover-bg-color: #212529;
-  --elk-header-bg-color: #343a40;
-  --elk-header-border-color: #495057;
-  --top-nav-a-color: #868e96;
-  --top-nav-a-hover-bg-color: #212529;
-  --elk-switch-indicator-bg: #adb5bd;
-  --elk-switch-indicator-border: #343a40;
-  --elk-switch-indicator-before: #ffffff;
-  --elk-switch-indicator-checked-bg: #adb5bd;
-}
-
 .elk-app,
 body > .ember-view {
   position: absolute;
   width: 100%;
+  height: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
   flex-direction: row;
-  min-height: 100%;
 }
 
 .elk-wrap {
-  -ms-flex: 1;
-  flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
   position: relative;
+  width: 100%;
 }
 
 .elk-header {
@@ -82,10 +51,9 @@ body > .ember-view {
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex: 1 1 0%;
-  flex: 1 1 0%;
-  -ms-flex-preferred-size: 0%;
-  flex-basis: 0%;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow-x: auto;
   transition: margin 0.3s ease-out;
 }
 
@@ -94,9 +62,6 @@ body > .ember-view {
   margin-bottom: auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  padding: 1rem;
 }
 
 .elk-side {
@@ -111,10 +76,6 @@ body > .ember-view {
 * <div class="elk-app is-fixed">
 *
 */
-.elk-app.is-fixed {
-  height: 100%;
-}
-
 .elk-app.is-fixed .elk-container,
 .elk-app.is-fixed .elk-side,
 .elk-app.is-fixed .elk-main {
@@ -139,7 +100,7 @@ body > .ember-view {
 * available classess: is-open
 */
 .elk-side {
-  width: 256px;
+  width: 16rem;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -162,7 +123,7 @@ body > .ember-view {
 
 @media (min-width: 992px) {
   .elk-side.is-open ~ .elk-main {
-    margin-left: 256px;
+    margin-left: 16rem;
   }
 }
 
@@ -189,15 +150,15 @@ body > .ember-view {
 }
 
 .elk-side-nav .metismenu li {
-  margin-top: 5px;
+  margin-top: .25rem;
 }
 
 .elk-side-nav .metismenu li:first-child {
-  padding-top: 5px;
+  padding-top: .25rem;
 }
 
 .elk-side-nav .metismenu li:last-child {
-  padding-bottom: 5px;
+  padding-bottom: .25rem;
 }
 
 .elk-side-nav .metismenu > li {
@@ -205,7 +166,6 @@ body > .ember-view {
 }
 
 .elk-side-nav .metismenu a {
-  font-size: 0.875rem;
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -221,8 +181,12 @@ body > .ember-view {
   text-decoration: none;
 }
 
+.elk-side-nav .metismenu a {
+  padding: .5rem 1rem;
+}
+
 .elk-side-nav .metismenu ul a {
-  padding: .5em;
+  padding: .5rem;
   padding-left: 3.5rem;
 }
 
@@ -235,11 +199,11 @@ body > .ember-view {
 */
 @media (min-width: 992px) {
   .elk-side.is-mini {
-    width: 56px;
+    width: 4rem;
     border-width: 0 !important;
   }
   .elk-side.is-mini.is-open ~ .elk-main {
-    margin-left: 56px;
+    margin-left: 4rem;
   }
   .elk-side.is-mini .metismenu li:last-child {
     padding-bottom: 0;
@@ -265,7 +229,7 @@ body > .ember-view {
   }
   .elk-side.is-mini .metismenu > li:hover > ul {
     display: block;
-    min-width: 201px;
+    min-width: 13rem;
     height: auto !important;
   }
   .elk-side.is-mini .metismenu > li:hover > a {
@@ -273,7 +237,7 @@ body > .ember-view {
     display: flex;
     -ms-flex-direction: row;
     flex-direction: row;
-    min-width: 257px;
+    min-width: 17rem;
   }
   .elk-side.is-mini .metismenu > li:hover .nav-title {
     display: inline-block;
@@ -293,10 +257,10 @@ body > .ember-view {
 @media (min-width: 992px) {
   .elk-side.is-hoverable {
     transition: all 0.3s ease;
-    width: 56px;
+    width: 4rem;
   }
   .elk-side.is-hoverable.is-open ~ .elk-main {
-    margin-left: 56px;
+    margin-left: 4rem;
   }
   .elk-side.is-hoverable .metismenu > li > a.has-arrow::after {
     transition: none;
@@ -311,9 +275,10 @@ body > .ember-view {
     transition: transform 0.3s ease, -webkit-transform 0.3s ease;
     -webkit-transform: translate3d(-10000%, 0, 0);
     transform: translate3d(-10000%, 0, 0);
+    white-space: nowrap;
   }
   .elk-side.is-hoverable:hover {
-    width: 256px;
+    width: 16rem;
   }
   .elk-side.is-hoverable:hover .nav-title {
     -webkit-transform: translate3d(0, 0, 0);
@@ -325,11 +290,6 @@ body > .ember-view {
   .elk-side.is-hoverable:hover .metismenu > li > a.has-arrow::after {
     border-width: 1px 0 0 1px;
   }
-}
-
-.onoffcanvas-toggler {
-  display: inline-block !important;
-  outline-width: 0;
 }
 
 .elk-top-nav {
@@ -366,7 +326,6 @@ body > .ember-view {
 }
 
 .elk-top-nav .metismenu a {
-  font-size: 0.875rem;
   position: relative;
   display: block;
   padding: .75rem 1rem;
@@ -420,94 +379,6 @@ body > .ember-view {
   }
 }
 
-.elk-header {
-  background: #ffffff;
-  background: var(--elk-header-bg-color);
-  border-bottom: 1px solid #dee2e6;
-  border-bottom: 1px solid var(--elk-header-border-color);
-}
-
-/* .elk-top-nav colors */
-.elk-header .elk-top-nav a,
-.elk-header .elk-top-nav li,
-.elk-header .elk-top-nav ul {
-  background: #ffffff;
-  background: var(--elk-header-bg-color);
-}
-
-.elk-header .elk-top-nav .metismenu a {
-  color: #495057;
-  color: var(--top-nav-a-color);
-}
-
-.elk-header .elk-top-nav .metismenu a:active, .elk-header .elk-top-nav .metismenu a:focus, .elk-header .elk-top-nav .metismenu a:hover {
-  color: #0c8599;
-  color: var(--top-nav-a-hover-color);
-  background: #e9ecef;
-  background: var(--top-nav-a-hover-bg-color);
-}
-
-.elk-header .elk-top-nav .metismenu li > a.active {
-  color: #0c8599;
-  color: var(--top-nav-a-hover-color);
-  background: #e9ecef;
-  background: var(--top-nav-a-hover-bg-color);
-}
-
-.elk-side {
-  background: #ffffff;
-  background: var(--elk-side-bg-color);
-}
-
-.elk-side.is-open {
-  border-right: 1px solid #dee2e6;
-  border-right: 1px solid var(--elk-side-border-color);
-}
-
-/* .elk-side-nav colors */
-.elk-side .elk-side-nav a,
-.elk-side .elk-side-nav li,
-.elk-side .elk-side-nav ul {
-  background: #ffffff;
-  background: var(--elk-side-bg-color);
-}
-
-.elk-side .elk-side-nav .metismenu a {
-  color: #495057;
-  color: var(--side-nav-a-color);
-}
-
-.elk-side .elk-side-nav .metismenu a:active, .elk-side .elk-side-nav .metismenu a:focus, .elk-side .elk-side-nav .metismenu a:hover {
-  color: #0c8599;
-  color: var(--side-nav-a-hover-color);
-  background: #e9ecef;
-  background: var(--side-nav-a-hover-bg-color);
-}
-
-.elk-side .elk-side-nav .metismenu li > a.active {
-  color: #0c8599;
-  color: var(--side-nav-a-hover-color);
-  background: #e9ecef;
-  background: var(--side-nav-a-hover-bg-color);
-}
-
-.elk-switch-indicator {
-  background: #e9ecef;
-  background: var(--elk-switch-indicator-bg);
-  border: 1px solid #dee2e6;
-  border: 1px solid var(--elk-switch-indicator-border);
-}
-
-.elk-switch-indicator::before {
-  background: #ffffff;
-  background: var(--elk-switch-indicator-before);
-}
-
-.elk-switch-input:checked ~ .elk-switch-indicator {
-  background: #e9ecef;
-  background: var(--elk-switch-indicator-checked-bg);
-}
-
 .is-sticky {
   position: -webkit-sticky;
   position: sticky;
@@ -518,80 +389,5 @@ body > .ember-view {
 .is-sticky.is-bottom {
   top: auto;
   bottom: 0;
-}
-
-.has-icon {
-  width: 56px;
-  -ms-flex: 0 0 56px;
-  flex: 0 0 56px;
-  height: 2.5rem;
-  font-size: 1.5em;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.onoffcanvas {
-  visibility: hidden;
-}
-
-.onoffcanvas.is-open {
-  visibility: visible;
-}
-
-.elk-switch {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: default;
-  display: none;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-}
-
-.elk-switch-indicator {
-  display: inline-block;
-  height: 1.25rem;
-  width: 2.25rem;
-  border-radius: 50px;
-  position: relative;
-  vertical-align: bottom;
-  transition: .3s border-color, .3s background-color;
-}
-
-.elk-switch-indicator::before {
-  content: '';
-  position: absolute;
-  height: calc(1.25rem - 4px);
-  width: calc(1.25rem - 4px);
-  top: 1px;
-  left: 1px;
-  border-radius: 50%;
-  transition: .3s left;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
-}
-
-.elk-switch-input {
-  position: absolute;
-  z-index: 9;
-  opacity: 0;
-}
-
-.elk-switch-input:checked ~ .elk-switch-indicator::before {
-  left: calc(1rem + 1px);
-}
-
-@media (min-width: 992px) {
-  .elk-switch {
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-  }
 }
 /*# sourceMappingURL=elektron.css.map */

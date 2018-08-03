@@ -10,20 +10,19 @@
 }
 
 .elk-side-nav .metismenu li {
-  margin-top: 5px;
+  margin-top: .25rem;
 }
 .elk-side-nav .metismenu li:first-child {
-  padding-top: 5px;
+  padding-top: .25rem;
 }
 .elk-side-nav .metismenu li:last-child {
-  padding-bottom: 5px;
+  padding-bottom: .25rem;
 }
 
 .elk-side-nav .metismenu > li {
     position: relative;
 }
 .elk-side-nav .metismenu a {
-    font-size: $side-nav-a-font-size;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -40,8 +39,12 @@
     }
 }
 
+.elk-side-nav .metismenu a {
+    padding: .5rem 1rem;
+}
+
 .elk-side-nav .metismenu ul a {
-    padding: .5em;
+    padding: .5rem;
     padding-left: 3.5rem;
 }
 

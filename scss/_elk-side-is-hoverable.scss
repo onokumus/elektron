@@ -27,6 +27,7 @@
     .nav-title {
       transition: transform 0.3s ease;
       transform: translate3d(-10000%, 0, 0);
+      white-space: nowrap;
     }
   }
 

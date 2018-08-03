@@ -1,14 +1,12 @@
 /*!
 * elektron - v0.5.1
 * An Admin Layout
-* https://github.com/onokumus/elektron#readme
+* https://github.com/onokumus/elektron
 *
 * Made by Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)
 * Under MIT License
 */
 @import "elk-variables";
-@import "elk-root";
-@import "elk-custom";
 
 @import "elk-layout";
 @import "elk-layout-fixed";
@@ -17,9 +15,5 @@
 @import "elk-side-menu";
 @import "elk-side-is-mini";
 @import "elk-side-is-hoverable";
-@import "elk-side-toggler";
 
 @import "elk-header-menu";
-@import "elk-theme";
-
-@import "elk-utility";

@@ -14,10 +14,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenujs/dist/metismenujs.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onoffcanvas/dist/onoffcanvas.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/elektron@0.5.0/dist/elektron.min.css">
-  <link rel="stylesheet" href="assets/css/elektron-demo.css">
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/elektron@0.5.1/dist/elektron.min.css">
+
+  <link rel="stylesheet" href="assets/css/elektron-demo.css">
+  <link rel="stylesheet" href="assets/css/elektron-theme.css">
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1669764-16"></script>
   <script>
@@ -52,7 +54,7 @@
 
       <!-- BEGIN .app-heading -->
       <header class="elk-header is-sticky">
-        <nav class="elk-top-nav is-hoverable onoffcanvas" id="elk-top-nav">
+        <nav class="elk-top-nav is-hoverable onoffcanvas is-top" id="elk-top-nav">
           <ul class="metismenu" id="menu1">
             <li>
               <a class="" href="index.html">
@@ -64,13 +66,13 @@
             </li>
 
             <li>
-              <a href="#" class="has-arrow" aria-expanded=false>
+              <a href="#" class="has-arrow">
                 <span class="has-icon">
                   <i class="fa fa-pagelines"></i>
                 </span>
                 <span class="nav-title">Blank Pages</span>
               </a>
-              <ul aria-expanded=false>
+              <ul>
                 <li>
                   <a href="no-footers.html">No Footers</a>
                 </li>
@@ -78,7 +80,7 @@
                   <a href="no-headers.html">No Headers</a>
                 </li>
                 <li>
-                  <a href="no-headers-footers.html">No Headers&Footers</a>
+                  <a href="no-headers-footers.html">No Headers & Footers</a>
                 </li>
                 <li>
                   <a href="app-is-fixed.html">App Fixed</a>
@@ -99,42 +101,36 @@
             </li>
 
             <li>
-              <a href="#" class="has-arrow" aria-expanded=false>
+              <a href="#" class="has-arrow">
                 <span class="has-icon">
                   <i class="fa fa-list"></i>
                 </span>
-                <span class="nav-title">app-side</span>
+                <span class="nav-title">elk-side</span>
               </a>
-              <ul aria-expanded=false>
+              <ul>
                 <li>
-                  <a href="app-side-is-inverse.html">app-side-is-inverse</a>
+                  <a href="app-side-is-mini.html">is-mini</a>
                 </li>
                 <li>
-                  <a href="#" class="has-arrow" aria-expanded=false>is-fixed</a>
-                  <ul aria-expanded=false>
+                  <a href="app-side-is-hoverable.html">is-hoverable</a>
+                </li>
+                <li>
+                  <a href="#" class="has-arrow">is-fixed</a>
+                  <ul>
                     <li>
-                      <a href="app-side-is-fixed.html">default</a>
+                      <a href="app-side-is-fixed.html">Default</a>
                     </li>
                     <li>
-                      <a href="app-side-is-fixed-is-inverse.html">inverse</a>
-                    </li>
-                    <li>
-                      <a href="app-side-is-fixed-is-hoverable.html">hoverable default</a>
-                    </li>
-                    <li>
-                      <a href="app-side-is-fixed-is-hoverable-is-inverse.html">hoverable inverse</a>
+                      <a href="app-side-is-fixed-is-hoverable.html">Hoverable</a>
                     </li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="#" class="has-arrow" aria-expanded=false>is-sticky</a>
-                  <ul aria-expanded=false>
+                  <a href="#" class="has-arrow">is-sticky</a>
+                  <ul>
                     <li>
-                      <a href="app-side-is-sticky.html">light</a>
-                    </li>
-                    <li>
-                      <a href="app-side-is-sticky-is-inverse.html">inverse</a>
+                      <a href="app-side-is-sticky.html">Default</a>
                     </li>
                     <li>
                       <a href="app-side-is-sticky-is-mini.html">mini</a>
@@ -145,29 +141,6 @@
                   </ul>
                 </li>
 
-                <li>
-                  <a href="#" class="has-arrow" aria-expanded=false>is-mini</a>
-                  <ul aria-expanded=false>
-                    <li>
-                      <a href="app-side-is-mini.html">light</a>
-                    </li>
-                    <li>
-                      <a href="app-side-is-inverse-is-mini.html">inverse</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a href="#" class="has-arrow" aria-expanded=false>is-hoverable</a>
-                  <ul aria-expanded=false>
-                    <li>
-                      <a href="app-side-is-hoverable.html">light</a>
-                    </li>
-                    <li>
-                      <a href="app-side-is-inverse-is-hoverable.html">inverse</a>
-                    </li>
-                  </ul>
-                </li>
               </ul>
             </li>
           </ul>
@@ -296,7 +269,6 @@
         </p>
       </footer>
       <!-- END: .app-footer -->
-
     </div>
     <!-- END: .elk-wrap -->
 
@@ -307,7 +279,7 @@
   <script src="https://cdn.jsdelivr.net/npm/onoffcanvas" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs" charset="utf-f"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/elektron@0.5.0" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/elektron@0.5.1" charset="utf-8"></script>
   <script src="assets/js/changetheme.js"></script>
 </body>
 
