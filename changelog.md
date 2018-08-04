@@ -1,23 +1,40 @@
-#### key
+## Changelog
 
-Changelog entries are classified using the following labels _(from [keep-a-changelog][]_):
+### [Unreleased]
+**removed**
+- helper-changelog
 
-- `added`: for new features
-- `changed`: for changes in existing functionality
-- `deprecated`: for once-stable features removed in upcoming releases
-- `removed`: for deprecated features removed in this release
-- `fixed`: for any bug fixes
+### [0.5.1] - 2018-08-03
 
-Custom labels used in this changelog:
+**fixed**
+- elk-main class
 
-* `dependencies`: bumps dependencies
-* `housekeeping`: code re-organization, minor edits, or other changes that don't fit in one of the other categories.
+**added**
+- elektron-theme.css
 
-### [0.4.1] - 2018-04-20
+**removed**
+- open-color.scss
+
+### [0.5.0] - 2018-07-26
+
+**added**
+- gtag
+- logo
+- theme changer
+
+**removed**
+- jquery
+- metismenu
+
+**fixed**
+- is-fixed class
+- data-theme attribute
+
+### [0.4.1] - 2018-04-30
 **fixed**
 - elk-switch selector in elektron.js
 
-### [0.4.0] - 2018-04-30
+### [0.4.0]  - 2018-04-30
 
 **added**
 - elk-switch component
@@ -53,7 +70,7 @@ Custom labels used in this changelog:
 **fixed**
 - ember-view class
 
-### [0.2.1] - 2017-03-15
+### [0.2.1]  - 2017-03-15
 **fixed**
 - app-side
 
@@ -88,8 +105,22 @@ Custom labels used in this changelog:
 **fixed**
 - .verb.md
 
-### [0.0.1] - 2017-02-13
+### 0.0.1 - 2017-02-13
 **added**
 - initial release
 
-[keep-a-changelog]: https://github.com/olivierlacan/keep-a-changelog
+[Unreleased]: https://github.com/onokumus/elektron/compare/v0.5.1...HEAD
+[0.5.1]: https://github.com/onokumus/elektron/compare/v0.5.0...v0.5.1
+[0.5.0]: https://github.com/onokumus/elektron/compare/v0.4.1...v0.5.0
+[0.4.1]: https://github.com/onokumus/elektron/compare/v0.4.0...v0.4.1
+[0.4.0]: https://github.com/onokumus/elektron/compare/v0.3.3...v0.4.0
+[0.3.3]: https://github.com/onokumus/elektron/compare/v0.3.2...v0.3.3
+[0.3.2]: https://github.com/onokumus/elektron/compare/v0.3.1...v0.3.2
+[0.3.1]: https://github.com/onokumus/elektron/compare/v0.3.0...v0.3.1
+[0.3.0]: https://github.com/onokumus/elektron/compare/v0.2.1...v0.3.0
+[0.2.1]: https://github.com/onokumus/elektron/compare/v0.2.0...v0.2.1
+[0.2.0]: https://github.com/onokumus/elektron/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/onokumus/elektron/compare/v0.0.4...v0.1.0
+[0.0.4]: https://github.com/onokumus/elektron/compare/v0.0.3...v0.0.4
+[0.0.3]: https://github.com/onokumus/elektron/compare/v0.0.2...v0.0.3
+[0.0.2]: https://github.com/onokumus/elektron/compare/v0.0.1...v0.0.2

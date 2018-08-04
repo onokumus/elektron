@@ -111,22 +111,19 @@
     "plugins": [
       "gulp-format-md"
     ],
-    "helpers": [
-      "helper-changelog"
-    ],
     "related": {
       "list": [
         "metismenu",
-        "twbuttons",
-        "label2srt"
+        "metismenujs",
+        "onoffcanvas",
+        "chl"
       ]
     },
     "reflinks": [
       "metismenu",
-      "label2srt",
-      "twbuttons",
-      "helper-changelog",
-      "keep-a-changelog"
+      "metismenujs",
+      "onoffcanvas",
+      "chl"
     ]
   }
 }

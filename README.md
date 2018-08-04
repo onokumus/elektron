@@ -8,21 +8,7 @@
 - [Download](#download)
 - [About](#about)
   * [Related projects](#related-projects)
-  * [Community](#community)
   * [Contributing](#contributing)
-  * [Contributors](#contributors)
-  * [Release history](#release-history)
-      - [[0.4.1] - 2018-04-20](#041---2018-04-20)
-      - [[0.4.0] - 2018-04-30](#040---2018-04-30)
-      - [[0.3.3] - 2018-04-20](#033---2018-04-20)
-      - [[0.3.2] - 2018-04-20](#032---2018-04-20)
-      - [[0.2.1] - 2017-03-15](#021---2017-03-15)
-      - [[0.2.0] - 2017-03-13](#020---2017-03-13)
-      - [[0.1.0] - 2017-03-03](#010---2017-03-03)
-      - [[0.0.4] - 2017-02-19](#004---2017-02-19)
-      - [[0.0.3] - 2017-02-13](#003---2017-02-13)
-      - [[0.0.2] - 2017-02-13](#002---2017-02-13)
-      - [[0.0.1] - 2017-02-13](#001---2017-02-13)
   * [Building docs](#building-docs)
   * [Author](#author)
   * [License](#license)
@@ -46,126 +32,15 @@ $ yarn add elektron
 
 ## About
 ### Related projects
-- [label2srt](https://www.npmjs.com/package/label2srt): Converts Audacity labels (txt files) into SubRip (srt files) | [homepage](https://github.com/onokumus/label2srt#readme "Converts Audacity labels (txt files) into SubRip (srt files)")
+- [chl](https://www.npmjs.com/package/chl): flexbox admin layout | [homepage](https://github.com/chaldene/chl#readme "flexbox admin layout")
 - [metismenu](https://www.npmjs.com/package/metismenu): A jQuery menu plugin | [homepage](https://github.com/onokumus/metismenu#readme "A jQuery menu plugin")
-- [twbuttons](https://www.npmjs.com/package/twbuttons): alexwolfe/Buttons for Twitter Bootstrap 3 | [homepage](https://github.com/onokumus/twbuttons "alexwolfe/Buttons for Twitter Bootstrap 3")
-
-### Community
+- [metismenujs](https://www.npmjs.com/package/metismenujs): MetisMenu with Vanilla-JS | [homepage](https://github.com/onokumus/metismenujs#readme "MetisMenu with Vanilla-JS")
+- [onoffcanvas](https://www.npmjs.com/package/onoffcanvas): An offcanvas plugin | [homepage](https://github.com/onokumus/onoffcanvas#readme "An offcanvas plugin")
 
 ### Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](../../issues/new).
 
 Please read the [contributing guide](.github/contributing.md) for advice on opening issues, pull requests, and coding standards.
-
-### Contributors
-
-### Release history
-
-Changelog entries are classified using the following labels _(from [keep-a-changelog][]_):
-
-- `added`: for new features
-- `changed`: for changes in existing functionality
-- `deprecated`: for once-stable features removed in upcoming releases
-- `removed`: for deprecated features removed in this release
-- `fixed`: for any bug fixes
-
-Custom labels used in this changelog:
-
-* `dependencies`: bumps dependencies
-* `housekeeping`: code re-organization, minor edits, or other changes that don't fit in one of the other categories.
-
-##### [0.4.1] - 2018-04-20
-**fixed**
-- elk-switch selector in elektron.js
-
-##### [0.4.0] - 2018-04-30
-
-**added**
-- elk-switch component
-- data-theme=dark attribute
-- is-fixed class for elk-app component
-- is-fixed class for elk-main component
-
-**changed**
-- app class to elk-app
-- app-wrap class to elk-wrap
-- app-heading class to elk-header
-- app-container class to elk-container
-- app-footer class to elk-footer
-- app-side class to elk-side
-- side-heading class to elk-side-header
-- side-content class to elk-side-content
-- side-footer class to elk-side-footer
-- app-main class to elk-main
-- main-heading class to elk-main-header
-- main-content class to elk-main-content
-- main-footer class to elk-main-footer
-
-**removed**
-- is-inverse class
-- app-is-fixed class
-- main-is-fixed class
-
-##### [0.3.3] - 2018-04-20
-**fixed**
-- ember-view class
-
-##### [0.3.2] - 2018-04-20
-**fixed**
-- ember-view class
-
-##### [0.2.1] - 2017-03-15
-**fixed**
-- app-side
-
-##### [0.2.0] - 2017-03-13
-**added**
-- font-awesome
-- is-inverse class
-**changes**
-- onoffcanvas update
-**removed**
-- side-inverse class
-
-##### [0.1.0] - 2017-03-03
-**removed**
-- bootstrap
-- tether
-- animate.css
-- font-awesome
-
-##### [0.0.4] - 2017-02-19
-**added**
-- animate.css
-- multilevel menü
-**fixed**
-- elektron.js
-
-##### [0.0.3] - 2017-02-13
-**added**
-- bower support
-
-##### [0.0.2] - 2017-02-13
-**fixed**
-- .verb.md
-
-##### [0.0.1] - 2017-02-13
-**added**
-- initial release
-
-[keep-a-changelog]: https://github.com/olivierlacan/keep-a-changelog
-
-[0.4.1]: https://github.com/onokumus/elektron/compare/0.4.0...0.4.1
-[0.4.0]: https://github.com/onokumus/elektron/compare/0.3.3...0.4.0
-[0.3.3]: https://github.com/onokumus/elektron/compare/0.3.2...0.3.3
-[0.3.2]: https://github.com/onokumus/elektron/compare/0.2.1...0.3.2
-[0.2.1]: https://github.com/onokumus/elektron/compare/0.2.0...0.2.1
-[0.2.0]: https://github.com/onokumus/elektron/compare/0.1.0...0.2.0
-[0.1.0]: https://github.com/onokumus/elektron/compare/0.0.4...0.1.0
-[0.0.4]: https://github.com/onokumus/elektron/compare/0.0.3...0.0.4
-[0.0.3]: https://github.com/onokumus/elektron/compare/0.0.2...0.0.3
-[0.0.2]: https://github.com/onokumus/elektron/compare/0.0.1...0.0.2
-_(Changelog generated by [helper-changelog][])_
 
 ### Building docs
 _(This project's readme.md is generated by [verb](https://github.com/verbose/verb-generate-readme), please don't edit the readme directly. Any changes to the readme must be made in the [.verb.md](.verb.md) readme template.)_
@@ -188,11 +63,10 @@ MIT
 
 ***
 
-_This file was generated by [verb-generate-readme](https://github.com/verbose/verb-generate-readme), v0.6.0, on May 09, 2018._
+_This file was generated by [verb-generate-readme](https://github.com/verbose/verb-generate-readme), v0.7.0, on August 05, 2018._
 
-[helper-changelog]: https://github.com/helpers/helper-changelog
-[keep-a-changelog]: https://github.com/oscarotero/keep-a-changelog
-[label2srt]: https://github.com/onokumus/label2srt
+[chl]: https://github.com/chaldene/chl
 [metismenu]: https://github.com/onokumus/metismenu
-[twbuttons]: https://github.com/onokumus/twbuttons
+[metismenujs]: https://github.com/onokumus/metismenujs
+[onoffcanvas]: https://github.com/onokumus/onoffcanvas
 
