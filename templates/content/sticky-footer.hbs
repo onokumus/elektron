@@ -1,10 +1,10 @@
 ---
 title: sticky footer
-footerClass: is-sticky is-bottom
+footerClass: is-sticky
 ifBlank: true
 ---
 <style media="screen">
-  .app-footer {
+  .elk-footer {
     background: #212529;
   }
 </style>
@@ -14,13 +14,13 @@ ifBlank: true
 <p>
 {{#markdown}}
   ```html
-  <!-- begin .app-footer -->
-  <footer class="app-footer is-sticky is-bottom">
+  <!-- begin .elk-footer -->
+  <footer class="elk-footer is-sticky">
     <p>
       {{pkg.name}} v{{pkg.version}} 2017
     </p>
   </footer>
-  <!-- END: .app-footer -->
+  <!-- END: .elk-footer -->
   ```
 {{/markdown}}
 </p>

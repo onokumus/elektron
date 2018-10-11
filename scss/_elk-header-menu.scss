@@ -43,7 +43,7 @@
 .elk-top-nav .metismenu a:hover {
   text-decoration: none;
 }
-@media (min-width: 992px) {
+@media (--viewport-medium) {
   .elk-top-nav .metismenu {
     flex-direction: row;
   }
@@ -83,12 +83,3 @@
   }
 }
 
-.is-sticky {
-  position: sticky;
-  top: 0;
-  z-index: 1002;
-  &.is-bottom {
-    top: auto;
-    bottom: 0;
-  }
-}

@@ -1,8 +1,6 @@
 // elk-header
 .elk-header {
-  background: $elk-header-bg-color;
   background: var(--elk-header-bg-color);
-  border-bottom: 1px solid $elk-header-border-color;
   border-bottom: 1px solid var(--elk-header-border-color);
 }
 
@@ -12,39 +10,33 @@
   a,
   li,
   ul {
-    background: $elk-header-bg-color;
     background: var(--elk-header-bg-color);
   }
   .metismenu a {
-    color: $top-nav-a-color;
     color: var(--top-nav-a-color);
     &:active,
     &:focus,
     &:hover {
-      color: $top-nav-a-hover-color;
       color: var(--top-nav-a-hover-color);
-      background: $top-nav-a-hover-bg-color;
-      background: var(--top-nav-a-hover-bg-color);
+      // background: var(--top-nav-a-hover-bg-color);
     }
   }
-  .metismenu li>a.active {
-    color: $top-nav-a-hover-color;
+  .metismenu li:hover > a,
+  .metismenu li.active > a,
+  .metismenu li > a.active {
     color: var(--top-nav-a-hover-color);
-    background: $top-nav-a-hover-bg-color;
-    background: var(--top-nav-a-hover-bg-color);
+    // background: var(--top-nav-a-hover-bg-color);
   }
 }
 
 .elk-top-nav .metismenu a {
-  font-size: $top-nav-a-font-size;
+  font-size: var(--top-nav-a-font-size);
 }
 
 // elk-side
 .elk-side {
-  background: $elk-side-bg-color;
   background: var(--elk-side-bg-color);
   &.is-open {
-    border-right: 1px solid $elk-side-border-color;
     border-right: 1px solid var(--elk-side-border-color);
   }
 }
@@ -55,52 +47,44 @@
   a,
   li,
   ul {
-    background: $elk-side-bg-color;
     background: var(--elk-side-bg-color);
   }
   .metismenu a {
-    color: $side-nav-a-color;
     color: var(--side-nav-a-color);
     &:active,
     &:focus,
     &:hover {
-      color: $side-nav-a-hover-color;
       color: var(--side-nav-a-hover-color);
-      background: $side-nav-a-hover-bg-color;
-      background: var(--side-nav-a-hover-bg-color);
+      // background: var(--side-nav-a-hover-bg-color);
     }
   }
-  .metismenu li>a.active {
-    color: $side-nav-a-hover-color;
+  .metismenu li:hover > a,
+  .metismenu li.active > a,
+  .metismenu li > a.active {
     color: var(--side-nav-a-hover-color);
-    background: $side-nav-a-hover-bg-color;
-    background: var(--side-nav-a-hover-bg-color);
+    // background: var(--side-nav-a-hover-bg-color);
   }
 }
 
 .elk-side-nav .metismenu a {
-  font-size: $side-nav-a-font-size;
+  font-size: var(--side-nav-a-font-size);
 }
 
 // elk-switch
 .elk-switch-indicator {
-  background: $elk-switch-indicator-bg;
   background: var(--elk-switch-indicator-bg);
-  border: 1px solid $elk-switch-indicator-border;
   border: 1px solid var(--elk-switch-indicator-border);
 }
 
 .elk-switch-indicator::before {
-  background: $elk-switch-indicator-before;
   background: var(--elk-switch-indicator-before);
 }
 
 .elk-switch-input:checked~.elk-switch-indicator {
-  background: $elk-switch-indicator-checked-bg;
   background: var(--elk-switch-indicator-checked-bg);
 }
 
 // elk-main-content
 .elk-main-content {
-  padding: $main-content-padding;
+  padding: var(--main-content-padding);
 }

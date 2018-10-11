@@ -57,7 +57,7 @@
 }
 
 
-@media(min-width:$elk-side-breakpoint) {
+@media(--viewport-medium) {
   .elk-switch{
     display: inline-flex;
   }

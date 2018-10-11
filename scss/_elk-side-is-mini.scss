@@ -1,15 +1,15 @@
 /*
 * .elk-side.is-mini
 */
-@media (min-width: $elk-side-breakpoint) {
+@media (--viewport-medium) {
   .elk-side.is-mini {
-    width: $elk-side-is-mini-width;
+    width: var(--elk-side-is-mini-width);
     border-width: 0 !important;
   }
 
-  .elk-side.is-mini.is-open ~ .elk-main {
-    margin-left: $elk-side-is-mini-width;
-  }
+  // .elk-side.is-mini.is-open ~ .elk-main {
+  //   margin-left: var(--elk-side-is-mini-width);
+  // }
 
   .elk-side.is-mini {
     .metismenu li:last-child {
@@ -44,7 +44,7 @@
 
     .metismenu > li:hover > ul {
       display: block;
-      min-width: $elk-side-width - $elk-side-is-mini-width + 1;
+      min-width: calc(var(--elk-side-width) - var(--elk-side-is-mini-width) + 1px);
       height: auto !important;
     }
 
@@ -52,7 +52,7 @@
       > a {
         display: flex;
         flex-direction: row;
-        min-width: $elk-side-width + 1;
+        min-width: calc(var(--elk-side-width) + 1px);
       }
 
       .nav-title {

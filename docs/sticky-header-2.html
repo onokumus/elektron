@@ -15,23 +15,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenujs/dist/metismenujs.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onoffcanvas/dist/onoffcanvas.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/elektron@0.5.1/dist/elektron.min.css">
-
+  <link rel="stylesheet" href="assets/css/elektron.css">
   <link rel="stylesheet" href="assets/css/elektron-demo.css">
   <link rel="stylesheet" href="assets/css/elektron-theme.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1669764-16"></script>
   <script>
+    if(location.hostname === "elk.onokumus.com"){
     window.dataLayer = window.dataLayer || [];
-
-    function gtag()
-    {
-      dataLayer.push(arguments);
-    }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+  
     gtag('config', 'UA-1669764-16');
-
+    }
   </script>
 
 </head>
@@ -43,16 +40,16 @@
 
     <!-- BEGIN .elk-wrap -->
     <div class="elk-wrap">
-      <!-- BEGIN .app-heading -->
+      <!-- BEGIN .elk-header -->
       <header class="elk-header">
         <a class="onoffcanvas-toggler is-animated" href="#elk-top-nav" data-toggle="onoffcanvas"></a>
         <a href="index.html">
           <img src="assets/img/logo.svg" alt="Elektron Logo">
         </a>
       </header>
-      <!-- END:  .app-heading -->
+      <!-- END:  .elk-header -->
 
-      <!-- BEGIN .app-heading -->
+      <!-- BEGIN .elk-header -->
       <header class="elk-header is-sticky">
         <nav class="elk-top-nav is-hoverable onoffcanvas is-top" id="elk-top-nav">
           <ul class="metismenu" id="menu1">
@@ -102,42 +99,26 @@
 
             <li>
               <a href="#" class="has-arrow">
-                <span class="has-icon">
-                  <i class="fa fa-list"></i>
-                </span>
+                <span class="has-icon"><i class="fa fa-list"></i></span>
                 <span class="nav-title">elk-side</span>
               </a>
               <ul>
-                <li>
-                  <a href="app-side-is-mini.html">is-mini</a>
-                </li>
-                <li>
-                  <a href="app-side-is-hoverable.html">is-hoverable</a>
-                </li>
+                <li><a href="app-side-is-mini.html">is-mini</a></li>
+                <li><a href="app-side-is-hoverable.html">is-hoverable</a></li>
                 <li>
                   <a href="#" class="has-arrow">is-fixed</a>
                   <ul>
-                    <li>
-                      <a href="app-side-is-fixed.html">Default</a>
-                    </li>
-                    <li>
-                      <a href="app-side-is-fixed-is-hoverable.html">Hoverable</a>
-                    </li>
+                    <li><a href="app-side-is-fixed.html">Default</a></li>
+                    <li><a href="app-side-is-fixed-is-hoverable.html">Hoverable</a></li>
                   </ul>
                 </li>
 
                 <li>
                   <a href="#" class="has-arrow">is-sticky</a>
                   <ul>
-                    <li>
-                      <a href="app-side-is-sticky.html">Default</a>
-                    </li>
-                    <li>
-                      <a href="app-side-is-sticky-is-mini.html">mini</a>
-                    </li>
-                    <li>
-                      <a href="app-side-is-sticky-is-hoverable.html">hoverable</a>
-                    </li>
+                    <li><a href="app-side-is-sticky.html">Default</a></li>
+                    <li><a href="app-side-is-sticky-is-mini.html">mini</a></li>
+                    <li><a href="app-side-is-sticky-is-hoverable.html">hoverable</a></li>
                   </ul>
                 </li>
 
@@ -146,7 +127,7 @@
           </ul>
         </nav>
       </header>
-      <!-- END:  .app-heading -->
+      <!-- END:  .elk-header -->
 
       <!-- BEGIN .app-container -->
       <div class="elk-container">
@@ -172,15 +153,15 @@
             </p>
             <h5>HTML</h5>
             <p>
-              <pre><code class="language-html">&lt;!-- BEGIN .app-header --&gt;
-&lt;header class=&quot;app-header is-sticky&quot; data-theme=dark&gt;
+              <pre><code class="language-html">&lt;!-- BEGIN .elk-header --&gt;
+&lt;header class=&quot;elk-header is-sticky&quot; data-theme=dark&gt;
   &lt;a href=&quot;#app-side&quot;
   data-toggle=&quot;onoffcanvas&quot;
   class=&quot;onoffcanvas-toggler&quot;
   aria-expanded=false&gt;&lt;/a&gt;
   &lt;span&gt;APP HEADER&lt;/span&gt;
 &lt;/header&gt;
-&lt;!-- END:  .app-header --&gt;
+&lt;!-- END:  .elk-header --&gt;
 </code></pre>
             </p>
             <p>lorem</p>
@@ -269,6 +250,7 @@
         </p>
       </footer>
       <!-- END: .app-footer -->
+
     </div>
     <!-- END: .elk-wrap -->
 
@@ -278,9 +260,9 @@
   <script src="https://cdn.jsdelivr.net/npm/metismenujs" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/onoffcanvas" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs" charset="utf-f"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/elektron@0.5.1" charset="utf-8"></script>
+  <script src="assets/js/elektron.js" charset="utf-8"></script>
   <script src="assets/js/changetheme.js"></script>
+
 </body>
 
 </html>

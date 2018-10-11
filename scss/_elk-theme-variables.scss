@@ -1,42 +1,43 @@
-// elektron-theme variables
+:root {
+  // main-content padding
+  --main-content-padding: 1rem;
 
-$side-nav-a-font-size                   : .875rem;
-$top-nav-a-font-size                    : $side-nav-a-font-size;
+  --side-nav-a-font-size : .875rem;
+  --top-nav-a-font-size  : .875rem;
 
-$elk-side-bg-color                      : #fff;
-$elk-side-border-color                  : #dee2e6;
-$side-nav-a-color                       : #495057;
-$side-nav-a-hover-color                 : #0c8599;
-$side-nav-a-hover-bg-color              : #e9ecef;
+  --elk-side-bg-color: #fff;
+  --elk-side-border-color: #dee2e6;
+  --side-nav-a-color: #495057;
+  --side-nav-a-hover-color:  #0c8599;
+  --side-nav-a-hover-bg-color: #e9ecef;
 
-$elk-side-inverse-bg-color              : #343a40;
-$elk-side-dark-border-color             : #495057;
-$elk-side-inverse-a-color               : #adb5bd;
-$elk-side-inverse-a-hover-color         : #ced4da;
-$elk-side-inverse-a-hover-bg-color      : #212529;
+  --elk-header-bg-color: #fff;
+  --elk-header-border-color: #dee2e6;
+  --top-nav-a-color: #495057;
+  --top-nav-a-hover-color : #0c8599;
+  --top-nav-a-hover-bg-color: #e9ecef;
 
-$elk-header-bg-color                    : #fff;
-$elk-header-border-color                : #dee2e6;
-$top-nav-a-color                        : #495057;
-$top-nav-a-hover-color                  : #0c8599;
-$top-nav-a-hover-bg-color               : #e9ecef;
+  --elk-switch-indicator-bg: #e9ecef;
+  --elk-switch-indicator-border: #dee2e6;
+  --elk-switch-indicator-before: #fff;
+  --elk-switch-indicator-checked-bg: #e9ecef;
+}
 
-$elk-header-inverse-bg-color            : #343a40;
-$elk-header-dark-border-color           : #495057;
-$elk-header-inverse-a-color             : #868e96;
-$elk-header-inverse-a-hover-color       : #adb5bd;
-$elk-header-inverse-a-hover-bg-color    : #212529;
+[data-theme="dark"] {
+  --elk-side-bg-color: #2b303b;
+  --elk-side-border-color: #495057;
+  --side-nav-a-color: #788195;
+  --side-nav-a-hover-color:  #fff;
+  --side-nav-a-hover-bg-color: #212529;
 
-$elk-switch-indicator-bg                : #e9ecef;
-$elk-switch-indicator-border            : #dee2e6;
-$elk-switch-indicator-before            : #fff;
-$elk-switch-indicator-checked-bg        : #e9ecef;
+  --elk-header-bg-color: #272b35;
+  --elk-header-border-color: #232730;
+  --top-nav-a-color: #868e96;
+  --top-nav-a-hover-color : #fff;
+  --top-nav-a-hover-bg-color: #212529;
 
-$elk-switch-dark-indicator-bg           : #adb5bd;
-$elk-switch-dark-indicator-border       : #343a40;
-$elk-switch-dark-indicator-before       : #fff;
-$elk-switch-dark-indicator-checked-bg   : #adb5bd;
-
-
-// main-content padding
-$main-content-padding: 1rem !default;
+  --elk-switch-indicator-bg: #adb5bd;
+  --elk-switch-indicator-border: #343a40;
+  --elk-switch-indicator-before: #fff;
+  --elk-switch-indicator-checked-bg: #adb5bd;
+}

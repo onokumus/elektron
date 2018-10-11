@@ -1,15 +1,15 @@
 /*
 * .elk-side.is-hoverable
 */
-@media (min-width: $elk-side-breakpoint) {
+@media (--viewport-medium) {
   .elk-side.is-hoverable {
     transition: all 0.3s ease;
-    width: $elk-side-is-mini-width;
+    width: var(--elk-side-is-mini-width);
   }
 
-  .elk-side.is-hoverable.is-open ~ .elk-main {
-    margin-left: $elk-side-is-mini-width;
-  }
+  // .elk-side.is-hoverable.is-open ~ .elk-main {
+  //   margin-left: var(--elk-side-is-mini-width);
+  // }
 
   .elk-side.is-hoverable {
 
@@ -32,7 +32,7 @@
   }
 
   .elk-side.is-hoverable:hover {
-    width: $elk-side-width;
+    width: var(--elk-side-width);
 
     .nav-title {
       transform: translate3d(0, 0, 0);

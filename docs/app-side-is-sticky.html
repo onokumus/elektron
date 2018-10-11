@@ -15,23 +15,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenujs/dist/metismenujs.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onoffcanvas/dist/onoffcanvas.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/elektron@0.5.1/dist/elektron.min.css">
-
+  <link rel="stylesheet" href="assets/css/elektron.css">
   <link rel="stylesheet" href="assets/css/elektron-demo.css">
   <link rel="stylesheet" href="assets/css/elektron-theme.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1669764-16"></script>
   <script>
+    if(location.hostname === "elk.onokumus.com"){
     window.dataLayer = window.dataLayer || [];
-
-    function gtag()
-    {
-      dataLayer.push(arguments);
-    }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+  
     gtag('config', 'UA-1669764-16');
-
+    }
   </script>
 
 </head>
@@ -67,86 +64,50 @@
 
                 <li>
                   <a href="index.html">
-                    <span class="has-icon">
-                      <i class="fa fa-cogs"></i>
-                    </span>
+                    <span class="has-icon"><i class="fa fa-cogs"></i></span>
                     <span class="nav-title">Dashboard</span>
                   </a>
                 </li>
 
                 <li>
                   <a href="#" class="has-arrow">
-                    <span class="has-icon">
-                      <i class="fa fa-pagelines"></i>
-                    </span>
+                    <span class="has-icon"><i class="fa fa-pagelines"></i></span>
                     <span class="nav-title">Blank Pages</span>
                   </a>
                   <ul>
-                    <li>
-                      <a href="no-footers.html">No Footers</a>
-                    </li>
-                    <li>
-                      <a href="no-headers.html">No Headers</a>
-                    </li>
-                    <li>
-                      <a href="no-headers-footers.html">No Headers&Footers</a>
-                    </li>
-                    <li>
-                      <a href="app-is-fixed.html">App Fixed</a>
-                    </li>
-                    <li>
-                      <a href="main-is-fixed.html">Main Fixed</a>
-                    </li>
-                    <li>
-                      <a href="sticky-header.html">Sticky Header</a>
-                    </li>
-                    <li>
-                      <a href="sticky-header-2.html">Sticky Header 2</a>
-                    </li>
-                    <li>
-                      <a href="sticky-footer.html">Sticky Footer</a>
-                    </li>
+                    <li><a href="no-footers.html">No Footers</a></li>
+                    <li><a href="no-headers.html">No Headers</a></li>
+                    <li><a href="no-headers-footers.html">No Headers&Footers</a></li>
+                    <li><a href="app-is-fixed.html">App Fixed</a></li>
+                    <li><a href="main-is-fixed.html">Main Fixed</a></li>
+                    <li><a href="sticky-header.html">Sticky Header</a></li>
+                    <li><a href="sticky-header-2.html">Sticky Header 2</a></li>
+                    <li><a href="sticky-footer.html">Sticky Footer</a></li>
                   </ul>
                 </li>
 
                 <li class="active">
                   <a href="#" class="has-arrow">
-                    <span class="has-icon">
-                      <i class="fa fa-list"></i>
-                    </span>
+                    <span class="has-icon"><i class="fa fa-list"></i></span>
                     <span class="nav-title">elk-side</span>
                   </a>
                   <ul class="collapse in">
-                    <li>
-                      <a href="app-side-is-mini.html">is-mini</a>
-                    </li>
-                    <li>
-                      <a href="app-side-is-hoverable.html">is-hoverable</a>
-                    </li>
+                    <li><a href="app-side-is-mini.html">is-mini</a></li>
+                    <li><a href="app-side-is-hoverable.html">is-hoverable</a></li>
                     <li>
                       <a href="#" class="has-arrow">is-fixed</a>
                       <ul>
-                        <li>
-                          <a href="app-side-is-fixed.html">Default</a>
-                        </li>
-                        <li>
-                          <a href="app-side-is-fixed-is-hoverable.html">Hoverable</a>
-                        </li>
+                        <li><a href="app-side-is-fixed.html">Default</a></li>
+                        <li><a href="app-side-is-fixed-is-hoverable.html">Hoverable</a></li>
                       </ul>
                     </li>
 
                     <li class="active">
                       <a href="#" class="has-arrow">is-sticky</a>
                       <ul class="collapse in">
-                        <li>
-                          <a class=active href="app-side-is-sticky.html">Default</a>
-                        </li>
-                        <li>
-                          <a href="app-side-is-sticky-is-mini.html">mini</a>
-                        </li>
-                        <li>
-                          <a href="app-side-is-sticky-is-hoverable.html">hoverable</a>
-                        </li>
+                        <li><a class=active href="app-side-is-sticky.html">Default</a></li>
+                        <li><a href="app-side-is-sticky-is-mini.html">mini</a></li>
+                        <li><a href="app-side-is-sticky-is-hoverable.html">hoverable</a></li>
                       </ul>
                     </li>
 
@@ -184,9 +145,7 @@
               <span class="elk-switch-indicator"></span>
             </label>
             <hr>
-            <p>Supported browser :
-              <a href="http://caniuse.com/#feat=css-sticky">http://caniuse.com/#feat=css-sticky</a>
-            </p>
+            <p>Supported browser : <a href="http://caniuse.com/#feat=css-sticky">http://caniuse.com/#feat=css-sticky</a></p>
 
             <pre><code class="language-html">&lt;aside class=&quot;elk-side&quot;&gt;
   &lt;div class=&quot;elk-side-content is-sticky&quot;&gt;
@@ -270,7 +229,17 @@
           <!-- END: .elk-main-content -->
           <!-- BEGIN .elk-main-footer -->
           <footer class="elk-main-footer">
-            MAIN FOOTER
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- responsive reklam -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5671633872085649" data-ad-slot="6251877391" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+              if (location.hostname === "elk.onokumus.com")
+              {
+                (adsbygoogle = window.adsbygoogle || []).push(
+                {});
+              }
+
+            </script>
           </footer>
 
           <!-- END: .elk-main-footer -->
@@ -284,10 +253,11 @@
       <!-- begin .elk-footer -->
       <footer class="elk-footer ">
         <p>
-          elektron v0.5.1 2018
+          elektron v0.5.2 2018
         </p>
       </footer>
       <!-- END: .elk-footer -->
+
     </div>
     <!-- END: .elk-wrap -->
 
@@ -297,9 +267,9 @@
   <script src="https://cdn.jsdelivr.net/npm/metismenujs" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/onoffcanvas" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs" charset="utf-f"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/elektron@0.5.1" charset="utf-8"></script>
+  <script src="assets/js/elektron.js" charset="utf-8"></script>
   <script src="assets/js/changetheme.js"></script>
+
 </body>
 
 </html>

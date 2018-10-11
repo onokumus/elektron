@@ -15,23 +15,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenujs/dist/metismenujs.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onoffcanvas/dist/onoffcanvas.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/elektron@0.5.1/dist/elektron.min.css">
-
+  <link rel="stylesheet" href="assets/css/elektron.css">
   <link rel="stylesheet" href="assets/css/elektron-demo.css">
   <link rel="stylesheet" href="assets/css/elektron-theme.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1669764-16"></script>
   <script>
+    if(location.hostname === "elk.onokumus.com"){
     window.dataLayer = window.dataLayer || [];
-
-    function gtag()
-    {
-      dataLayer.push(arguments);
-    }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+  
     gtag('config', 'UA-1669764-16');
-
+    }
   </script>
 
 </head>
@@ -65,88 +62,52 @@
               <!-- BEGIN: elk-side-nav-content -->
               <ul class="metismenu" id="metismenu">
 
-                <li>
-                  <a class="active" href="index.html">
-                    <span class="has-icon">
-                      <i class="fa fa-cogs"></i>
-                    </span>
+                <li class="active">
+                  <a href="index.html">
+                    <span class="has-icon"><i class="fa fa-cogs"></i></span>
                     <span class="nav-title">Dashboard</span>
                   </a>
                 </li>
 
                 <li>
                   <a href="#" class="has-arrow">
-                    <span class="has-icon">
-                      <i class="fa fa-pagelines"></i>
-                    </span>
+                    <span class="has-icon"><i class="fa fa-pagelines"></i></span>
                     <span class="nav-title">Blank Pages</span>
                   </a>
                   <ul>
-                    <li>
-                      <a href="no-footers.html">No Footers</a>
-                    </li>
-                    <li>
-                      <a href="no-headers.html">No Headers</a>
-                    </li>
-                    <li>
-                      <a href="no-headers-footers.html">No Headers&Footers</a>
-                    </li>
-                    <li>
-                      <a href="app-is-fixed.html">App Fixed</a>
-                    </li>
-                    <li>
-                      <a href="main-is-fixed.html">Main Fixed</a>
-                    </li>
-                    <li>
-                      <a href="sticky-header.html">Sticky Header</a>
-                    </li>
-                    <li>
-                      <a href="sticky-header-2.html">Sticky Header 2</a>
-                    </li>
-                    <li>
-                      <a href="sticky-footer.html">Sticky Footer</a>
-                    </li>
+                    <li><a href="no-footers.html">No Footers</a></li>
+                    <li><a href="no-headers.html">No Headers</a></li>
+                    <li><a href="no-headers-footers.html">No Headers&Footers</a></li>
+                    <li><a href="app-is-fixed.html">App Fixed</a></li>
+                    <li><a href="main-is-fixed.html">Main Fixed</a></li>
+                    <li><a href="sticky-header.html">Sticky Header</a></li>
+                    <li><a href="sticky-header-2.html">Sticky Header 2</a></li>
+                    <li><a href="sticky-footer.html">Sticky Footer</a></li>
                   </ul>
                 </li>
 
                 <li>
                   <a href="#" class="has-arrow">
-                    <span class="has-icon">
-                      <i class="fa fa-list"></i>
-                    </span>
+                    <span class="has-icon"><i class="fa fa-list"></i></span>
                     <span class="nav-title">elk-side</span>
                   </a>
                   <ul>
-                    <li>
-                      <a href="app-side-is-mini.html">is-mini</a>
-                    </li>
-                    <li>
-                      <a href="app-side-is-hoverable.html">is-hoverable</a>
-                    </li>
+                    <li><a href="app-side-is-mini.html">is-mini</a></li>
+                    <li><a href="app-side-is-hoverable.html">is-hoverable</a></li>
                     <li>
                       <a href="#" class="has-arrow">is-fixed</a>
                       <ul>
-                        <li>
-                          <a href="app-side-is-fixed.html">Default</a>
-                        </li>
-                        <li>
-                          <a href="app-side-is-fixed-is-hoverable.html">Hoverable</a>
-                        </li>
+                        <li><a href="app-side-is-fixed.html">Default</a></li>
+                        <li><a href="app-side-is-fixed-is-hoverable.html">Hoverable</a></li>
                       </ul>
                     </li>
 
                     <li>
                       <a href="#" class="has-arrow">is-sticky</a>
                       <ul>
-                        <li>
-                          <a href="app-side-is-sticky.html">Default</a>
-                        </li>
-                        <li>
-                          <a href="app-side-is-sticky-is-mini.html">mini</a>
-                        </li>
-                        <li>
-                          <a href="app-side-is-sticky-is-hoverable.html">hoverable</a>
-                        </li>
+                        <li><a href="app-side-is-sticky.html">Default</a></li>
+                        <li><a href="app-side-is-sticky-is-mini.html">mini</a></li>
+                        <li><a href="app-side-is-sticky-is-hoverable.html">hoverable</a></li>
                       </ul>
                     </li>
 
@@ -184,30 +145,20 @@
               <span class="elk-switch-indicator"></span>
             </label>
             <hr>
-            <h1>Elektron:
-              <small>An Admin Layout</small>
-            </h1>
-            <!-- Place this tag where you want the button to render. -->
-            <a class="github-button" href="https://github.com/onokumus" data-size="large" data-show-count="true" aria-label="Follow @onokumus on GitHub">Follow @onokumus</a>
-            <!-- Place this tag where you want the button to render. -->
+            <h1>Elektron: <small>An Admin Layout</small></h1>
             <a class="github-button" href="https://github.com/onokumus/elektron" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star onokumus/elektron on GitHub">Star</a>
-            <!-- Place this tag where you want the button to render. -->
+            <a class="github-button" href="https://github.com/onokumus/elektron/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork onokumus/elektron on GitHub">Fork</a>
             <a class="github-button" href="https://github.com/onokumus/elektron/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download onokumus/elektron on GitHub">Download</a>
             <h2>Install</h2>
-            <p>Install with
-              <a href="https://www.npmjs.com/">npm</a>:</p>
+            <p>Install with <a href="https://www.npmjs.com/">npm</a>:</p>
             <pre><code class="language-sh">$ npm install --save elektron
 </code></pre>
-            <p>Install with
-              <a href="https://yarnpkg.com/">yarn</a>
-            </p>
+            <p>Install with <a href="https://yarnpkg.com/">yarn</a></p>
             <pre><code class="language-sh">$ yarn add elektron
 </code></pre>
 
             <h2>Download</h2>
-            <p>
-              <a href="https://github.com/onokumus/elektron/archive/master.zip">Download Link</a>
-            </p>
+            <p><a href="https://github.com/onokumus/elektron/archive/master.zip">Download Link</a></p>
 
             <h2>HTML Structure</h2>
             <p>
@@ -428,34 +379,34 @@
             <h3>Fixed Page Options</h3>
             <h4>elk-app fixed</h4>
             <p>Elektron is fluid by default. Can be used as fixed on will. All that's needed to be done is to add <code>.is-fixed</code> class to <code>elk-app</code> element.</p>
-            <pre><code class="lang-html">&lt;div class="elk-app is-fixed">
+            <pre><code class="lang-html">&lt;div class="elk-app is-fixed"&gt;
   ...
-&lt;/div>
+&lt;/div&gt;
 </code></pre>
             <h4>elk-main fixed</h4>
             <p>All that's needed to be done is to add <code>.is-fixed</code> class to <code>elk-app</code> and <code>is-fixed</code> class to <code>elk-main</code> elements. For example :</p>
-            <pre><code class="lang-html">  &lt;div class="elk-app is-fixed">
-    &lt;div class="elk-main is-fixed">
+            <pre><code class="lang-html"> &lt;div class="elk-app is-fixed"&gt;
+    &lt;div class="elk-main is-fixed"&gt;
       ...
-    &lt;/div>
-  &lt;/div>
+    &lt;/div&gt;
+  &lt;/div&gt;
 </code></pre>
             <h4>sticky top bar</h4>
-            <pre><code class="lang-html">&lt;!-- BEGIN .elk-header -->
-&lt;header class="elk-header is-sticky">
-    &lt;a href="#elk-side" data-toggle="onoffcanvas" class="onoffcanvas-toggler" aria-expanded=false></a>
-    &lt;span>APP HEADER</span>
-&lt;/header>
-&lt;!-- END:  .elk-header -->
+            <pre><code class="lang-html">&lt;!-- BEGIN .elk-header --&gt;
+&lt;header class="elk-header is-sticky"&gt;
+    &lt;a href="#elk-side" data-toggle="onoffcanvas" class="onoffcanvas-toggler" aria-expanded=false&gt;&lt;/a&gt;
+    &lt;span&gt;APP HEADER&lt;/span&gt;
+&lt;/header&gt;
+&lt;!-- END:  .elk-header --&gt;
 </code></pre>
             <h4>sticky bottom bar</h4>
-            <pre><code class="lang-html"><!-- begin .elk-footer -->
-&lt;footer class="elk-footer is-sticky is-bottom">
-    &lt;p>
-      elektron v1.0.0 2018
-    &lt;/p>
-&lt;/footer>
-<!-- END: .elk-footer -->
+            <pre><code class="lang-html">&lt;!-- begin .elk-footer --&gt;
+ &lt;footer class="elk-footer is-sticky is-bottom"&gt;
+    &lt;p&gt;
+      elektron v0.5.2 2018
+    &lt;/p&gt;
+&lt;/footer&gt;
+&lt;!-- END: .elk-footer --&gt;
 </code></pre>
 
             <!-- Place this tag in your head or just before your close body tag. -->
@@ -465,7 +416,17 @@
           <!-- END: .elk-main-content -->
           <!-- BEGIN .elk-main-footer -->
           <footer class="elk-main-footer">
-            MAIN FOOTER
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- responsive reklam -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5671633872085649" data-ad-slot="6251877391" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+              if (location.hostname === "elk.onokumus.com")
+              {
+                (adsbygoogle = window.adsbygoogle || []).push(
+                {});
+              }
+
+            </script>
           </footer>
 
           <!-- END: .elk-main-footer -->
@@ -479,10 +440,11 @@
       <!-- begin .elk-footer -->
       <footer class="elk-footer ">
         <p>
-          elektron v0.5.1 2018
+          elektron v0.5.2 2018
         </p>
       </footer>
       <!-- END: .elk-footer -->
+
     </div>
     <!-- END: .elk-wrap -->
 
@@ -492,9 +454,9 @@
   <script src="https://cdn.jsdelivr.net/npm/metismenujs" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/onoffcanvas" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/prismjs" charset="utf-f"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/elektron@0.5.1" charset="utf-8"></script>
+  <script src="assets/js/elektron.js" charset="utf-8"></script>
   <script src="assets/js/changetheme.js"></script>
+
 </body>
 
 </html>

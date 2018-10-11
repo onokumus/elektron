@@ -4,8 +4,8 @@
   <!-- BEGIN: elk-side-nav-content -->
   <ul class="metismenu" id="metismenu">
 
-    <li>
-      <a{{#is title "Dashboard"}} class="active"{{/is}} href="index.html">
+    <li{{#is title "Dashboard"}} class="active"{{/is}} >
+      <a href="index.html">
         <span class="has-icon"><i class="fa fa-cogs"></i></span>
         <span class="nav-title">Dashboard</span>
       </a>
@@ -27,7 +27,7 @@
         <li><a{{#is title "sticky footer"}} class=active{{/is}} href="sticky-footer.html">Sticky Footer</a></li>
       </ul>
     </li>
-    
+
     <li{{#if ifSide}} class="active"{{/if}}>
       <a href="#" class="has-arrow">
         <span class="has-icon"><i class="fa fa-list"></i></span>

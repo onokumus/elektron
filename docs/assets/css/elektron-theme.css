@@ -1,4 +1,14 @@
+/*! elektron v0.5.2 | MIT License | github.com/onokumus/elektron */
 :root {
+  --elk-side-width: 16rem;
+  --elk-side-is-mini-width: 4rem;
+  --elk-side-z-index: 1000;
+}
+
+:root {
+  --main-content-padding: 1rem;
+  --side-nav-a-font-size: .875rem;
+  --top-nav-a-font-size: .875rem;
   --elk-side-bg-color: #fff;
   --elk-side-border-color: #dee2e6;
   --side-nav-a-color: #495057;
@@ -16,13 +26,15 @@
 }
 
 [data-theme="dark"] {
-  --elk-side-bg-color: #343a40;
+  --elk-side-bg-color: #2b303b;
   --elk-side-border-color: #495057;
-  --side-nav-a-color: #adb5bd;
+  --side-nav-a-color: #788195;
+  --side-nav-a-hover-color:  #fff;
   --side-nav-a-hover-bg-color: #212529;
-  --elk-header-bg-color: #343a40;
-  --elk-header-border-color: #495057;
+  --elk-header-bg-color: #272b35;
+  --elk-header-border-color: #232730;
   --top-nav-a-color: #868e96;
+  --top-nav-a-hover-color: #fff;
   --top-nav-a-hover-bg-color: #212529;
   --elk-switch-indicator-bg: #adb5bd;
   --elk-switch-indicator-border: #343a40;
@@ -53,19 +65,18 @@
 .elk-header .elk-top-nav .metismenu a:active, .elk-header .elk-top-nav .metismenu a:focus, .elk-header .elk-top-nav .metismenu a:hover {
   color: #0c8599;
   color: var(--top-nav-a-hover-color);
-  background: #e9ecef;
-  background: var(--top-nav-a-hover-bg-color);
 }
 
+.elk-header .elk-top-nav .metismenu li:hover > a,
+.elk-header .elk-top-nav .metismenu li.active > a,
 .elk-header .elk-top-nav .metismenu li > a.active {
   color: #0c8599;
   color: var(--top-nav-a-hover-color);
-  background: #e9ecef;
-  background: var(--top-nav-a-hover-bg-color);
 }
 
 .elk-top-nav .metismenu a {
-  font-size: 0.875rem;
+  font-size: .875rem;
+  font-size: var(--top-nav-a-font-size);
 }
 
 .elk-side {
@@ -94,19 +105,18 @@
 .elk-side .elk-side-nav .metismenu a:active, .elk-side .elk-side-nav .metismenu a:focus, .elk-side .elk-side-nav .metismenu a:hover {
   color: #0c8599;
   color: var(--side-nav-a-hover-color);
-  background: #e9ecef;
-  background: var(--side-nav-a-hover-bg-color);
 }
 
+.elk-side .elk-side-nav .metismenu li:hover > a,
+.elk-side .elk-side-nav .metismenu li.active > a,
 .elk-side .elk-side-nav .metismenu li > a.active {
   color: #0c8599;
   color: var(--side-nav-a-hover-color);
-  background: #e9ecef;
-  background: var(--side-nav-a-hover-bg-color);
 }
 
 .elk-side-nav .metismenu a {
-  font-size: 0.875rem;
+  font-size: .875rem;
+  font-size: var(--side-nav-a-font-size);
 }
 
 .elk-switch-indicator {
@@ -128,6 +138,7 @@
 
 .elk-main-content {
   padding: 1rem;
+  padding: var(--main-content-padding);
 }
 
 .has-icon {
