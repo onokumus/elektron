@@ -4,7 +4,6 @@
 body > .ember-view {
   position: absolute;
   width: 100%;
-  // height: 100%;
   display: flex;
   flex-direction: row;
 }
@@ -23,7 +22,7 @@ body > .ember-view {
   &.is-sticky {
     position: sticky;
     top: 0;
-    z-index: 1002;
+    z-index: var(--elk-side-z-index);
   }
 }
 
@@ -61,5 +60,5 @@ body > .ember-view {
 .elk-footer.is-sticky {
   position: sticky;
   bottom: 0;
-  z-index: 1002;
+  z-index: var(--elk-side-is-open-z-index);
 }

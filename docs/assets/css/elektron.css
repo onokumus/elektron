@@ -1,8 +1,10 @@
-/*! elektron v0.5.2 | MIT License | github.com/onokumus/elektron */
+/*! elektron v0.5.3 | MIT License | github.com/onokumus/elektron */
 :root {
   --elk-side-width: 16rem;
   --elk-side-is-mini-width: 4rem;
-  --elk-side-z-index: 1000;
+  --elk-side-z-index: 1;
+  --elk-side-is-open-z-index: 2;
+  --elk-side-breakpoint: 992px;
 }
 
 .elk-app,
@@ -35,7 +37,8 @@ body > .ember-view {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 1002;
+  z-index: 1;
+  z-index: var(--elk-side-z-index);
 }
 
 .elk-container {
@@ -81,7 +84,8 @@ body > .ember-view {
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
-  z-index: 1002;
+  z-index: 2;
+  z-index: var(--elk-side-is-open-z-index);
 }
 
 /*
@@ -121,7 +125,7 @@ body > .ember-view {
   top: 0;
   bottom: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1;
   z-index: var(--elk-side-z-index);
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
@@ -143,6 +147,8 @@ body > .ember-view {
 .elk-side.is-open {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 @media (min-width: 992px) {
@@ -166,7 +172,8 @@ body > .ember-view {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 1002;
+    z-index: 2;
+    z-index: var(--elk-side-is-open-z-index);
   }
   .elk-side:not(.is-mini) .elk-side-content.is-sticky {
     overflow-y: auto;
@@ -403,7 +410,8 @@ body > .ember-view {
     position: absolute;
     top: 100%;
     min-width: 256px;
-    z-index: 1001;
+    z-index: 1;
+    z-index: var(--elk-side-z-index);
   }
   .elk-top-nav .metismenu > li:last-child > ul {
     right: 0;

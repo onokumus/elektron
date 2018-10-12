@@ -43,7 +43,7 @@
 .elk-top-nav .metismenu a:hover {
   text-decoration: none;
 }
-@media (--viewport-medium) {
+@media (min-width: $elk-side-breakpoint) {
   .elk-top-nav .metismenu {
     flex-direction: row;
   }
@@ -63,7 +63,7 @@
     position: absolute;
     top: 100%;
     min-width: 256px;
-    z-index: 1001;
+    z-index: var(--elk-side-z-index);;
   }
 
   .elk-top-nav .metismenu > li:last-child > ul {

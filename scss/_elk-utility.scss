@@ -48,7 +48,7 @@
 
 .elk-switch-input {
   position: absolute;
-  z-index: 9;
+  z-index: var(--elk-side-is-open-z-index);
   opacity: 0;
 }
 
@@ -57,7 +57,7 @@
 }
 
 
-@media(--viewport-medium) {
+@media(min-width: $elk-side-breakpoint) {
   .elk-switch{
     display: inline-flex;
   }

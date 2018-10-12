@@ -1,7 +1,7 @@
 /*
 * .elk-side.is-hoverable
 */
-@media (--viewport-medium) {
+@media (min-width: $elk-side-breakpoint) {
   .elk-side.is-hoverable {
     transition: all 0.3s ease;
     width: var(--elk-side-is-mini-width);

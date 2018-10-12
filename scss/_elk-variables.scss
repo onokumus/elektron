@@ -1,15 +1,17 @@
-/*! elektron v0.5.2 | MIT License | github.com/onokumus/elektron */
+/*! elektron v0.5.3 | MIT License | github.com/onokumus/elektron */
 // Variables
-
-// elk-side and elk-main transition
 $enable-transitions: true !default;
 $transition-duration: 0.3s !default;
 $transition-timing-function: ease-out !default;
-
-@custom-media --viewport-medium (width >= 992px);
+$elk-side-breakpoint: 992px !default;
 
 :root {
   --elk-side-width: 16rem;
   --elk-side-is-mini-width: 4rem;
-  --elk-side-z-index: 1000;
+  --elk-side-z-index: 1;
+  --elk-side-is-open-z-index: 2;
+  --elk-side-breakpoint: 992px;
 }
+
+
+

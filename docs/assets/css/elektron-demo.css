@@ -1,8 +1,10 @@
-/*! elektron v0.5.2 | MIT License | github.com/onokumus/elektron */
+/*! elektron v0.5.3 | MIT License | github.com/onokumus/elektron */
 :root {
   --elk-side-width: 16rem;
   --elk-side-is-mini-width: 4rem;
-  --elk-side-z-index: 1000;
+  --elk-side-z-index: 1;
+  --elk-side-is-open-z-index: 2;
+  --elk-side-breakpoint: 992px;
 }
 
 html {

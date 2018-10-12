@@ -1,7 +1,7 @@
 /*
 * .elk-side.is-mini
 */
-@media (--viewport-medium) {
+@media (min-width: $elk-side-breakpoint) {
   .elk-side.is-mini {
     width: var(--elk-side-is-mini-width);
     border-width: 0 !important;

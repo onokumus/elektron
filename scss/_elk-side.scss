@@ -6,14 +6,13 @@
 */
 .elk-side {
   width: 100%;
-  @media (--viewport-medium) {
+  @media (min-width: $elk-side-breakpoint) {
     width: var(--elk-side-width);
   }
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  // margin: auto;
   z-index: var(--elk-side-z-index);
   transform: translate3d(-100%, 0, 0);
   @if $enable-transitions {
@@ -25,8 +24,9 @@
 */
 .elk-side.is-open {
   transform: translate3d(0, 0, 0);
+  flex-shrink: 0;
 
-  @media (--viewport-medium) {
+  @media (min-width: $elk-side-breakpoint) {
     position: relative;
   }
 }
@@ -36,14 +36,14 @@
 *
 * available classess: is-sticky
 */
-@media (--viewport-medium) {
+@media (min-width: $elk-side-breakpoint) {
   .elk-side-content {
     margin-bottom: auto;
     &.is-sticky {
       margin-bottom: initial;
       position: sticky;
       top: 0;
-      z-index: 1002;
+      z-index: var(--elk-side-is-open-z-index);
     }
   }
   .elk-side:not(.is-mini) .elk-side-content.is-sticky {

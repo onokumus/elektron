@@ -1,5 +1,5 @@
 /*!
-* elektron - v0.5.2
+* elektron - v0.5.3
 * An Admin Layout
 * https://github.com/onokumus/elektron#readme
 *

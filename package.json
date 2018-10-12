@@ -1,6 +1,6 @@
 {
   "name": "elektron",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "An Admin Layout",
   "main": "dist/elektron.js",
   "browser": "dist/elektron.js",
