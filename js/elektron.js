@@ -69,7 +69,7 @@ if (elkSide !== null) {
 
   showHideElkSide();
 
-  window.addEventListener('resize', debounce(showHideElkSide, 250));
+  elkSide.classList.contains("disable-resize") || window.addEventListener('resize', debounce(showHideElkSide, 250));
 
   const esi = document.querySelector('.elk-switch-input');
 
