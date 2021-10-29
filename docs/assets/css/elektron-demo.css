@@ -1,7 +1,7 @@
-/*! elektron v0.5.3 | MIT License | github.com/onokumus/elektron */
+/*! elektron v0.6.0 | MIT License | github.com/onokumus/elektron */
 :root {
-  --elk-side-width: 16rem;
-  --elk-side-is-mini-width: 4rem;
+  --elk-side-width: 256px;
+  --elk-side-is-mini-width: 64px;
   --elk-side-z-index: 1;
   --elk-side-is-open-z-index: 2;
   --elk-side-breakpoint: 992px;
@@ -20,14 +20,13 @@ html {
 @-ms-viewport {
   width: device-width;
 }
-
 html {
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  font-family: system-ui;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
@@ -75,15 +74,15 @@ tr,
 td {
   border-collapse: collapse;
   border: 1px solid #e9ecef;
-  padding: .25rem;
+  padding: 0.25rem;
 }
 
 .elk-main-content .elk-switch {
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
 .onoffcanvas-drawer.is-open {
   background: rgba(0, 0, 0, 0.5);
 }
+
 /*# sourceMappingURL=elektron-demo.css.map */

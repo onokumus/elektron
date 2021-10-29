@@ -4,13 +4,12 @@
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>Elektron - Dashboard</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/normalize.min.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenujs/dist/metismenujs.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/onoffcanvas/dist/onoffcanvas.min.css">
@@ -21,149 +20,145 @@
 
 </head>
 
-<body>
+<body class="elk-app">
 
-  <!-- BEGIN .elk-app -->
-  <div class="elk-app">
+  <!-- BEGIN .elk-wrap -->
+  <div class="elk-wrap">
+    <!-- BEGIN .elk-header -->
+    <header class="elk-header ">
+      <a class="onoffcanvas-toggler is-animated" href="#elk-side" data-toggle="onoffcanvas"></a>
+      <a href="index.html">
+        <img src="assets/img/logo.svg" alt="Elektron Logo">
+      </a>
+    </header>
+    <!-- END:  .elk-header -->
+    <!-- BEGIN .elk-container -->
+    <div class="elk-container">
 
-    <!-- BEGIN .elk-wrap -->
-    <div class="elk-wrap">
-      <!-- BEGIN .elk-header -->
-      <header class="elk-header ">
-        <a class="onoffcanvas-toggler is-animated" href="#elk-side" data-toggle="onoffcanvas"></a>
-        <a href="index.html">
-          <img src="assets/img/logo.svg" alt="Elektron Logo">
-        </a>
-      </header>
-      <!-- END:  .elk-header -->
-      <!-- BEGIN .elk-container -->
-      <div class="elk-container">
+      <!-- BEGIN .elk-side -->
+      <aside class="elk-side " id="elk-side">
 
-        <!-- BEGIN .elk-side -->
-        <aside class="elk-side " id="elk-side">
+        <!-- BEGIN .elk-side-content -->
+        <div class="elk-side-content ">
+          <!-- BEGIN .elk-side-nav -->
+          <nav class="elk-side-nav">
 
-          <!-- BEGIN .elk-side-content -->
-          <div class="elk-side-content ">
-            <!-- BEGIN .elk-side-nav -->
-            <nav class="elk-side-nav">
+            <!-- BEGIN: elk-side-nav-content -->
+            <ul class="metismenu" id="metismenu">
 
-              <!-- BEGIN: elk-side-nav-content -->
-              <ul class="metismenu" id="metismenu">
+              <li class="mm-active">
+                <a href="index.html">
+                  <span class="has-icon"><i class="fa fa-cogs"></i></span>
+                  <span class="nav-title">Dashboard</span>
+                </a>
+              </li>
 
-                <li class="active">
-                  <a href="index.html">
-                    <span class="has-icon"><i class="fa fa-cogs"></i></span>
-                    <span class="nav-title">Dashboard</span>
-                  </a>
-                </li>
+              <li>
+                <a href="#" class="has-arrow">
+                  <span class="has-icon"><i class="fa fa-pagelines"></i></span>
+                  <span class="nav-title">Blank Pages</span>
+                </a>
+                <ul>
+                  <li><a href="no-footers.html">No Footers</a></li>
+                  <li><a href="no-headers.html">No Headers</a></li>
+                  <li><a href="no-headers-footers.html">No Headers&Footers</a></li>
+                  <li><a href="app-is-fixed.html">App Fixed</a></li>
+                  <li><a href="main-is-fixed.html">Main Fixed</a></li>
+                  <li><a href="sticky-header.html">Sticky Header</a></li>
+                  <li><a href="sticky-header-2.html">Sticky Header 2</a></li>
+                  <li><a href="sticky-footer.html">Sticky Footer</a></li>
+                </ul>
+              </li>
 
-                <li>
-                  <a href="#" class="has-arrow">
-                    <span class="has-icon"><i class="fa fa-pagelines"></i></span>
-                    <span class="nav-title">Blank Pages</span>
-                  </a>
-                  <ul>
-                    <li><a href="no-footers.html">No Footers</a></li>
-                    <li><a href="no-headers.html">No Headers</a></li>
-                    <li><a href="no-headers-footers.html">No Headers&Footers</a></li>
-                    <li><a href="app-is-fixed.html">App Fixed</a></li>
-                    <li><a href="main-is-fixed.html">Main Fixed</a></li>
-                    <li><a href="sticky-header.html">Sticky Header</a></li>
-                    <li><a href="sticky-header-2.html">Sticky Header 2</a></li>
-                    <li><a href="sticky-footer.html">Sticky Footer</a></li>
-                  </ul>
-                </li>
+              <li>
+                <a href="#" class="has-arrow">
+                  <span class="has-icon"><i class="fa fa-list"></i></span>
+                  <span class="nav-title">elk-side</span>
+                </a>
+                <ul>
+                  <li><a href="app-side-is-mini.html">is-mini</a></li>
+                  <li><a href="app-side-is-hoverable.html">is-hoverable</a></li>
+                  <li>
+                    <a href="#" class="has-arrow">is-fixed</a>
+                    <ul>
+                      <li><a href="app-side-is-fixed.html">Default</a></li>
+                      <li><a href="app-side-is-fixed-is-hoverable.html">Hoverable</a></li>
+                    </ul>
+                  </li>
 
-                <li>
-                  <a href="#" class="has-arrow">
-                    <span class="has-icon"><i class="fa fa-list"></i></span>
-                    <span class="nav-title">elk-side</span>
-                  </a>
-                  <ul>
-                    <li><a href="app-side-is-mini.html">is-mini</a></li>
-                    <li><a href="app-side-is-hoverable.html">is-hoverable</a></li>
-                    <li>
-                      <a href="#" class="has-arrow">is-fixed</a>
-                      <ul>
-                        <li><a href="app-side-is-fixed.html">Default</a></li>
-                        <li><a href="app-side-is-fixed-is-hoverable.html">Hoverable</a></li>
-                      </ul>
-                    </li>
+                  <li>
+                    <a href="#" class="has-arrow">is-sticky</a>
+                    <ul>
+                      <li><a href="app-side-is-sticky.html">Default</a></li>
+                      <li><a href="app-side-is-sticky-is-mini.html">mini</a></li>
+                      <li><a href="app-side-is-sticky-is-hoverable.html">hoverable</a></li>
+                    </ul>
+                  </li>
 
-                    <li>
-                      <a href="#" class="has-arrow">is-sticky</a>
-                      <ul>
-                        <li><a href="app-side-is-sticky.html">Default</a></li>
-                        <li><a href="app-side-is-sticky-is-mini.html">mini</a></li>
-                        <li><a href="app-side-is-sticky-is-hoverable.html">hoverable</a></li>
-                      </ul>
-                    </li>
+                </ul>
+              </li>
 
-                  </ul>
-                </li>
+            </ul>
+            <!-- END: elk-side-nav-content -->
+          </nav>
+          <!-- END: .elk-side-nav -->
+        </div>
+        <!-- END: .elk-side-content -->
 
-              </ul>
-              <!-- END: elk-side-nav-content -->
-            </nav>
-            <!-- END: .elk-side-nav -->
-          </div>
-          <!-- END: .elk-side-content -->
+        <!-- BEGIN .elk-side-footer -->
+        <footer class="elk-side-footer">
+          ESF
+        </footer>
+        <!-- END .elk-side-footer -->
 
-          <!-- BEGIN .elk-side-footer -->
-          <footer class="elk-side-footer">
-            ESF
-          </footer>
-          <!-- END .elk-side-footer -->
+      </aside>
+      <!-- END: .elk-side -->
 
-        </aside>
-        <!-- END: .elk-side -->
+      <!-- BEGIN .elk-main -->
+      <div class="elk-main">
 
-        <!-- BEGIN .elk-main -->
-        <div class="elk-main">
-
-          <!-- BEGIN .elk-main-heading -->
-          <header class="elk-main-header">
-            MAIN HEADER
-          </header>
-          <!-- END: .elk-main-header -->
-          <!-- BEGIN .elk-main-content -->
-          <div class="elk-main-content">
-            <label class="elk-switch">
-              <input name="dark" class="elk-switch-input" type="checkbox">
-              <span class="elk-switch-indicator"></span>
-            </label>
-            <hr>
-            <h1>Elektron: <small>An Admin Layout</small></h1>
-            <a class="github-button" href="https://github.com/onokumus/elektron" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star onokumus/elektron on GitHub">Star</a>
-            <a class="github-button" href="https://github.com/onokumus/elektron/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork onokumus/elektron on GitHub">Fork</a>
-            <a class="github-button" href="https://github.com/onokumus/elektron/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download onokumus/elektron on GitHub">Download</a>
-            <h2>Install</h2>
-            <p>Install with <a href="https://www.npmjs.com/">npm</a>:</p>
-            <pre><code class="language-sh">$ npm install --save elektron
+        <!-- BEGIN .elk-main-heading -->
+        <header class="elk-main-header">
+          MAIN HEADER
+        </header>
+        <!-- END: .elk-main-header -->
+        <!-- BEGIN .elk-main-content -->
+        <div class="elk-main-content">
+          <label class="elk-switch">
+            <input name="dark" class="elk-switch-input" type="checkbox">
+            <span class="elk-switch-indicator"></span>
+          </label>
+          <hr>
+          <h1>Elektron: <small>An Admin Layout</small></h1>
+          <a class="github-button" href="https://github.com/onokumus/elektron" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star onokumus/elektron on GitHub">Star</a>
+          <a class="github-button" href="https://github.com/onokumus/elektron/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork onokumus/elektron on GitHub">Fork</a>
+          <a class="github-button" href="https://github.com/onokumus/elektron/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download onokumus/elektron on GitHub">Download</a>
+          <h2>Install</h2>
+          <p>Install with <a href="https://www.npmjs.com/">npm</a>:</p>
+          <pre><code class="language-sh">$ npm install --save elektron
 </code></pre>
-            <p>Install with <a href="https://yarnpkg.com/">yarn</a></p>
-            <pre><code class="language-sh">$ yarn add elektron
+          <p>Install with <a href="https://yarnpkg.com/">yarn</a></p>
+          <pre><code class="language-sh">$ yarn add elektron
 </code></pre>
 
-            <h2>Download</h2>
-            <p><a href="https://github.com/onokumus/elektron/archive/master.zip">Download Link</a></p>
+          <h2>Download</h2>
+          <p><a href="https://github.com/onokumus/elektron/archive/master.zip">Download Link</a></p>
 
-            <h2>HTML Structure</h2>
-            <p>
-              <code>.elk-app</code> class should be added to div element inside the body tag.
-            </p>
+          <h2>HTML Structure</h2>
+          <p>
+            <code>.elk-app</code> class should be added to div element inside the body tag.
+          </p>
 
-            <h3>Basic Template</h3>
-            <span>Start with this basic HTML template.</span>
+          <h3>Basic Template</h3>
+          <span>Start with this basic HTML template.</span>
 
-            <pre><code class="language-html"> &lt;!doctype html&gt;
+          <pre><code class="language-html">&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 
 &lt;head&gt;
   &lt;!-- Required meta tags --&gt;
   &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
 
   &lt;!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --&gt;
   &lt;title&gt;Admin&lt;/title&gt;
@@ -176,108 +171,102 @@
 
 &lt;/head&gt;
 
-&lt;body&gt;
+&lt;body class=&quot;elk-app&quot;&gt;
 
-  &lt;!-- BEGIN .elk-app --&gt;
-  &lt;div class=&quot;elk-app&quot;&gt;
+  &lt;!-- BEGIN .elk-wrap --&gt;
+  &lt;div class=&quot;elk-wrap&quot;&gt;
+    &lt;!-- BEGIN .elk-header --&gt;
+    &lt;header class=&quot;elk-header &quot;&gt;
+      &lt;a class=&quot;onoffcanvas-toggler is-animated&quot; href=&quot;#elk-side&quot; data-toggle=&quot;onoffcanvas&quot;&gt;&lt;/a&gt;
+    &lt;/header&gt;
+    &lt;!-- END:  .elk-header --&gt;
+    &lt;!-- BEGIN .elk-container --&gt;
+    &lt;div class=&quot;elk-container&quot;&gt;
 
-    &lt;!-- BEGIN .elk-wrap --&gt;
-    &lt;div class=&quot;elk-wrap&quot;&gt;
-      &lt;!-- BEGIN .elk-header --&gt;
-      &lt;header class=&quot;elk-header &quot;&gt;
-        &lt;a class=&quot;onoffcanvas-toggler is-animated&quot; href=&quot;#elk-side&quot; data-toggle=&quot;onoffcanvas&quot;&gt;&lt;/a&gt;
-      &lt;/header&gt;
-      &lt;!-- END:  .elk-header --&gt;
-      &lt;!-- BEGIN .elk-container --&gt;
-      &lt;div class=&quot;elk-container&quot;&gt;
+      &lt;!-- BEGIN .elk-side --&gt;
+      &lt;aside class=&quot;elk-side &quot; id=&quot;elk-side&quot; aria-expanded=false&gt;
 
-        &lt;!-- BEGIN .elk-side --&gt;
-        &lt;aside class=&quot;elk-side &quot; id=&quot;elk-side&quot; aria-expanded=false&gt;
+        &lt;!-- BEGIN .elk-side-content --&gt;
+        &lt;div class=&quot;elk-side-content &quot;&gt;
+          &lt;!-- BEGIN .elk-side-nav --&gt;
+          &lt;nav class=&quot;elk-side-nav&quot;&gt;
 
-          &lt;!-- BEGIN .elk-side-content --&gt;
-          &lt;div class=&quot;elk-side-content &quot;&gt;
-            &lt;!-- BEGIN .elk-side-nav --&gt;
-            &lt;nav class=&quot;elk-side-nav&quot;&gt;
+            &lt;!-- BEGIN: elk-side-nav-content --&gt;
+            &lt;ul class=&quot;metismenu&quot; id=&quot;metismenu&quot;&gt;
 
-              &lt;!-- BEGIN: elk-side-nav-content --&gt;
-              &lt;ul class=&quot;metismenu&quot; id=&quot;metismenu&quot;&gt;
+              &lt;li&gt;
+                &lt;a class=&quot;active&quot; href=&quot;index.html&quot;&gt;
+                  &lt;span class=&quot;has-icon&quot;&gt;
+                    &lt;i class=&quot;fa fa-cogs&quot;&gt;&lt;/i&gt;
+                  &lt;/span&gt;
+                  &lt;span class=&quot;nav-title&quot;&gt;Dashboard&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/li&gt;
 
-                &lt;li&gt;
-                  &lt;a class=&quot;active&quot; href=&quot;index.html&quot;&gt;
-                    &lt;span class=&quot;has-icon&quot;&gt;
-                      &lt;i class=&quot;fa fa-cogs&quot;&gt;&lt;/i&gt;
-                    &lt;/span&gt;
-                    &lt;span class=&quot;nav-title&quot;&gt;Dashboard&lt;/span&gt;
-                  &lt;/a&gt;
-                &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;has-arrow&quot; aria-expanded=false&gt;
+                  &lt;span class=&quot;has-icon&quot;&gt;
+                    &lt;i class=&quot;fa fa-pagelines&quot;&gt;&lt;/i&gt;
+                  &lt;/span&gt;
+                  &lt;span class=&quot;nav-title&quot;&gt;Menu&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;ul aria-expanded=false&gt;
+                  &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;Menu Item&lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
 
-                &lt;li&gt;
-                  &lt;a href=&quot;#&quot; class=&quot;has-arrow&quot; aria-expanded=false&gt;
-                    &lt;span class=&quot;has-icon&quot;&gt;
-                      &lt;i class=&quot;fa fa-pagelines&quot;&gt;&lt;/i&gt;
-                    &lt;/span&gt;
-                    &lt;span class=&quot;nav-title&quot;&gt;Menu&lt;/span&gt;
-                  &lt;/a&gt;
-                  &lt;ul aria-expanded=false&gt;
-                    &lt;li&gt;
-                      &lt;a href=&quot;#&quot;&gt;Menu Item&lt;/a&gt;
-                    &lt;/li&gt;
-                  &lt;/ul&gt;
-                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;!-- END: elk-side-nav-content --&gt;
+          &lt;/nav&gt;
+          &lt;!-- END: .elk-side-nav --&gt;
+        &lt;/div&gt;
+        &lt;!-- END: .elk-side-content --&gt;
+        &lt;!-- BEGIN .elk-side-footer --&gt;
+        &lt;footer class=&quot;elk-side-footer&quot;&gt;
+          ...
+        &lt;/footer&gt;
+        &lt;!-- END .elk-side-footer --&gt;
 
-              &lt;/ul&gt;
-              &lt;!-- END: elk-side-nav-content --&gt;
-            &lt;/nav&gt;
-            &lt;!-- END: .elk-side-nav --&gt;
-          &lt;/div&gt;
-          &lt;!-- END: .elk-side-content --&gt;
-          &lt;!-- BEGIN .elk-side-footer --&gt;
-          &lt;footer class=&quot;elk-side-footer&quot;&gt;
-            ...
-          &lt;/footer&gt;
-          &lt;!-- END .elk-side-footer --&gt;
+      &lt;/aside&gt;
+      &lt;!-- END: .elk-side --&gt;
 
-        &lt;/aside&gt;
-        &lt;!-- END: .elk-side --&gt;
+      &lt;!-- BEGIN .elk-main --&gt;
+      &lt;div class=&quot;elk-main&quot;&gt;
 
-        &lt;!-- BEGIN .elk-main --&gt;
-        &lt;div class=&quot;elk-main&quot;&gt;
+        &lt;!-- BEGIN .elk-main-heading --&gt;
+        &lt;header class=&quot;elk-main-header&quot;&gt;
+          ...
+        &lt;/header&gt;
+        &lt;!-- END: .elk-main-header --&gt;
+        &lt;!-- BEGIN .elk-main-content --&gt;
+        &lt;div class=&quot;elk-main-content&quot;&gt;
 
-          &lt;!-- BEGIN .elk-main-heading --&gt;
-          &lt;header class=&quot;elk-main-header&quot;&gt;
-            ...
-          &lt;/header&gt;
-          &lt;!-- END: .elk-main-header --&gt;
-          &lt;!-- BEGIN .elk-main-content --&gt;
-          &lt;div class=&quot;elk-main-content&quot;&gt;
-
-            ...
-
-          &lt;/div&gt;
-          &lt;!-- END: .elk-main-content --&gt;
-          &lt;!-- BEGIN .elk-main-footer --&gt;
-          &lt;footer class=&quot;elk-main-footer&quot;&gt;
-            ...
-          &lt;/footer&gt;
-
-          &lt;!-- END: .elk-main-footer --&gt;
+          ...
 
         &lt;/div&gt;
-        &lt;!-- END: .elk-main --&gt;
+        &lt;!-- END: .elk-main-content --&gt;
+        &lt;!-- BEGIN .elk-main-footer --&gt;
+        &lt;footer class=&quot;elk-main-footer&quot;&gt;
+          ...
+        &lt;/footer&gt;
+
+        &lt;!-- END: .elk-main-footer --&gt;
 
       &lt;/div&gt;
-      &lt;!-- END: .elk-container --&gt;
+      &lt;!-- END: .elk-main --&gt;
 
-      &lt;!-- begin .elk-footer --&gt;
-      &lt;footer class=&quot;elk-footer &quot;&gt;
-        ...
-      &lt;/footer&gt;
-      &lt;!-- END: .elk-footer --&gt;
     &lt;/div&gt;
-    &lt;!-- END: .elk-wrap --&gt;
+    &lt;!-- END: .elk-container --&gt;
 
+    &lt;!-- begin .elk-footer --&gt;
+    &lt;footer class=&quot;elk-footer &quot;&gt;
+      ...
+    &lt;/footer&gt;
+    &lt;!-- END: .elk-footer --&gt;
   &lt;/div&gt;
-  &lt;!-- END: .elk-app --&gt;
+  &lt;!-- END: .elk-wrap --&gt;
 
   &lt;script src=&quot;https://cdn.jsdelivr.net/npm/metismenujs&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
   &lt;script src=&quot;https://cdn.jsdelivr.net/npm/onoffcanvas/dist/onoffcanvas.min.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
@@ -287,108 +276,108 @@
 &lt;/html&gt;
 </code></pre>
 
-            <h3>Class structure</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>class</th>
-                  <th>required</th>
-                  <th>multiple</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>.elk-app</td>
-                  <td>not required for ember.js project, otherwise required</td>
-                  <td>no</td>
-                </tr>
-                <tr>
-                  <td>.elk-wrap</td>
-                  <td>required</td>
-                  <td>no</td>
-                </tr>
-                <tr>
-                  <td>.elk-header</td>
-                  <td>no</td>
-                  <td>yes</td>
-                </tr>
-                <tr>
-                  <td>.elk-container</td>
-                  <td>required</td>
-                  <td>no</td>
-                </tr>
-                <tr>
-                  <td>.elk-footer</td>
-                  <td>no</td>
-                  <td>yes</td>
-                </tr>
-                <tr>
-                  <td>.elk-side</td>
-                  <td>no</td>
-                  <td>yes</td>
-                </tr>
-                <tr>
-                  <td>.elk-side-header</td>
-                  <td>no</td>
-                  <td>yes</td>
-                </tr>
-                <tr>
-                  <td>.elk-side-content</td>
-                  <td>no (required, if .app-side )</td>
-                  <td>no</td>
-                </tr>
-                <tr>
-                  <td>.elk-side-footer</td>
-                  <td>no</td>
-                  <td>no</td>
-                </tr>
-                <tr>
-                  <td>.elk-main</td>
-                  <td>required</td>
-                  <td>no</td>
-                </tr>
-                <tr>
-                  <td>.elk-main-header</td>
-                  <td>no</td>
-                  <td>yes</td>
-                </tr>
-                <tr>
-                  <td>.elk-main-content</td>
-                  <td>required</td>
-                  <td>no</td>
-                </tr>
-                <tr>
-                  <td>.elk-main-footer</td>
-                  <td>no</td>
-                  <td>yes</td>
-                </tr>
-              </tbody>
-            </table>
-            <h3>Fixed Page Options</h3>
-            <h4>elk-app fixed</h4>
-            <p>Elektron is fluid by default. Can be used as fixed on will. All that's needed to be done is to add <code>.is-fixed</code> class to <code>elk-app</code> element.</p>
-            <pre><code class="lang-html">&lt;div class="elk-app is-fixed"&gt;
+          <h3>Class structure</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>class</th>
+                <th>required</th>
+                <th>multiple</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>.elk-app</td>
+                <td>not required for ember.js project, otherwise required</td>
+                <td>no</td>
+              </tr>
+              <tr>
+                <td>.elk-wrap</td>
+                <td>required</td>
+                <td>no</td>
+              </tr>
+              <tr>
+                <td>.elk-header</td>
+                <td>no</td>
+                <td>yes</td>
+              </tr>
+              <tr>
+                <td>.elk-container</td>
+                <td>required</td>
+                <td>no</td>
+              </tr>
+              <tr>
+                <td>.elk-footer</td>
+                <td>no</td>
+                <td>yes</td>
+              </tr>
+              <tr>
+                <td>.elk-side</td>
+                <td>no</td>
+                <td>yes</td>
+              </tr>
+              <tr>
+                <td>.elk-side-header</td>
+                <td>no</td>
+                <td>yes</td>
+              </tr>
+              <tr>
+                <td>.elk-side-content</td>
+                <td>no (required, if .app-side )</td>
+                <td>no</td>
+              </tr>
+              <tr>
+                <td>.elk-side-footer</td>
+                <td>no</td>
+                <td>no</td>
+              </tr>
+              <tr>
+                <td>.elk-main</td>
+                <td>required</td>
+                <td>no</td>
+              </tr>
+              <tr>
+                <td>.elk-main-header</td>
+                <td>no</td>
+                <td>yes</td>
+              </tr>
+              <tr>
+                <td>.elk-main-content</td>
+                <td>required</td>
+                <td>no</td>
+              </tr>
+              <tr>
+                <td>.elk-main-footer</td>
+                <td>no</td>
+                <td>yes</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Fixed Page Options</h3>
+          <h4>elk-app fixed</h4>
+          <p>Elektron is fluid by default. Can be used as fixed on will. All that's needed to be done is to add <code>.is-fixed</code> class to <code>elk-app</code> element.</p>
+          <pre><code class="lang-html">&lt;div class="elk-app is-fixed"&gt;
   ...
 &lt;/div&gt;
 </code></pre>
-            <h4>elk-main fixed</h4>
-            <p>All that's needed to be done is to add <code>.is-fixed</code> class to <code>elk-app</code> and <code>is-fixed</code> class to <code>elk-main</code> elements. For example :</p>
-            <pre><code class="lang-html"> &lt;div class="elk-app is-fixed"&gt;
+          <h4>elk-main fixed</h4>
+          <p>All that's needed to be done is to add <code>.is-fixed</code> class to <code>elk-app</code> and <code>is-fixed</code> class to <code>elk-main</code> elements. For example :</p>
+          <pre><code class="lang-html"> &lt;div class="elk-app is-fixed"&gt;
     &lt;div class="elk-main is-fixed"&gt;
       ...
     &lt;/div&gt;
   &lt;/div&gt;
 </code></pre>
-            <h4>sticky top bar</h4>
-            <pre><code class="lang-html">&lt;!-- BEGIN .elk-header --&gt;
+          <h4>sticky top bar</h4>
+          <pre><code class="lang-html">&lt;!-- BEGIN .elk-header --&gt;
 &lt;header class="elk-header is-sticky"&gt;
     &lt;a href="#elk-side" data-toggle="onoffcanvas" class="onoffcanvas-toggler" aria-expanded=false&gt;&lt;/a&gt;
     &lt;span&gt;APP HEADER&lt;/span&gt;
 &lt;/header&gt;
 &lt;!-- END:  .elk-header --&gt;
 </code></pre>
-            <h4>sticky bottom bar</h4>
-            <pre><code class="lang-html">&lt;!-- begin .elk-footer --&gt;
+          <h4>sticky bottom bar</h4>
+          <pre><code class="lang-html">&lt;!-- begin .elk-footer --&gt;
  &lt;footer class="elk-footer is-sticky is-bottom"&gt;
     &lt;p&gt;
       elektron v0.5.2 2018
@@ -397,31 +386,28 @@
 &lt;!-- END: .elk-footer --&gt;
 </code></pre>
 
-            <!-- Place this tag in your head or just before your close body tag. -->
-            <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-          </div>
-          <!-- END: .elk-main-content -->
+          <!-- Place this tag in your head or just before your close body tag. -->
+          <script async defer src="https://buttons.github.io/buttons.js"></script>
 
         </div>
-        <!-- END: .elk-main -->
+        <!-- END: .elk-main-content -->
 
       </div>
-      <!-- END: .elk-container -->
-
-      <!-- begin .elk-footer -->
-      <footer class="elk-footer ">
-        <p>
-          elektron v0.5.3 2018
-        </p>
-      </footer>
-      <!-- END: .elk-footer -->
+      <!-- END: .elk-main -->
 
     </div>
-    <!-- END: .elk-wrap -->
+    <!-- END: .elk-container -->
+
+    <!-- begin .elk-footer -->
+    <footer class="elk-footer ">
+      <p>
+        elektron v0.6.0 2021
+      </p>
+    </footer>
+    <!-- END: .elk-footer -->
 
   </div>
-  <!-- END: .elk-app -->
+  <!-- END: .elk-wrap -->
 
   <script src="https://cdn.jsdelivr.net/npm/metismenujs" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/onoffcanvas" charset="utf-8"></script>

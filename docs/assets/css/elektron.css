@@ -1,7 +1,7 @@
-/*! elektron v0.5.3 | MIT License | github.com/onokumus/elektron */
+/*! elektron v0.6.0 | MIT License | github.com/onokumus/elektron */
 :root {
-  --elk-side-width: 16rem;
-  --elk-side-is-mini-width: 4rem;
+  --elk-side-width: 256px;
+  --elk-side-is-mini-width: 64px;
   --elk-side-z-index: 1;
   --elk-side-is-open-z-index: 2;
   --elk-side-breakpoint: 992px;
@@ -11,18 +11,13 @@
 body > .ember-view {
   position: absolute;
   width: 100%;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
   flex-direction: row;
 }
 
 .elk-wrap {
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
   position: relative;
@@ -32,34 +27,24 @@ body > .ember-view {
 .elk-header {
   position: relative;
 }
-
 .elk-header.is-sticky {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 1;
   z-index: var(--elk-side-z-index);
 }
 
 .elk-container {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  -ms-flex-direction: row;
   flex-direction: row;
   position: relative;
 }
 
 .elk-main {
   position: relative;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   overflow-x: auto;
   transition: margin 0.3s ease-out;
@@ -68,23 +53,18 @@ body > .ember-view {
 .elk-main-content {
   position: relative;
   margin-bottom: auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
 .elk-side {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   margin: 0;
 }
 
 .elk-footer.is-sticky {
-  position: -webkit-sticky;
   position: sticky;
   bottom: 0;
-  z-index: 2;
   z-index: var(--elk-side-is-open-z-index);
 }
 
@@ -95,7 +75,6 @@ body > .ember-view {
 .elk-app.is-fixed {
   height: 100%;
 }
-
 .elk-app.is-fixed .elk-container,
 .elk-app.is-fixed .elk-side,
 .elk-app.is-fixed .elk-main {
@@ -124,19 +103,13 @@ body > .ember-view {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
-  z-index: 1;
+  inset-inline-start: 0;
   z-index: var(--elk-side-z-index);
-  -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
-  transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
-
 @media (min-width: 992px) {
   .elk-side {
-    width: 16rem;
     width: var(--elk-side-width);
   }
 }
@@ -145,12 +118,9 @@ body > .ember-view {
 * show elk-side
 */
 .elk-side.is-open {
-  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
-
 @media (min-width: 992px) {
   .elk-side.is-open {
     position: relative;
@@ -167,19 +137,16 @@ body > .ember-view {
     margin-bottom: auto;
   }
   .elk-side-content.is-sticky {
-    margin-bottom: 0;
     margin-bottom: initial;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 2;
     z-index: var(--elk-side-is-open-z-index);
   }
+
   .elk-side:not(.is-mini) .elk-side-content.is-sticky {
     overflow-y: auto;
   }
 }
-
 .elk-side-header {
   padding: 0.5rem;
   text-align: right;
@@ -192,22 +159,20 @@ body > .ember-view {
 }
 
 .elk-side-nav .metismenu {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .elk-side-nav .metismenu li {
-  margin-top: .25rem;
+  margin-top: 0.25rem;
 }
 
 .elk-side-nav .metismenu li:first-child {
-  padding-top: .25rem;
+  padding-top: 0.25rem;
 }
 
 .elk-side-nav .metismenu li:last-child {
-  padding-bottom: .25rem;
+  padding-bottom: 0.25rem;
 }
 
 .elk-side-nav .metismenu > li {
@@ -216,31 +181,28 @@ body > .ember-view {
 
 .elk-side-nav .metismenu a {
   position: relative;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-align: center;
   align-items: center;
   outline-width: 0;
+  cursor: pointer;
   transition: all 0.3s ease-out;
 }
-
 .elk-side-nav .metismenu a:active, .elk-side-nav .metismenu a:focus, .elk-side-nav .metismenu a:hover {
   text-decoration: none;
 }
 
 .elk-side-nav .metismenu a {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .elk-side-nav .metismenu ul a {
-  padding: .5rem;
-  padding-left: 3.5rem;
+  padding: 0.5rem;
+  padding-inline-start: 3rem;
 }
 
 .elk-side-nav .metismenu ul ul a {
-  padding-left: 4.5rem;
+  padding-inline-start: 4rem;
 }
 
 /*
@@ -248,102 +210,91 @@ body > .ember-view {
 */
 @media (min-width: 992px) {
   .elk-side.is-mini {
-    width: 4rem;
     width: var(--elk-side-is-mini-width);
     border-width: 0 !important;
   }
+
   .elk-side.is-mini .metismenu li:last-child {
     padding-bottom: 0;
   }
   .elk-side.is-mini .metismenu > li > a.has-arrow::after {
+    transition-duration: 0.1s;
+  }
+  .elk-side.is-mini .metismenu > li:not(:hover) > a.has-arrow::after {
     border-width: 0;
   }
   .elk-side.is-mini .nav-title {
     display: none;
-    margin-left: 1.5rem;
+    margin-inline-start: 1.5rem;
   }
   .elk-side.is-mini .metismenu ul ul a {
-    padding-left: 2.5rem;
+    padding-inline-start: 2.5rem;
   }
   .elk-side.is-mini .metismenu > li > ul {
     position: absolute;
     top: 100%;
-    left: 100%;
+    inset-inline-start: 100%;
+  }
+  .elk-side.is-mini .metismenu > li > ul.mm-collapse.mm-show:not(.mm-collapsing) {
     display: none;
   }
   .elk-side.is-mini .metismenu > li > ul > li > a {
     padding: 0.5em 0.5em 0.5em 1.5em;
   }
-  .elk-side.is-mini .metismenu > li:hover > ul {
+  .elk-side.is-mini .metismenu > li > ul.mm-collapsing {
+    visibility: collapse;
+    transition-duration: 0.1s;
+  }
+  .elk-side.is-mini .metismenu > li:hover > ul.mm-collapse.mm-show:not(.mm-collapsing) {
     display: block;
-    min-width: calc(16rem - 4rem + 1px);
     min-width: calc(var(--elk-side-width) - var(--elk-side-is-mini-width) + 1px);
     height: auto !important;
   }
   .elk-side.is-mini .metismenu > li:hover > a {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: row;
     flex-direction: row;
-    min-width: calc(16rem + 1px);
     min-width: calc(var(--elk-side-width) + 1px);
   }
   .elk-side.is-mini .metismenu > li:hover .nav-title {
     display: inline-block;
-    -ms-flex-item-align: center;
     align-self: center;
   }
-  .elk-side.is-mini .metismenu > li:hover > .has-arrow::after {
-    border-width: 1px 0 0 1px;
-    -webkit-transform: rotate(-135deg);
-    transform: rotate(-135deg);
-  }
 }
-
 /*
 * .elk-side.is-hoverable
 */
 @media (min-width: 992px) {
   .elk-side.is-hoverable {
     transition: all 0.3s ease;
-    width: 4rem;
     width: var(--elk-side-is-mini-width);
   }
-  .elk-side.is-hoverable .metismenu > li > a.has-arrow::after {
+
+  .elk-side.is-hoverable .metismenu > li > a:not(:hover).has-arrow::after {
     transition: none;
     border-width: 0;
   }
-  .elk-side.is-hoverable .metismenu > li > ul.collapse.in {
+  .elk-side.is-hoverable .metismenu > li > ul.mm-collapse.mm-show:not(.mm-collapsing) {
     display: none;
   }
   .elk-side.is-hoverable .nav-title {
-    transition: -webkit-transform 0.3s ease;
     transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-    -webkit-transform: translate3d(-10000%, 0, 0);
     transform: translate3d(-10000%, 0, 0);
     white-space: nowrap;
   }
+
   .elk-side.is-hoverable:hover {
-    width: 16rem;
     width: var(--elk-side-width);
   }
   .elk-side.is-hoverable:hover .nav-title {
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
-  .elk-side.is-hoverable:hover .metismenu > li > ul.collapse.in {
+  .elk-side.is-hoverable:hover .metismenu > li > ul.mm-collapse.mm-show {
     display: block;
   }
-  .elk-side.is-hoverable:hover .metismenu > li > a.has-arrow::after {
-    border-width: 1px 0 0 1px;
-  }
 }
-
 .elk-top-nav {
   padding: 0 1rem;
 }
-
 .elk-top-nav.is-open {
   position: relative;
 }
@@ -355,9 +306,7 @@ body > .ember-view {
 }
 
 .elk-top-nav .metismenu {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -366,9 +315,7 @@ body > .ember-view {
 }
 
 .elk-top-nav .metismenu > li {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
 }
@@ -376,13 +323,14 @@ body > .ember-view {
 .elk-top-nav .metismenu a {
   position: relative;
   display: block;
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   outline-width: 0;
   transition: all 0.3s ease-out;
+  cursor: pointer;
 }
 
 .elk-top-nav .metismenu ul a {
-  padding: .5rem 5rem;
+  padding: 0.5rem;
 }
 
 .elk-top-nav .metismenu a:active,
@@ -393,38 +341,43 @@ body > .ember-view {
 
 @media (min-width: 992px) {
   .elk-top-nav .metismenu {
-    -ms-flex-direction: row;
     flex-direction: row;
   }
+
   .elk-top-nav .metismenu > li > a {
-    padding-right: 2rem;
+    padding-inline-end: 2rem;
   }
+
   .elk-top-nav .metismenu > li {
-    -ms-flex-direction: column;
     flex-direction: column;
   }
+
   .elk-top-nav .metismenu ul a {
-    padding: .625rem 1rem;
+    padding: 0.625rem 1rem;
   }
+
   .elk-top-nav .metismenu > li > ul {
     position: absolute;
     top: 100%;
     min-width: 256px;
-    z-index: 1;
     z-index: var(--elk-side-z-index);
   }
+
   .elk-top-nav .metismenu > li:last-child > ul {
-    right: 0;
+    inset-inline-end: 0;
   }
+
   .elk-top-nav.is-hoverable .metismenu > li > ul {
     height: auto !important;
   }
+
   .elk-top-nav.is-hoverable .metismenu > li:hover > ul {
     display: block;
   }
+
   .elk-top-nav.is-hoverable .metismenu > li:hover > a.has-arrow:after {
-    -webkit-transform: rotate(-135deg);
-    transform: rotate(-135deg);
+    transform: rotate(-45deg);
   }
 }
+
 /*# sourceMappingURL=elektron.css.map */
