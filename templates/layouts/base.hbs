@@ -13,19 +13,13 @@
 
 </head>
 
-<body>
-
-  <!-- BEGIN .elk-app -->
-  <div class="elk-app{{#if elkAppIsFixed}} is-fixed{{/if}}{{#if elkMainIsFixed}} is-fixed{{/if}}">
+<body class="elk-app{{#if elkAppIsFixed}} is-fixed{{/if}}{{#if elkMainIsFixed}} is-fixed{{/if}}">
 
     <!-- BEGIN .elk-wrap -->
     <div class="elk-wrap">
       {% body %}
     </div>
     <!-- END: .elk-wrap -->
-
-  </div>
-  <!-- END: .elk-app -->
 
   {{> scripts}}
 
