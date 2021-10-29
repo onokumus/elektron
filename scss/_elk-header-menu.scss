@@ -32,10 +32,11 @@
   padding: .75rem 1rem;
   outline-width: 0;
   transition: all 0.3s ease-out;
+  cursor: pointer;
 }
 
 .elk-top-nav .metismenu ul a {
-  padding: .5rem 5rem;
+  padding: .5rem;
 }
 
 .elk-top-nav .metismenu a:active,
@@ -49,7 +50,7 @@
   }
 
   .elk-top-nav .metismenu > li >a {
-    padding-right: 2rem;
+    padding-inline-end: 2rem;
   }
 
   .elk-top-nav .metismenu > li {
@@ -67,7 +68,7 @@
   }
 
   .elk-top-nav .metismenu > li:last-child > ul {
-    right: 0;
+    inset-inline-end: 0;
   }
 
   .elk-top-nav.is-hoverable .metismenu > li > ul {
@@ -79,7 +80,7 @@
   }
 
   .elk-top-nav.is-hoverable .metismenu > li:hover > a.has-arrow:after {
-    transform: rotate(-135deg);
+    transform: rotate(-45deg);
   }
 }
 

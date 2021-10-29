@@ -28,6 +28,7 @@
     flex-direction: row;
     align-items: center;
     outline-width: 0;
+    cursor: pointer;
     @if $enable-transitions {
       transition: all $transition-duration $transition-timing-function;
     }
@@ -45,9 +46,9 @@
 
 .elk-side-nav .metismenu ul a {
     padding: .5rem;
-    padding-left: 3.5rem;
+    padding-inline-start: 3rem;
 }
 
 .elk-side-nav .metismenu ul ul a {
-    padding-left: 4.5rem;
+    padding-inline-start: 4rem;
 }

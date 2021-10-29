@@ -16,7 +16,11 @@
       padding-bottom: 0;
     }
 
-    .metismenu > li > a {
+    .metismenu > li > a.has-arrow::after {
+      transition-duration: .1s;
+    }
+
+    .metismenu > li:not(:hover) > a {
       &.has-arrow::after {
         border-width: 0;
       }
@@ -24,25 +28,32 @@
 
     .nav-title {
       display: none;
-      margin-left: 1.5rem;
+      margin-inline-start: 1.5rem;
     }
 
     .metismenu ul ul a {
-      padding-left: 2.5rem;
+      padding-inline-start: 2.5rem;
     }
 
     .metismenu > li > ul {
       position: absolute;
       top: 100%;
-      left: 100%;
-      display: none;
+      inset-inline-start: 100%;
+      &.mm-collapse.mm-show:not(.mm-collapsing) {
+        display: none;
+      }
 
       > li > a {
         padding: 0.5em 0.5em 0.5em 1.5em;
       }
     }
 
-    .metismenu > li:hover > ul {
+    .metismenu > li > ul.mm-collapsing {
+      visibility: collapse;
+      transition-duration: .1s;
+    }
+
+    .metismenu > li:hover > ul.mm-collapse.mm-show:not(.mm-collapsing) {
       display: block;
       min-width: calc(var(--elk-side-width) - var(--elk-side-is-mini-width) + 1px);
       height: auto !important;
@@ -58,11 +69,6 @@
       .nav-title {
         display: inline-block;
         align-self: center;
-      }
-
-      > .has-arrow::after {
-        border-width: 1px 0 0 1px;
-        transform: rotate(-135deg);
       }
     }
   }

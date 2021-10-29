@@ -13,14 +13,14 @@
 
   .elk-side.is-hoverable {
 
-    .metismenu > li > a {
+    .metismenu > li > a:not(:hover) {
       &.has-arrow::after {
         transition: none;
         border-width: 0;
       }
     }
 
-    .metismenu > li > ul.collapse.in {
+    .metismenu > li > ul.mm-collapse.mm-show:not(.mm-collapsing) {
       display: none;
     }
 
@@ -38,13 +38,13 @@
       transform: translate3d(0, 0, 0);
     }
 
-    .metismenu > li > ul.collapse.in {
+    .metismenu > li > ul.mm-collapse.mm-show {
       display: block;
     }
 
     .metismenu > li > a {
       &.has-arrow::after {
-        border-width: 1px 0 0 1px;
+        // border-width: 1px 0 0 1px;
       }
     }
   }
