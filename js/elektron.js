@@ -26,7 +26,8 @@ if (elkSide !== null) {
 
   showHideElkSide();
 
-  elkSide.classList.contains("disable-resize") || window.addEventListener('resize', debounce(showHideElkSide, 250));
+  // eslint-disable-next-line no-unused-expressions
+  elkSide.classList.contains('disable-resize') || window.addEventListener('resize', debounce(showHideElkSide, 250));
 
   const esi = document.querySelector('.elk-switch-input');
 

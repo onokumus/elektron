@@ -1,6 +1,6 @@
 {
   "name": "elektron",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "An Admin Layout",
   "main": "dist/elektron.js",
   "browser": "dist/elektron.js",
@@ -35,7 +35,7 @@
   ],
   "author": "Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)",
   "contributors": [
-    "Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)"
+    "githubwyj <githubwyj@qq.com> (https://github.com/githubwyj)"
   ],
   "license": "MIT",
   "bugs": {
