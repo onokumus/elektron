@@ -1,8 +1,7 @@
 ### Class structure
 | class | required                                              | multiple |
 |-------|-------------------------------------------------------|----------|
-| .elk-app  | not required for ember.js project, otherwise required | no       |
-| .elk-wrap | required                                            | no       |
+| .elk-app  | required | no       |
 | .elk-header | no                                    | yes      |
 | .elk-container | required | no |
 | .elk-footer | no | yes |
@@ -21,20 +20,20 @@
 Elektron is fluid by default. Can be used as fixed on will. All that's needed to be done is to add `.is-fixed` class to `elk-app` element.
 
 ```html
-&lt;div class="elk-app is-fixed"&gt;
+&lt;body class="elk-app is-fixed"&gt;
   ...
-&lt;/div&gt;
+&lt;/body&gt;
 ```
 
 #### elk-main fixed
 All that's needed to be done is to add `.is-fixed` class to `elk-app` and `is-fixed` class to `elk-main` elements. For example :
 
 ```html
- &lt;div class="elk-app is-fixed"&gt;
+ &lt;body class="elk-app is-fixed"&gt;
     &lt;div class="elk-main is-fixed"&gt;
       ...
     &lt;/div&gt;
-  &lt;/div&gt;
+  &lt;/body&gt;
 ```
 
 #### sticky top bar
