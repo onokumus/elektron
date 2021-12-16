@@ -56,21 +56,21 @@
     "onoffcanvas": "^2.3.0"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-node-resolve": "^13.1.1",
     "assemble": "^0.24.3",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.25.2",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
     "gulp-extname": "^0.2.2",
     "gulp-prettify": "^0.5.0",
     "handlebars-helpers": "^0.10.0",
     "helper-changelog": "^0.3.0",
     "helper-markdown": "^1.0.0",
     "helper-md": "^0.2.2",
-    "nodemon": "^2.0.14",
+    "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.5",
-    "rollup": "^2.58.3",
-    "sass": "^1.43.4",
-    "uglify-js": "^3.14.2"
+    "rollup": "^2.61.1",
+    "sass": "^1.45.0",
+    "uglify-js": "^3.14.5"
   }
 }
