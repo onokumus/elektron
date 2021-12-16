@@ -2,6 +2,11 @@
 
 ### [Unreleased]
 
+### [0.7.2] - 2021-12-17
+
+**fixed**
+- fix #2
+
 ### [0.7.1] - 2021-12-16
 
 **added**
@@ -129,7 +134,8 @@
 **added**
 - initial release
 
-[Unreleased]: https://github.com/onokumus/elektron/compare/v0.7.1...HEAD
+[Unreleased]: https://github.com/onokumus/elektron/compare/v0.7.2...HEAD
+[0.7.2]: https://github.com/onokumus/elektron/compare/v0.7.1...v0.7.2
 [0.7.1]: https://github.com/onokumus/elektron/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/onokumus/elektron/compare/v0.5.3...v0.7.0
 [0.5.3]: https://github.com/onokumus/elektron/compare/v0.5.2...v0.5.3

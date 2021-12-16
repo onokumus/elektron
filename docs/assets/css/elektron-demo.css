@@ -1,8 +1,8 @@
-/*! elektron v0.7.1 | MIT License | github.com/onokumus/elektron */
+/*! elektron v0.7.2 | MIT License | github.com/onokumus/elektron */
 :root {
   --elk-side-width: 256px;
   --elk-side-is-mini-width: 64px;
-  --elk-side-z-index: 1;
+  --elk-side-z-index: 2;
   --elk-side-is-open-z-index: 2;
   --elk-side-breakpoint: 992px;
 }
@@ -82,7 +82,7 @@ td {
 }
 
 .onoffcanvas-drawer.is-open {
-  background: rgba(0, 0, 0, 0.5);
+  background: transparent;
 }
 
 /*# sourceMappingURL=elektron-demo.css.map */

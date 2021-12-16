@@ -1,6 +1,6 @@
 {
   "name": "elektron",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "An Admin Layout",
   "main": "dist/elektron.js",
   "browser": "dist/elektron.js",
@@ -13,7 +13,8 @@
     "css:dev": "sass scss:docs/assets/css -w",
     "js": "npm-run-all js-lint js-compile js-minify",
     "js-lint": "eslint js",
-    "js-compile": "rollup --config rollup.config.js",
+    "js-compile": "rollup -c",
+    "js:dev": "rollup -c -w",
     "js-minify": "uglifyjs --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/elektron.js.map,includeSources,url=elektron.min.js.map\" --output dist/elektron.min.js dist/elektron.js",
     "pages": "assemble",
     "build": "npm-run-all --parallel pages css js",

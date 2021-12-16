@@ -1,4 +1,4 @@
-/*! elektron v0.7.1 | MIT License | https://github.com/onokumus/elektron */
+/*! elektron v0.7.2 | MIT License | https://github.com/onokumus/elektron */
 (function (factory) {
   typeof define === 'function' && define.amd ? define(factory) :
   factory();
@@ -14,26 +14,29 @@
     };
   };
 
+  const isMobile = () => window.innerWidth < 993;
+
+  const showHideOnoffCanvas = (oc) => {
+    if (isMobile()) {
+      oc.hide();
+    } else {
+      oc.show();
+    }
+  };
+
   const elkSide = document.querySelector('.elk-side');
 
   if (elkSide !== null) {
     const elkSideNavOnoffCanvas = new OnoffCanvas(elkSide, {
-      hideByEsc: window.innerWidth < 993,
-      createDrawer: window.innerWidth < 993,
+      hideByEsc: isMobile(),
+      createDrawer: isMobile(),
     });
-    /* eslint-disable-next-line no-inner-declarations */
-    function showHideElkSide() {
-      if (window.innerWidth < 993) {
-        elkSideNavOnoffCanvas.hide();
-      } else {
-        elkSideNavOnoffCanvas.show();
-      }
-    }
 
-    showHideElkSide();
+    showHideOnoffCanvas(elkSideNavOnoffCanvas);
 
     // eslint-disable-next-line no-unused-expressions
-    elkSide.classList.contains('disable-resize') || window.addEventListener('resize', debounce(showHideElkSide, 250));
+    elkSide.classList.contains('disable-resize')
+      || window.addEventListener('resize', debounce(showHideOnoffCanvas(elkSideNavOnoffCanvas), 250));
 
     const esi = document.querySelector('.elk-switch-input');
 
@@ -67,16 +70,8 @@
       createDrawer: false,
     });
 
-    /* eslint-disable-next-line no-inner-declarations */
-    function showHideElkTopNav() {
-      if (window.innerWidth < 993) {
-        elkTopNavCanvas.hide();
-      } else {
-        elkTopNavCanvas.show();
-      }
-    }
-    showHideElkTopNav();
-    window.addEventListener('resize', debounce(showHideElkTopNav, 250));
+    showHideOnoffCanvas(elkTopNavCanvas);
+    window.addEventListener('resize', debounce(showHideOnoffCanvas(elkTopNavCanvas), 250));
 
     // eslint-disable-next-line no-new
     new MetisMenu(elkTopNav.querySelector('.metismenu'));
