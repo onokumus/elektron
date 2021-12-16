@@ -1,4 +1,4 @@
-/*! elektron v0.6.0 | MIT License | github.com/onokumus/elektron */
+/*! elektron v0.7.0 | MIT License | github.com/onokumus/elektron */
 :root {
   --elk-side-width: 256px;
   --elk-side-is-mini-width: 64px;
@@ -7,14 +7,22 @@
   --elk-side-breakpoint: 992px;
 }
 
-.elk-app,
-body > .ember-view {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+:where(html) {
+  block-size: 100%;
 }
 
+:where(body) {
+  min-block-size: 100%;
+}
+
+.elk-app {
+  display: flex;
+  flex-direction: column;
+}
+
+/**
+* deprecated
+*/
 .elk-wrap {
   flex: 1 1 auto;
   display: flex;
@@ -69,7 +77,7 @@ body > .ember-view {
 }
 
 /*
-* <div class="elk-app is-fixed">
+* <body class="elk-app is-fixed">
 *
 */
 .elk-app.is-fixed {
@@ -82,12 +90,11 @@ body > .ember-view {
 }
 
 /*
-* <div class="elk-app is-fixed">
+* <body class="elk-app is-fixed">
 *   <div class="elk-main is-fixed">
 *     ...
 *   </div>
-* </div>
-*
+* </body>
 */
 .elk-app.is-fixed .elk-main.is-fixed .elk-main-content {
   overflow-y: auto;

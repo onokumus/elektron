@@ -1,4 +1,4 @@
-/*! elektron v0.6.0 | MIT License | https://github.com/onokumus/elektron */
+/*! elektron v0.7.0 | MIT License | https://github.com/onokumus/elektron */
 (function (factory) {
   typeof define === 'function' && define.amd ? define(factory) :
   factory();
