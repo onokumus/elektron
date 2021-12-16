@@ -1,12 +1,13 @@
 // layout
 
 .elk-app {
-  position: absolute;
-  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
+/**
+* deprecated
+*/
 .elk-wrap {
   flex: 1 1 auto;
   display: flex;
