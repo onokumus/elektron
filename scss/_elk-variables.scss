@@ -6,8 +6,8 @@ $transition-timing-function: ease-out !default;
 $elk-side-breakpoint: 992px !default;
 
 :root {
-  --elk-side-width: 256px;
-  --elk-side-is-mini-width: 64px;
+  --elk-side-width: 16rem;
+  --elk-side-is-mini-width: 4rem;
   --elk-side-z-index: 2;
   --elk-side-is-open-z-index: 2;
   --elk-side-breakpoint: 992px;
