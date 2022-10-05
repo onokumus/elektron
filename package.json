@@ -8,6 +8,7 @@
   "jsdelivr": "dist/elektron.min.js",
   "style": "dist/elektron.css",
   "sass": "scss/elektron.scss",
+  "type":"module",
   "scripts": {
     "css": "sass scss/elektron.scss dist/elektron.css -s compressed",
     "css:dev": "sass scss:public/assets/css -w",
