@@ -20,40 +20,40 @@
 Elektron is fluid by default. Can be used as fixed on will. All that's needed to be done is to add `.is-fixed` class to `elk-app` element.
 
 ```html
-&lt;body class="elk-app is-fixed"&gt;
+<body class="elk-app is-fixed">
   ...
-&lt;/body&gt;
+</body>
 ```
 
 #### elk-main fixed
 All that's needed to be done is to add `.is-fixed` class to `elk-app` and `is-fixed` class to `elk-main` elements. For example :
 
 ```html
- &lt;body class="elk-app is-fixed"&gt;
-    &lt;div class="elk-main is-fixed"&gt;
-      ...
-    &lt;/div&gt;
-  &lt;/body&gt;
+<body class="elk-app is-fixed">
+  <div class="elk-main is-fixed">
+    ...
+  </div>
+</body>
 ```
 
 #### sticky top bar
 
 ```html
-&lt;!-- BEGIN .elk-header --&gt;
-&lt;header class="elk-header is-sticky"&gt;
-    &lt;a href="#elk-side" data-toggle="onoffcanvas" class="onoffcanvas-toggler" aria-expanded=false&gt;&lt;/a&gt;
-    &lt;span&gt;APP HEADER&lt;/span&gt;
-&lt;/header&gt;
-&lt;!-- END:  .elk-header --&gt;
+<!-- BEGIN .elk-header -->
+<header class="elk-header is-sticky">
+    <a href="#elk-side" data-toggle="onoffcanvas" class="onoffcanvas-toggler" aria-expanded=false></a>
+    <span>APP HEADER</span>
+</header>
+<!-- END:  .elk-header -->
 ```
 
 #### sticky bottom bar
 ```html
-&lt;!-- begin .elk-footer --&gt;
- &lt;footer class="elk-footer is-sticky is-bottom"&gt;
-    &lt;p&gt;
+<!-- begin .elk-footer -->
+ <footer class="elk-footer is-sticky">
+    <p>
       elektron v0.5.2 2018
-    &lt;/p&gt;
-&lt;/footer&gt;
-&lt;!-- END: .elk-footer --&gt;
+    </p>
+</footer>
+<!-- END: .elk-footer -->
 ```

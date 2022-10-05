@@ -1,0 +1,26 @@
+---
+export interface Props {
+  elkFooterClasses?: string;
+}
+
+const { elkFooterClasses } = Astro.props;
+---
+
+<!-- begin .elk-footer -->
+<footer class:list={["elk-footer", elkFooterClasses]}>
+  Elektron v0.7.2 2021
+</footer>
+<!-- END: .elk-footer -->
+
+<style lang="scss">
+  .elk-footer {
+    padding: var(--size-fluid-1);
+    text-align: center;
+    font-size: var(--font-size-fluid-0);
+    background-color: var(--gray-1);
+    border-block-start: 1px solid var(--surface-3);
+    @media (prefers-color-scheme:dark) {
+      background-color: var(--gray-8);
+    }
+  }
+</style>

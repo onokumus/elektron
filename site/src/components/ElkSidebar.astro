@@ -1,0 +1,89 @@
+---
+export interface Props {
+  elkSideClasses?:string;
+  elkSideContentClasses?:string;
+};
+const { elkSideClasses, elkSideContentClasses } = Astro.props as Props;
+---
+
+<!-- BEGIN .elk-side -->
+<aside class:list={["elk-side", elkSideClasses ]} id="elk-side">
+  <!-- BEGIN .elk-side-content -->
+  <div class:list={["elk-side-content", elkSideContentClasses]}>
+    <!-- BEGIN .elk-side-nav -->
+    <nav class="elk-side-nav">
+      <!-- BEGIN: elk-side-nav-content -->
+      <ul class="metismenu" id="metismenu">
+        <li>
+          <a href="/">
+            <span class="has-icon"><i class="fa fa-cogs"></i></span>
+            <span class="nav-title">Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="has-arrow">
+            <span class="has-icon"><i class="fa fa-pagelines"></i></span>
+            <span class="nav-title">Blank Pages</span>
+          </a>
+          <ul>
+            <li><a href="/no-footers">No Footers</a></li>
+            <li><a href="/no-headers">No Headers</a></li>
+            <li><a href="/no-headers-footers">No Headers&Footers</a></li>
+            <li><a href="/app-is-fixed">App Fixed</a></li>
+            <li><a href="/main-is-fixed">Main Fixed</a></li>
+            <li><a href="/sticky-header">Sticky Header</a></li>
+            <li><a href="/sticky-header-2">Sticky Header 2</a></li>
+            <li><a href="/sticky-footer">Sticky Footer</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="has-arrow">
+            <span class="has-icon"><i class="fa fa-list"></i></span>
+            <span class="nav-title">elk-side</span>
+          </a>
+          <ul>
+            <li><a href="/app-side-is-mini">is-mini</a></li>
+            <li><a href="/app-side-is-hoverable">is-hoverable</a></li>
+            <li>
+              <a href="#" class="has-arrow">is-fixed</a>
+              <ul>
+                <li><a href="/app-side-is-fixed">Default</a></li>
+                <li><a href="/app-side-is-fixed-is-hoverable">Hoverable</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" class="has-arrow">is-sticky</a>
+              <ul>
+                <li><a href="/app-side-is-sticky">Default</a></li>
+                <li><a href="/app-side-is-sticky-is-mini">mini</a></li>
+                <li>
+                  <a href="/app-side-is-sticky-is-hoverable">hoverable</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- END: elk-side-nav-content -->
+    </nav>
+    <!-- END: .elk-side-nav -->
+  </div>
+  <!-- END: .elk-side-content -->
+
+  <!-- BEGIN .elk-side-footer -->
+  <footer class="elk-side-footer">ESF</footer>
+  <!-- END .elk-side-footer -->
+</aside>
+<!-- END: .elk-side -->
+
+
+<style>
+  .elk-side {
+
+    background-color: var(--surface-2);
+    border-inline-end: 1px solid var(--surface-3);
+  }
+</style>

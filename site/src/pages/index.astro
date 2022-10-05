@@ -1,0 +1,50 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import {Content as BasicHtml} from '../components/basicHtml.md';
+import {Content as BasicCss} from '../../../document.md';
+---
+
+
+<MainLayout title="Dashboard">
+
+
+<h1>Elektron: <small>An Admin Layout</small></h1>
+
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/onokumus/elektron" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star onokumus/elektron on GitHub">Star</a>
+
+<a class="github-button" href="https://github.com/onokumus/elektron/fork" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork onokumus/elektron on GitHub">Fork</a>
+
+<a class="github-button" href="https://github.com/onokumus/elektron/archive/HEAD.zip" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-download" data-size="large" aria-label="Download onokumus/elektron on GitHub">Download</a>
+
+<a class="github-button" href="https://github.com/sponsors/onokumus" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-heart" data-size="large" aria-label="Sponsor @onokumus on GitHub">Sponsor</a>
+<h2>Install</h2>
+
+<pre class="language-bash" tabindex="0"><code class="language-bash">npm i elektron</code></pre>
+<p>OR</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash">yarn add elektron</code></pre>
+
+
+
+<h2>Download</h2>
+<a href="https://github.com/onokumus/elektron/archive/master.zip" target="_blank">Download Link</a>
+
+
+<h2>HTML Structure</h2>
+<p>
+  <code>.elk-app</code> class should be added to div element inside the body tag.
+ </p>
+
+<h3>Basic Template</h3>
+<span>Start with this basic HTML template.</span>
+
+<BasicHtml />
+
+<BasicCss />
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script is:inline async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+</MainLayout>

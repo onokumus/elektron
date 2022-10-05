@@ -1,0 +1,30 @@
+---
+import OnoffCanvasToggler from './OnoffCanvasToggler.astro';
+
+export interface Props {
+  elkHeaderClasses?: string;
+}
+
+const { elkHeaderClasses } = Astro.props;
+---
+<!-- BEGIN .elk-header -->
+<header class:list={["elk-header", elkHeaderClasses]}>
+  <OnoffCanvasToggler />
+  <img src="/assets/img/logo.svg" alt="Elektron" class="elk-logo">
+</header>
+<!-- END:  .elk-header -->
+
+<style lang="scss">
+  .elk-header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--surface-2);
+    border-block-end: 1px solid var(--surface-3);
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+  }
+  .elk-logo {
+    fill: none;
+  }
+</style>

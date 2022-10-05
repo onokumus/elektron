@@ -1,0 +1,104 @@
+---
+type Props = {
+  title: string;
+  elkAppIsFixed?: boolean;
+  elkMainIsFixed?: boolean;
+  elkAppClasses?: string;
+  elkSideClasses?: string;
+};
+
+const { frontmatter } = Astro.props;
+
+const { title, elkAppIsFixed, elkMainIsFixed, elkSideClasses, elkAppClasses } =
+  Astro.props as Props;
+
+import "open-props/style";
+import "open-props/normalize";
+
+import "../../../scss/elektron.scss";
+
+import ElkSidebar from "../components/ElkSidebar.astro";
+import BaseHead from "../components/BaseHead.astro";
+import ElkHeader from "../components/ElkHeader.astro";
+import ElkFooter from "../components/ElkFooter.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={title || frontmatter.title} />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/metismenujs/dist/metismenujs.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/onoffcanvas/dist/onoffcanvas.min.css"
+    />
+
+    <link rel="stylesheet" href="/assets/css/prism.css" />
+  </head>
+  <body class:list={["elk-app", elkAppClasses]}>
+    <ElkHeader />
+    <!-- BEGIN .elk-container -->
+    <div class="elk-container">
+      <ElkSidebar elkSideClasses={elkSideClasses} />
+
+      <!-- BEGIN .elk-main -->
+      <div class="elk-main">
+        <!-- BEGIN .elk-main-heading -->
+        <header class="elk-main-header">
+          <ul class="elk-main-header-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Data</li>
+          </ul>
+        </header>
+        <!-- END: .elk-main-header -->
+        <!-- BEGIN .elk-main-content -->
+        <div class="elk-main-content">
+          <slot />
+        </div>
+        <!-- END: .elk-main-content -->
+        <!-- BEGIN .elk-main-footer -->
+        <footer class="elk-main-footer">...</footer>
+
+        <!-- END: .elk-main-footer -->
+      </div>
+      <!-- END: .elk-main -->
+    </div>
+    <!-- END: .elk-container -->
+
+    <ElkFooter />
+
+    <style lang="scss">
+      .elk-main-content {
+        padding: 1rem;
+      }
+      .elk-main-header-breadcrumb {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        gap: 1rem;
+        list-style: none;
+      }
+      .elk-main-header-breadcrumb .breadcrumb-item:not(:last-child)::after {
+        margin-inline-start: 1rem;
+          content: "/";
+        }
+    </style>
+
+    <script is:inline src="https://cdn.jsdelivr.net/npm/metismenujs"></script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/onoffcanvas"></script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script is:inline async defer src="https://buttons.github.io/buttons.js"
+    ></script>
+    <script is:inline src="/assets/js/elektron.js"></script>
+    <!-- <script is:inline src="/assets/js/changetheme.js"></script> -->
+  </body>
+</html>

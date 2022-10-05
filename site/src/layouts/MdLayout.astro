@@ -1,0 +1,86 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import ElkSidebar from "../components/ElkSidebar.astro";
+import * as CONFIG from "../config";
+type Props = {
+  frontmatter: CONFIG.Frontmatter;
+};
+
+const { frontmatter } = Astro.props as Props;
+
+const currentPage = Astro.url.pathname;
+
+import "open-props/style";
+import "open-props/normalize";
+
+import "../../../scss/elektron.scss";
+import ElkHeader from "../components/ElkHeader.astro";
+import ElkFooter from "../components/ElkFooter.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en" dir={frontmatter.dir ?? "ltr"}>
+  <head>
+    <BaseHead title={frontmatter.title} />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/metismenujs/dist/metismenujs.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/onoffcanvas/dist/onoffcanvas.min.css"
+    />
+
+    <link rel="stylesheet" href="/assets/css/prism.css" />
+  </head>
+  <body class:list={["elk-app", frontmatter.elkAppClasses]}>
+    {
+      frontmatter.hasElkHeader && (
+        <ElkHeader elkHeaderClasses={frontmatter.elkHeaderClasses} />
+      )
+    }
+    <!-- BEGIN .elk-container -->
+    <div class="elk-container">
+      <ElkSidebar
+        elkSideClasses={frontmatter.elkSideClasses}
+        elkSideContentClasses={frontmatter.elkSideContentClasses}
+      />
+
+      <!-- BEGIN .elk-main -->
+      <div class:list={["elk-main", frontmatter.elkMainClasses]}>
+        <!-- BEGIN .elk-main-heading -->
+        <header class="elk-main-header">...</header>
+        <!-- END: .elk-main-header -->
+        <!-- BEGIN .elk-main-content -->
+        <div class="elk-main-content">
+          <slot />
+        </div>
+        <!-- END: .elk-main-content -->
+        <!-- BEGIN .elk-main-footer -->
+        <footer class="elk-main-footer">...</footer>
+
+        <!-- END: .elk-main-footer -->
+      </div>
+      <!-- END: .elk-main -->
+    </div>
+    <!-- END: .elk-container -->
+
+    {
+      frontmatter.hasElkFooter && (
+        <ElkFooter elkFooterClasses={frontmatter.elkFooterClasses} />
+      )
+    }
+
+    <script is:inline src="https://cdn.jsdelivr.net/npm/metismenujs"></script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/onoffcanvas"></script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+    <script is:inline async defer src="https://buttons.github.io/buttons.js"
+    ></script>
+    <script is:inline src="/assets/js/elektron.js"></script>
+    <!-- <script is:inline src="/assets/js/changetheme.js"></script> -->
+  </body>
+</html>

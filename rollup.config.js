@@ -11,7 +11,7 @@ export default [
       {
         name: 'elektron',
         banner,
-        file: production ? pkg.browser : 'docs/assets/js/elektron.js',
+        file: production ? pkg.browser : 'public/assets/js/elektron.js',
         format: 'umd',
         sourcemap: true,
       },
