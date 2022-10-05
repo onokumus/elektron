@@ -4,7 +4,6 @@ export default defineConfig({
     root: './site',
     srcDir: './site/src',
     publicDir: './site/public',
-    outDir: './docs',
     build:{
         format: 'file'
     },
