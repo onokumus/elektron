@@ -10,7 +10,7 @@
   "sass": "scss/elektron.scss",
   "scripts": {
     "css": "sass scss/elektron.scss dist/elektron.css -s compressed",
-    "css:dev": "sass scss:docs/assets/css -w",
+    "css:dev": "sass scss:public/assets/css -w",
     "js": "npm-run-all js-lint js-compile js-minify",
     "js-lint": "eslint js",
     "js-compile": "rollup -c",
@@ -22,7 +22,8 @@
     "watch": "npm-run-all --parallel watch-css watch-js watch-pages",
     "watch-pages": "nodemon --ignore docs/ --ignore js --ignore dist/ --ignore scss/ -e hbs -x \"npm run pages\"",
     "watch-css": "nodemon --ignore docs/ --ignore js --ignore dist/ -e scss -x \"npm run css\"",
-    "watch-js": "nodemon --ignore scss/ --ignore scss --ignore dist/ -e js -x \"npm run js\""
+    "watch-js": "nodemon --ignore scss/ --ignore scss --ignore dist/ -e js -x \"npm run js\"",
+    "dev": "astro dev"
   },
   "repository": {
     "type": "git",
@@ -53,25 +54,27 @@
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "dependencies": {
+    "astro": "^1.4.4",
     "metismenujs": "^1.3.1",
-    "onoffcanvas": "^2.3.0"
+    "onoffcanvas": "^2.3.1",
+    "open-props": "^1.4.16"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^13.1.1",
+    "@rollup/plugin-node-resolve": "^14.1.0",
     "assemble": "^0.24.3",
-    "eslint": "^8.4.1",
+    "eslint": "^8.24.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-import": "^2.26.0",
     "gulp-extname": "^0.2.2",
     "gulp-prettify": "^0.5.0",
     "handlebars-helpers": "^0.10.0",
     "helper-changelog": "^0.3.0",
     "helper-markdown": "^1.0.0",
     "helper-md": "^0.2.2",
-    "nodemon": "^2.0.15",
+    "nodemon": "^2.0.20",
     "npm-run-all": "^4.1.5",
-    "rollup": "^2.61.1",
-    "sass": "^1.45.0",
-    "uglify-js": "^3.14.5"
+    "rollup": "^2.79.1",
+    "sass": "^1.55.0",
+    "uglify-js": "^3.17.2"
   }
 }
