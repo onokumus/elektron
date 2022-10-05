@@ -16,11 +16,9 @@
     "js-compile": "rollup -c",
     "js:dev": "rollup -c -w",
     "js-minify": "uglifyjs --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/elektron.js.map,includeSources,url=elektron.min.js.map\" --output dist/elektron.min.js dist/elektron.js",
-    "pages": "assemble",
-    "build": "npm-run-all --parallel pages css js",
+    "build": "npm-run-all --parallel css js",
     "dist": "npm-run-all --parallel css js",
-    "watch": "npm-run-all --parallel watch-css watch-js watch-pages",
-    "watch-pages": "nodemon --ignore docs/ --ignore js --ignore dist/ --ignore scss/ -e hbs -x \"npm run pages\"",
+    "watch": "npm-run-all --parallel watch-css watch-js",
     "watch-css": "nodemon --ignore docs/ --ignore js --ignore dist/ -e scss -x \"npm run css\"",
     "watch-js": "nodemon --ignore scss/ --ignore scss --ignore dist/ -e js -x \"npm run js\"",
     "dev": "astro dev"
@@ -32,8 +30,7 @@
   "keywords": [
     "admin",
     "layout",
-    "elektron",
-    "jquery"
+    "elektron"
   ],
   "author": "Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)",
   "contributors": [
