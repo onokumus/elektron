@@ -14,7 +14,7 @@ elkAppClasses: is-fixed
 </body>
 ```
 
-lorem
+> lorem
 
 lorem
 
