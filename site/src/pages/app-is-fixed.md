@@ -16,7 +16,7 @@ elkAppClasses: is-fixed
 
 > lorem
 
-lorem
+> lorem
 
 lorem
 

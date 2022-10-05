@@ -19,7 +19,7 @@ elkSideClasses: is-hoverable
 </body>
 ```
 
-lorem
+> lorem
 
 lorem
 
