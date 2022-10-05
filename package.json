@@ -17,12 +17,15 @@
     "js-compile": "rollup -c",
     "js:dev": "rollup -c -w",
     "js-minify": "uglifyjs --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/elektron.js.map,includeSources,url=elektron.min.js.map\" --output dist/elektron.min.js dist/elektron.js",
-    "build": "npm-run-all --parallel css js",
     "dist": "npm-run-all --parallel css js",
     "watch": "npm-run-all --parallel watch-css watch-js",
     "watch-css": "nodemon --ignore docs/ --ignore js --ignore dist/ -e scss -x \"npm run css\"",
     "watch-js": "nodemon --ignore scss/ --ignore scss --ignore dist/ -e js -x \"npm run js\"",
-    "dev": "astro dev"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "repository": {
     "type": "git",
