@@ -120,4 +120,4 @@ npm run build
 
 ## 📄 License
 
-MIT © [ono](https://github.com/ono)
+MIT © [onokumus](https://github.com/onokumus)
