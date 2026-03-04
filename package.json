@@ -1,74 +1,51 @@
 {
   "name": "elektron",
-  "version": "0.7.2",
-  "description": "An Admin Layout",
-  "main": "dist/elektron.js",
-  "browser": "dist/elektron.js",
-  "unpkg": "dist/elektron.min.js",
-  "jsdelivr": "dist/elektron.min.js",
-  "style": "dist/elektron.css",
-  "sass": "scss/elektron.scss",
-  "type":"module",
-  "scripts": {
-    "css": "sass scss/elektron.scss dist/elektron.css -s compressed",
-    "css:dev": "sass scss:public/assets/css -w",
-    "js": "npm-run-all js-lint js-compile js-minify",
-    "js-lint": "eslint js",
-    "js-compile": "rollup -c",
-    "js:dev": "rollup -c -w",
-    "js-minify": "uglifyjs --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/elektron.js.map,includeSources,url=elektron.min.js.map\" --output dist/elektron.min.js dist/elektron.js",
-    "dist": "npm-run-all --parallel css js",
-    "watch": "npm-run-all --parallel watch-css watch-js",
-    "watch-css": "nodemon --ignore docs/ --ignore js --ignore dist/ -e scss -x \"npm run css\"",
-    "watch-js": "nodemon --ignore scss/ --ignore scss --ignore dist/ -e js -x \"npm run js\"",
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
+  "version": "0.8.0",
+  "description": "A premium, minimalist admin dashboard designed with Technical Prestige.",
+  "author": "onokumus",
+  "license": "MIT",
+  "keywords": [
+    "admin",
+    "dashboard",
+    "ui",
+    "premium",
+    "minimalist",
+    "vite",
+    "tailwind"
+  ],
+  "homepage": "https://github.com/onokumus/elektron",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/onokumus/elektron.git"
   },
-  "keywords": [
-    "admin",
-    "layout",
-    "elektron"
-  ],
-  "author": "Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)",
-  "contributors": [
-    "githubwyj <githubwyj@qq.com> (https://github.com/githubwyj)"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/onokumus/elektron/issues"
+  "type": "module",
+  "unpkg": "dist/elektron.umd.cjs",
+  "jsdelivr": "dist/elektron.js",
+  "main": "./dist/elektron.umd.cjs",
+  "module": "./dist/elektron.js",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/elektron.js",
+      "require": "./dist/elektron.umd.cjs"
+    },
+    "./style": "./dist/elektron.css",
+    "./style.css": "./dist/elektron.css"
   },
-  "homepage": "https://github.com/onokumus/elektron#readme",
   "files": [
-    "dist/",
-    "js/",
-    "scss/",
-    "README.md"
+    "dist",
+    "src"
   ],
-  "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
-  },
-  "dependencies": {
-    "astro": "^2.9.0",
-    "metismenujs": "^1.4.0",
-    "onoffcanvas": "^2.3.1",
-    "open-props": "^1.5.10"
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build --mode app",
+    "build:lib": "vite build --mode lib",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.1.0",
-    "eslint": "^8.45.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "nodemon": "^3.0.1",
-    "npm-run-all": "^4.1.5",
-    "rollup": "^3.26.3",
-    "sass": "^1.64.0",
-    "uglify-js": "^3.17.4"
+    "@tailwindcss/vite": "^4.2.1",
+    "tailwindcss": "^4.2.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.1"
   }
 }

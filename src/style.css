@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-primary: #ffffff;
+  --color-brand-secondary: #71717a;
+  --color-brand-muted: #3f3f46;
+
+  --color-bg-main: #050505;
+  /* Deeper black for more contrast */
+  --color-bg-card: #0a0a0a;
+
+  /* Metallic Accents */
+  --color-titanium: #e2e2e2;
+  --color-platinum: #f5f5f5;
+  --color-slate-metal: #1e1e20;
+
+  --color-border-subtle: rgba(255, 255, 255, 0.03);
+  --color-border-active: rgba(255, 255, 255, 0.08);
+}
+
+
+@layer layout {
+
+  /* App Container */
+  .elk-app {
+    @apply w-full;
+  }
+
+  /* Main Wrapper */
+  .elk-wrap {
+    @apply flex min-h-screen bg-bg-main;
+  }
+
+  /* Backdrop */
+  .elk-backdrop {
+    @apply fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden transition-all duration-500 ease-in-out;
+    @apply max-lg:opacity-0 max-lg:pointer-events-none;
+  }
+
+  .elk-backdrop[data-state="open"] {
+    @apply max-lg:opacity-100 max-lg:pointer-events-auto;
+  }
+
+  /* Sidebar */
+  .elk-sidebar {
+    @apply fixed lg:sticky top-0 z-50 w-72 h-screen bg-bg-main border-r border-border-subtle flex flex-col transition-transform duration-500 ease-in-out;
+    @apply max-lg:-translate-x-full;
+  }
+
+  .elk-sidebar[data-state="open"] {
+    @apply max-lg:translate-x-0;
+  }
+
+  /* Main Content Area */
+  .elk-main {
+    @apply flex-1 flex flex-col min-w-0;
+  }
+
+  /* Main Header */
+  .elk-main-header {
+    @apply h-20 border-b border-border-subtle px-8 flex items-center justify-between sticky top-0 bg-bg-main/80 backdrop-blur-xl z-40;
+  }
+
+  /* Main Content */
+  .elk-main-content {
+    @apply p-8 max-w-7xl mx-auto w-full;
+  }
+}
+
+@layer components {
+
+  /* Subtle Grain Overlay */
+  .elk-grain-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.02;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  /* Logo */
+  .elk-logo {
+    @apply w-8 h-8 bg-white rounded-lg flex items-center justify-center p-1;
+  }
+
+  /* Title */
+  .elk-title {
+    @apply text-lg font-light tracking-[0.3em] uppercase text-white;
+  }
+}

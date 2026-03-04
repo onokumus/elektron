@@ -1,57 +1,67 @@
-# Contributing to elektron
+# Contributing to Elektron
 
-First and foremost, thank you! We appreciate that you want to contribute to elektron, your time is valuable, and your contributions mean a lot to us.
+First and foremost, thank you! We appreciate your interest in contributing to Elektron. Your time is valuable, and your contributions help make this project a premium experience for everyone.
 
-**What does "contributing" mean?**
+---
 
-Creating an issue is the simplest form of contributing to a project. But there are many ways to contribute, including the following:
+## 🗿 Our Philosophy: Technical Prestige
 
-- Updating or correcting documentation
-- Feature requests
-- Bug reports
+When contributing to Elektron, please keep our core design principles in mind. We aim for a "Technical Prestige" aesthetic:
+- **Minimalism & Depth:** Use glassmorphism and subtle borders.
+- **Precision:** Pay attention to spacing (macro-spacing like `p-8`) and typography.
+- **Industrial Luxury:** Favor our Titanium and Slate color palette.
 
-If you'd like to learn more about contributing in general, the [Guide to Idiomatic Contributing](https://github.com/jonschlinkert/idiomatic-contributing) has a lot of useful information.
+For more details, please see our [Design Principles](GEMINI.md).
 
-**Showing support for elektron**
+---
 
-Please keep in mind that open source software is built by people like you, who spend their free time creating things the rest the community can use.
+## 🛠 Development Workflow
 
-Don't have time to contribute? No worries, here are some other ways to show your support for elektron:
+### Prerequisites
+- Node.js (Latest LTS recommended)
+- NPM
 
-- star the [project](https://github.com/onokumus/elektron)
-- tweet your support for elektron
+### Setup
+1. Clone the repository.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Issues
+### Local Development
+Run the development server to see changes in real-time:
+```bash
+npm run dev
+```
 
-### Before creating an issue
+### Build Processes
+Elektron supports two build modes:
+- **App Mode (Demo):** Generates the `index.html` and assets for GitHub Pages.
+  ```bash
+  npm run build
+  ```
+- **Library Mode (NPM):** Generates the UMD and ESM bundles for the package.
+  ```bash
+  npm run build:lib
+  ```
 
-Please try to determine if the issue is caused by an underlying library, and if so, create the issue there. Sometimes this is difficult to know. We only ask that you attempt to give a reasonable attempt to find out. Oftentimes the readme will have advice about where to go to create issues.
+---
 
-Try to follow these guidelines
+## 🤝 How to Contribute
 
-- **Investigate the issue**:
-- **Check the readme** - oftentimes you will find notes about creating issues, and where to go depending on the type of issue.
-- Create the issue in the appropriate repository.
+### Reporting Bugs
+- Check if the issue has already been reported.
+- Be descriptive: include version, environment, and clear steps to reproduce.
+- Provide error logs or screenshots if applicable.
 
-### Creating an issue
+### Pull Requests
+1. **Branching:** Create a descriptive branch name (e.g., `feat/new-sidebar-effect` or `fix/toggle-issue`).
+2. **Quality:** Ensure your code follows TypeScript best practices and uses Tailwind CSS 4 variables.
+3. **Commit Messages:** Use clear, concise commit messages.
+4. **Testing:** Verify your changes in both `dev` mode and after running `build`.
 
-Please be as descriptive as possible when creating an issue. Give us the information we need to successfully answer your question or address your issue by answering the following in your issue:
+---
 
-- **version**: please note the version of elektron are you using
-- **extensions, plugins, helpers, etc** (if applicable): please list any extensions you're using
-- **error messages**: please paste any error messages into the issue, or a [gist](https://gist.github.com/)
+## 📄 License
 
-## Above and beyond
-
-Here are some tips for creating idiomatic issues. Taking just a little bit extra time will make your issue easier to read, easier to resolve, more likely to be found by others who have the same or similar issue in the future.
-
-- read the [Guide to Idiomatic Contributing](https://github.com/jonschlinkert/idiomatic-contributing)
-- take some time to learn basic markdown. This [markdown cheatsheet](https://gist.github.com/jonschlinkert/5854601) is super helpful, as is the GitHub guide to [basic markdown](https://help.github.com/articles/markdown-basics/).
-- Learn about [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/). And if you want to really go above and beyond, read [mastering markdown](https://guides.github.com/features/mastering-markdown/).
-- use backticks to wrap code. This ensures that code will retain its format, making it much more readable to others
-- use syntax highlighting by adding the correct language name after the first "code fence"
-
-
-[node-glob]: https://github.com/isaacs/node-glob
-[micromatch]: https://github.com/jonschlinkert/micromatch
-[so]: http://stackoverflow.com/questions/tagged/elektron
+By contributing, you agree that your contributions will be licensed under its [MIT License](LICENSE).
