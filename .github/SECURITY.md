@@ -6,8 +6,8 @@ We are committed to keeping Elektron secure. Please use the following versions f
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 0.1.x   | ✅ Yes            |
-| < 0.1.0 | ❌ No             |
+| 0.8.x   | ✅ Yes            |
+| < 0.8.0 | ❌ No             |
 
 ---
 
