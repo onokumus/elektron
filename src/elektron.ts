@@ -1,4 +1,4 @@
-import './style.css';
+import './elektron.css';
 
 /**
  * Sidebar initialization options

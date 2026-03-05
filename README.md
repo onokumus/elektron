@@ -1,4 +1,4 @@
-# Elektron Admin Dashboard
+# Elektron Admin Layout
 
 Elektron is a premium, minimalist admin dashboard designed with "Technical Prestige" in mind. Built with Vite, TypeScript, and Tailwind CSS, it offers a sophisticated interface that balances functionality with aesthetic excellence.
 
@@ -25,60 +25,202 @@ npm install elektron
 Or use it directly via CDN:
 
 ```html
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/elektron/lib/elektron.css">
+
 <!-- UMD (Universal) -->
-<script src="https://cdn.jsdelivr.net/npm/elektron/dist/elektron.umd.cjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/elektron/lib/elektron.umd.cjs"></script>
 
 <!-- ESM (Modern) -->
 <script type="module">
-  import { initSidebar } from 'https://cdn.jsdelivr.net/npm/elektron/dist/elektron.js';
+  import { initSidebar } from 'https://cdn.jsdelivr.net/npm/elektron/lib/elektron.js';
+  initSidebar();
+</script>
+```
+---
+
+## Usage
+
+### With npm
+
+#### With precompiled CSS (no Tailwind required)
+
+```js
+import 'elektron/style.css'
+```
+
+Or in your CSS file:
+
+```css
+@import "elektron/style.css";
+```
+
+---
+
+#### With Tailwind CSS v4
+
+Do **not** import the precompiled CSS. Instead, point Tailwind at elektron's source so it scans and compiles the classes together with your own:
+
+In your CSS file:
+
+```css
+@import "tailwindcss";
+@source "../node_modules/elektron/src";
+@import "elektron/source";
+
+@theme {
+  /* override elektron's theme variables if needed */
+  --font-sans: "Your Font", sans-serif;
+  --color-bg-main: #0f0f0f;
+}
+```
+
+This way there are no duplicate styles — everything is compiled in a single pass.
+
+---
+
+### Via CDN (jsDelivr / unpkg)
+
+No build step required. Add the precompiled CSS directly to your HTML:
+
+#### jsDelivr
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/elektron/lib/elektron.css">
+```
+
+#### unpkg
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/elektron/lib/elektron.css">
+```
+
+For a specific version:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/elektron@0.8.3/lib/elektron.css">
+<link rel="stylesheet" href="https://unpkg.com/elektron@0.8.3/lib/elektron.css">
+```
+
+---
+
+## JavaScript
+
+### With npm
+
+```js
+import { initSidebar } from 'elektron'
+
+initSidebar()
+```
+
+With custom options:
+
+```js
+initSidebar({
+  sidebarId: 'my-sidebar',
+  toggleId: 'my-toggle',
+  backdropId: 'my-backdrop'
+})
+```
+
+### Via CDN (jsDelivr / unpkg)
+
+```html
+<script type="module">
+  import { initSidebar } from 'https://cdn.jsdelivr.net/npm/elektron/lib/elektron.js'
+  initSidebar()
 </script>
 ```
 
-### Basic Usage
+Or with unpkg:
 
-1. **Include Styles:**
+```html
+<script type="module">
+  import { initSidebar } from 'https://unpkg.com/elektron/lib/elektron.js'
+  initSidebar()
+</script>
+```
 
-   **For Bundlers (Vite, Webpack, etc.):**
-   ```javascript
-   import 'elektron/style';
-   ```
+### `initSidebar(options?)`
 
-   **Via HTML (Legacy/CDN):**
-   ```html
-   <link rel="stylesheet" href="node_modules/elektron/dist/elektron.css">
-   ```
+| Option | Type | Default | Description |
+|---|---|---|---|
+| `sidebarId` | `string` | `"sidebar"` | `id` of the sidebar element |
+| `toggleId` | `string` | `"sidebar-toggle"` | `id` of the button that opens/closes the sidebar |
+| `backdropId` | `string` | `"sidebar-backdrop"` | `id` of the backdrop overlay element |
 
-2. **Structure Your HTML:**
-   ```html
-   <div class="elk-wrap">
-     <div id="sidebar-backdrop" class="elk-backdrop"></div>
-     
-     <aside id="sidebar" class="elk-sidebar">
-       <!-- Sidebar Content -->
-     </aside>
+The function returns a cleanup function that removes all event listeners — useful for SPA frameworks:
 
-     <main class="elk-main">
-       <header class="elk-main-header">
-         <button id="sidebar-toggle">Toggle</button>
-       </header>
-       <div class="elk-main-content">
-         <!-- Page Content -->
-       </div>
-     </main>
-   </div>
-   ```
+```js
+const cleanup = initSidebar()
 
-3. **Initialize in JavaScript:**
-   ```javascript
-   import { initSidebar } from 'elektron';
+// later, when component is destroyed
+cleanup()
+```
 
-   // Initialize sidebar functionality
-   initSidebar({
-     sidebarId: 'sidebar',
-     toggleId: 'sidebar-toggle',
-     backdropId: 'sidebar-backdrop'
-   });
-   ```
+---
+
+## CSS Variables (Theme)
+
+You can override elektron's default theme by redefining these variables:
+
+```css
+@theme {
+  --color-bg-main: #050505;
+  --color-bg-card: #0a0a0a;
+  --color-brand-primary: #ffffff;
+  --color-brand-secondary: #71717a;
+  --color-brand-muted: #3f3f46;
+  --color-titanium: #e2e2e2;
+  --color-platinum: #f5f5f5;
+  --color-slate-metal: #1e1e20;
+  --color-border-subtle: rgba(255, 255, 255, 0.03);
+  --color-border-active: rgba(255, 255, 255, 0.08);
+}
+```
+
+CDN users can override via plain CSS:
+
+```css
+:root {
+  --color-bg-main: #0f0f0f;
+  --color-brand-primary: #e0e0e0;
+}
+```
+
+---
+
+## HTML Structure
+
+```html
+<div class="elk-app">
+  <div class="elk-wrap">
+    <div class="elk-grain-overlay"></div>
+    <div class="elk-backdrop"></div>
+
+    <aside class="elk-sidebar">
+      <header>
+        <div class="elk-logo">
+          <img src="logo.svg" alt="Logo" />
+        </div>
+        <span class="elk-title">My App</span>
+      </header>
+    </aside>
+
+    <main class="elk-main">
+      <header class="elk-main-header">
+        <!-- top bar -->
+      </header>
+      <div class="elk-main-content">
+        <!-- page content -->
+      </div>
+    </main>
+  </div>
+</div>
+```
+
+---
 
 ## 🗿 Design Philosophy: "Technical Prestige"
 
@@ -91,19 +233,6 @@ Elektron is not just a tool; it's an asset to be proud of. Our design principles
 - **Fluid Motion:** Interactions are heavy and fluid, using `cubic-bezier` transitions for a substantial and controlled experience.
 
 ---
-
-## 🎨 Styling
-
-Elektron uses Tailwind CSS 4. If you are using Tailwind, you can extend your theme with Elektron's premium color palette:
-
-```css
-@theme {
-  --color-bg-main: #050505;
-  --color-titanium: #e2e2e2;
-  --color-platinum: #f5f5f5;
-  --color-slate-metal: #1e1e20;
-}
-```
 
 ## 🛠 Development
 

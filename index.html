@@ -2,57 +2,60 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="elektron.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-    rel="stylesheet">
-  <title>ELEKTRON</title>
-  <link rel="stylesheet" href="src/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <title>ELEKTRON</title>
+
 </head>
 
 <body class="bg-zinc-950 text-white">
-  <div id="app" class="elk-app">
-    <div class="elk-wrap">
-      <div class="elk-grain-overlay"></div>
-      <div id="sidebar-backdrop" class="elk-backdrop"></div>
-      <aside id="sidebar" class="elk-sidebar">
-        <header class="p-8 flex items-center gap-3">
-          <div class="elk-logo overflow-hidden">
-            <img src="elektron.svg" alt="Elektron Logo" class="w-full h-full" />
-          </div>
-          <span class="elk-title">ELEKTRON</span>
-        </header>
-      </aside>
-      <main class="elk-main">
-        <header class="elk-main-header">
-          <button id="sidebar-toggle" class="lg:hidden p-2 -ml-2 text-zinc-400 hover:text-white transition-colors"
-            aria-label="Toggle Sidebar">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="4" x2="20" y1="12" y2="12"></line>
-              <line x1="4" x2="20" y1="6" y2="6"></line>
-              <line x1="4" x2="20" y1="18" y2="18"></line>
-            </svg>
-          </button>
-          <div class="flex-1 lg:hidden"></div>
-          <span class="text-xs font-medium tracking-[0.2em] uppercase text-zinc-500 lg:hidden">Elektron System</span>
-        </header>
-        <div class="elk-main-content">
-          <div class="flex flex-col gap-2">
-            <h1 class="text-4xl font-light tracking-tight text-white">Dashboard Overview</h1>
-            <p class="text-zinc-500 text-sm font-medium tracking-wide">Welcome back. Here's what's happening today.</p>
-          </div>
+    <div id="app" class="elk-app">
+        <div class="elk-wrap">
+            <div class="elk-grain-overlay"></div>
+            <div id="sidebar-backdrop" class="elk-backdrop"></div>
+            <aside id="sidebar" class="elk-sidebar">
+                <header class="p-8 flex items-center gap-3">
+                    <div class="elk-logo overflow-hidden">
+                        <img src="/logo.svg" alt="Elektron Logo" class="w-full h-full" />
+                    </div>
+                    <span class="elk-title">ELEKTRON</span>
+                </header>
+            </aside>
+            <main class="elk-main">
+                <header class="elk-main-header">
+                    <button id="sidebar-toggle"
+                        class="lg:hidden p-2 -ml-2 text-zinc-400 hover:text-white transition-colors cursor-pointer"
+                        aria-label="Toggle Sidebar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" x2="20" y1="12" y2="12"></line>
+                            <line x1="4" x2="20" y1="6" y2="6"></line>
+                            <line x1="4" x2="20" y1="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div class="flex-1 lg:hidden"></div>
+                    <span class="text-xs font-medium tracking-[0.2em] uppercase text-zinc-500 lg:hidden">Elektron
+                        System</span>
+                </header>
+                <div class="elk-main-content">
+                    <div class="flex flex-col gap-2">
+                        <h1 class="text-4xl font-light tracking-tight text-white">Dashboard Overview</h1>
+                        <p class="text-zinc-500 text-sm font-medium tracking-wide">Welcome back. Here's what's happening
+                            today.</p>
+                    </div>
+                </div>
+            </main>
         </div>
-      </main>
     </div>
-  </div>
-  <script type="module">
-    import { initSidebar } from './src/main.ts'
-    initSidebar();
-  </script>
+    <script type="module">
+        import {initSidebar} from './src/elektron.ts'
+        initSidebar();
+    </script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 {
   "name": "elektron",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "A premium, minimalist admin dashboard designed with Technical Prestige.",
   "author": "onokumus",
   "license": "MIT",
@@ -19,28 +19,30 @@
     "url": "git+https://github.com/onokumus/elektron.git"
   },
   "type": "module",
-  "unpkg": "dist/elektron.umd.cjs",
-  "jsdelivr": "dist/elektron.js",
-  "main": "./dist/elektron.umd.cjs",
-  "module": "./dist/elektron.js",
-  "types": "./dist/main.d.ts",
+  "unpkg": "lib/elektron.umd.cjs",
+  "jsdelivr": "lib/elektron.js",
+  "main": "./lib/elektron.umd.cjs",
+  "module": "./lib/elektron.js",
+  "types": "./lib/elektron.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/main.d.ts",
-      "import": "./dist/elektron.js",
-      "require": "./dist/elektron.umd.cjs"
+      "types": "./lib/elektron.d.ts",
+      "import": "./lib/elektron.js",
+      "require": "./lib/elektron.umd.cjs"
     },
-    "./style": "./dist/elektron.css",
-    "./style.css": "./dist/elektron.css"
+    "./style": "./lib/elektron.css",
+    "./style.css": "./lib/elektron.css",
+    "./source": "./src/elektron.css"
   },
   "files": [
-    "dist",
+    "lib",
     "src"
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build --mode app",
-    "build:lib": "vite build --mode lib && tsc --noEmit false --emitDeclarationOnly --outDir dist",
+    "build": "tsc && vite build",
+    "build:lib": "tsc && vite build --mode lib",
+    "build:types": "tsc -p tsconfig.lib.json",
     "preview": "vite preview"
   },
   "devDependencies": {
