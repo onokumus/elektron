@@ -1,6 +1,6 @@
 {
   "name": "elektron",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "A premium, minimalist admin dashboard designed with Technical Prestige.",
   "author": "onokumus",
   "license": "MIT",
@@ -26,6 +26,7 @@
   "types": "./dist/main.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/main.d.ts",
       "import": "./dist/elektron.js",
       "require": "./dist/elektron.umd.cjs"
     },
