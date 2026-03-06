@@ -25,14 +25,14 @@ npm install elektron
 #### Deno
 
 ```ts
-// Option 1: ESM CDN (requires npm package)
+// Option 1: JSR (Recommended)
+import { initSidebar } from "jsr:@onokumus/elektron"
+
+// Option 2: ESM CDN
 import { initSidebar } from "https://esm.sh/elektron"
 
-// Option 2: Direct from GitHub
+// Option 3: Direct from GitHub
 import { initSidebar } from "https://raw.githubusercontent.com/onokumus/elektron/master/mod.ts"
-
-// Option 3: JSR (coming soon)
-// import { initSidebar } from "jsr:@onokumus/elektron"
 
 initSidebar()
 ```
@@ -144,11 +144,11 @@ initSidebar({
 ### With Deno
 
 ```ts
-// ESM CDN
-import { initSidebar } from "https://esm.sh/elektron"
+// JSR (Recommended)
+import { initSidebar } from "jsr:@onokumus/elektron"
 
-// Or directly from GitHub
-import { initSidebar } from "https://raw.githubusercontent.com/onokumus/elektron/master/mod.ts"
+// Or ESM CDN
+import { initSidebar } from "https://esm.sh/elektron"
 
 initSidebar()
 ```
