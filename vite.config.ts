@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => {
             // Library build for NPM
             outDir: 'lib',
             lib: {
-                entry: './src/elektron.ts',
+                entry: './src/index.ts',
                 name: 'Elektron',
                 fileName: 'elektron',
                 formats: ['es', 'umd']

@@ -1,5 +1,3 @@
-import './elektron.css';
-
 /**
  * Sidebar initialization options
  */
@@ -12,8 +10,9 @@ export interface SidebarOptions {
 /**
  * Initializes the Elektron sidebar toggle logic.
  * @param options - Configuration for element IDs
+ * @returns A cleanup function that removes all event listeners
  */
-export function initSidebar(options: SidebarOptions = {}) {
+export function initSidebar(options: SidebarOptions = {}): () => void {
   const {
     sidebarId = 'sidebar',
     toggleId = 'sidebar-toggle',
@@ -26,7 +25,7 @@ export function initSidebar(options: SidebarOptions = {}) {
 
   if (!sidebar || !toggleBtn) {
     console.warn(`Elektron: Sidebar or Toggle button not found (${sidebarId}, ${toggleId})`);
-    return;
+    return () => {};
   }
 
   function toggle() {

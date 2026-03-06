@@ -41,8 +41,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "build:lib": "tsc && vite build --mode lib",
-    "build:types": "tsc -p tsconfig.lib.json",
+    "build:lib": "tsc && vite build --mode lib && tsc -p tsconfig.lib.json",
     "preview": "vite preview"
   },
   "devDependencies": {

@@ -16,13 +16,30 @@ Elektron is a premium, minimalist admin dashboard designed with "Technical Prest
 
 ### Installation
 
-Install Elektron via NPM:
+#### NPM
 
 ```bash
 npm install elektron
 ```
 
-Or use it directly via CDN:
+#### Deno
+
+```ts
+// Option 1: ESM CDN (requires npm package)
+import { initSidebar } from "https://esm.sh/elektron"
+
+// Option 2: Direct from GitHub
+import { initSidebar } from "https://raw.githubusercontent.com/onokumus/elektron/master/mod.ts"
+
+// Option 3: JSR (coming soon)
+// import { initSidebar } from "jsr:@onokumus/elektron"
+
+initSidebar()
+```
+
+#### CDN
+
+Use it directly via CDN:
 
 ```html
 <!-- CSS -->
@@ -117,6 +134,28 @@ initSidebar()
 With custom options:
 
 ```js
+initSidebar({
+  sidebarId: 'my-sidebar',
+  toggleId: 'my-toggle',
+  backdropId: 'my-backdrop'
+})
+```
+
+### With Deno
+
+```ts
+// ESM CDN
+import { initSidebar } from "https://esm.sh/elektron"
+
+// Or directly from GitHub
+import { initSidebar } from "https://raw.githubusercontent.com/onokumus/elektron/master/mod.ts"
+
+initSidebar()
+```
+
+With custom options:
+
+```ts
 initSidebar({
   sidebarId: 'my-sidebar',
   toggleId: 'my-toggle',

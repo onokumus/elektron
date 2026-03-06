@@ -1,0 +1,22 @@
+{
+    "name": "@onokumus/elektron",
+    "version": "0.8.3",
+    "exports": "./mod.ts",
+    "compilerOptions": {
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "dom.asynciterable",
+            "deno.ns"
+        ]
+    },
+    "publish": {
+        "include": [
+            "src/**/*.ts",
+            "src/**/*.css",
+            "mod.ts",
+            "README.md",
+            "LICENSE"
+        ]
+    }
+}
