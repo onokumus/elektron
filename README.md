@@ -1,5 +1,11 @@
 # Elektron Admin Layout
 
+[![Technical Prestige](https://img.shields.io/badge/Design-Technical%20Prestige-050505?style=flat-square)](#design-philosophy)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
+[![JSR](https://jsr.io/badges/@onokumus/elektron?style=flat-square)](https://jsr.io/@onokumus/elektron)
+[![NPM Version](https://img.shields.io/npm/v/elektron.svg?style=flat-square)](https://www.npmjs.com/package/elektron)
+[![NPM Downloads](https://img.shields.io/npm/dt/elektron.svg?style=flat-square)](https://www.npmjs.com/package/elektron)
+
 Elektron is a premium, minimalist admin dashboard designed with "Technical Prestige" in mind. Built with Vite, TypeScript, and Tailwind CSS, it offers a sophisticated interface that balances functionality with aesthetic excellence.
 
 ---
