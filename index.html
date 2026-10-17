@@ -25,6 +25,14 @@
                     </div>
                     <span class="elk-title">ELEKTRON</span>
                 </header>
+                <footer class="mt-auto p-8 border-t border-white/[0.03]">
+                    <a href="https://github.com/onokumus/elektron" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-3 text-zinc-500 hover:text-white transition-colors group">
+                        <i data-lucide="github"
+                            class="w-4 h-4 text-zinc-600 group-hover:text-white transition-colors"></i>
+                        <span class="text-[10px] font-medium uppercase tracking-[0.2em]">Repository</span>
+                    </a>
+                </footer>
             </aside>
             <main class="elk-main">
                 <header class="elk-main-header">
@@ -43,19 +51,129 @@
                         System</span>
                 </header>
                 <div class="elk-main-content">
-                    <div class="flex flex-col gap-2">
-                        <h1 class="text-4xl font-light tracking-tight text-white">Dashboard Overview</h1>
-                        <p class="text-zinc-500 text-sm font-medium tracking-wide">Welcome back. Here's what's happening
-                            today.</p>
+                    <div class="flex flex-col gap-2 mb-8">
+                        <h1 class="text-4xl font-light tracking-tight text-white">Elektron</h1>
+                        <p class="text-zinc-500 text-sm font-medium tracking-wide">An admin layout</p>
                     </div>
+
+                    <div class="elk-card elk-card-hover flex flex-col mb-8">
+                        <header class="flex items-center justify-between border-b border-border-subtle p-8">
+                            <h3 class="text-[10px] font-bold tracking-[0.2em] text-zinc-500 uppercase">Features</h3>
+                        </header>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+                            <div class="flex flex-col gap-2">
+                                <h4 class="text-sm font-light tracking-wider text-white">Technical Prestige</h4>
+                                <p class="text-xs text-zinc-500 leading-relaxed">Inspired by Linear and Vercel
+                                    aesthetics - deep blacks, thin borders, and high-contrast typography.</p>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h4 class="text-sm font-light tracking-wider text-white">Glassmorphism</h4>
+                                <p class="text-xs text-zinc-500 leading-relaxed">Elegant use of background blurs and
+                                    translucent layers for depth.</p>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h4 class="text-sm font-light tracking-wider text-white">Editorial Typography</h4>
+                                <p class="text-xs text-zinc-500 leading-relaxed">Lightweight fonts and wide tracking for
+                                    an authoritative, premium feel.</p>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h4 class="text-sm font-light tracking-wider text-white">Micro-animations</h4>
+                                <p class="text-xs text-zinc-500 leading-relaxed">Fluid transitions and subtle hover
+                                    effects for a responsive user experience.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="elk-card elk-card-hover elk-card-glass flex flex-col mb-8">
+                        <header class="flex items-center justify-between border-b border-border-subtle p-8">
+                            <h3 class="text-[10px] font-bold tracking-[0.2em] text-zinc-500 uppercase">Quick Start</h3>
+                            <i data-lucide="github"></i>
+                        </header>
+                        <div class="flex flex-col gap-6 p-8">
+                            <div class="flex flex-col gap-3">
+                                <span class="text-[10px] font-medium text-zinc-500 uppercase tracking-widest">1. Install (NPM)</span>
+                                <div class="bg-zinc-900/50 rounded-lg p-4 border border-white/[0.03]">
+                                    <code class="text-xs text-zinc-300">npm install elektron</code>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <span class="text-[10px] font-medium text-zinc-500 uppercase tracking-widest">2. Add CSS</span>
+                                <div class="bg-zinc-900/50 rounded-lg p-4 border border-white/[0.03]">
+                                    <code class="text-xs text-zinc-300">@import "elektron/style.css";</code>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <span class="text-[10px] font-medium text-zinc-500 uppercase tracking-widest">3. Initialize Sidebar</span>
+                                <div class="bg-zinc-900/50 rounded-lg p-4 border border-white/[0.03]">
+                                    <code class="text-xs text-zinc-300">import { initSidebar } from 'elektron'; initSidebar();</code>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <span class="text-[10px] font-medium text-zinc-500 uppercase tracking-widest">4. CDN (No Build)</span>
+                                <div class="bg-zinc-900/50 rounded-lg p-4 border border-white/[0.03]">
+                                    <code
+                                        class="text-xs text-zinc-300">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/elektron/lib/elektron.css"&gt;</code>
+                                </div>
+                                <div class="bg-zinc-900/50 rounded-lg p-4 border border-white/[0.03]">
+                                    <code
+                                        class="text-xs text-zinc-300">&lt;script type="module"&gt;import { initSidebar } from 'https://cdn.jsdelivr.net/npm/elektron/lib/elektron.js'; initSidebar();&lt;/script&gt;</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="elk-card elk-card-hover elk-card-glass flex flex-col mb-8">
+                        <header class="flex items-center justify-between border-b border-border-subtle p-8">
+                            <h3 class="text-[10px] font-bold tracking-[0.2em] text-zinc-500 uppercase">Buttons</h3>
+                        </header>
+                        <div class="flex flex-wrap items-center gap-3 p-8">
+                            <button class="elk-btn elk-btn-primary">Primary</button>
+                            <button class="elk-btn elk-btn-secondary">Secondary</button>
+                            <button class="elk-btn elk-btn-ghost">Ghost</button>
+                            <button class="elk-btn elk-btn-sm">Small</button>
+                            <button class="elk-btn elk-btn-lg">Large</button>
+                            <button class="elk-btn elk-btn-icon" aria-label="Settings">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.15.09a2 2 0 0 1-2 0l-.16-.09a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.16.09a2 2 0 0 1 1 1.73V12a2 2 0 0 1-1 1.73l-.16.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.16-.09a2 2 0 0 1 2 0l.15.09a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.15-.09a2 2 0 0 1 2 0l.16.09a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.16-.09a2 2 0 0 1-1-1.73v-.18a2 2 0 0 1 1-1.73l.16-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.16.09a2 2 0 0 1-2 0l-.15-.09a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="elk-card elk-card-hover elk-card-glass flex flex-col mb-8">
+                        <header class="flex items-center justify-between border-b border-border-subtle p-8">
+                            <h3 class="text-[10px] font-bold tracking-[0.2em] text-zinc-500 uppercase">Switches</h3>
+                        </header>
+                        <div class="flex flex-col gap-5 p-8">
+                            <label class="elk-switch">
+                                <input class="elk-switch-input" type="checkbox" checked>
+                                <span class="elk-switch-track">
+                                    <span class="elk-switch-thumb"></span>
+                                </span>
+                                <span class="elk-switch-label">Notifications</span>
+                            </label>
+
+                            <label class="elk-switch">
+                                <input class="elk-switch-input" type="checkbox">
+                                <span class="elk-switch-track">
+                                    <span class="elk-switch-thumb"></span>
+                                </span>
+                                <span class="elk-switch-label">Auto Backup</span>
+                            </label>
+                        </div>
+                    </div>
+
                 </div>
             </main>
         </div>
     </div>
     <script type="module">
-        import {initSidebar} from './src/index.ts'
+        import { initSidebar } from './src/index.ts'
         initSidebar();
     </script>
+    <script type="module" src="./src/app.ts"></script>
 </body>
 
 </html>

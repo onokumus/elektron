@@ -1,0 +1,64 @@
+@layer components {
+	.elk-btn {
+		@apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl;
+		@apply px-4 py-2 text-xs font-medium tracking-[0.08em] uppercase;
+		@apply border border-white/[0.08] bg-white/[0.02] text-titanium;
+		@apply transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)];
+		@apply shadow-[0_0_0_1px_rgba(255,255,255,0.02),0_14px_30px_-20px_rgba(0,0,0,0.8)];
+		@apply select-none;
+	}
+
+	.elk-btn:hover {
+		@apply border-white/[0.14] bg-white/[0.05] text-white;
+	}
+
+	.elk-btn:focus-visible {
+		@apply outline-none ring-1 ring-white/30 ring-offset-2 ring-offset-bg-main;
+	}
+
+	.elk-btn:active {
+		@apply border-white/[0.18] bg-white/[0.07];
+	}
+
+	.elk-btn:disabled,
+	.elk-btn[aria-disabled="true"] {
+		@apply pointer-events-none opacity-50;
+	}
+
+	.elk-btn-primary {
+		@apply border-transparent bg-white text-black;
+		@apply shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_24px_40px_-22px_rgba(255,255,255,0.35)];
+	}
+
+	.elk-btn-primary:hover {
+		@apply bg-platinum text-black;
+	}
+
+	.elk-btn-secondary {
+		@apply border-border-active bg-transparent text-brand-secondary;
+	}
+
+	.elk-btn-secondary:hover {
+		@apply border-white/[0.16] bg-white/[0.03] text-titanium;
+	}
+
+	.elk-btn-ghost {
+		@apply border-transparent bg-transparent text-brand-secondary shadow-none;
+	}
+
+	.elk-btn-ghost:hover {
+		@apply bg-white/[0.04] text-white;
+	}
+
+	.elk-btn-sm {
+		@apply px-3 py-1.5 text-[10px] tracking-[0.12em];
+	}
+
+	.elk-btn-lg {
+		@apply px-5 py-2.5 text-sm tracking-[0.1em];
+	}
+
+	.elk-btn-icon {
+		@apply size-9 p-0;
+	}
+}

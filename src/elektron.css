@@ -22,6 +22,10 @@
 }
 
 
+@import './card/card.css';
+@import './button/button.css';
+@import './switch/switch.css';
+
 @layer layout {
 
   /* App Container */
@@ -84,11 +88,12 @@
 
   /* Logo */
   .elk-logo {
-    @apply w-8 h-8 bg-white rounded-lg flex items-center justify-center p-1;
+    @apply w-8 h-8 flex items-center justify-center;
   }
 
   /* Title */
   .elk-title {
     @apply text-lg font-light tracking-[0.3em] uppercase text-white;
   }
+
 }

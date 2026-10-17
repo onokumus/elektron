@@ -1,0 +1,38 @@
+@layer components {
+  .elk-card {
+    @apply relative overflow-hidden rounded-2xl bg-bg-card;
+    @apply transition-colors duration-600 ease-[cubic-bezier(0.22,1,0.36,1)];
+    @apply shadow-[0_0_0_1px_rgba(255,255,255,0.03),0_20px_40px_-20px_rgba(0,0,0,0.5)];
+  }
+
+  .elk-card::before {
+    @apply absolute inset-0 pointer-events-none;
+    content: "";
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.01) 40%,
+      rgba(255, 255, 255, 0.01) 60%,
+      rgba(255, 255, 255, 0.05)
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .elk-card-hover:hover {
+    @apply bg-white/[0.03] border-white/[0.10];
+  }
+
+  .elk-card-glass {
+    @apply bg-white/[0.02] backdrop-blur-xl;
+    @apply border border-white/[0.06];
+  }
+}

@@ -1,0 +1,54 @@
+@layer components {
+	.elk-switch {
+		@apply inline-flex items-center gap-3 select-none;
+	}
+
+	.elk-switch-input {
+		position: absolute;
+		inline-size: 1px;
+		block-size: 1px;
+		margin: -1px;
+		padding: 0;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		border: 0;
+		white-space: nowrap;
+	}
+
+	.elk-switch-track {
+		@apply relative block h-6 w-11 rounded-full border border-white/[0.12] bg-white/[0.06];
+		@apply transition-colors duration-300 ease-[cubic-bezier(0.22,1,0.36,1)];
+	}
+
+	.elk-switch-thumb {
+		@apply absolute left-0.75 top-0.75 size-4 rounded-full bg-zinc-600;
+		@apply transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)];
+		@apply shadow-[0_1px_2px_rgba(0,0,0,0.4)];
+	}
+
+	.elk-switch-label {
+		@apply text-xs font-medium tracking-[0.08em] uppercase text-zinc-400;
+		@apply transition-colors duration-300 ease-[cubic-bezier(0.22,1,0.36,1)];
+	}
+
+	.elk-switch-input:checked + .elk-switch-track {
+		@apply border-emerald-400/50 bg-emerald-500/35;
+	}
+
+	.elk-switch-input:checked + .elk-switch-track .elk-switch-thumb {
+		@apply translate-x-5 bg-emerald-300;
+	}
+
+	.elk-switch-input:checked ~ .elk-switch-label {
+		@apply text-emerald-300;
+	}
+
+	.elk-switch-input:focus-visible + .elk-switch-track {
+		@apply outline-none ring-1 ring-emerald-400/50 ring-offset-2 ring-offset-bg-main;
+	}
+
+	.elk-switch-input:disabled + .elk-switch-track,
+	.elk-switch-input:disabled ~ .elk-switch-label {
+		@apply cursor-not-allowed opacity-50;
+	}
+}
